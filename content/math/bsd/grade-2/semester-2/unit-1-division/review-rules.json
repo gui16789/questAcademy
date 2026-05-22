@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-average-sharing-basic",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillId": "skill.average-sharing.identify-equal-groups",
+      "misconceptionId": "mis.average-sharing.unequal-as-equal",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-average-sharing"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.identify-equal-groups",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-division-expression-basic",
+      "knowledgePointId": "math.division.expression",
+      "skillId": "skill.expression.map-story-to-expression",
+      "misconceptionId": "mis.expression.use-addition",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-division-expression"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.map-story-to-expression",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-with-remainder-basic",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.calculate",
+      "misconceptionId": "mis.remainder.forget-leftover",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-with-remainder"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.calculate-quotient-remainder",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-remainder-rule-basic",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.compare-with-divisor",
+      "misconceptionId": "mis.remainder.greater-than-divisor",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-remainder-rule"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.judge-remainder-valid",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

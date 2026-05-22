@@ -35,6 +35,13 @@ http://127.0.0.1:4173
 - `styles.css`：视觉样式和响应式布局
 - `app.js`：内容包加载、流程、状态与数据保存
 - `content/`：教材、知识图谱、案件、题目、知识卡、线索和勋章内容包
+- `scripts/validate-content.mjs`：内容包结构和引用校验脚本
+
+## 内容校验
+
+```bash
+node scripts/validate-content.mjs
+```
 
 ## 协作规范
 
