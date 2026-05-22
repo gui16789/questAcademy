@@ -1,6 +1,6 @@
 {
   "name": "@quest-academy/web",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,9 +10,9 @@
     "check": "tsc -b --pretty false"
   },
   "dependencies": {
-    "@quest-academy/content-runtime": "1.0.0-alpha.0",
-    "@quest-academy/content-schema": "1.0.0-alpha.0",
-    "@quest-academy/game-core": "1.0.0-alpha.0",
+    "@quest-academy/content-runtime": "1.0.0",
+    "@quest-academy/content-schema": "1.0.0",
+    "@quest-academy/game-core": "1.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

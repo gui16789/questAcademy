@@ -1,6 +1,6 @@
 {
   "name": "@quest-academy/game-core",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "exports": {
@@ -13,7 +13,7 @@
     "test": "npm run build && node --test dist/index.test.js"
   },
   "dependencies": {
-    "@quest-academy/content-schema": "1.0.0-alpha.0"
+    "@quest-academy/content-schema": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
