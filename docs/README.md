@@ -50,6 +50,12 @@
   - 产品版本 Milestone 建议和 v0.2.0 Milestone 初始化草案。
 - `动物侦探城 - v0.2.0 开发执行记录.md`
   - v0.2.0 Issue、分支、PR、内容校验、回归测试、风险和发布前结论记录。
+- `动物侦探城 - v1.0.0 工程化实施计划.md`
+  - v1.0.0 React/Vite/TypeScript 工程化目标、monorepo 分层、runtime、game-core、测试和验收标准。
+- `动物侦探城 - v1.0.0 Issue 拆分清单.md`
+  - v1.0.0 工程化的 8 个主 Issue、PR 顺序、范围、不做清单和验收标准。
+- `动物侦探城 - v1.0.0 开发前检查清单.md`
+  - v1.0.0 开发前门禁，覆盖版本范围、技术选型、localStorage 迁移、测试和 GitHub 准备。
 - `动物侦探城：项目开发规范、里程碑与版本号规范 ... .md`
   - 项目治理、版本节奏、内容工厂、里程碑和验收机制。
 - `动物侦探城：UI 视觉设计规范 ... .md`
@@ -61,12 +67,12 @@
 
 ## 启动前优先补齐
 
-建议按以下顺序逐个完善：
+v0.2.0 已完成发布，下一阶段建议按以下顺序推进：
 
-1. 创建 GitHub Labels
-2. 创建 GitHub Milestone `v0.2.0`
-3. 创建 v0.2.0 六个 Issue
-4. 执行 v0.2.0 内容抽取开发
+1. 创建 GitHub Milestone `v1.0.0`
+2. 创建 v1.0.0 八个 Issue
+3. 从工程骨架 Issue 开始进入独立分支开发
+4. 按 PR 顺序迁移 content-schema、content-runtime、game-core、UI 和数据迁移
 5. 发布前检查并等待确认
 
 ## 文档原则
