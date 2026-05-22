@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-carrot-badge-final",
+    "caseId": "case-carrot-badge",
+    "legacyRuntimeLevelId": "boss",
+    "name": "胡萝卜徽章最终推理",
+    "targetKnowledgePointIds": [
+      "math.division.average-sharing",
+      "math.division.with-remainder",
+      "math.division.remainder-rule",
+      "math.division.word-problem"
+    ],
+    "targetSkillIds": [
+      "skill.remainder.calculate",
+      "skill.remainder.compare-with-divisor",
+      "skill.word-problem.interpret-remainder"
+    ],
+    "targetMisconceptionIds": [
+      "mis.remainder.greater-than-divisor",
+      "mis.word-problem.use-remainder-wrong"
+    ],
+    "scenario": "学院原来有 35 枚胡萝卜徽章，每队分 6 枚。需要判断能分给几个完整小队，还剩几枚，以及狐狸配送员的说法是否合理。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b1",
+        "skillIds": [
+          "skill.remainder.calculate"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b2",
+        "skillIds": [
+          "skill.word-problem.interpret-remainder"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-with-remainder",
+        "card-remainder-rule"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-with-remainder",
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.calculate",
+      "misconceptionId": "mis.remainder.forget-leftover",
+      "questionPatternId": "pattern.calculate-quotient-remainder",
+      "caseId": "case-carrot-badge",
+      "levelId": "boss",
+      "bossTaskId": "boss-carrot-badge-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "学院原来有 35 枚胡萝卜徽章，每队分 6 枚。可以分给几个完整小队，还剩几枚？",
+      "options": [
+        "5 队余 5 枚",
+        "6 队余 1 枚",
+        "4 队余 11 枚"
+      ],
+      "answer": "5 队余 5 枚",
+      "explanation": "6 × 5 = 30，35 - 30 = 5。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "有余数除法",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-remainder-rule",
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+      "knowledgePointId": "math.division.word-problem",
+      "skillId": "skill.word-problem.interpret-remainder",
+      "misconceptionId": "mis.word-problem.use-remainder-wrong",
+      "questionPatternId": "pattern.judge-remainder-context",
+      "caseId": "case-carrot-badge",
+      "levelId": "boss",
+      "bossTaskId": "boss-carrot-badge-final",
+      "stepId": "boss-step-2",
+      "questionType": "judge",
+      "difficultyBand": "integrated",
+      "stem": "狐狸配送员说：剩下 5 枚还能再分给一个完整小队。这句话对吗？",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "每队要 6 枚，剩下 5 枚不够再分一个完整小队。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "余数情境",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}
