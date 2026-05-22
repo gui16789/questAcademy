@@ -1,0 +1,6 @@
+{
+  "name": "@quest-academy/content-schema",
+  "version": "1.0.0-alpha.0",
+  "private": true,
+  "type": "module"
+}

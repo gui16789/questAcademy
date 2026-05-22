@@ -1,0 +1,20 @@
+{
+  "name": "quest-academy",
+  "version": "1.0.0-alpha.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @quest-academy/web",
+    "build": "npm run build -w @quest-academy/web",
+    "preview": "npm run preview -w @quest-academy/web",
+    "check": "npm run check -w @quest-academy/web",
+    "validate:content": "node scripts/validate-content.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

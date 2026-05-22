@@ -43,6 +43,18 @@ http://127.0.0.1:4173
 node scripts/validate-content.mjs
 ```
 
+## v1.0.0 工程化骨架
+
+React + TypeScript + Vite 工程从 `apps/web` 开始迁移。当前阶段只提供工程骨架，正式学习体验仍以根目录静态 MVP 为准。
+
+```bash
+npm install
+npm run dev
+npm run check
+npm run build
+npm run validate:content
+```
+
 ## 协作规范
 
 - `CONTRIBUTING.md`：分支、提交、PR、文档和内容协作规范
