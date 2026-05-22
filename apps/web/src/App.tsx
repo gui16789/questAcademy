@@ -89,7 +89,8 @@ export function App() {
 
   useEffect(() => {
     let active = true;
-    loadBundledContentRuntime()
+    const contentPackageId = new URLSearchParams(window.location.search).get("contentPackageId") ?? undefined;
+    loadBundledContentRuntime(contentPackageId)
       .then((runtime) => {
         if (!active) return;
         const nextModel = buildRuntimeModel(runtime);
