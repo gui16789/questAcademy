@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-1-division",
+  "title": "北师大版二年级下册第一单元：除法",
+  "defaultCaseId": "case-carrot-badge",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-22T00:00:00.000Z",
+  "updatedAt": "2026-05-22T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-carrot-badge.json"
+    ],
+    "questions": [
+      "questions/level-average-sharing.json",
+      "questions/level-division-expression.json",
+      "questions/level-with-remainder.json",
+      "questions/level-remainder-rule.json",
+      "questions/boss-carrot-badge-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}

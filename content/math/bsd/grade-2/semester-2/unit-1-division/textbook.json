@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-1-division",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 1,
+    "name": "第一单元：除法",
+    "learningGoals": [
+      "理解平均分",
+      "理解除法算式含义",
+      "理解有余数除法",
+      "理解余数小于除数"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-average-sharing",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-average-sharing",
+      "name": "平均分",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.division.average-sharing"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": ""
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-division-expression",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-division-expression",
+      "name": "除法算式含义",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.division.expression"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": ""
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-with-remainder",
+      "name": "有余数除法",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.division.with-remainder"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": ""
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "lessonId": "lesson-remainder-rule",
+      "name": "余数小于除数",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.division.remainder-rule"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": ""
+      }
+    }
+  ]
+}

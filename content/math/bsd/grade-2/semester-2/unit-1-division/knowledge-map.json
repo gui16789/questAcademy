@@ -1,0 +1,454 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "number-and-algebra",
+    "subjectId": "math",
+    "name": "数与代数"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.division.average-sharing",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "平均分",
+      "shortName": "平均分",
+      "definition": "把一些物品分成几份，并且每份数量相同。",
+      "learningGoal": "理解平均分就是每份数量一样多，能判断和计算简单平均分情境。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.average-sharing.identify-equal-groups",
+        "skill.average-sharing.calculate-each-share"
+      ],
+      "misconceptionIds": [
+        "mis.average-sharing.unequal-as-equal",
+        "mis.average-sharing.wrong-share-count"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.division.expression",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "除法算式含义",
+      "shortName": "除法算式",
+      "definition": "除法可以表示平均分，也可以表示按每份数量分成若干组。",
+      "learningGoal": "理解除法可以表示平均分，能根据情境读懂除法算式。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.division.average-sharing"
+      ],
+      "skillIds": [
+        "skill.expression.map-story-to-expression",
+        "skill.expression.explain-quotient"
+      ],
+      "misconceptionIds": [
+        "mis.expression.use-addition",
+        "mis.expression.reverse-roles"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.division.with-remainder",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "有余数除法",
+      "shortName": "有余数除法",
+      "definition": "平均分后还剩下一些不够再分一份或一组的数量，叫余数。",
+      "learningGoal": "理解除完后剩下不够再分一组的数量叫余数，能计算简单商和余数。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.division.expression"
+      ],
+      "skillIds": [
+        "skill.remainder.calculate",
+        "skill.remainder.explain-leftover"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.forget-leftover",
+        "mis.remainder.leftover-as-group"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.division.remainder-rule",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "余数小于除数",
+      "shortName": "余数规则",
+      "definition": "在有余数除法中，余数必须小于除数。",
+      "learningGoal": "理解余数必须比除数小，能判断一个有余数除法结果是否合理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.division.with-remainder"
+      ],
+      "skillIds": [
+        "skill.remainder.compare-with-divisor",
+        "skill.remainder.correct-invalid-result"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.greater-than-divisor",
+        "mis.remainder.equal-divisor"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.division.word-problem",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "除法解决实际问题",
+      "shortName": "除法实际问题",
+      "definition": "在真实情境中判断商和余数分别代表什么，以及剩余数量是否还能组成完整一组。",
+      "learningGoal": "能在情境中判断商和余数的意义，完成综合推理任务。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.division.average-sharing",
+        "math.division.expression",
+        "math.division.with-remainder",
+        "math.division.remainder-rule"
+      ],
+      "skillIds": [
+        "skill.word-problem.interpret-remainder"
+      ],
+      "misconceptionIds": [
+        "mis.word-problem.use-remainder-wrong"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.average-sharing.identify-equal-groups",
+      "knowledgePointId": "math.division.average-sharing",
+      "name": "判断每份是否一样多",
+      "learningGoal": "能判断一个分法是不是平均分。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.identify-equal-groups"
+      ],
+      "misconceptionIds": [
+        "mis.average-sharing.unequal-as-equal"
+      ]
+    },
+    {
+      "skillId": "skill.average-sharing.calculate-each-share",
+      "knowledgePointId": "math.division.average-sharing",
+      "name": "计算每份数量",
+      "learningGoal": "能根据总数和份数算出每份数量。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.calculate-each-share"
+      ],
+      "misconceptionIds": [
+        "mis.average-sharing.wrong-share-count"
+      ]
+    },
+    {
+      "skillId": "skill.expression.map-story-to-expression",
+      "knowledgePointId": "math.division.expression",
+      "name": "根据情境选择除法算式",
+      "learningGoal": "能把平均分情境转换成对应除法算式。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.map-story-to-expression"
+      ],
+      "misconceptionIds": [
+        "mis.expression.use-addition"
+      ]
+    },
+    {
+      "skillId": "skill.expression.explain-quotient",
+      "knowledgePointId": "math.division.expression",
+      "name": "理解商表示每份或组数",
+      "learningGoal": "能说清楚除法算式中商的实际含义。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.explain-quotient"
+      ],
+      "misconceptionIds": [
+        "mis.expression.reverse-roles"
+      ]
+    },
+    {
+      "skillId": "skill.remainder.calculate",
+      "knowledgePointId": "math.division.with-remainder",
+      "name": "计算商和余数",
+      "learningGoal": "能算出有余数除法中的商和余数。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.calculate-quotient-remainder"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.forget-leftover"
+      ]
+    },
+    {
+      "skillId": "skill.remainder.explain-leftover",
+      "knowledgePointId": "math.division.with-remainder",
+      "name": "理解剩余数量含义",
+      "learningGoal": "能解释余数表示剩下不够再分一组的数量。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.explain-leftover"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.leftover-as-group"
+      ]
+    },
+    {
+      "skillId": "skill.remainder.compare-with-divisor",
+      "knowledgePointId": "math.division.remainder-rule",
+      "name": "比较余数和除数大小",
+      "learningGoal": "能判断余数是否小于除数。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.judge-remainder-valid",
+        "pattern.choose-invalid-remainder"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.greater-than-divisor",
+        "mis.remainder.equal-divisor"
+      ]
+    },
+    {
+      "skillId": "skill.remainder.correct-invalid-result",
+      "knowledgePointId": "math.division.remainder-rule",
+      "name": "修正不合理余数",
+      "learningGoal": "能发现并修正余数不合理的除法结果。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.correct-invalid-remainder"
+      ],
+      "misconceptionIds": [
+        "mis.remainder.greater-than-divisor",
+        "mis.remainder.equal-divisor"
+      ]
+    },
+    {
+      "skillId": "skill.word-problem.interpret-remainder",
+      "knowledgePointId": "math.division.word-problem",
+      "name": "判断余数在情境中的意义",
+      "learningGoal": "能判断剩余数量是否能再组成一个完整小组。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.judge-remainder-context"
+      ],
+      "misconceptionIds": [
+        "mis.word-problem.use-remainder-wrong"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.average-sharing.unequal-as-equal",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillId": "skill.average-sharing.identify-equal-groups",
+      "name": "把分完误认为平均分",
+      "description": "孩子只关注物品是否分完，没有检查每份数量是否一样多。",
+      "diagnosisHint": "让孩子逐份比较数量，确认每份相同才是平均分。",
+      "remediationStrategyId": "review-average-sharing-basic"
+    },
+    {
+      "misconceptionId": "mis.average-sharing.wrong-share-count",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillId": "skill.average-sharing.calculate-each-share",
+      "name": "把份数和每份数混淆",
+      "description": "孩子把要分成几份和每份是多少混在一起。",
+      "diagnosisHint": "引导孩子先找总数和份数，再计算每份数量。",
+      "remediationStrategyId": "review-average-sharing-basic"
+    },
+    {
+      "misconceptionId": "mis.expression.use-addition",
+      "knowledgePointId": "math.division.expression",
+      "skillId": "skill.expression.map-story-to-expression",
+      "name": "把平均分情境写成加法",
+      "description": "孩子没有把平均分识别为除法情境。",
+      "diagnosisHint": "检查题干中是否出现平均分、每份、每组等除法线索。",
+      "remediationStrategyId": "review-division-expression-basic"
+    },
+    {
+      "misconceptionId": "mis.expression.reverse-roles",
+      "knowledgePointId": "math.division.expression",
+      "skillId": "skill.expression.explain-quotient",
+      "name": "被除数、除数、商含义混淆",
+      "description": "孩子不能稳定说清总数、份数或每份数量与算式位置的关系。",
+      "diagnosisHint": "让孩子用一句话说明算式中每个数字代表什么。",
+      "remediationStrategyId": "review-division-expression-basic"
+    },
+    {
+      "misconceptionId": "mis.remainder.forget-leftover",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.calculate",
+      "name": "忘记写余数",
+      "description": "孩子只写完整分组数量，忽略剩下不够再分一组的数量。",
+      "diagnosisHint": "检查完整分组后还剩几个，并把剩余数量写成余数。",
+      "remediationStrategyId": "review-with-remainder-basic"
+    },
+    {
+      "misconceptionId": "mis.remainder.leftover-as-group",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.explain-leftover",
+      "name": "把剩余误当完整一组",
+      "description": "孩子把剩下的数量也当成一个完整小组。",
+      "diagnosisHint": "比较剩余数量和每组需要的数量，判断是否够再组成完整一组。",
+      "remediationStrategyId": "review-with-remainder-basic"
+    },
+    {
+      "misconceptionId": "mis.remainder.greater-than-divisor",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.compare-with-divisor",
+      "name": "认为余数可以大于除数",
+      "description": "孩子没有意识到余数大于除数时还能继续再分一组。",
+      "diagnosisHint": "检查孩子是否理解余数表示剩下不够再分一组的数量。",
+      "remediationStrategyId": "review-remainder-rule-basic"
+    },
+    {
+      "misconceptionId": "mis.remainder.equal-divisor",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.compare-with-divisor",
+      "name": "认为余数可以等于除数",
+      "description": "孩子没有意识到余数等于除数时也能再分一组。",
+      "diagnosisHint": "让孩子比较余数和除数，说明相等时为什么还能继续分。",
+      "remediationStrategyId": "review-remainder-rule-basic"
+    },
+    {
+      "misconceptionId": "mis.word-problem.use-remainder-wrong",
+      "knowledgePointId": "math.division.word-problem",
+      "skillId": "skill.word-problem.interpret-remainder",
+      "name": "不理解剩余是否能再组成一组",
+      "description": "孩子不能把余数放回情境中判断它是否能组成完整小组。",
+      "diagnosisHint": "引导孩子对照每组需要数量，判断剩余是否足够。",
+      "remediationStrategyId": "review-remainder-rule-basic"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.identify-equal-groups",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillId": "skill.average-sharing.identify-equal-groups",
+      "name": "判断是否平均分",
+      "supportedQuestionTypes": [
+        "judge",
+        "single"
+      ],
+      "difficultyBand": "basic",
+      "template": "判断给出的分法是不是每份数量一样多。"
+    },
+    {
+      "questionPatternId": "pattern.calculate-each-share",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillId": "skill.average-sharing.calculate-each-share",
+      "name": "计算每份数量",
+      "supportedQuestionTypes": [
+        "single",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "把 {total} 个平均分成 {groups} 份，求每份数量。"
+    },
+    {
+      "questionPatternId": "pattern.map-story-to-expression",
+      "knowledgePointId": "math.division.expression",
+      "skillId": "skill.expression.map-story-to-expression",
+      "name": "根据情境选择除法算式",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "basic",
+      "template": "根据平均分情境选择正确除法算式。"
+    },
+    {
+      "questionPatternId": "pattern.explain-quotient",
+      "knowledgePointId": "math.division.expression",
+      "skillId": "skill.expression.explain-quotient",
+      "name": "解释商的含义",
+      "supportedQuestionTypes": [
+        "single",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "读懂除法算式中商表示的数量。"
+    },
+    {
+      "questionPatternId": "pattern.calculate-quotient-remainder",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.calculate",
+      "name": "计算商和余数",
+      "supportedQuestionTypes": [
+        "single",
+        "fill",
+        "judge"
+      ],
+      "difficultyBand": "basic",
+      "template": "计算 {dividend} 除以 {divisor} 的商和余数。"
+    },
+    {
+      "questionPatternId": "pattern.explain-leftover",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillId": "skill.remainder.explain-leftover",
+      "name": "解释剩余数量",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "application",
+      "template": "判断剩下的数量是否够再组成完整一组。"
+    },
+    {
+      "questionPatternId": "pattern.judge-remainder-valid",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.compare-with-divisor",
+      "name": "判断余数是否合理",
+      "supportedQuestionTypes": [
+        "judge",
+        "single"
+      ],
+      "difficultyBand": "basic",
+      "template": "判断有余数除法算式中的余数是否小于除数。"
+    },
+    {
+      "questionPatternId": "pattern.choose-invalid-remainder",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.compare-with-divisor",
+      "name": "选择不可能的余数",
+      "supportedQuestionTypes": [
+        "single",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "从选项中选出不可能出现的余数。"
+    },
+    {
+      "questionPatternId": "pattern.correct-invalid-remainder",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillId": "skill.remainder.correct-invalid-result",
+      "name": "修正不合理余数",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "application",
+      "template": "发现并修正余数大于或等于除数的结果。"
+    },
+    {
+      "questionPatternId": "pattern.judge-remainder-context",
+      "knowledgePointId": "math.division.word-problem",
+      "skillId": "skill.word-problem.interpret-remainder",
+      "name": "判断情境中的余数含义",
+      "supportedQuestionTypes": [
+        "judge",
+        "single"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合实际情境判断剩余数量是否能组成完整一组。"
+    }
+  ]
+}
