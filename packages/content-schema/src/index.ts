@@ -83,6 +83,29 @@ export interface ContentPackageFileRefs {
   reviewRules: string;
 }
 
+export interface ContentPackageRegistryEntry {
+  contentPackageId: string;
+  contentVersion: ContentVersion;
+  title: string;
+  subjectId: SubjectId;
+  textbookVersionId: TextbookVersionId;
+  gradeId: GradeId;
+  semesterId: SemesterId;
+  unitId: UnitId;
+  defaultCaseId: CaseId;
+  status: ContentStatus;
+  entryPath: string;
+  isDefault: boolean;
+  releaseNote: string;
+}
+
+export interface ContentPackageRegistry {
+  schemaVersion: SchemaVersion;
+  registryVersion: ContentVersion;
+  defaultContentPackageId: string;
+  packages: ContentPackageRegistryEntry[];
+}
+
 export interface Subject {
   subjectId: SubjectId;
   name: string;

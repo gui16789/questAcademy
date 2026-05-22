@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "0.1.0",
+  "registryVersion": "0.1.0",
+  "defaultContentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "packages": [
+    {
+      "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+      "contentVersion": "0.1.0",
+      "title": "北师大版二年级下册第一单元：除法",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-1-division",
+      "defaultCaseId": "case-carrot-badge",
+      "status": "draft",
+      "entryPath": "content/math/bsd/grade-2/semester-2/unit-1-division",
+      "isDefault": true,
+      "releaseNote": "v1.0.0 默认内容包，覆盖北师大版二年级下册第一单元除法的徽章失踪案。"
+    }
+  ]
+}

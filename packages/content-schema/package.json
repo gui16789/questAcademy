@@ -8,7 +8,8 @@
   },
   "types": "./src/index.ts",
   "scripts": {
-    "check": "tsc -b --pretty false"
+    "check": "tsc -b --pretty false",
+    "test": "node --test src/registry.test.mjs"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
