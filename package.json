@@ -11,7 +11,7 @@
     "dev": "npm run dev -w @quest-academy/web",
     "build": "npm run build -w @quest-academy/web",
     "preview": "npm run preview -w @quest-academy/web",
-    "check": "npm run check -w @quest-academy/web",
+    "check": "npm run check --workspaces --if-present",
     "validate:content": "node scripts/validate-content.mjs"
   },
   "engines": {
