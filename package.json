@@ -13,9 +13,13 @@
     "preview": "npm run preview -w @quest-academy/web",
     "check": "npm run check --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
+    "test:regression": "node scripts/regression-smoke.mjs",
     "validate:content": "node scripts/validate-content.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "chrome-remote-interface": "^0.34.0"
   }
 }
