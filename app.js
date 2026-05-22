@@ -1,7 +1,9 @@
 const STORAGE_KEY = "animalDetectiveCityMvp";
+const CONTENT_PACKAGE_PATH = "content/math/bsd/grade-2/semester-2/unit-1-division";
+const CONTENT_LOAD_COMMAND = "python -m http.server 4173 --bind 127.0.0.1";
 const storage = createSafeStorage();
 
-const badgeDefs = [
+let badgeDefs = [
   { id: "rookie", icon: "🕵️", name: "新手小侦探", reason: "完成第一个普通关卡" },
   { id: "collector", icon: "🔎", name: "线索收集员", reason: "收集全部 4 条线索" },
   { id: "reviewer", icon: "📁", name: "悬案调查员", reason: "第一次进入悬案馆复习" },
@@ -9,7 +11,7 @@ const badgeDefs = [
   { id: "caseCloser", icon: "🏅", name: "破案小能手", reason: "完成 Boss 并结案" },
 ];
 
-const levels = [
+let levels = [
   {
     id: "level-1",
     order: 1,
@@ -48,7 +50,7 @@ const levels = [
   },
 ];
 
-const knowledgeCards = [
+let knowledgeCards = [
   {
     id: "level-1",
     title: "平均分线索卡",
@@ -91,7 +93,7 @@ const knowledgeCards = [
   },
 ];
 
-const questions = [
+let questions = [
   makeQuestion("q1", "level-1", "single", "兔仓管有 12 枚徽章，要平均分给 3 个小队。每队几枚？", ["3", "4", "6"], "4", "12 ÷ 3 = 4，每队 4 枚。"),
   makeQuestion("q2", "level-1", "judge", "把 10 枚徽章分成 5 份，每份 2 枚，这是平均分。", ["对", "错"], "对", "每份都是 2 枚，所以是平均分。"),
   makeQuestion("q3", "level-1", "fill", "16 枚徽章平均分给 4 队，每队 ___ 枚。", [], "4", "16 ÷ 4 = 4。"),
@@ -112,7 +114,7 @@ const questions = [
   makeQuestion("b2", "boss", "judge", "狐狸配送员说：剩下 5 枚还能再分给一个完整小队。这句话对吗？", ["对", "错"], "错", "每队要 6 枚，剩下 5 枚不够再分一个完整小队。"),
 ];
 
-const backupQuestions = [
+let backupQuestions = [
   makeQuestion("r1", "reserve", "fill", "14 ÷ 2 = ___。", [], "7", "2 个 7 是 14。"),
   makeQuestion("r2", "reserve", "single", "21 枚每 4 枚一组，余数是？", ["1", "2", "3"], "1", "4 × 5 = 20，余 1。"),
   makeQuestion("r3", "reserve", "judge", "余数可以和除数一样大。", ["对", "错"], "错", "余数必须小于除数。"),
@@ -125,7 +127,7 @@ const backupQuestions = [
   makeQuestion("r10", "reserve", "single", "18 ÷ 4 = 4 余 2 中，2 是什么？", ["商", "余数", "除数"], "余数", "分完后剩下的数是余数。"),
 ];
 
-let state = loadState();
+let state = null;
 let activeLevelId = null;
 let activeQuestionIds = [];
 let activeQuestionIndex = 0;
@@ -135,7 +137,7 @@ let lastAnswerLocked = false;
 let selectedAnswer = "";
 let selectedAnswerQuestionId = "";
 let reviewQuestionId = null;
-let nicknameDraft = state.user.nickname === "小侦探" ? "" : state.user.nickname;
+let nicknameDraft = "";
 
 const app = document.querySelector("#app");
 
@@ -167,7 +169,170 @@ if (typeof window !== "undefined") {
   window.startGameFromForm = startGameFromForm;
 }
 
-render(state.user?.started ? "map" : "start");
+bootApp();
+
+async function bootApp() {
+  renderLoading();
+  try {
+    const contentPackage = await loadContentPackage(CONTENT_PACKAGE_PATH);
+    buildRuntimeContent(contentPackage);
+  } catch (error) {
+    console.error(error);
+    renderContentLoadError(error);
+    return;
+  }
+
+  state = loadState();
+  nicknameDraft = state.user.nickname === "小侦探" ? "" : state.user.nickname;
+  render(state.user?.started ? "map" : "start");
+}
+
+function renderLoading() {
+  app.innerHTML = `
+    <section class="screen result-panel">
+      <p class="tag">内容包加载中</p>
+      <h1>正在整理调查档案</h1>
+      <p class="lead">请稍等，题目、线索和知识卡正在从内容包读取。</p>
+    </section>
+  `;
+}
+
+function renderContentLoadError(error) {
+  app.innerHTML = `
+    <section class="screen result-panel">
+      <p class="tag warn">内容包加载失败</p>
+      <h1>内容包没有加载成功</h1>
+      <p class="lead">请使用本地静态服务打开项目，然后刷新页面。</p>
+      <pre class="error-command">${escapeHtml(CONTENT_LOAD_COMMAND)}</pre>
+      <p>${escapeHtml(error?.message ?? "无法读取 JSON 内容包。")}</p>
+    </section>
+  `;
+}
+
+async function loadJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(`读取失败：${path} (${response.status})`);
+  return response.json();
+}
+
+async function loadContentPackage(basePath) {
+  const manifest = await loadJson(`${basePath}/manifest.json`);
+  const [
+    textbook,
+    knowledgeMap,
+    caseData,
+    knowledgeCardData,
+    clueData,
+    badgeData,
+    ...questionGroups
+  ] = await Promise.all([
+    loadJson(`${basePath}/${manifest.files.textbook}`),
+    loadJson(`${basePath}/${manifest.files.knowledgeMap}`),
+    loadJson(`${basePath}/${manifest.files.cases[0]}`),
+    loadJson(`${basePath}/${manifest.files.knowledgeCards}`),
+    loadJson(`${basePath}/${manifest.files.clues}`),
+    loadJson(`${basePath}/${manifest.files.badges}`),
+    ...manifest.files.questions.map((file) => loadJson(`${basePath}/${file}`)),
+  ]);
+
+  return {
+    manifest,
+    textbook,
+    knowledgeMap,
+    caseData,
+    knowledgeCardData,
+    clueData,
+    badgeData,
+    questionGroups,
+  };
+}
+
+function buildRuntimeContent(contentPackage) {
+  const { knowledgeMap, caseData, knowledgeCardData, clueData, badgeData, questionGroups } = contentPackage;
+  const knowledgePointById = new Map(knowledgeMap.knowledgePoints.map((item) => [item.knowledgePointId, item]));
+  const clueByLevelId = new Map(clueData.clues.map((item) => [item.levelId, item]));
+  const levelIdToRuntimeId = new Map(caseData.levels.map((item) => [item.levelId, item.legacyRuntimeId ?? item.levelId]));
+
+  levels = caseData.levels
+    .slice()
+    .sort((a, b) => a.order - b.order)
+    .map((level) => {
+      const knowledgePoint = knowledgePointById.get(level.knowledgePointId);
+      const clue = clueByLevelId.get(level.levelId);
+      return {
+        id: level.legacyRuntimeId ?? level.levelId,
+        contentLevelId: level.levelId,
+        order: level.order,
+        name: level.name,
+        place: level.place,
+        knowledgePoint: knowledgePoint?.shortName ?? knowledgePoint?.name ?? level.knowledgePointId,
+        clue: clue?.text ?? "",
+        intro: level.intro,
+      };
+    });
+
+  knowledgeCards = knowledgeCardData.knowledgeCards.map((card) => {
+    const level = levels.find((item) => item.contentLevelId === card.levelId);
+    const knowledgePoint = knowledgePointById.get(card.knowledgePointId);
+    return {
+      id: card.legacyRuntimeId ?? level?.id ?? card.levelId,
+      knowledgeCardId: card.knowledgeCardId,
+      title: card.title,
+      knowledgePoint: knowledgePoint?.shortName ?? knowledgePoint?.name ?? card.knowledgePointId,
+      summary: card.summary,
+      example: card.example,
+      method: card.method,
+      mistake: card.commonMistake,
+      level: level ? `第 ${level.order} 关：${level.name}` : card.levelId,
+    };
+  });
+
+  badgeDefs = badgeData.badges.map((badge) => ({
+    id: badge.legacyRuntimeId ?? badge.badgeId,
+    badgeId: badge.badgeId,
+    icon: badgeIcon(badge.icon),
+    name: badge.name,
+    reason: badge.description.replace(/。$/, ""),
+  }));
+
+  const flattenedQuestions = questionGroups.flatMap((group) =>
+    group.questions.map((question) => toRuntimeQuestion(question, group, knowledgePointById, levelIdToRuntimeId)),
+  );
+
+  questions = flattenedQuestions.filter((question) => question.levelId !== "reserve");
+  backupQuestions = flattenedQuestions.filter((question) => question.levelId === "reserve");
+}
+
+function toRuntimeQuestion(question, group, knowledgePointById, levelIdToRuntimeId) {
+  const isBossQuestion = question.levelId === "boss" || Boolean(question.bossTaskId);
+  const runtimeLevelId = isBossQuestion ? "boss" : question.levelId === "reserve" ? "reserve" : levelIdToRuntimeId.get(question.levelId) ?? group.legacyRuntimeLevelId ?? question.levelId;
+  const knowledgePoint = knowledgePointById.get(question.knowledgePointId);
+  return {
+    ...question,
+    levelId: runtimeLevelId,
+    contentLevelId: question.levelId,
+    grade: "二年级",
+    textbookVersion: "北师大版",
+    semester: "下册",
+    unit: "第一单元：除法",
+    knowledgePoint: knowledgePoint?.shortName ?? knowledgePoint?.name ?? question.knowledgePointId,
+    difficulty: question.difficultyBand === "integrated" ? "综合" : question.difficultyBand === "application" ? "应用" : "基础",
+    wrongHint: question.wrongHint ?? "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+    isBossQuestion,
+    wrongCategory: knowledgePoint?.shortName ?? knowledgePoint?.name ?? question.knowledgePointId,
+  };
+}
+
+function badgeIcon(iconId) {
+  const icons = {
+    "badge-detective-rookie": "🕵️",
+    "badge-clue-collector": "🔎",
+    "badge-reviewer": "📁",
+    "badge-persistent": "⭐",
+    "badge-detective-gold": "🏅",
+  };
+  return icons[iconId] ?? "🏅";
+}
 
 function makeQuestion(id, levelId, questionType, stem, options, answer, explanation) {
   const level = levels.find((item) => item.id === levelId);
