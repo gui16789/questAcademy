@@ -27,7 +27,7 @@ http://127.0.0.1:4173
 - 悬案馆：自动记录错题，可重新作答并标记已侦破
 - 线索库：通关后解锁知识卡
 - 勋章馆：自动发放 5 类 MVP 勋章
-- 学习记录：使用 `localStorage` 保存；不可用时退回本次会话内存存储
+- 学习记录：使用 `localStorage` 保存，写入 `dataVersion`、`contentPackageId` 和 `contentVersion`；不可用时退回本次会话内存存储
 
 ## 主要文件
 

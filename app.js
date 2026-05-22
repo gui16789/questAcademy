@@ -1,7 +1,12 @@
 const STORAGE_KEY = "animalDetectiveCityMvp";
+const DATA_VERSION = "0.2.0";
 const CONTENT_PACKAGE_PATH = "content/math/bsd/grade-2/semester-2/unit-1-division";
 const CONTENT_LOAD_COMMAND = "python -m http.server 4173 --bind 127.0.0.1";
 const storage = createSafeStorage();
+let activeContentMeta = {
+  contentPackageId: "math.bsd.g2.s2.unit-1-division",
+  contentVersion: "0.1.0",
+};
 
 let badgeDefs = [
   { id: "rookie", icon: "🕵️", name: "新手小侦探", reason: "完成第一个普通关卡" },
@@ -248,7 +253,11 @@ async function loadContentPackage(basePath) {
 }
 
 function buildRuntimeContent(contentPackage) {
-  const { knowledgeMap, caseData, knowledgeCardData, clueData, badgeData, questionGroups } = contentPackage;
+  const { manifest, knowledgeMap, caseData, knowledgeCardData, clueData, badgeData, questionGroups } = contentPackage;
+  activeContentMeta = {
+    contentPackageId: manifest.contentPackageId,
+    contentVersion: manifest.contentVersion,
+  };
   const knowledgePointById = new Map(knowledgeMap.knowledgePoints.map((item) => [item.knowledgePointId, item]));
   const clueByLevelId = new Map(clueData.clues.map((item) => [item.levelId, item]));
   const levelIdToRuntimeId = new Map(caseData.levels.map((item) => [item.levelId, item.legacyRuntimeId ?? item.levelId]));
@@ -359,6 +368,9 @@ function makeQuestion(id, levelId, questionType, stem, options, answer, explanat
 
 function defaultState() {
   return {
+    dataVersion: DATA_VERSION,
+    contentPackageId: activeContentMeta.contentPackageId,
+    contentVersion: activeContentMeta.contentVersion,
     user: {
       id: globalThis.crypto?.randomUUID ? globalThis.crypto.randomUUID() : String(Date.now()),
       nickname: "小侦探",
@@ -366,9 +378,12 @@ function defaultState() {
       started: false,
       createdAt: new Date().toISOString(),
       lastLoginAt: new Date().toISOString(),
+      dataVersion: DATA_VERSION,
     },
     progress: {
-      caseId: "carrot-badge-case",
+      contentPackageId: activeContentMeta.contentPackageId,
+      contentVersion: activeContentMeta.contentVersion,
+      caseId: "case-carrot-badge",
       currentLevel: "level-1",
       passedLevels: [],
       clues: [],
@@ -392,23 +407,98 @@ function loadState() {
 }
 
 function mergeState(base, saved) {
-  return {
+  const merged = {
     ...base,
     ...saved,
     user: { ...base.user, ...saved.user },
     progress: { ...base.progress, ...saved.progress },
-    answerRecords: saved.answerRecords ?? [],
-    wrongQuestions: saved.wrongQuestions ?? {},
-    badges: saved.badges ?? {},
+    answerRecords: (saved.answerRecords ?? []).map(migrateAnswerRecord),
+    wrongQuestions: migrateWrongQuestions(saved.wrongQuestions ?? {}),
+    badges: migrateBadges(saved.badges ?? {}),
   };
+  return stampStateVersions(merged, saved.dataVersion ? DATA_VERSION : "0.1.0");
 }
 
 function saveState() {
+  stampStateVersions(state);
   state.progress.bossUnlocked = state.progress.clues.length >= 4;
   state.progress.lastStudyAt = new Date().toISOString();
   state.user.lastLoginAt = new Date().toISOString();
   storage.setItem(STORAGE_KEY, JSON.stringify(state));
   updateActiveNav();
+}
+
+function stampStateVersions(target, sourceDataVersion = DATA_VERSION) {
+  target.dataVersion = DATA_VERSION;
+  target.contentPackageId = activeContentMeta.contentPackageId;
+  target.contentVersion = activeContentMeta.contentVersion;
+  target.user = {
+    ...target.user,
+    dataVersion: DATA_VERSION,
+  };
+  target.progress = {
+    ...target.progress,
+    contentPackageId: activeContentMeta.contentPackageId,
+    contentVersion: activeContentMeta.contentVersion,
+    caseId: target.progress?.caseId === "carrot-badge-case" ? "case-carrot-badge" : target.progress?.caseId ?? "case-carrot-badge",
+  };
+  target.migratedFromDataVersion = sourceDataVersion === DATA_VERSION ? target.migratedFromDataVersion ?? "" : sourceDataVersion;
+  return target;
+}
+
+function dataStamp(extra = {}) {
+  return {
+    dataVersion: DATA_VERSION,
+    contentPackageId: activeContentMeta.contentPackageId,
+    contentVersion: activeContentMeta.contentVersion,
+    ...extra,
+  };
+}
+
+function migrateAnswerRecord(record) {
+  return {
+    ...dataStamp({
+      questionVersion: record.questionVersion ?? activeContentMeta.contentVersion,
+    }),
+    ...record,
+    dataVersion: record.dataVersion ?? "0.1.0",
+    contentPackageId: record.contentPackageId ?? activeContentMeta.contentPackageId,
+    contentVersion: record.contentVersion ?? activeContentMeta.contentVersion,
+  };
+}
+
+function migrateWrongQuestions(wrongQuestions) {
+  return Object.fromEntries(
+    Object.entries(wrongQuestions).map(([questionId, item]) => [
+      questionId,
+      {
+        ...dataStamp({
+          questionVersion: item.questionVersion ?? activeContentMeta.contentVersion,
+          questionMigrated: Boolean(!item.knowledgePointId),
+        }),
+        ...item,
+        dataVersion: item.dataVersion ?? "0.1.0",
+        contentPackageId: item.contentPackageId ?? activeContentMeta.contentPackageId,
+        contentVersion: item.contentVersion ?? activeContentMeta.contentVersion,
+      },
+    ]),
+  );
+}
+
+function migrateBadges(badges) {
+  return Object.fromEntries(
+    Object.entries(badges).map(([badgeId, item]) => [
+      badgeId,
+      {
+        ...dataStamp(),
+        ...item,
+        dataVersion: item.dataVersion ?? "0.1.0",
+        contentPackageId: item.contentPackageId ?? activeContentMeta.contentPackageId,
+        contentVersion: item.contentVersion ?? activeContentMeta.contentVersion,
+        caseId: item.caseId === "carrot-badge-case" ? "case-carrot-badge" : item.caseId ?? "case-carrot-badge",
+      },
+    ]),
+  );
 }
 
 function handleAction(action, data) {
@@ -1101,10 +1191,22 @@ function renderBadgeCard(badge) {
 
 function recordAnswer(question, userAnswer, isCorrect) {
   state.answerRecords.push({
+    ...dataStamp({
+      questionVersion: question.contentVersion ?? activeContentMeta.contentVersion,
+    }),
     userId: state.user.id,
     questionId: question.questionId,
+    caseId: question.caseId ?? state.progress.caseId,
     levelId: question.levelId,
+    contentLevelId: question.contentLevelId ?? question.levelId,
+    subjectId: question.subjectId,
+    textbookVersionId: question.textbookVersionId,
+    unitId: question.unitId,
+    knowledgePointId: question.knowledgePointId,
+    skillId: question.skillId,
+    misconceptionId: question.misconceptionId,
     userAnswer,
+    correctAnswer: question.answer,
     isCorrect,
     answeredAt: new Date().toISOString(),
     isFirstAnswer: !state.answerRecords.some((record) => record.questionId === question.questionId),
@@ -1114,8 +1216,18 @@ function recordAnswer(question, userAnswer, isCorrect) {
 function addWrongQuestion(question, userAnswer) {
   const existing = state.wrongQuestions[question.questionId];
   state.wrongQuestions[question.questionId] = {
+    ...dataStamp({
+      questionVersion: question.contentVersion ?? activeContentMeta.contentVersion,
+      questionMigrated: false,
+    }),
     userId: state.user.id,
     questionId: question.questionId,
+    caseId: question.caseId ?? state.progress.caseId,
+    levelId: question.levelId,
+    contentLevelId: question.contentLevelId ?? question.levelId,
+    knowledgePointId: question.knowledgePointId,
+    skillId: question.skillId,
+    misconceptionId: question.misconceptionId,
     stem: question.stem,
     userAnswer,
     originalAnswer: existing?.originalAnswer ?? existing?.userAnswer ?? userAnswer,
@@ -1133,8 +1245,10 @@ function awardBadge(id) {
   const badge = badgeDefs.find((item) => item.id === id);
   if (!badge) return;
   state.badges[id] = {
+    ...dataStamp(),
     userId: state.user.id,
     badgeId: id,
+    contentBadgeId: badge.badgeId ?? id,
     name: badge.name,
     icon: badge.icon,
     earnedAt: new Date().toISOString(),
