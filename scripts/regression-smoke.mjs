@@ -8,11 +8,8 @@ import path from "node:path";
 const rootDir = process.cwd();
 const appUrl = "http://127.0.0.1:5173/";
 const cdpPort = 9223;
-const contentPackageId = "math.bsd.g2.s2.unit-1-division";
 const legacyStorageKey = "animalDetectiveCityMvp";
-const storageKey = `questAcademy:progress:${contentPackageId}`;
-const otherPackageStorageKey = "questAcademy:progress:math.other.package";
-const contentBase = path.join(rootDir, "content", "math", "bsd", "grade-2", "semester-2", "unit-1-division");
+const regressionEntries = await resolveRegressionEntries();
 
 const devServer = spawn(commandName("npm"), ["run", "dev", "--workspace", "@quest-academy/web", "--", "--port", "5173"], {
   cwd: rootDir,
@@ -38,8 +35,11 @@ try {
   await waitForHttp(`http://127.0.0.1:${cdpPort}/json/version`, 30_000);
 
   client = await CDP({ port: cdpPort });
-  await runRegression(client, await loadQuestions());
-  console.log("Regression smoke passed.");
+  for (const entry of regressionEntries) {
+    await runRegression(client, await loadQuestions(entry), entry);
+    console.log(`Regression smoke passed for ${entry.contentPackageId}.`);
+  }
+  console.log(`Regression smoke passed for ${regressionEntries.length} content package(s).`);
 } finally {
   if (client) await client.close().catch(() => {});
   if (chrome) await killProcessTree(chrome);
@@ -47,8 +47,11 @@ try {
   await removeWithRetry(chromeProfile);
 }
 
-async function runRegression(cdpClient, content) {
+async function runRegression(cdpClient, content, entry) {
   const { Page, Runtime, Emulation } = cdpClient;
+  const packageAppUrl = `${appUrl}?contentPackageId=${encodeURIComponent(entry.contentPackageId)}`;
+  const storageKey = `questAcademy:progress:${entry.contentPackageId}`;
+  const otherPackageStorageKey = `questAcademy:progress:${entry.contentPackageId}.other`;
   const exceptions = [];
   Runtime.exceptionThrown((event) => exceptions.push(event));
   await Promise.all([Page.enable(), Runtime.enable()]);
@@ -87,12 +90,12 @@ async function runRegression(cdpClient, content) {
   };
 
   await Emulation.setDeviceMetricsOverride({ width: 1365, height: 900, deviceScaleFactor: 1, mobile: false });
-  await Page.navigate({ url: appUrl });
+  await Page.navigate({ url: packageAppUrl });
   await sleep(500);
   await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
   await evalJs(`localStorage.removeItem(${JSON.stringify(legacyStorageKey)})`);
   await evalJs(`localStorage.setItem(${JSON.stringify(otherPackageStorageKey)}, ${JSON.stringify("other-package-progress")})`);
-  await Page.navigate({ url: appUrl });
+  await Page.navigate({ url: packageAppUrl });
   await waitForText("开始调查");
   await clickByText("开始调查");
   await waitForText("欢迎，小侦探");
@@ -138,7 +141,7 @@ async function runRegression(cdpClient, content) {
 
   await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
   await evalJs(`localStorage.setItem(${JSON.stringify(legacyStorageKey)}, ${JSON.stringify(JSON.stringify(createLegacyState()))})`);
-  await Page.navigate({ url: appUrl });
+  await Page.navigate({ url: packageAppUrl });
   await waitForText("欢迎，旧侦探");
   const migratedState = await evalJs(`(() => {
     const data = JSON.parse(localStorage.getItem(${JSON.stringify(storageKey)}));
@@ -159,10 +162,10 @@ async function runRegression(cdpClient, content) {
   assert(migratedState.wrongCorrectAnswer === "对" && migratedState.wrongCount === 2, "legacy wrong question is preserved");
   assert(migratedState.badgeId === "badge-rookie-detective", "legacy badge is preserved");
 
-  await Page.navigate({ url: appUrl });
+  await Page.navigate({ url: packageAppUrl });
   await waitForText("欢迎，旧侦探");
   await Emulation.setDeviceMetricsOverride({ width: 320, height: 900, deviceScaleFactor: 1, mobile: true });
-  await Page.navigate({ url: appUrl });
+  await Page.navigate({ url: packageAppUrl });
   await waitForText("欢迎，旧侦探");
   const mobile = await evalJs(`({ scrollWidth: document.documentElement.scrollWidth, innerWidth, hasNav: document.querySelectorAll('.quick-nav button').length === 4 })`);
   assert(mobile.scrollWidth <= mobile.innerWidth, "320px viewport has no horizontal overflow");
@@ -170,7 +173,8 @@ async function runRegression(cdpClient, content) {
   assert(exceptions.length === 0, "no browser runtime exceptions");
 }
 
-async function loadQuestions() {
+async function loadQuestions(entry) {
+  const contentBase = path.join(rootDir, entry.entryPath);
   const manifest = await readJson(path.join(contentBase, "manifest.json"));
   const questionGroups = await Promise.all(manifest.files.questions.map((file) => readJson(path.join(contentBase, file))));
   const levelGroups = questionGroups.filter((group) => "levelId" in group && group.levelId !== "reserve" && !("bossTask" in group));
@@ -179,6 +183,84 @@ async function loadQuestions() {
     levels: levelGroups.map((group) => ({ levelId: group.levelId, questions: group.questions })),
     bossQuestions: bossGroup.questions,
   };
+}
+
+async function resolveRegressionEntries() {
+  try {
+    const registry = await readJson(path.join(rootDir, "content", "registry.json"));
+    const cliOptions = parseArgs(process.argv.slice(2));
+
+    if (cliOptions.help) {
+      printUsage();
+      process.exit(0);
+    }
+
+    return selectRegressionEntries(registry, cliOptions);
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  }
+}
+
+function parseArgs(args) {
+  const options = {
+    all: false,
+    help: false,
+    packageId: "",
+  };
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg === "--help" || arg === "-h") {
+      options.help = true;
+      continue;
+    }
+    if (arg === "--all") {
+      options.all = true;
+      continue;
+    }
+    if (arg === "--package") {
+      const packageId = args[index + 1];
+      if (!packageId || packageId.startsWith("--")) throw new Error("--package requires a contentPackageId.");
+      options.packageId = packageId;
+      index += 1;
+      continue;
+    }
+    if (arg.startsWith("--package=")) {
+      const packageId = arg.slice("--package=".length);
+      if (!packageId) throw new Error("--package requires a contentPackageId.");
+      options.packageId = packageId;
+      continue;
+    }
+    throw new Error(`Unknown regression option: ${arg}`);
+  }
+
+  if (options.all && options.packageId) throw new Error("Use either --all or --package, not both.");
+  return options;
+}
+
+function selectRegressionEntries(registry, options) {
+  if (!registry || !Array.isArray(registry.packages)) throw new Error("Content registry is invalid: packages must be an array.");
+
+  if (options.all) {
+    if (registry.packages.length === 0) throw new Error("Content registry has no packages to regress.");
+    return registry.packages;
+  }
+
+  const contentPackageId = options.packageId || registry.defaultContentPackageId;
+  if (!contentPackageId) throw new Error("Content registry does not define defaultContentPackageId.");
+  const entry = registry.packages.find((item) => item.contentPackageId === contentPackageId);
+  if (!entry) throw new Error(`Content package is not registered: ${contentPackageId}`);
+  return [entry];
+}
+
+function printUsage() {
+  console.log(`Usage: npm run test:regression -- [--package <contentPackageId> | --all]
+
+Options:
+  --package <contentPackageId>  Run the smoke regression for one registered content package.
+  --all                         Run the smoke regression for every registered content package.
+  -h, --help                    Show this help message.`);
 }
 
 function createLegacyState() {
