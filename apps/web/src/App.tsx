@@ -18,6 +18,15 @@ import {
   type WrongRecordMap,
 } from "@quest-academy/game-core";
 import { loadBundledContentRuntime } from "./contentPackage";
+import {
+  clearStoredState,
+  createDefaultProgress,
+  createDefaultUser,
+  loadStoredState,
+  saveStoredState,
+  type LoadedStoredState,
+  type UserState,
+} from "./storage";
 
 type View = "start" | "map" | "case" | "level" | "boss" | "clue" | "closing" | "wrongs" | "knowledge" | "badges" | "review" | "levelResult" | "bossResult";
 type PlayerMode = "level" | "boss" | "review";
@@ -60,23 +69,18 @@ interface BossResultView {
   passed: boolean;
 }
 
-const defaultProgress: LearningProgress = {
-  passedLevelIds: [],
-  unlockedClueIds: [],
-  unlockedKnowledgeCardIds: [],
-  bossUnlocked: false,
-  caseClosed: false,
-};
-
 export function App() {
   const [model, setModel] = useState<RuntimeModel | null>(null);
   const [loadError, setLoadError] = useState<string>("");
+  const [hydrated, setHydrated] = useState(false);
   const [view, setView] = useState<View>("start");
   const [nickname, setNickname] = useState("");
-  const [startedNickname, setStartedNickname] = useState("小侦探");
-  const [progress, setProgress] = useState<LearningProgress>(defaultProgress);
+  const [user, setUser] = useState<UserState>(() => createDefaultUser());
+  const [progress, setProgress] = useState<LearningProgress>(() => createDefaultProgress());
   const [wrongRecords, setWrongRecords] = useState<WrongRecordMap>({});
   const [badgeRecords, setBadgeRecords] = useState<BadgeRecordMap>({});
+  const [answerRecords, setAnswerRecords] = useState<unknown[]>([]);
+  const [migratedFromDataVersion, setMigratedFromDataVersion] = useState("");
   const [player, setPlayer] = useState<PlayerState | null>(null);
   const [toast, setToast] = useState("");
   const [levelResult, setLevelResult] = useState<LevelResultView | null>(null);
@@ -88,7 +92,10 @@ export function App() {
     loadBundledContentRuntime()
       .then((runtime) => {
         if (!active) return;
-        setModel(buildRuntimeModel(runtime));
+        const nextModel = buildRuntimeModel(runtime);
+        const storedState = loadStoredState(toStorageModel(nextModel));
+        setModel(nextModel);
+        hydrateState(storedState);
       })
       .catch((error: unknown) => {
         if (!active) return;
@@ -99,6 +106,18 @@ export function App() {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!model || !hydrated) return;
+    saveStoredState(toStorageModel(model), {
+      user,
+      progress,
+      wrongRecords,
+      badgeRecords,
+      answerRecords,
+      migratedFromDataVersion,
+    });
+  }, [answerRecords, badgeRecords, hydrated, migratedFromDataVersion, model, progress, user, wrongRecords]);
 
   useEffect(() => {
     if (!toast) return;
@@ -147,20 +166,28 @@ export function App() {
   const showToast = (message: string) => setToast(message);
 
   const startGame = () => {
-    setStartedNickname(nickname.trim() || "小侦探");
+    setUser((current) => ({
+      ...current,
+      nickname: nickname.trim() || "小侦探",
+      started: true,
+      lastLoginAt: new Date().toISOString(),
+    }));
     setView("map");
   };
 
   const resetProgress = () => {
-    setProgress(defaultProgress);
+    clearStoredState();
+    setProgress(createDefaultProgress());
     setWrongRecords({});
     setBadgeRecords({});
+    setAnswerRecords([]);
+    setMigratedFromDataVersion("");
     setPlayer(null);
     setLevelResult(null);
     setBossResult(null);
     setLastClueLevelId("");
     setNickname("");
-    setStartedNickname("小侦探");
+    setUser(createDefaultUser());
     setView("start");
   };
 
@@ -250,6 +277,7 @@ export function App() {
     }
 
     const answerResult = checkAnswer(activeQuestion, player.selectedAnswer);
+    setAnswerRecords((records) => [...records, answerResult]);
     if (!answerResult.isCorrect) {
       setWrongRecords((records) => addWrongRecord(records, answerResult));
     }
@@ -380,7 +408,7 @@ export function App() {
       case "start":
         return <StartScreen nickname={nickname} onNicknameChange={setNickname} onStart={startGame} />;
       case "map":
-        return <MapScreen model={model} nickname={startedNickname} progress={progress} wrongRecords={wrongRecords} badgeRecords={badgeRecords} onCase={() => openView("case")} onReset={resetProgress} onBoss={startBoss} onNavigate={openView} />;
+        return <MapScreen model={model} nickname={user.nickname} progress={progress} wrongRecords={wrongRecords} badgeRecords={badgeRecords} onCase={() => openView("case")} onReset={resetProgress} onBoss={startBoss} onNavigate={openView} />;
       case "case":
         return <CaseDetail model={model} progress={progress} onMap={() => openView("map")} onStartLevel={startLevel} onStartNext={startNextLevel} onBoss={startBoss} />;
       case "level":
@@ -420,11 +448,23 @@ export function App() {
   })();
 
   return (
-    <AppShell view={view} started={view !== "start"} onNavigate={openView}>
+    <AppShell view={view} started={user.started} onNavigate={openView}>
       {screen}
       {toast ? <div className="toast">{toast}</div> : null}
     </AppShell>
   );
+
+  function hydrateState(storedState: LoadedStoredState) {
+    setUser(storedState.user);
+    setNickname(storedState.user.started && storedState.user.nickname !== "小侦探" ? storedState.user.nickname : "");
+    setProgress(storedState.progress);
+    setWrongRecords(storedState.wrongRecords);
+    setBadgeRecords(storedState.badgeRecords);
+    setAnswerRecords(storedState.answerRecords);
+    setMigratedFromDataVersion(storedState.migratedFromDataVersion);
+    setView(storedState.user.started ? "map" : "start");
+    setHydrated(true);
+  }
 }
 
 function AppShell({ children, view, started, onNavigate }: { children: React.ReactNode; view: View; started: boolean; onNavigate: (view: View) => void }) {
@@ -1078,6 +1118,17 @@ function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
 function findQuestion(model: RuntimeModel, questionId?: string) {
   if (!questionId) return undefined;
   return [...model.questions, ...model.reserveQuestions].find((question) => question.questionId === questionId);
+}
+
+function toStorageModel(model: RuntimeModel) {
+  return {
+    manifest: model.runtime.getManifest(),
+    caseId: model.caseData.caseId,
+    levels: model.levels,
+    badges: model.badges,
+    questions: model.questions,
+    reserveQuestions: model.reserveQuestions,
+  };
 }
 
 function nextPlayableLevelId(levels: LevelConfig[], progress: LearningProgress) {
