@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动物侦探城：徽章失踪案</title>
+    <link rel="stylesheet" href="styles.css?v=20260521-audit-fix-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="brand" type="button" data-action="go-map" aria-label="返回地图">
+          <span class="brand-mark">探</span>
+          <span>
+            <strong>动物侦探城</strong>
+            <small>徽章失踪案</small>
+          </span>
+        </button>
+        <nav class="quick-nav" aria-label="主要入口">
+          <button type="button" data-view="map">地图</button>
+          <button type="button" data-view="wrongs">悬案馆</button>
+          <button type="button" data-view="knowledge">线索库</button>
+          <button type="button" data-view="badges">勋章馆</button>
+        </nav>
+      </header>
+
+      <main id="app" aria-live="polite"></main>
+    </div>
+
+    <template id="question-template">
+      <section class="question-panel">
+        <div class="question-meta"></div>
+        <h2></h2>
+        <div class="answer-zone"></div>
+        <div class="feedback" role="status"></div>
+        <div class="panel-actions"></div>
+      </section>
+    </template>
+
+    <script src="app.js?v=20260521-audit-fix-1"></script>
+  </body>
+</html>
