@@ -462,6 +462,16 @@ main {
   margin: 0 0 0.7rem;
 }
 
+.error-command {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 2px solid rgba(36, 49, 64, 0.1);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  background: #fff6df;
+  font-size: 0.95rem;
+}
+
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
