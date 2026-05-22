@@ -12,7 +12,8 @@
     "build": "npm run build --workspaces --if-present",
     "preview": "npm run preview -w @quest-academy/web",
     "check": "npm run check --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present && npm run test:content",
+    "test:content": "node --test scripts/validate-content.test.mjs",
     "test:regression": "node scripts/regression-smoke.mjs",
     "validate:content": "node scripts/validate-content.mjs"
   },
