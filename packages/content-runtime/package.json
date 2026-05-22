@@ -2,5 +2,21 @@
   "name": "@quest-academy/content-runtime",
   "version": "1.0.0-alpha.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -b --pretty false",
+    "test": "npm run build && node --test dist/index.test.js"
+  },
+  "dependencies": {
+    "@quest-academy/content-schema": "1.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.8.3"
+  }
 }
