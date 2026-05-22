@@ -8,7 +8,10 @@ import path from "node:path";
 const rootDir = process.cwd();
 const appUrl = "http://127.0.0.1:5173/";
 const cdpPort = 9223;
-const storageKey = "animalDetectiveCityMvp";
+const contentPackageId = "math.bsd.g2.s2.unit-1-division";
+const legacyStorageKey = "animalDetectiveCityMvp";
+const storageKey = `questAcademy:progress:${contentPackageId}`;
+const otherPackageStorageKey = "questAcademy:progress:math.other.package";
 const contentBase = path.join(rootDir, "content", "math", "bsd", "grade-2", "semester-2", "unit-1-division");
 
 const devServer = spawn(commandName("npm"), ["run", "dev", "--workspace", "@quest-academy/web", "--", "--port", "5173"], {
@@ -87,6 +90,8 @@ async function runRegression(cdpClient, content) {
   await Page.navigate({ url: appUrl });
   await sleep(500);
   await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
+  await evalJs(`localStorage.removeItem(${JSON.stringify(legacyStorageKey)})`);
+  await evalJs(`localStorage.setItem(${JSON.stringify(otherPackageStorageKey)}, ${JSON.stringify("other-package-progress")})`);
   await Page.navigate({ url: appUrl });
   await waitForText("开始调查");
   await clickByText("开始调查");
@@ -129,8 +134,10 @@ async function runRegression(cdpClient, content) {
   assert(fullFlowState.dataVersion === "1.0.0", "new data is saved as v1.0.0");
   assert(fullFlowState.passed === 4 && fullFlowState.clues === 4 && fullFlowState.cards === 4, "4 levels unlock clues and cards");
   assert(fullFlowState.bossUnlocked && fullFlowState.caseClosed, "boss is unlocked and case is closed");
+  assert((await evalJs(`localStorage.getItem(${JSON.stringify(otherPackageStorageKey)})`)) === "other-package-progress", "other content package progress key is preserved");
 
-  await evalJs(`localStorage.setItem(${JSON.stringify(storageKey)}, ${JSON.stringify(JSON.stringify(createLegacyState()))})`);
+  await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
+  await evalJs(`localStorage.setItem(${JSON.stringify(legacyStorageKey)}, ${JSON.stringify(JSON.stringify(createLegacyState()))})`);
   await Page.navigate({ url: appUrl });
   await waitForText("欢迎，旧侦探");
   const migratedState = await evalJs(`(() => {

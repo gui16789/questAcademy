@@ -176,7 +176,7 @@ export function App() {
   };
 
   const resetProgress = () => {
-    clearStoredState();
+    clearStoredState(model ? toStorageModel(model) : undefined);
     setProgress(createDefaultProgress());
     setWrongRecords({});
     setBadgeRecords({});

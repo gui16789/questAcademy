@@ -1,7 +1,8 @@
 import type { Badge, ContentPackageManifest, LevelConfig, Question } from "@quest-academy/content-schema";
 import type { AnswerResult, BadgeRecordMap, LearningProgress, WrongRecord, WrongRecordMap } from "@quest-academy/game-core";
 
-export const STORAGE_KEY = "animalDetectiveCityMvp";
+export const LEGACY_STORAGE_KEY = "animalDetectiveCityMvp";
+export const PROGRESS_STORAGE_KEY_PREFIX = "questAcademy:progress";
 export const DATA_VERSION = "1.0.0";
 
 export interface UserState {
@@ -54,7 +55,7 @@ export function createDefaultProgress(): LearningProgress {
 
 export function loadStoredState(model: StorageModel): LoadedStoredState {
   const fallback = createDefaultStoredState();
-  const raw = safeStorage.getItem(STORAGE_KEY);
+  const raw = safeStorage.getItem(getProgressStorageKey(model.manifest.contentPackageId)) ?? safeStorage.getItem(LEGACY_STORAGE_KEY);
   if (!raw) return fallback;
 
   try {
@@ -68,7 +69,7 @@ export function loadStoredState(model: StorageModel): LoadedStoredState {
 export function saveStoredState(model: StorageModel, state: LoadedStoredState): void {
   const now = new Date().toISOString();
   safeStorage.setItem(
-    STORAGE_KEY,
+    getProgressStorageKey(model.manifest.contentPackageId),
     JSON.stringify({
       dataVersion: DATA_VERSION,
       contentPackageId: model.manifest.contentPackageId,
@@ -95,8 +96,13 @@ export function saveStoredState(model: StorageModel, state: LoadedStoredState): 
   );
 }
 
-export function clearStoredState(): void {
-  safeStorage.removeItem(STORAGE_KEY);
+export function clearStoredState(model?: StorageModel): void {
+  if (model) safeStorage.removeItem(getProgressStorageKey(model.manifest.contentPackageId));
+  safeStorage.removeItem(LEGACY_STORAGE_KEY);
+}
+
+export function getProgressStorageKey(contentPackageId: string): string {
+  return `${PROGRESS_STORAGE_KEY_PREFIX}:${contentPackageId}`;
 }
 
 function createDefaultStoredState(): LoadedStoredState {
@@ -242,7 +248,7 @@ function createSafeStorage() {
   const memoryStore = new Map<string, string>();
   let persistentStorage: Storage | null = null;
   try {
-    const testKey = `${STORAGE_KEY}:test`;
+    const testKey = `${PROGRESS_STORAGE_KEY_PREFIX}:test`;
     globalThis.localStorage.setItem(testKey, "1");
     globalThis.localStorage.removeItem(testKey);
     persistentStorage = globalThis.localStorage;
