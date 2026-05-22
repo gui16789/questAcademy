@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-average-sharing",
+      "legacyRuntimeId": "level-1",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillIds": [
+        "skill.average-sharing.identify-equal-groups",
+        "skill.average-sharing.calculate-each-share"
+      ],
+      "title": "平均分线索卡",
+      "summary": "平均分就是每一份一样多。",
+      "example": "12 枚徽章分给 3 队，每队 4 枚。",
+      "method": "先看总数，再看分成几份，最后让每份数量相同。",
+      "commonMistake": "只分完不够，还要每份一样多。",
+      "reviewPrompt": "看到平均分，先检查每份数量是不是一样多。",
+      "relatedQuestionPatternIds": [
+        "pattern.identify-equal-groups",
+        "pattern.calculate-each-share"
+      ],
+      "levelId": "level-average-sharing",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-division-expression",
+      "legacyRuntimeId": "level-2",
+      "knowledgePointId": "math.division.expression",
+      "skillIds": [
+        "skill.expression.map-story-to-expression",
+        "skill.expression.explain-quotient"
+      ],
+      "title": "除法算式线索卡",
+      "summary": "除法可以表示平均分。",
+      "example": "18 ÷ 3 = 6，表示 18 个平均分成 3 份，每份 6 个。",
+      "method": "读算式时说清楚总数、份数和每份数量。",
+      "commonMistake": "把被除数、除数和商的位置看反。",
+      "reviewPrompt": "读除法算式时，把每个数字在故事里的意思说出来。",
+      "relatedQuestionPatternIds": [
+        "pattern.map-story-to-expression",
+        "pattern.explain-quotient"
+      ],
+      "levelId": "level-division-expression",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-with-remainder",
+      "legacyRuntimeId": "level-3",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillIds": [
+        "skill.remainder.calculate",
+        "skill.remainder.explain-leftover"
+      ],
+      "title": "剩余徽章线索卡",
+      "summary": "平均分后剩下不够再分一份的数，叫余数。",
+      "example": "17 ÷ 5 = 3 余 2，表示能分 3 份，还剩 2 个。",
+      "method": "先分完整份，再数剩下几个。",
+      "commonMistake": "忘记写剩下的数量。",
+      "reviewPrompt": "算完完整分组后，再看还剩几个。",
+      "relatedQuestionPatternIds": [
+        "pattern.calculate-quotient-remainder",
+        "pattern.explain-leftover"
+      ],
+      "levelId": "level-with-remainder",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-remainder-rule",
+      "legacyRuntimeId": "level-4",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillIds": [
+        "skill.remainder.compare-with-divisor",
+        "skill.remainder.correct-invalid-result"
+      ],
+      "title": "余数规则线索卡",
+      "summary": "余数一定要比除数小。",
+      "example": "23 ÷ 6 = 3 余 5 可以，余 6 就不可以。",
+      "method": "算完后检查余数，余数不能等于或大于除数。",
+      "commonMistake": "余数太大时没有继续再分一份。",
+      "reviewPrompt": "看到余数时，先和除数比一比。",
+      "relatedQuestionPatternIds": [
+        "pattern.judge-remainder-valid",
+        "pattern.choose-invalid-remainder",
+        "pattern.correct-invalid-remainder"
+      ],
+      "levelId": "level-remainder-rule",
+      "status": "draft"
+    }
+  ]
+}
