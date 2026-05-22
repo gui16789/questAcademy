@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "caseId": "case-carrot-badge",
+  "legacyCaseId": "carrot-badge-case",
+  "name": "徽章失踪案",
+  "subjectId": "math",
+  "unitId": "unit-1-division",
+  "targetKnowledgePointIds": [
+    "math.division.average-sharing",
+    "math.division.expression",
+    "math.division.with-remainder",
+    "math.division.remainder-rule"
+  ],
+  "story": {
+    "summary": "动物侦探学院的胡萝卜徽章数量对不上，小侦探需要用除法知识找出真相。",
+    "setting": "动物侦探学院",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-average-sharing",
+    "level-division-expression",
+    "level-with-remainder",
+    "level-remainder-rule"
+  ],
+  "levels": [
+    {
+      "levelId": "level-average-sharing",
+      "legacyRuntimeId": "level-1",
+      "caseId": "case-carrot-badge",
+      "order": 1,
+      "name": "仓库平均分",
+      "place": "兔仓管的徽章仓库",
+      "knowledgePointId": "math.division.average-sharing",
+      "skillIds": [
+        "skill.average-sharing.identify-equal-groups",
+        "skill.average-sharing.calculate-each-share"
+      ],
+      "questionGroupId": "qg-level-average-sharing-basic",
+      "intro": "兔仓管把徽章盒打开了。先看看每个小队能不能分得一样多。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-average-sharing",
+        "knowledgeCardIds": [
+          "card-average-sharing"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-division-expression",
+      "legacyRuntimeId": "level-2",
+      "caseId": "case-carrot-badge",
+      "order": 2,
+      "name": "分发记录表",
+      "place": "学院分发台",
+      "knowledgePointId": "math.division.expression",
+      "skillIds": [
+        "skill.expression.map-story-to-expression",
+        "skill.expression.explain-quotient"
+      ],
+      "questionGroupId": "qg-level-division-expression-basic",
+      "intro": "狐狸配送员留下了一张记录表。小侦探要读懂每个除法算式。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-division-expression",
+        "knowledgeCardIds": [
+          "card-division-expression"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-average-sharing"
+      }
+    },
+    {
+      "levelId": "level-with-remainder",
+      "legacyRuntimeId": "level-3",
+      "caseId": "case-carrot-badge",
+      "order": 3,
+      "name": "剩下的徽章",
+      "place": "运输路线口",
+      "knowledgePointId": "math.division.with-remainder",
+      "skillIds": [
+        "skill.remainder.calculate",
+        "skill.remainder.explain-leftover"
+      ],
+      "questionGroupId": "qg-level-with-remainder-basic",
+      "intro": "路口发现了几枚徽章。它们是不是线索，要用有余数除法判断。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-with-remainder",
+        "knowledgeCardIds": [
+          "card-with-remainder"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-division-expression"
+      }
+    },
+    {
+      "levelId": "level-remainder-rule",
+      "legacyRuntimeId": "level-4",
+      "caseId": "case-carrot-badge",
+      "order": 4,
+      "name": "可疑的说法",
+      "place": "熊老师办公室",
+      "knowledgePointId": "math.division.remainder-rule",
+      "skillIds": [
+        "skill.remainder.compare-with-divisor",
+        "skill.remainder.correct-invalid-result"
+      ],
+      "questionGroupId": "qg-level-remainder-rule-basic",
+      "intro": "嫌疑动物们开始解释。哪句话不合理？余数规则会帮忙。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-remainder-rule",
+        "knowledgeCardIds": [
+          "card-remainder-rule"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-with-remainder"
+      }
+    }
+  ],
+  "bossTaskId": "boss-carrot-badge-final",
+  "badgeRewardIds": [
+    "badge-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-1-division",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-average-sharing",
+      "caseId": "case-carrot-badge",
+      "levelId": "level-average-sharing",
+      "legacyRuntimeId": "level-1",
+      "knowledgePointId": "math.division.average-sharing",
+      "title": "平均分线索",
+      "text": "仓库里的徽章原本可以平均分给 4 个侦探小队。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-average-sharing"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-division-expression",
+      "caseId": "case-carrot-badge",
+      "levelId": "level-division-expression",
+      "legacyRuntimeId": "level-2",
+      "knowledgePointId": "math.division.expression",
+      "title": "分发记录线索",
+      "text": "分发记录里有一组除法算式写错了。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-division-expression"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-with-remainder",
+      "caseId": "case-carrot-badge",
+      "levelId": "level-with-remainder",
+      "legacyRuntimeId": "level-3",
+      "knowledgePointId": "math.division.with-remainder",
+      "title": "剩余徽章线索",
+      "text": "剩下的 3 枚徽章不是丢了，而是没有组成完整一队。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-with-remainder"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-remainder-rule",
+      "caseId": "case-carrot-badge",
+      "levelId": "level-remainder-rule",
+      "legacyRuntimeId": "level-4",
+      "knowledgePointId": "math.division.remainder-rule",
+      "title": "余数规则线索",
+      "text": "狐狸配送员说的余数太大，不符合除法规则。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-remainder-rule"
+      },
+      "status": "draft"
+    }
+  ]
+}
