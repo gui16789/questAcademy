@@ -90,7 +90,9 @@ Issue 建议分为：
 
 ## 5. PR 流程
 
-推荐流程：
+所有文档、内容和代码变更必须通过 Issue、独立分支和 PR 管理。禁止直接在 `main` 上开发。
+
+标准流程：
 
 ```text
 创建 Issue
@@ -104,6 +106,25 @@ Issue 建议分为：
 ```
 
 文档和内容类 PR 可以更小、更频繁；架构和核心流程类 PR 需要更严格评审。
+
+PR 合并前必须确认：
+
+- 已关联 Issue。
+- 变更范围与 Issue 一致。
+- 已完成自测或说明无法测试的原因。
+- 相关文档已同步。
+- 无 P0 / P1 问题。
+
+分支命名建议：
+
+```text
+docs/<issue-id>-<topic>
+feature/<issue-id>-<module>
+fix/<issue-id>-<bug>
+content/<issue-id>-<case-or-unit>
+test/<issue-id>-<scope>
+release/<version>
+```
 
 ## 6. Review 重点
 
@@ -150,11 +171,13 @@ v1.0.0  除法正式体验版
 版本号：
 发布日期：
 版本目标：
+内容包版本：
 新增：
 优化：
 修复：
 已知问题：
 验证方式：
+回滚方案：
 下一步：
 ```
 

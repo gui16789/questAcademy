@@ -5,6 +5,8 @@
 ## 基本原则
 
 - 文档先行：涉及产品范围、内容规则、数据结构、架构选择的变更，先更新文档再开发。
+- Issue 驱动：所有文档、内容和代码变更必须先有 Issue，明确范围和验收标准。
+- PR 合并：所有变更通过独立分支和 Pull Request 合并，禁止直接在 `main` 上开发。
 - 小步提交：每次提交聚焦一个清晰目标，避免把无关修改混在一起。
 - 主闭环优先：任何功能都应服务“接案 -> 学习 -> 闯关 -> 线索 -> 错题复习 -> Boss -> 结案”的核心闭环。
 - 儿童友好优先：交互、文案、视觉和反馈不得制造挫败感或高压感。
@@ -18,23 +20,27 @@
 main
 ```
 
+`main` 只接受 PR 合并，不直接提交开发变更。
+
 建议分支命名：
 
 ```text
-docs/<topic>
-feature/<module>
-fix/<issue>
-chore/<task>
-content/<case-or-unit>
+docs/<issue-id>-<topic>
+feature/<issue-id>-<module>
+fix/<issue-id>-<bug>
+chore/<issue-id>-<task>
+content/<issue-id>-<case-or-unit>
+test/<issue-id>-<scope>
+release/<version>
 ```
 
 示例：
 
 ```text
-docs/tech-architecture-v0
-feature/wrong-case-review
-content/badge-missing-case-v0
-fix/mobile-option-layout
+docs/12-tech-architecture-v0
+feature/23-wrong-case-review
+content/31-badge-missing-case-v0
+fix/42-mobile-option-layout
 ```
 
 ## 提交信息规范
@@ -68,6 +74,7 @@ content(case): add badge missing boss questions
 
 每个 PR 应包含：
 
+- 关联 Issue
 - 变更目的
 - 影响范围
 - 验证方式
@@ -76,6 +83,7 @@ content(case): add badge missing boss questions
 
 合并前至少检查：
 
+- 变更范围与 Issue 一致
 - 核心流程没有被阻断
 - 文案适合低年级儿童
 - 题目答案和解析准确
