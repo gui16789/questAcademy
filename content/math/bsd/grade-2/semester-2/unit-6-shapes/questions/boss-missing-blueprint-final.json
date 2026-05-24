@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-missing-blueprint-final",
+    "caseId": "case-missing-blueprint",
+    "name": "图纸碎片最终拼合",
+    "targetKnowledgePointIds": [
+      "math.shapes.angle",
+      "math.shapes.right-angle",
+      "math.shapes.rectangle-square",
+      "math.shapes.parallelogram",
+      "math.shapes.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.shapes.angle.1",
+      "skill.shapes.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.shapes.angle.1",
+      "mis.shapes.integrated.1"
+    ],
+    "scenario": "最后的图纸包含一个长方形窗框、一个正方形标志和一个平行四边形屋顶，需要根据图形特征判断碎片。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.shapes.angle.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.shapes.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-angle",
+        "card-parallelogram"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "misconceptionId": "mis.shapes.angle.1",
+      "questionPatternId": "pattern.shapes.angle.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "boss",
+      "bossTaskId": "boss-missing-blueprint-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "有四条边、四个直角、对边相等的窗框是什么图形？",
+      "options": [
+        "长方形",
+        "三角形",
+        "圆"
+      ],
+      "answer": "长方形",
+      "explanation": "长方形有四个直角，对边相等。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "认识图形",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-parallelogram",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+      "knowledgePointId": "math.shapes.integrated",
+      "skillId": "skill.shapes.integrated.1",
+      "misconceptionId": "mis.shapes.integrated.1",
+      "questionPatternId": "pattern.shapes.integrated.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "boss",
+      "bossTaskId": "boss-missing-blueprint-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "斜斜的屋顶碎片，对边互相平行，它更可能是什么图形？",
+      "options": [
+        "平行四边形",
+        "圆",
+        "五边形"
+      ],
+      "answer": "平行四边形",
+      "explanation": "对边互相平行是平行四边形的重要特征。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "认识图形",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

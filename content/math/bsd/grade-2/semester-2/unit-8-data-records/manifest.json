@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-8-data-records",
+  "title": "北师大版二年级下册第八单元：调查与记录",
+  "defaultCaseId": "case-survey-notebook",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-24T00:00:00.000Z",
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-survey-notebook.json"
+    ],
+    "questions": [
+      "questions/level-survey-question.json",
+      "questions/level-collect-data.json",
+      "questions/level-record-table.json",
+      "questions/level-interpret-data.json",
+      "questions/boss-survey-notebook-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewStatus": "changes_requested",
+    "teachingReviewStatus": "changes_requested",
+    "readabilityReviewStatus": "changes_requested",
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}

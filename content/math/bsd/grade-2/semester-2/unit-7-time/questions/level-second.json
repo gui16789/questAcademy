@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-second-basic",
+  "caseId": "case-clock-schedule",
+  "levelId": "level-second",
+  "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+  "knowledgePointId": "math.time.second",
+  "questions": [
+    {
+      "questionId": "q-second-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-second",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.1",
+      "misconceptionId": "mis.time.second.1",
+      "questionPatternId": "pattern.time.second.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-second",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "1 分等于多少秒？",
+      "options": [
+        "60 秒",
+        "10 秒",
+        "100 秒"
+      ],
+      "answer": "60 秒",
+      "explanation": "1 分钟有 60 秒。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "秒",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-second-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-second",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.2",
+      "misconceptionId": "mis.time.second.2",
+      "questionPatternId": "pattern.time.second.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-second",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "3 分 = ___ 秒。",
+      "options": [],
+      "answer": "180",
+      "explanation": "3 个 60 秒是 180 秒。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "秒",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-second-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-second",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.1",
+      "misconceptionId": "mis.time.second.1",
+      "questionPatternId": "pattern.time.second.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-second",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "眨一下眼通常用秒描述更合适。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "很短的动作可以用秒描述。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "秒",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-second-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-second",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.2",
+      "misconceptionId": "mis.time.second.2",
+      "questionPatternId": "pattern.time.second.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-second",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "跑 50 米可能用什么单位记录？",
+      "options": [
+        "秒",
+        "千米",
+        "元"
+      ],
+      "answer": "秒",
+      "explanation": "短跑成绩常用秒记录。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "秒",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillIds": [
+        "skill.data-records.survey-question.1",
+        "skill.data-records.survey-question.2"
+      ],
+      "title": "调查问题线索卡",
+      "summary": "能提出清楚、可统计的调查问题。",
+      "example": "想知道同学最喜欢的社团，哪个问题更合适？",
+      "method": "问题要让大家容易选择和回答。",
+      "commonMistake": "问题不清楚",
+      "reviewPrompt": "看到调查问题题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.data-records.survey-question.1",
+        "pattern.data-records.survey-question.2"
+      ],
+      "levelId": "level-survey-question",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillIds": [
+        "skill.data-records.collect-data.1",
+        "skill.data-records.collect-data.2"
+      ],
+      "title": "收集数据线索卡",
+      "summary": "能按规则询问并收集数据。",
+      "example": "调查 20 名同学，每人只能选 1 种水果，最多会有多少条记录？",
+      "method": "一个人记录一次，避免重复或漏记。",
+      "commonMistake": "重复记录",
+      "reviewPrompt": "看到收集数据题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.data-records.collect-data.1",
+        "pattern.data-records.collect-data.2"
+      ],
+      "levelId": "level-collect-data",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillIds": [
+        "skill.data-records.record-table.1",
+        "skill.data-records.record-table.2"
+      ],
+      "title": "记录表线索卡",
+      "summary": "能用画记号、表格等方式记录数据。",
+      "example": "用“正”字记录人数，一个完整“正”表示几人？",
+      "method": "同类数据记在同一栏，最后合计。",
+      "commonMistake": "记号和人数不对应",
+      "reviewPrompt": "看到记录表题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.data-records.record-table.1",
+        "pattern.data-records.record-table.2"
+      ],
+      "levelId": "level-record-table",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillIds": [
+        "skill.data-records.interpret-data.1",
+        "skill.data-records.interpret-data.2"
+      ],
+      "title": "读懂数据线索卡",
+      "summary": "能根据统计结果判断最多、最少和相差多少。",
+      "example": "绘画 12 人、足球 9 人，哪个更多？",
+      "method": "先找每类数量，再比较或相减。",
+      "commonMistake": "只看类别顺序",
+      "reviewPrompt": "看到读懂数据题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.data-records.interpret-data.1",
+        "pattern.data-records.interpret-data.2"
+      ],
+      "levelId": "level-interpret-data",
+      "status": "draft"
+    }
+  ]
+}

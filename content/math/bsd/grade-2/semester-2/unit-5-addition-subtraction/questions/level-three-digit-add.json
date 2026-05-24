@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-three-digit-add-basic",
+  "caseId": "case-ledger-balance",
+  "levelId": "level-three-digit-add",
+  "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+  "knowledgePointId": "math.add-subtract.three-digit-addition",
+  "questions": [
+    {
+      "questionId": "q-three-digit-add-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-add",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "236 + 142 = ?",
+      "options": [
+        "378",
+        "368",
+        "288"
+      ],
+      "answer": "378",
+      "explanation": "个位、十位、百位分别相加。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "三位数加法",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-three-digit-add-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "misconceptionId": "mis.add-subtract.three-digit-add.2",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-add",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "128 + 236 = ___。",
+      "options": [],
+      "answer": "364",
+      "explanation": "8+6=14 向十位进 1，结果是 364。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "三位数加法",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-three-digit-add-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-add",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "三位数加法要把相同数位对齐。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "数位对齐才能正确相加。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "三位数加法",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-three-digit-add-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "misconceptionId": "mis.add-subtract.three-digit-add.2",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-add",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "哪道算式需要个位向十位进位？",
+      "options": [
+        "247 + 126",
+        "230 + 140",
+        "312 + 121"
+      ],
+      "answer": "247 + 126",
+      "explanation": "7 + 6 = 13，需要进位。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "三位数加法",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

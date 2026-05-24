@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-count-thousands",
+      "caseId": "case-large-number-code",
+      "levelId": "level-count-thousands",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "title": "千以内计数线索",
+      "text": "在书架计数台确认：会用一百一百、一十一十等方式数较大的数。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-count-thousands"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-read-write",
+      "caseId": "case-large-number-code",
+      "levelId": "level-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "title": "数位读写线索",
+      "text": "在号码牌工作台确认：理解千、百、十、个位上的数字表示多少。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-read-write"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-compare-order",
+      "caseId": "case-large-number-code",
+      "levelId": "level-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "title": "大数比较线索",
+      "text": "在藏书编号墙确认：先比位数，位数相同从高位比起。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-compare-order"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-estimate-represent",
+      "caseId": "case-large-number-code",
+      "levelId": "level-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "title": "大数估计线索",
+      "text": "在故事页扫描间确认：先找一组大约多少，再推想总数。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-estimate-represent"
+      },
+      "status": "draft"
+    }
+  ]
+}

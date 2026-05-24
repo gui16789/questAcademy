@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-bridge-measure-final",
+    "caseId": "case-bridge-measure",
+    "name": "小桥材料最终核对",
+    "targetKnowledgePointIds": [
+      "math.measurement.millimeter",
+      "math.measurement.decimeter",
+      "math.measurement.kilometer",
+      "math.measurement.choose-length-unit",
+      "math.measurement.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.measurement.millimeter.1",
+      "skill.measurement.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.measurement.millimeter.1",
+      "mis.measurement.integrated.1"
+    ],
+    "scenario": "施工单写着桥板长 2 米、护栏长 18 分米、巡路线约 1 千米，需要换算并判断哪条记录最合理。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.measurement.millimeter.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.measurement.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-millimeter",
+        "card-choose-unit"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-millimeter",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.1",
+      "misconceptionId": "mis.measurement.millimeter.1",
+      "questionPatternId": "pattern.measurement.millimeter.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "boss",
+      "bossTaskId": "boss-bridge-measure-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "2 米等于多少分米？",
+      "options": [
+        "20 分米",
+        "2 分米",
+        "200 分米"
+      ],
+      "answer": "20 分米",
+      "explanation": "1 米 = 10 分米，2 米 = 20 分米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "测量",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "knowledgePointId": "math.measurement.integrated",
+      "skillId": "skill.measurement.integrated.1",
+      "misconceptionId": "mis.measurement.integrated.1",
+      "questionPatternId": "pattern.measurement.integrated.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "boss",
+      "bossTaskId": "boss-bridge-measure-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "18 分米和 2 米相比，哪一个更短？",
+      "options": [
+        "18 分米",
+        "2 米",
+        "一样长"
+      ],
+      "answer": "18 分米",
+      "explanation": "2 米是 20 分米，18 分米更短。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "测量",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

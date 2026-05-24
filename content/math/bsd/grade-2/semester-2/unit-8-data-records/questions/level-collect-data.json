@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-collect-data-basic",
+  "caseId": "case-survey-notebook",
+  "levelId": "level-collect-data",
+  "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+  "knowledgePointId": "math.data-records.collect-data",
+  "questions": [
+    {
+      "questionId": "q-collect-data-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-collect-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.1",
+      "misconceptionId": "mis.data-records.collect-data.1",
+      "questionPatternId": "pattern.data-records.collect-data.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-collect-data",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "调查 20 名同学，每人只能选 1 种水果，最多会有多少条记录？",
+      "options": [
+        "20 条",
+        "10 条",
+        "40 条"
+      ],
+      "answer": "20 条",
+      "explanation": "每人记录一次，所以是 20 条。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "收集数据",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-collect-data-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-collect-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.2",
+      "misconceptionId": "mis.data-records.collect-data.2",
+      "questionPatternId": "pattern.data-records.collect-data.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-collect-data",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "已经问了 15 人，还要问 5 人，一共调查 ___ 人。",
+      "options": [],
+      "answer": "20",
+      "explanation": "15 + 5 = 20。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "收集数据",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-collect-data-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-collect-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.1",
+      "misconceptionId": "mis.data-records.collect-data.1",
+      "questionPatternId": "pattern.data-records.collect-data.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-collect-data",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "同一个人的答案可以重复记两次。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "重复记录会让数据不准确。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "收集数据",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-collect-data-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-collect-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.2",
+      "misconceptionId": "mis.data-records.collect-data.2",
+      "questionPatternId": "pattern.data-records.collect-data.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-collect-data",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "收集数据时，发现漏问一名同学，应该怎么做？",
+      "options": [
+        "补问并记录",
+        "随便填一个",
+        "直接删掉表格"
+      ],
+      "answer": "补问并记录",
+      "explanation": "补问能减少遗漏。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "收集数据",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

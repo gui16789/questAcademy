@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-hour-minute-basic",
+  "caseId": "case-clock-schedule",
+  "levelId": "level-hour-minute",
+  "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+  "knowledgePointId": "math.time.hour-minute",
+  "questions": [
+    {
+      "questionId": "q-hour-minute-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.1",
+      "misconceptionId": "mis.time.hour-minute.1",
+      "questionPatternId": "pattern.time.hour-minute.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-hour-minute",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "1 时等于多少分？",
+      "options": [
+        "60 分",
+        "100 分",
+        "10 分"
+      ],
+      "answer": "60 分",
+      "explanation": "钟表上一小时是 60 分钟。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "时和分",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-hour-minute-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.2",
+      "misconceptionId": "mis.time.hour-minute.2",
+      "questionPatternId": "pattern.time.hour-minute.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-hour-minute",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "2 时 = ___ 分。",
+      "options": [],
+      "answer": "120",
+      "explanation": "2 个 60 分是 120 分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "时和分",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-hour-minute-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.1",
+      "misconceptionId": "mis.time.hour-minute.1",
+      "questionPatternId": "pattern.time.hour-minute.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-hour-minute",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "一节课大约 40 分钟。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "课堂时间通常用分钟描述。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "时和分",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-hour-minute-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.2",
+      "misconceptionId": "mis.time.hour-minute.2",
+      "questionPatternId": "pattern.time.hour-minute.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-hour-minute",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "看一场电影大约用什么单位合适？",
+      "options": [
+        "小时",
+        "秒",
+        "毫米"
+      ],
+      "answer": "小时",
+      "explanation": "电影时间较长，常用小时描述。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "时和分",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

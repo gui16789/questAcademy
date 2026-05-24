@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-rectangle-square-basic",
+  "caseId": "case-missing-blueprint",
+  "levelId": "level-rectangle-square",
+  "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+  "knowledgePointId": "math.shapes.rectangle-square",
+  "questions": [
+    {
+      "questionId": "q-rectangle-square-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-rectangle-square",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.1",
+      "misconceptionId": "mis.shapes.rectangle-square.1",
+      "questionPatternId": "pattern.shapes.rectangle-square.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-rectangle-square",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "正方形有什么特征？",
+      "options": [
+        "四条边都相等，四个角都是直角",
+        "只有对边相等",
+        "没有直角"
+      ],
+      "answer": "四条边都相等，四个角都是直角",
+      "explanation": "正方形四边相等且四个角都是直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "长方形和正方形",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-rectangle-square-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-rectangle-square",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.2",
+      "misconceptionId": "mis.shapes.rectangle-square.2",
+      "questionPatternId": "pattern.shapes.rectangle-square.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-rectangle-square",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "长方形有 ___ 个直角。",
+      "options": [],
+      "answer": "4",
+      "explanation": "长方形四个角都是直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "长方形和正方形",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-rectangle-square-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-rectangle-square",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.1",
+      "misconceptionId": "mis.shapes.rectangle-square.1",
+      "questionPatternId": "pattern.shapes.rectangle-square.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-rectangle-square",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "长方形的对边相等。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "这是长方形的重要特征。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "长方形和正方形",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-rectangle-square-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-rectangle-square",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.2",
+      "misconceptionId": "mis.shapes.rectangle-square.2",
+      "questionPatternId": "pattern.shapes.rectangle-square.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-rectangle-square",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "哪一个一定是正方形？",
+      "options": [
+        "四条边相等且四个直角",
+        "四条边都不等",
+        "只有一组对边相等"
+      ],
+      "answer": "四条边相等且四个直角",
+      "explanation": "正方形要同时满足边和角的特征。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "长方形和正方形",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

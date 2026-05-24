@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-elapsed-time-basic",
+  "caseId": "case-clock-schedule",
+  "levelId": "level-elapsed-time",
+  "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+  "knowledgePointId": "math.time.elapsed-time",
+  "questions": [
+    {
+      "questionId": "q-elapsed-time-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.1",
+      "misconceptionId": "mis.time.elapsed-time.1",
+      "questionPatternId": "pattern.time.elapsed-time.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-elapsed-time",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "8:20 过 10 分钟是几点？",
+      "options": [
+        "8:30",
+        "8:10",
+        "9:20"
+      ],
+      "answer": "8:30",
+      "explanation": "20 分再过 10 分到 30 分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "经过时间",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-elapsed-time-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.2",
+      "misconceptionId": "mis.time.elapsed-time.2",
+      "questionPatternId": "pattern.time.elapsed-time.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-elapsed-time",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "9:00 到 9:25 经过 ___ 分钟。",
+      "options": [],
+      "answer": "25",
+      "explanation": "从 9:00 数到 9:25 是 25 分钟。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "经过时间",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-elapsed-time-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.1",
+      "misconceptionId": "mis.time.elapsed-time.1",
+      "questionPatternId": "pattern.time.elapsed-time.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-elapsed-time",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "计算经过时间时，要看开始和结束两个时间。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "两个时间相差多少就是经过时间。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "经过时间",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-elapsed-time-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.2",
+      "misconceptionId": "mis.time.elapsed-time.2",
+      "questionPatternId": "pattern.time.elapsed-time.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-elapsed-time",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "7:45 过 15 分钟是几点？",
+      "options": [
+        "8:00",
+        "7:60",
+        "7:30"
+      ],
+      "answer": "8:00",
+      "explanation": "45 分再过 15 分正好到下一小时。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "经过时间",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

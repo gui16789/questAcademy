@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-add-subtract-three-digit-add-1",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-three-digit-add"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.three-digit-add.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-three-digit-add-2",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "misconceptionId": "mis.add-subtract.three-digit-add.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-three-digit-add"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.three-digit-add.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-three-digit-subtract-1",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.1",
+      "misconceptionId": "mis.add-subtract.three-digit-subtract.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-three-digit-subtract"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.three-digit-subtract.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-three-digit-subtract-2",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.2",
+      "misconceptionId": "mis.add-subtract.three-digit-subtract.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-three-digit-subtract"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.three-digit-subtract.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-mixed-steps-1",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "misconceptionId": "mis.add-subtract.mixed-steps.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-mixed-steps"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.mixed-steps.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-mixed-steps-2",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "misconceptionId": "mis.add-subtract.mixed-steps.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-mixed-steps"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.mixed-steps.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-estimate-check-1",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "misconceptionId": "mis.add-subtract.estimate-check.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-check"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.estimate-check.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-estimate-check-2",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "misconceptionId": "mis.add-subtract.estimate-check.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-check"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.estimate-check.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-add-subtract-integrated-1",
+      "knowledgePointId": "math.add-subtract.integrated",
+      "skillId": "skill.add-subtract.integrated.1",
+      "misconceptionId": "mis.add-subtract.integrated.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-check"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.add-subtract.integrated.1"
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

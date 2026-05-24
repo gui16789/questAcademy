@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-choose-unit-basic",
+  "caseId": "case-bridge-measure",
+  "levelId": "level-choose-unit",
+  "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+  "knowledgePointId": "math.measurement.choose-length-unit",
+  "questions": [
+    {
+      "questionId": "q-choose-unit-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.1",
+      "misconceptionId": "mis.measurement.choose-unit.1",
+      "questionPatternId": "pattern.measurement.choose-unit.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-choose-unit",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "一支铅笔长约 18 什么？",
+      "options": [
+        "厘米",
+        "千米",
+        "毫米"
+      ],
+      "answer": "厘米",
+      "explanation": "铅笔长度通常用厘米描述。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "选择长度单位",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-choose-unit-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.2",
+      "misconceptionId": "mis.measurement.choose-unit.2",
+      "questionPatternId": "pattern.measurement.choose-unit.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-choose-unit",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "教室长约 ___ 米。",
+      "options": [],
+      "answer": "8",
+      "explanation": "教室长度通常用米作单位，约 8 米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "选择长度单位",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-choose-unit-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.1",
+      "misconceptionId": "mis.measurement.choose-unit.1",
+      "questionPatternId": "pattern.measurement.choose-unit.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-choose-unit",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "蚂蚁身长写成 5 千米很合理。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "蚂蚁很小，不能用千米描述身长。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "选择长度单位",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-choose-unit-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.2",
+      "misconceptionId": "mis.measurement.choose-unit.2",
+      "questionPatternId": "pattern.measurement.choose-unit.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-choose-unit",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "操场跑道一圈约 400 什么？",
+      "options": [
+        "米",
+        "毫米",
+        "千米"
+      ],
+      "answer": "米",
+      "explanation": "跑道一圈常用米作单位。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "选择长度单位",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

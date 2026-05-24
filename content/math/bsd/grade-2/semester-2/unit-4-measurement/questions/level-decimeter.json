@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-decimeter-basic",
+  "caseId": "case-bridge-measure",
+  "levelId": "level-decimeter",
+  "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+  "knowledgePointId": "math.measurement.decimeter",
+  "questions": [
+    {
+      "questionId": "q-decimeter-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-decimeter",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.1",
+      "misconceptionId": "mis.measurement.decimeter.1",
+      "questionPatternId": "pattern.measurement.decimeter.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-decimeter",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "1 分米等于多少厘米？",
+      "options": [
+        "10 厘米",
+        "100 厘米",
+        "1 厘米"
+      ],
+      "answer": "10 厘米",
+      "explanation": "1 分米 = 10 厘米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "分米",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-decimeter-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-decimeter",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.2",
+      "misconceptionId": "mis.measurement.decimeter.2",
+      "questionPatternId": "pattern.measurement.decimeter.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-decimeter",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "5 分米 = ___ 厘米。",
+      "options": [],
+      "answer": "50",
+      "explanation": "5 个 10 厘米是 50 厘米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "分米",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-decimeter-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-decimeter",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.1",
+      "misconceptionId": "mis.measurement.decimeter.1",
+      "questionPatternId": "pattern.measurement.decimeter.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-decimeter",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "10 分米等于 1 米。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "1 米 = 10 分米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "分米",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-decimeter-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-decimeter",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.2",
+      "misconceptionId": "mis.measurement.decimeter.2",
+      "questionPatternId": "pattern.measurement.decimeter.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-decimeter",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "课桌宽大约 6 什么比较合适？",
+      "options": [
+        "分米",
+        "毫米",
+        "千米"
+      ],
+      "answer": "分米",
+      "explanation": "课桌宽接近几十厘米，用分米描述合适。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "分米",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

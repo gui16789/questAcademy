@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-three-digit-add",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "title": "三位数加法线索",
+      "text": "在电器柜台确认：个位对个位、十位对十位、百位对百位。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-three-digit-add"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-three-digit-subtract",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-three-digit-subtract",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "title": "三位数减法线索",
+      "text": "在电池回收箱确认：某一位不够减时，要向前一位借 1。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-three-digit-subtract"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-mixed-steps",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "title": "加减混合线索",
+      "text": "在年度展板确认：先看题意，再按步骤计算。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-mixed-steps"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-estimate-check",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "title": "估算验算线索",
+      "text": "在账本检查室确认：先估大约，再精算检查。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-estimate-check"
+      },
+      "status": "draft"
+    }
+  ]
+}

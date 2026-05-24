@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-measurement-millimeter-1",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.1",
+      "misconceptionId": "mis.measurement.millimeter.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-millimeter"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.millimeter.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-millimeter-2",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.2",
+      "misconceptionId": "mis.measurement.millimeter.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-millimeter"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.millimeter.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-decimeter-1",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.1",
+      "misconceptionId": "mis.measurement.decimeter.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-decimeter"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.decimeter.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-decimeter-2",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.2",
+      "misconceptionId": "mis.measurement.decimeter.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-decimeter"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.decimeter.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-kilometer-1",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.1",
+      "misconceptionId": "mis.measurement.kilometer.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-kilometer"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.kilometer.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-kilometer-2",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.2",
+      "misconceptionId": "mis.measurement.kilometer.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-kilometer"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.kilometer.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-choose-unit-1",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.1",
+      "misconceptionId": "mis.measurement.choose-unit.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-choose-unit"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.choose-unit.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-choose-unit-2",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.2",
+      "misconceptionId": "mis.measurement.choose-unit.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-choose-unit"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.choose-unit.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-measurement-integrated-1",
+      "knowledgePointId": "math.measurement.integrated",
+      "skillId": "skill.measurement.integrated.1",
+      "misconceptionId": "mis.measurement.integrated.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-choose-unit"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.measurement.integrated.1"
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

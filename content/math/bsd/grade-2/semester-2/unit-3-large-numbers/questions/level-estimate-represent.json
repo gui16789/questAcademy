@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-estimate-represent-basic",
+  "caseId": "case-large-number-code",
+  "levelId": "level-estimate-represent",
+  "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+  "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+  "questions": [
+    {
+      "questionId": "q-estimate-represent-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-estimate-represent",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "misconceptionId": "mis.large-numbers.estimate-represent.1",
+      "questionPatternId": "pattern.large-numbers.estimate-represent.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-estimate-represent",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "一页大约有 500 个字，4 页大约有多少个字？",
+      "options": [
+        "2000",
+        "900",
+        "4500"
+      ],
+      "answer": "2000",
+      "explanation": "500 × 4 = 2000。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数估计",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-represent-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-estimate-represent",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "misconceptionId": "mis.large-numbers.estimate-represent.2",
+      "questionPatternId": "pattern.large-numbers.estimate-represent.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-estimate-represent",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "每盒约 100 张贴纸，8 盒约 ___ 张。",
+      "options": [],
+      "answer": "800",
+      "explanation": "8 个 100 是 800。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数估计",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-represent-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-estimate-represent",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "misconceptionId": "mis.large-numbers.estimate-represent.1",
+      "questionPatternId": "pattern.large-numbers.estimate-represent.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-estimate-represent",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "估计时可以先找一个参照数量。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "参照能帮助快速判断大约有多少。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数估计",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-represent-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-estimate-represent",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "misconceptionId": "mis.large-numbers.estimate-represent.2",
+      "questionPatternId": "pattern.large-numbers.estimate-represent.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-estimate-represent",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "图书馆一天借出 198 本书，约是几百本？",
+      "options": [
+        "200 本",
+        "100 本",
+        "900 本"
+      ],
+      "answer": "200 本",
+      "explanation": "198 接近 200。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数估计",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

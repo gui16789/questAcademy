@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-compare-order-basic",
+  "caseId": "case-large-number-code",
+  "levelId": "level-compare-order",
+  "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+  "knowledgePointId": "math.large-numbers.compare-large-numbers",
+  "questions": [
+    {
+      "questionId": "q-compare-order-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-compare-order",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.1",
+      "misconceptionId": "mis.large-numbers.compare-order.1",
+      "questionPatternId": "pattern.large-numbers.compare-order.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-compare-order",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "哪个编号最大？",
+      "options": [
+        "2980",
+        "3020",
+        "2899"
+      ],
+      "answer": "3020",
+      "explanation": "先比千位，3020 是 3 千多，比 2980 和 2899 都大。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数比较",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-compare-order-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-compare-order",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.2",
+      "misconceptionId": "mis.large-numbers.compare-order.2",
+      "questionPatternId": "pattern.large-numbers.compare-order.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-compare-order",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "把 4100、4010、4001 从小到大排列，排在中间的是 ___。",
+      "options": [],
+      "answer": "4010",
+      "explanation": "4001 < 4010 < 4100。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数比较",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-compare-order-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-compare-order",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.1",
+      "misconceptionId": "mis.large-numbers.compare-order.1",
+      "questionPatternId": "pattern.large-numbers.compare-order.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-compare-order",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "比较 5608 和 5680 时，先看千位，再看百位，最后看十位。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "高位相同再继续比较下一位。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数比较",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-compare-order-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-compare-order",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.2",
+      "misconceptionId": "mis.large-numbers.compare-order.2",
+      "questionPatternId": "pattern.large-numbers.compare-order.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-compare-order",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "哪一个数比 3999 大？",
+      "options": [
+        "4000",
+        "3909",
+        "3099"
+      ],
+      "answer": "4000",
+      "explanation": "4000 是四位数且比 3999 多 1。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "大数比较",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

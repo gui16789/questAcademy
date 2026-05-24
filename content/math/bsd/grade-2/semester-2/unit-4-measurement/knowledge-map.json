@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "measurement",
+    "subjectId": "math",
+    "name": "测量"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.measurement.millimeter",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "毫米",
+      "shortName": "毫米",
+      "definition": "认识毫米，能用毫米描述较短物体的长度。",
+      "learningGoal": "知道 1 厘米 = 10 毫米。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.measurement.millimeter.1",
+        "skill.measurement.millimeter.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.millimeter.1",
+        "mis.measurement.millimeter.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.measurement.decimeter",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "分米",
+      "shortName": "分米",
+      "definition": "认识分米，能在厘米、分米、米之间换算。",
+      "learningGoal": "知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.measurement.decimeter.1",
+        "skill.measurement.decimeter.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.decimeter.1",
+        "mis.measurement.decimeter.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.measurement.kilometer",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "千米",
+      "shortName": "千米",
+      "definition": "认识千米，能理解 1 千米 = 1000 米。",
+      "learningGoal": "选择千米描述较长路线。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.measurement.kilometer.1",
+        "skill.measurement.kilometer.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.kilometer.1",
+        "mis.measurement.kilometer.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "选择长度单位",
+      "shortName": "选择长度单位",
+      "definition": "能根据物体或路线特点选择合适长度单位。",
+      "learningGoal": "短小物体用毫米或厘米，较长路线用米或千米。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.measurement.choose-unit.1",
+        "skill.measurement.choose-unit.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.choose-unit.1",
+        "mis.measurement.choose-unit.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.measurement.integrated",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "测量综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.measurement.millimeter",
+        "math.measurement.decimeter",
+        "math.measurement.kilometer",
+        "math.measurement.choose-length-unit"
+      ],
+      "skillIds": [
+        "skill.measurement.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.measurement.millimeter.1",
+      "knowledgePointId": "math.measurement.millimeter",
+      "name": "认识毫米",
+      "learningGoal": "能认识毫米。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.measurement.millimeter.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.millimeter.1"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.millimeter.2",
+      "knowledgePointId": "math.measurement.millimeter",
+      "name": "厘米毫米换算",
+      "learningGoal": "能厘米毫米换算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.measurement.millimeter.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.millimeter.2"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.decimeter.1",
+      "knowledgePointId": "math.measurement.decimeter",
+      "name": "认识分米",
+      "learningGoal": "能认识分米。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.measurement.decimeter.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.decimeter.1"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.decimeter.2",
+      "knowledgePointId": "math.measurement.decimeter",
+      "name": "分米米换算",
+      "learningGoal": "能分米米换算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.measurement.decimeter.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.decimeter.2"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.kilometer.1",
+      "knowledgePointId": "math.measurement.kilometer",
+      "name": "认识千米",
+      "learningGoal": "能认识千米。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.measurement.kilometer.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.kilometer.1"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.kilometer.2",
+      "knowledgePointId": "math.measurement.kilometer",
+      "name": "米千米换算",
+      "learningGoal": "能米千米换算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.measurement.kilometer.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.kilometer.2"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.choose-unit.1",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "name": "选择长度单位",
+      "learningGoal": "能选择长度单位。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.measurement.choose-unit.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.choose-unit.1"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.choose-unit.2",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "name": "判断测量结果",
+      "learningGoal": "能判断测量结果。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.measurement.choose-unit.2"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.choose-unit.2"
+      ]
+    },
+    {
+      "skillId": "skill.measurement.integrated.1",
+      "knowledgePointId": "math.measurement.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.measurement.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.measurement.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.measurement.millimeter.1",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.1",
+      "name": "把毫米当厘米",
+      "description": "孩子在毫米任务中容易把毫米当厘米。",
+      "diagnosisHint": "请孩子回到题干，先说清毫米的关键信息。",
+      "remediationStrategyId": "review-measurement-millimeter"
+    },
+    {
+      "misconceptionId": "mis.measurement.millimeter.2",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.2",
+      "name": "忘记 1 厘米是 10 毫米",
+      "description": "孩子在毫米任务中容易忘记 1 厘米是 10 毫米。",
+      "diagnosisHint": "请孩子回到题干，先说清毫米的关键信息。",
+      "remediationStrategyId": "review-measurement-millimeter"
+    },
+    {
+      "misconceptionId": "mis.measurement.decimeter.1",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.1",
+      "name": "把分米和厘米混淆",
+      "description": "孩子在分米任务中容易把分米和厘米混淆。",
+      "diagnosisHint": "请孩子回到题干，先说清分米的关键信息。",
+      "remediationStrategyId": "review-measurement-decimeter"
+    },
+    {
+      "misconceptionId": "mis.measurement.decimeter.2",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.2",
+      "name": "忘记 10 分米是 1 米",
+      "description": "孩子在分米任务中容易忘记 10 分米是 1 米。",
+      "diagnosisHint": "请孩子回到题干，先说清分米的关键信息。",
+      "remediationStrategyId": "review-measurement-decimeter"
+    },
+    {
+      "misconceptionId": "mis.measurement.kilometer.1",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.1",
+      "name": "把千米当米",
+      "description": "孩子在千米任务中容易把千米当米。",
+      "diagnosisHint": "请孩子回到题干，先说清千米的关键信息。",
+      "remediationStrategyId": "review-measurement-kilometer"
+    },
+    {
+      "misconceptionId": "mis.measurement.kilometer.2",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.2",
+      "name": "路线单位选太小",
+      "description": "孩子在千米任务中容易路线单位选太小。",
+      "diagnosisHint": "请孩子回到题干，先说清千米的关键信息。",
+      "remediationStrategyId": "review-measurement-kilometer"
+    },
+    {
+      "misconceptionId": "mis.measurement.choose-unit.1",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.1",
+      "name": "单位过大或过小",
+      "description": "孩子在选择长度单位任务中容易单位过大或过小。",
+      "diagnosisHint": "请孩子回到题干，先说清选择长度单位的关键信息。",
+      "remediationStrategyId": "review-measurement-choose-unit"
+    },
+    {
+      "misconceptionId": "mis.measurement.choose-unit.2",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.2",
+      "name": "只看数字不看单位",
+      "description": "孩子在选择长度单位任务中容易只看数字不看单位。",
+      "diagnosisHint": "请孩子回到题干，先说清选择长度单位的关键信息。",
+      "remediationStrategyId": "review-measurement-choose-unit"
+    },
+    {
+      "misconceptionId": "mis.measurement.integrated.1",
+      "knowledgePointId": "math.measurement.integrated",
+      "skillId": "skill.measurement.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-measurement-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.measurement.millimeter.1",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.1",
+      "name": "毫米-认识毫米",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查毫米：认识毫米。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.millimeter.2",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillId": "skill.measurement.millimeter.2",
+      "name": "毫米-厘米毫米换算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查毫米：厘米毫米换算。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.decimeter.1",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.1",
+      "name": "分米-认识分米",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查分米：认识分米。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.decimeter.2",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillId": "skill.measurement.decimeter.2",
+      "name": "分米-分米米换算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查分米：分米米换算。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.kilometer.1",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.1",
+      "name": "千米-认识千米",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查千米：认识千米。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.kilometer.2",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.2",
+      "name": "千米-米千米换算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查千米：米千米换算。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.choose-unit.1",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.1",
+      "name": "选择长度单位-选择长度单位",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查选择长度单位：选择长度单位。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.choose-unit.2",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillId": "skill.measurement.choose-unit.2",
+      "name": "选择长度单位-判断测量结果",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查选择长度单位：判断测量结果。"
+    },
+    {
+      "questionPatternId": "pattern.measurement.integrated.1",
+      "knowledgePointId": "math.measurement.integrated",
+      "skillId": "skill.measurement.integrated.1",
+      "name": "第四单元：测量综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "statistics",
+    "subjectId": "math",
+    "name": "统计与概率"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.data-records.survey-question",
+      "subjectId": "math",
+      "domainId": "statistics",
+      "name": "调查问题",
+      "shortName": "调查问题",
+      "definition": "能提出清楚、可统计的调查问题。",
+      "learningGoal": "问题要让大家容易选择和回答。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.data-records.survey-question.1",
+        "skill.data-records.survey-question.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.survey-question.1",
+        "mis.data-records.survey-question.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.data-records.collect-data",
+      "subjectId": "math",
+      "domainId": "statistics",
+      "name": "收集数据",
+      "shortName": "收集数据",
+      "definition": "能按规则询问并收集数据。",
+      "learningGoal": "一个人记录一次，避免重复或漏记。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.data-records.collect-data.1",
+        "skill.data-records.collect-data.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.collect-data.1",
+        "mis.data-records.collect-data.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.data-records.record-table",
+      "subjectId": "math",
+      "domainId": "statistics",
+      "name": "记录表",
+      "shortName": "记录表",
+      "definition": "能用画记号、表格等方式记录数据。",
+      "learningGoal": "同类数据记在同一栏，最后合计。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.data-records.record-table.1",
+        "skill.data-records.record-table.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.record-table.1",
+        "mis.data-records.record-table.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.data-records.interpret-data",
+      "subjectId": "math",
+      "domainId": "statistics",
+      "name": "读懂数据",
+      "shortName": "读懂数据",
+      "definition": "能根据统计结果判断最多、最少和相差多少。",
+      "learningGoal": "先找每类数量，再比较或相减。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.data-records.interpret-data.1",
+        "skill.data-records.interpret-data.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.interpret-data.1",
+        "mis.data-records.interpret-data.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.data-records.integrated",
+      "subjectId": "math",
+      "domainId": "statistics",
+      "name": "调查与记录综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.data-records.survey-question",
+        "math.data-records.collect-data",
+        "math.data-records.record-table",
+        "math.data-records.interpret-data"
+      ],
+      "skillIds": [
+        "skill.data-records.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.data-records.survey-question.1",
+      "knowledgePointId": "math.data-records.survey-question",
+      "name": "判断调查问题",
+      "learningGoal": "能判断调查问题。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.data-records.survey-question.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.survey-question.1"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.survey-question.2",
+      "knowledgePointId": "math.data-records.survey-question",
+      "name": "选择调查对象",
+      "learningGoal": "能选择调查对象。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.data-records.survey-question.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.survey-question.2"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.collect-data.1",
+      "knowledgePointId": "math.data-records.collect-data",
+      "name": "按规则收集",
+      "learningGoal": "能按规则收集。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.data-records.collect-data.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.collect-data.1"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.collect-data.2",
+      "knowledgePointId": "math.data-records.collect-data",
+      "name": "避免重复遗漏",
+      "learningGoal": "能避免重复遗漏。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.data-records.collect-data.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.collect-data.2"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.record-table.1",
+      "knowledgePointId": "math.data-records.record-table",
+      "name": "用符号记录",
+      "learningGoal": "能用符号记录。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.data-records.record-table.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.record-table.1"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.record-table.2",
+      "knowledgePointId": "math.data-records.record-table",
+      "name": "整理成表格",
+      "learningGoal": "能整理成表格。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.data-records.record-table.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.record-table.2"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.interpret-data.1",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "name": "比较数据多少",
+      "learningGoal": "能比较数据多少。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.data-records.interpret-data.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.interpret-data.1"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.interpret-data.2",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "name": "求相差数量",
+      "learningGoal": "能求相差数量。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.data-records.interpret-data.2"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.interpret-data.2"
+      ]
+    },
+    {
+      "skillId": "skill.data-records.integrated.1",
+      "knowledgePointId": "math.data-records.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.data-records.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.data-records.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.data-records.survey-question.1",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "name": "问题不清楚",
+      "description": "孩子在调查问题任务中容易问题不清楚。",
+      "diagnosisHint": "请孩子回到题干，先说清调查问题的关键信息。",
+      "remediationStrategyId": "review-data-records-survey-question"
+    },
+    {
+      "misconceptionId": "mis.data-records.survey-question.2",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.2",
+      "name": "对象范围不合适",
+      "description": "孩子在调查问题任务中容易对象范围不合适。",
+      "diagnosisHint": "请孩子回到题干，先说清调查问题的关键信息。",
+      "remediationStrategyId": "review-data-records-survey-question"
+    },
+    {
+      "misconceptionId": "mis.data-records.collect-data.1",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.1",
+      "name": "重复记录",
+      "description": "孩子在收集数据任务中容易重复记录。",
+      "diagnosisHint": "请孩子回到题干，先说清收集数据的关键信息。",
+      "remediationStrategyId": "review-data-records-collect-data"
+    },
+    {
+      "misconceptionId": "mis.data-records.collect-data.2",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.2",
+      "name": "漏掉一个对象",
+      "description": "孩子在收集数据任务中容易漏掉一个对象。",
+      "diagnosisHint": "请孩子回到题干，先说清收集数据的关键信息。",
+      "remediationStrategyId": "review-data-records-collect-data"
+    },
+    {
+      "misconceptionId": "mis.data-records.record-table.1",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.1",
+      "name": "记号和人数不对应",
+      "description": "孩子在记录表任务中容易记号和人数不对应。",
+      "diagnosisHint": "请孩子回到题干，先说清记录表的关键信息。",
+      "remediationStrategyId": "review-data-records-record-table"
+    },
+    {
+      "misconceptionId": "mis.data-records.record-table.2",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.2",
+      "name": "类别混在一起",
+      "description": "孩子在记录表任务中容易类别混在一起。",
+      "diagnosisHint": "请孩子回到题干，先说清记录表的关键信息。",
+      "remediationStrategyId": "review-data-records-record-table"
+    },
+    {
+      "misconceptionId": "mis.data-records.interpret-data.1",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.1",
+      "name": "只看类别顺序",
+      "description": "孩子在读懂数据任务中容易只看类别顺序。",
+      "diagnosisHint": "请孩子回到题干，先说清读懂数据的关键信息。",
+      "remediationStrategyId": "review-data-records-interpret-data"
+    },
+    {
+      "misconceptionId": "mis.data-records.interpret-data.2",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.2",
+      "name": "相差人数计算错",
+      "description": "孩子在读懂数据任务中容易相差人数计算错。",
+      "diagnosisHint": "请孩子回到题干，先说清读懂数据的关键信息。",
+      "remediationStrategyId": "review-data-records-interpret-data"
+    },
+    {
+      "misconceptionId": "mis.data-records.integrated.1",
+      "knowledgePointId": "math.data-records.integrated",
+      "skillId": "skill.data-records.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-data-records-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.data-records.survey-question.1",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "name": "调查问题-判断调查问题",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查调查问题：判断调查问题。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.survey-question.2",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.2",
+      "name": "调查问题-选择调查对象",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查调查问题：选择调查对象。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.collect-data.1",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.1",
+      "name": "收集数据-按规则收集",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查收集数据：按规则收集。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.collect-data.2",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.2",
+      "name": "收集数据-避免重复遗漏",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查收集数据：避免重复遗漏。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.record-table.1",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.1",
+      "name": "记录表-用符号记录",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查记录表：用符号记录。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.record-table.2",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.2",
+      "name": "记录表-整理成表格",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查记录表：整理成表格。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.interpret-data.1",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.1",
+      "name": "读懂数据-比较数据多少",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查读懂数据：比较数据多少。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.interpret-data.2",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.2",
+      "name": "读懂数据-求相差数量",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查读懂数据：求相差数量。"
+    },
+    {
+      "questionPatternId": "pattern.data-records.integrated.1",
+      "knowledgePointId": "math.data-records.integrated",
+      "skillId": "skill.data-records.integrated.1",
+      "name": "第八单元：调查与记录综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

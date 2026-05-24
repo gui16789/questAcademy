@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-record-table-basic",
+  "caseId": "case-survey-notebook",
+  "levelId": "level-record-table",
+  "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+  "knowledgePointId": "math.data-records.record-table",
+  "questions": [
+    {
+      "questionId": "q-record-table-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-record-table",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.1",
+      "misconceptionId": "mis.data-records.record-table.1",
+      "questionPatternId": "pattern.data-records.record-table.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-record-table",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "用“正”字记录人数，一个完整“正”表示几人？",
+      "options": [
+        "5 人",
+        "4 人",
+        "10 人"
+      ],
+      "answer": "5 人",
+      "explanation": "正字有 5 画，常表示 5 人。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "记录表",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-record-table-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-record-table",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.2",
+      "misconceptionId": "mis.data-records.record-table.2",
+      "questionPatternId": "pattern.data-records.record-table.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-record-table",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "一栏有 2 个完整“正”，表示 ___ 人。",
+      "options": [],
+      "answer": "10",
+      "explanation": "2 个正字是 10 画，表示 10 人。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "记录表",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-record-table-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-record-table",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.1",
+      "misconceptionId": "mis.data-records.record-table.1",
+      "questionPatternId": "pattern.data-records.record-table.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-record-table",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "表格中的同类数据应记录在同一栏。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "分类记录更清楚。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "记录表",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-record-table-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-record-table",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.2",
+      "misconceptionId": "mis.data-records.record-table.2",
+      "questionPatternId": "pattern.data-records.record-table.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-record-table",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "记录苹果 6 人、香蕉 4 人，哪种水果更多？",
+      "options": [
+        "苹果",
+        "香蕉",
+        "一样多"
+      ],
+      "answer": "苹果",
+      "explanation": "6 比 4 多。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "记录表",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

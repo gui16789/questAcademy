@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-kilometer-basic",
+  "caseId": "case-bridge-measure",
+  "levelId": "level-kilometer",
+  "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+  "knowledgePointId": "math.measurement.kilometer",
+  "questions": [
+    {
+      "questionId": "q-kilometer-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-kilometer",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.1",
+      "misconceptionId": "mis.measurement.kilometer.1",
+      "questionPatternId": "pattern.measurement.kilometer.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-kilometer",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "1 千米等于多少米？",
+      "options": [
+        "1000 米",
+        "100 米",
+        "10 米"
+      ],
+      "answer": "1000 米",
+      "explanation": "千米是较大的长度单位，1 千米 = 1000 米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "千米",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-kilometer-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-kilometer",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.2",
+      "misconceptionId": "mis.measurement.kilometer.2",
+      "questionPatternId": "pattern.measurement.kilometer.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-kilometer",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "2 千米 = ___ 米。",
+      "options": [],
+      "answer": "2000",
+      "explanation": "2 个 1000 米是 2000 米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "千米",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-kilometer-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-kilometer",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.1",
+      "misconceptionId": "mis.measurement.kilometer.1",
+      "questionPatternId": "pattern.measurement.kilometer.1",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-kilometer",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "从学校到公园的距离可以用千米作单位。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "较长距离用千米合适。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "千米",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-kilometer-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-kilometer",
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillId": "skill.measurement.kilometer.2",
+      "misconceptionId": "mis.measurement.kilometer.2",
+      "questionPatternId": "pattern.measurement.kilometer.2",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-kilometer",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "800 米和 1 千米相比，哪个短？",
+      "options": [
+        "800 米",
+        "1 千米",
+        "一样长"
+      ],
+      "answer": "800 米",
+      "explanation": "1 千米是 1000 米。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "测量",
+        "千米",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

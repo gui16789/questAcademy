@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-5-addition-subtraction",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 5,
+    "name": "第五单元：加与减",
+    "learningGoals": [
+      "个位对个位、十位对十位、百位对百位。",
+      "某一位不够减时，要向前一位借 1。",
+      "先看题意，再按步骤计算。",
+      "先估大约，再精算检查。"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "name": "买电器",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.add-subtract.three-digit-addition"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-subtract",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-subtract",
+      "name": "回收电池",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.add-subtract.three-digit-subtraction"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-mixed-steps",
+      "name": "十年变化",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.add-subtract.mixed-add-subtract"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "name": "图书馆",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.add-subtract.estimate-and-check"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    }
+  ]
+}

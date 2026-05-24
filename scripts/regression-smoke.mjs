@@ -134,8 +134,14 @@ async function runRegression(cdpClient, content, entry) {
       badges: Object.keys(data.badgeRecords).length
     };
   })()`);
+  const expectedLevelCount = content.levels.length;
   assert(fullFlowState.dataVersion === "1.0.0", "new data is saved as v1.0.0");
-  assert(fullFlowState.passed === 4 && fullFlowState.clues === 4 && fullFlowState.cards === 4, "4 levels unlock clues and cards");
+  assert(
+    fullFlowState.passed === expectedLevelCount &&
+      fullFlowState.clues === expectedLevelCount &&
+      fullFlowState.cards === expectedLevelCount,
+    `${expectedLevelCount} levels unlock clues and cards`,
+  );
   assert(fullFlowState.bossUnlocked && fullFlowState.caseClosed, "boss is unlocked and case is closed");
   assert((await evalJs(`localStorage.getItem(${JSON.stringify(otherPackageStorageKey)})`)) === "other-package-progress", "other content package progress key is preserved");
 

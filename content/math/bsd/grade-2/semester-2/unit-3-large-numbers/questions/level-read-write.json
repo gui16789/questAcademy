@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-read-write-basic",
+  "caseId": "case-large-number-code",
+  "levelId": "level-read-write",
+  "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+  "knowledgePointId": "math.large-numbers.place-value-read-write",
+  "questions": [
+    {
+      "questionId": "q-read-write-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-read-write",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.1",
+      "misconceptionId": "mis.large-numbers.read-write.1",
+      "questionPatternId": "pattern.large-numbers.read-write.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-read-write",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "数 2040 读作什么？",
+      "options": [
+        "二千零四十",
+        "二千四十零",
+        "二百零四十"
+      ],
+      "answer": "二千零四十",
+      "explanation": "百位是 0，要读零，十位是 4。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "数位读写",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-write-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-read-write",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.2",
+      "misconceptionId": "mis.large-numbers.read-write.2",
+      "questionPatternId": "pattern.large-numbers.read-write.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-read-write",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "5 个千、3 个百和 2 个一组成的数是 ___。",
+      "options": [],
+      "answer": "5302",
+      "explanation": "5 个千是 5000，3 个百是 300，再加 2。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "数位读写",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-write-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-read-write",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.1",
+      "misconceptionId": "mis.large-numbers.read-write.1",
+      "questionPatternId": "pattern.large-numbers.read-write.1",
+      "caseId": "case-large-number-code",
+      "levelId": "level-read-write",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "4070 中的 7 表示 7 个十。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "7 在十位上，表示 70。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "数位读写",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-write-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-read-write",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.2",
+      "misconceptionId": "mis.large-numbers.read-write.2",
+      "questionPatternId": "pattern.large-numbers.read-write.2",
+      "caseId": "case-large-number-code",
+      "levelId": "level-read-write",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "哪个数中的 6 表示 6 个百？",
+      "options": [
+        "4610",
+        "3602",
+        "2065"
+      ],
+      "answer": "3602",
+      "explanation": "3602 的 6 在百位上。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "生活中的大数",
+        "数位读写",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

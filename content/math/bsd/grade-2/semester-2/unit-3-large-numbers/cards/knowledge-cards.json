@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-count-thousands",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillIds": [
+        "skill.large-numbers.count-thousands.1",
+        "skill.large-numbers.count-thousands.2"
+      ],
+      "title": "千以内计数线索卡",
+      "summary": "能按百、十、个或整百整千数数。",
+      "example": "馆员从 800 本开始一百一百地数，数 3 次到多少本？",
+      "method": "会用一百一百、一十一十等方式数较大的数。",
+      "commonMistake": "忘记满十进一",
+      "reviewPrompt": "看到千以内计数题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.large-numbers.count-thousands.1",
+        "pattern.large-numbers.count-thousands.2"
+      ],
+      "levelId": "level-count-thousands",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-read-write",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillIds": [
+        "skill.large-numbers.read-write.1",
+        "skill.large-numbers.read-write.2"
+      ],
+      "title": "数位读写线索卡",
+      "summary": "能读写万以内的数并说清每个数字所在数位。",
+      "example": "数 2040 读作什么？",
+      "method": "理解千、百、十、个位上的数字表示多少。",
+      "commonMistake": "漏读中间的零",
+      "reviewPrompt": "看到数位读写题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.large-numbers.read-write.1",
+        "pattern.large-numbers.read-write.2"
+      ],
+      "levelId": "level-read-write",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-compare-order",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillIds": [
+        "skill.large-numbers.compare-order.1",
+        "skill.large-numbers.compare-order.2"
+      ],
+      "title": "大数比较线索卡",
+      "summary": "能比较万以内数的大小并按顺序排列。",
+      "example": "哪个编号最大？",
+      "method": "先比位数，位数相同从高位比起。",
+      "commonMistake": "只比较末位数字",
+      "reviewPrompt": "看到大数比较题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.large-numbers.compare-order.1",
+        "pattern.large-numbers.compare-order.2"
+      ],
+      "levelId": "level-compare-order",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-estimate-represent",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillIds": [
+        "skill.large-numbers.estimate-represent.1",
+        "skill.large-numbers.estimate-represent.2"
+      ],
+      "title": "大数估计线索卡",
+      "summary": "能结合参照物估计较大的数量并选择合适表示。",
+      "example": "一页大约有 500 个字，4 页大约有多少个字？",
+      "method": "先找一组大约多少，再推想总数。",
+      "commonMistake": "把精确数当估计",
+      "reviewPrompt": "看到大数估计题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.large-numbers.estimate-represent.1",
+        "pattern.large-numbers.estimate-represent.2"
+      ],
+      "levelId": "level-estimate-represent",
+      "status": "draft"
+    }
+  ]
+}

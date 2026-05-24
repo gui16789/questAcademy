@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "geometry",
+    "subjectId": "math",
+    "name": "图形与几何"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.shapes.angle",
+      "subjectId": "math",
+      "domainId": "geometry",
+      "name": "角",
+      "shortName": "角",
+      "definition": "认识角，知道角有一个顶点和两条边。",
+      "learningGoal": "能在图形中辨认角。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.shapes.angle.1",
+        "skill.shapes.angle.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.angle.1",
+        "mis.shapes.angle.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.shapes.right-angle",
+      "subjectId": "math",
+      "domainId": "geometry",
+      "name": "直角",
+      "shortName": "直角",
+      "definition": "认识直角，能判断生活中的直角。",
+      "learningGoal": "直角像书本角、课桌角那样方方正正。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.shapes.right-angle.1",
+        "skill.shapes.right-angle.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.right-angle.1",
+        "mis.shapes.right-angle.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "subjectId": "math",
+      "domainId": "geometry",
+      "name": "长方形和正方形",
+      "shortName": "长方形和正方形",
+      "definition": "认识长方形和正方形的边与角的特征。",
+      "learningGoal": "长方形对边相等，正方形四条边相等，四个角都是直角。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.shapes.rectangle-square.1",
+        "skill.shapes.rectangle-square.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.rectangle-square.1",
+        "mis.shapes.rectangle-square.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.shapes.parallelogram",
+      "subjectId": "math",
+      "domainId": "geometry",
+      "name": "平行四边形",
+      "shortName": "平行四边形",
+      "definition": "认识平行四边形，能从形状特征中辨认。",
+      "learningGoal": "平行四边形的对边相互平行，形状可以斜斜的。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.shapes.parallelogram.1",
+        "skill.shapes.parallelogram.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.parallelogram.1",
+        "mis.shapes.parallelogram.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.shapes.integrated",
+      "subjectId": "math",
+      "domainId": "geometry",
+      "name": "认识图形综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.shapes.angle",
+        "math.shapes.right-angle",
+        "math.shapes.rectangle-square",
+        "math.shapes.parallelogram"
+      ],
+      "skillIds": [
+        "skill.shapes.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.shapes.angle.1",
+      "knowledgePointId": "math.shapes.angle",
+      "name": "辨认角",
+      "learningGoal": "能辨认角。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.shapes.angle.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.angle.1"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.angle.2",
+      "knowledgePointId": "math.shapes.angle",
+      "name": "数角",
+      "learningGoal": "能数角。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.shapes.angle.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.angle.2"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.right-angle.1",
+      "knowledgePointId": "math.shapes.right-angle",
+      "name": "辨认直角",
+      "learningGoal": "能辨认直角。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.shapes.right-angle.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.right-angle.1"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.right-angle.2",
+      "knowledgePointId": "math.shapes.right-angle",
+      "name": "比较角的大小",
+      "learningGoal": "能比较角的大小。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.shapes.right-angle.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.right-angle.2"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.rectangle-square.1",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "name": "辨认长方形",
+      "learningGoal": "能辨认长方形。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.shapes.rectangle-square.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.rectangle-square.1"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.rectangle-square.2",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "name": "辨认正方形",
+      "learningGoal": "能辨认正方形。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.shapes.rectangle-square.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.rectangle-square.2"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.parallelogram.1",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "name": "辨认平行四边形",
+      "learningGoal": "能辨认平行四边形。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.shapes.parallelogram.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.parallelogram.1"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.parallelogram.2",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "name": "区分四边形",
+      "learningGoal": "能区分四边形。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.shapes.parallelogram.2"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.parallelogram.2"
+      ]
+    },
+    {
+      "skillId": "skill.shapes.integrated.1",
+      "knowledgePointId": "math.shapes.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.shapes.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.shapes.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.shapes.angle.1",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "name": "把弯曲线当角",
+      "description": "孩子在角任务中容易把弯曲线当角。",
+      "diagnosisHint": "请孩子回到题干，先说清角的关键信息。",
+      "remediationStrategyId": "review-shapes-angle"
+    },
+    {
+      "misconceptionId": "mis.shapes.angle.2",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.2",
+      "name": "漏数角",
+      "description": "孩子在角任务中容易漏数角。",
+      "diagnosisHint": "请孩子回到题干，先说清角的关键信息。",
+      "remediationStrategyId": "review-shapes-angle"
+    },
+    {
+      "misconceptionId": "mis.shapes.right-angle.1",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.1",
+      "name": "把所有角都当直角",
+      "description": "孩子在直角任务中容易把所有角都当直角。",
+      "diagnosisHint": "请孩子回到题干，先说清直角的关键信息。",
+      "remediationStrategyId": "review-shapes-right-angle"
+    },
+    {
+      "misconceptionId": "mis.shapes.right-angle.2",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.2",
+      "name": "只看边长判断角",
+      "description": "孩子在直角任务中容易只看边长判断角。",
+      "diagnosisHint": "请孩子回到题干，先说清直角的关键信息。",
+      "remediationStrategyId": "review-shapes-right-angle"
+    },
+    {
+      "misconceptionId": "mis.shapes.rectangle-square.1",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.1",
+      "name": "忽略边长关系",
+      "description": "孩子在长方形和正方形任务中容易忽略边长关系。",
+      "diagnosisHint": "请孩子回到题干，先说清长方形和正方形的关键信息。",
+      "remediationStrategyId": "review-shapes-rectangle-square"
+    },
+    {
+      "misconceptionId": "mis.shapes.rectangle-square.2",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.2",
+      "name": "把所有四边形当长方形",
+      "description": "孩子在长方形和正方形任务中容易把所有四边形当长方形。",
+      "diagnosisHint": "请孩子回到题干，先说清长方形和正方形的关键信息。",
+      "remediationStrategyId": "review-shapes-rectangle-square"
+    },
+    {
+      "misconceptionId": "mis.shapes.parallelogram.1",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.1",
+      "name": "只认端正的四边形",
+      "description": "孩子在平行四边形任务中容易只认端正的四边形。",
+      "diagnosisHint": "请孩子回到题干，先说清平行四边形的关键信息。",
+      "remediationStrategyId": "review-shapes-parallelogram"
+    },
+    {
+      "misconceptionId": "mis.shapes.parallelogram.2",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.2",
+      "name": "把梯形当平行四边形",
+      "description": "孩子在平行四边形任务中容易把梯形当平行四边形。",
+      "diagnosisHint": "请孩子回到题干，先说清平行四边形的关键信息。",
+      "remediationStrategyId": "review-shapes-parallelogram"
+    },
+    {
+      "misconceptionId": "mis.shapes.integrated.1",
+      "knowledgePointId": "math.shapes.integrated",
+      "skillId": "skill.shapes.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-shapes-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.shapes.angle.1",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "name": "角-辨认角",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查角：辨认角。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.angle.2",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.2",
+      "name": "角-数角",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查角：数角。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.right-angle.1",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.1",
+      "name": "直角-辨认直角",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查直角：辨认直角。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.right-angle.2",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.2",
+      "name": "直角-比较角的大小",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查直角：比较角的大小。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.rectangle-square.1",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.1",
+      "name": "长方形和正方形-辨认长方形",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查长方形和正方形：辨认长方形。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.rectangle-square.2",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.2",
+      "name": "长方形和正方形-辨认正方形",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查长方形和正方形：辨认正方形。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.parallelogram.1",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.1",
+      "name": "平行四边形-辨认平行四边形",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查平行四边形：辨认平行四边形。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.parallelogram.2",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.2",
+      "name": "平行四边形-区分四边形",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查平行四边形：区分四边形。"
+    },
+    {
+      "questionPatternId": "pattern.shapes.integrated.1",
+      "knowledgePointId": "math.shapes.integrated",
+      "skillId": "skill.shapes.integrated.1",
+      "name": "第六单元：认识图形综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillIds": [
+        "skill.time.hour-minute.1",
+        "skill.time.hour-minute.2"
+      ],
+      "title": "时和分线索卡",
+      "summary": "认识时和分，知道 1 时 = 60 分。",
+      "example": "1 时等于多少分？",
+      "method": "能用时和分描述较长活动。",
+      "commonMistake": "把 1 时当 100 分",
+      "reviewPrompt": "看到时和分题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.time.hour-minute.1",
+        "pattern.time.hour-minute.2"
+      ],
+      "levelId": "level-hour-minute",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-second",
+      "knowledgePointId": "math.time.second",
+      "skillIds": [
+        "skill.time.second.1",
+        "skill.time.second.2"
+      ],
+      "title": "秒线索卡",
+      "summary": "认识秒，知道 1 分 = 60 秒。",
+      "example": "1 分等于多少秒？",
+      "method": "用秒描述很短的时间。",
+      "commonMistake": "把秒当分",
+      "reviewPrompt": "看到秒题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.time.second.1",
+        "pattern.time.second.2"
+      ],
+      "levelId": "level-second",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "skillIds": [
+        "skill.time.read-clock.1",
+        "skill.time.read-clock.2"
+      ],
+      "title": "读钟面线索卡",
+      "summary": "能认读整时、半时和几时几分。",
+      "example": "分针指向 12，时针指向 8，是几时？",
+      "method": "先看时针，再看分针。",
+      "commonMistake": "只看分针",
+      "reviewPrompt": "看到读钟面题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.time.read-clock.1",
+        "pattern.time.read-clock.2"
+      ],
+      "levelId": "level-read-clock",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillIds": [
+        "skill.time.elapsed-time.1",
+        "skill.time.elapsed-time.2"
+      ],
+      "title": "经过时间线索卡",
+      "summary": "能计算简单经过时间和结束时间。",
+      "example": "8:20 过 10 分钟是几点？",
+      "method": "从开始时间按分钟往后数。",
+      "commonMistake": "跨半小时数错",
+      "reviewPrompt": "看到经过时间题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.time.elapsed-time.1",
+        "pattern.time.elapsed-time.2"
+      ],
+      "levelId": "level-elapsed-time",
+      "status": "draft"
+    }
+  ]
+}

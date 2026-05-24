@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "number-and-algebra",
+    "subjectId": "math",
+    "name": "数与代数"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "三位数加法",
+      "shortName": "三位数加法",
+      "definition": "能计算三位数加法，理解相同数位对齐。",
+      "learningGoal": "个位对个位、十位对十位、百位对百位。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.add-subtract.three-digit-add.1",
+        "skill.add-subtract.three-digit-add.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-add.1",
+        "mis.add-subtract.three-digit-add.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "三位数减法",
+      "shortName": "三位数减法",
+      "definition": "能计算三位数减法，理解退位。",
+      "learningGoal": "某一位不够减时，要向前一位借 1。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.add-subtract.three-digit-subtract.1",
+        "skill.add-subtract.three-digit-subtract.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-subtract.1",
+        "mis.add-subtract.three-digit-subtract.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "加减混合",
+      "shortName": "加减混合",
+      "definition": "能按顺序计算简单加减混合问题。",
+      "learningGoal": "先看题意，再按步骤计算。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.add-subtract.mixed-steps.1",
+        "skill.add-subtract.mixed-steps.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.mixed-steps.1",
+        "mis.add-subtract.mixed-steps.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "估算验算",
+      "shortName": "估算验算",
+      "definition": "能用估算判断结果范围，并用验算检查加减法。",
+      "learningGoal": "先估大约，再精算检查。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.add-subtract.estimate-check.1",
+        "skill.add-subtract.estimate-check.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.estimate-check.1",
+        "mis.add-subtract.estimate-check.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.add-subtract.integrated",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "加与减综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.add-subtract.three-digit-addition",
+        "math.add-subtract.three-digit-subtraction",
+        "math.add-subtract.mixed-add-subtract",
+        "math.add-subtract.estimate-and-check"
+      ],
+      "skillIds": [
+        "skill.add-subtract.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "name": "相同数位相加",
+      "learningGoal": "能相同数位相加。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.add-subtract.three-digit-add.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-add.1"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "name": "处理进位",
+      "learningGoal": "能处理进位。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.add-subtract.three-digit-add.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-add.2"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.three-digit-subtract.1",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "name": "相同数位相减",
+      "learningGoal": "能相同数位相减。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.add-subtract.three-digit-subtract.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-subtract.1"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.three-digit-subtract.2",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "name": "处理退位",
+      "learningGoal": "能处理退位。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.add-subtract.three-digit-subtract.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.three-digit-subtract.2"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "name": "分步计算",
+      "learningGoal": "能分步计算。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.add-subtract.mixed-steps.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.mixed-steps.1"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "name": "理解数量变化",
+      "learningGoal": "能理解数量变化。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.add-subtract.mixed-steps.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.mixed-steps.2"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "name": "估算结果",
+      "learningGoal": "能估算结果。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.add-subtract.estimate-check.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.estimate-check.1"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "name": "用逆运算验算",
+      "learningGoal": "能用逆运算验算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.add-subtract.estimate-check.2"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.estimate-check.2"
+      ]
+    },
+    {
+      "skillId": "skill.add-subtract.integrated.1",
+      "knowledgePointId": "math.add-subtract.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.add-subtract.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.add-subtract.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "name": "数位没有对齐",
+      "description": "孩子在三位数加法任务中容易数位没有对齐。",
+      "diagnosisHint": "请孩子回到题干，先说清三位数加法的关键信息。",
+      "remediationStrategyId": "review-add-subtract-three-digit-add"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.three-digit-add.2",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "name": "忘记进位",
+      "description": "孩子在三位数加法任务中容易忘记进位。",
+      "diagnosisHint": "请孩子回到题干，先说清三位数加法的关键信息。",
+      "remediationStrategyId": "review-add-subtract-three-digit-add"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.three-digit-subtract.1",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.1",
+      "name": "忘记退位",
+      "description": "孩子在三位数减法任务中容易忘记退位。",
+      "diagnosisHint": "请孩子回到题干，先说清三位数减法的关键信息。",
+      "remediationStrategyId": "review-add-subtract-three-digit-subtract"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.three-digit-subtract.2",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.2",
+      "name": "被减数和减数看反",
+      "description": "孩子在三位数减法任务中容易被减数和减数看反。",
+      "diagnosisHint": "请孩子回到题干，先说清三位数减法的关键信息。",
+      "remediationStrategyId": "review-add-subtract-three-digit-subtract"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.mixed-steps.1",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "name": "漏算一步",
+      "description": "孩子在加减混合任务中容易漏算一步。",
+      "diagnosisHint": "请孩子回到题干，先说清加减混合的关键信息。",
+      "remediationStrategyId": "review-add-subtract-mixed-steps"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.mixed-steps.2",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "name": "把增加和减少弄反",
+      "description": "孩子在加减混合任务中容易把增加和减少弄反。",
+      "diagnosisHint": "请孩子回到题干，先说清加减混合的关键信息。",
+      "remediationStrategyId": "review-add-subtract-mixed-steps"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.estimate-check.1",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "name": "估算离精算太远",
+      "description": "孩子在估算验算任务中容易估算离精算太远。",
+      "diagnosisHint": "请孩子回到题干，先说清估算验算的关键信息。",
+      "remediationStrategyId": "review-add-subtract-estimate-check"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.estimate-check.2",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "name": "不会用逆运算检查",
+      "description": "孩子在估算验算任务中容易不会用逆运算检查。",
+      "diagnosisHint": "请孩子回到题干，先说清估算验算的关键信息。",
+      "remediationStrategyId": "review-add-subtract-estimate-check"
+    },
+    {
+      "misconceptionId": "mis.add-subtract.integrated.1",
+      "knowledgePointId": "math.add-subtract.integrated",
+      "skillId": "skill.add-subtract.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-add-subtract-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.add-subtract.three-digit-add.1",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "name": "三位数加法-相同数位相加",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查三位数加法：相同数位相加。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.three-digit-add.2",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.2",
+      "name": "三位数加法-处理进位",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查三位数加法：处理进位。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.three-digit-subtract.1",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.1",
+      "name": "三位数减法-相同数位相减",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查三位数减法：相同数位相减。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.three-digit-subtract.2",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillId": "skill.add-subtract.three-digit-subtract.2",
+      "name": "三位数减法-处理退位",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查三位数减法：处理退位。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.mixed-steps.1",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "name": "加减混合-分步计算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查加减混合：分步计算。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.mixed-steps.2",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "name": "加减混合-理解数量变化",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查加减混合：理解数量变化。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.estimate-check.1",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "name": "估算验算-估算结果",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查估算验算：估算结果。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.estimate-check.2",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "name": "估算验算-用逆运算验算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查估算验算：用逆运算验算。"
+    },
+    {
+      "questionPatternId": "pattern.add-subtract.integrated.1",
+      "knowledgePointId": "math.add-subtract.integrated",
+      "skillId": "skill.add-subtract.integrated.1",
+      "name": "第五单元：加与减综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

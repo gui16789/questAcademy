@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-survey-question-basic",
+  "caseId": "case-survey-notebook",
+  "levelId": "level-survey-question",
+  "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+  "knowledgePointId": "math.data-records.survey-question",
+  "questions": [
+    {
+      "questionId": "q-survey-question-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "misconceptionId": "mis.data-records.survey-question.1",
+      "questionPatternId": "pattern.data-records.survey-question.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-survey-question",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "想知道同学最喜欢的社团，哪个问题更合适？",
+      "options": [
+        "你最喜欢哪个社团？",
+        "你今天开心吗？",
+        "天气好吗？"
+      ],
+      "answer": "你最喜欢哪个社团？",
+      "explanation": "这个问题直接对应调查目标。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "调查问题",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-survey-question-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.2",
+      "misconceptionId": "mis.data-records.survey-question.2",
+      "questionPatternId": "pattern.data-records.survey-question.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-survey-question",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "调查全班喜欢足球的人数，应调查 ___ 个班。",
+      "options": [],
+      "answer": "1",
+      "explanation": "题目说全班，就是调查这 1 个班的同学。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "调查问题",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-survey-question-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "misconceptionId": "mis.data-records.survey-question.1",
+      "questionPatternId": "pattern.data-records.survey-question.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-survey-question",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "调查问题要和想知道的事情有关。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "问题越清楚，记录越准确。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "调查问题",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-survey-question-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.2",
+      "misconceptionId": "mis.data-records.survey-question.2",
+      "questionPatternId": "pattern.data-records.survey-question.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-survey-question",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "想统计午餐喜欢米饭还是面条，哪个选项适合放在调查表里？",
+      "options": [
+        "米饭、面条",
+        "红色、蓝色",
+        "东、南"
+      ],
+      "answer": "米饭、面条",
+      "explanation": "选项要对应午餐偏好。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "调查问题",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

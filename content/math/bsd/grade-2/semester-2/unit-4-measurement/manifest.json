@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-4-measurement",
+  "title": "北师大版二年级下册第四单元：测量",
+  "defaultCaseId": "case-bridge-measure",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-24T00:00:00.000Z",
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-bridge-measure.json"
+    ],
+    "questions": [
+      "questions/level-millimeter.json",
+      "questions/level-decimeter.json",
+      "questions/level-kilometer.json",
+      "questions/level-choose-unit.json",
+      "questions/boss-bridge-measure-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewStatus": "changes_requested",
+    "teachingReviewStatus": "changes_requested",
+    "readabilityReviewStatus": "changes_requested",
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}
