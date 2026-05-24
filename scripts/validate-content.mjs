@@ -2,6 +2,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { validateCoverageForEntries } from "./coverage-lib.mjs";
+
 const DEFAULT_REGISTRY_PATH = path.join("content", "registry.json");
 
 export async function validateContentRegistry(options = {}) {
@@ -390,16 +392,30 @@ export async function validateContentPackage(contentRoot, options = {}) {
 }
 
 export async function runValidation(options = {}) {
+  const result = await runValidationDetailed(options);
+  return result.errors;
+}
+
+export async function runValidationDetailed(options = {}) {
   const rootDir = options.rootDir ?? process.cwd();
   const registryResult = await validateContentRegistry({ rootDir, registryPath: options.registryPath });
   const errors = [...registryResult.errors];
+  const warnings = [];
   const entries = selectEntries(registryResult.registry, registryResult.entries, options, errors);
 
   for (const entry of entries) {
     errors.push(...(await validateContentPackage(entry.entryPath, { rootDir })));
   }
 
-  return errors;
+  if (errors.length === 0) {
+    const coverageDiagnostics = await validateCoverageForEntries(entries, rootDir);
+    for (const diagnostic of coverageDiagnostics) {
+      if (diagnostic.severity === "ERROR") errors.push(diagnostic.message);
+      else warnings.push(diagnostic.message);
+    }
+  }
+
+  return { errors, warnings };
 }
 
 function selectEntries(registry, entries, options, errors) {
@@ -481,12 +497,15 @@ async function main() {
     return;
   }
 
-  const errors = await runValidation(options);
+  const { errors, warnings } = await runValidationDetailed(options);
+  if (warnings.length > 0) {
+    console.warn(warnings.join("\n"));
+  }
   if (errors.length > 0) {
     console.error(errors.join("\n"));
     process.exit(1);
   }
-  console.log("Content validation passed.");
+  console.log(warnings.length > 0 ? `Content validation passed with ${warnings.length} warning(s).` : "Content validation passed.");
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

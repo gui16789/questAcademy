@@ -69,6 +69,8 @@ npm run test
 npm run validate:content
 npm run validate:content -- --package math.bsd.g2.s2.unit-1-division
 npm run validate:content -- --all
+npm run report:coverage -- --all
+npm run --silent report:coverage -- --all --json
 npm run build
 npm run test:regression
 npm run test:regression -- --package math.bsd.g2.s2.unit-1-division
@@ -76,6 +78,8 @@ npm run test:regression -- --all
 ```
 
 `npm run test:regression` 会启动本地 Vite 服务并使用本机 Chrome headless 跑完整浏览器回归。默认回归 registry 默认内容包；`--package` 可指定内容包；`--all` 会回归 registry 内全部内容包。若 Chrome 不在默认路径，可设置 `CHROME_PATH`。
+
+`npm run report:coverage` 会按 coverage plan 输出内容包真实覆盖率，普通诊断题、Boss 题和 reserve 题分开统计。数学二下覆盖计划见 `content/coverage-plans/math/bsd/grade-2/semester-2.json`，指标说明和补题流程见 `docs/数学知识覆盖率体系.md`。
 
 ## 主要目录
 
@@ -86,6 +90,7 @@ npm run test:regression -- --all
 - `content/`：教材、知识图谱、案件、题目、知识卡、线索和勋章内容包。
 - `content/registry.json`：内容包注册表。
 - `scripts/validate-content.mjs`：内容包 registry、结构和引用校验脚本。
+- `scripts/report-coverage.mjs`：知识覆盖率报告脚本，支持 `--all`、`--package` 和 `--json`。
 - `scripts/regression-smoke.mjs`：浏览器回归脚本，支持按内容包运行。
 - `docs/`：产品、架构、GitHub 流程、测试和发布文档。
 

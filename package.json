@@ -15,7 +15,8 @@
     "test": "npm run test --workspaces --if-present && npm run test:content",
     "test:content": "node --test scripts/validate-content.test.mjs",
     "test:regression": "node scripts/regression-smoke.mjs",
-    "validate:content": "node scripts/validate-content.mjs"
+    "validate:content": "node scripts/validate-content.mjs",
+    "report:coverage": "node scripts/report-coverage.mjs"
   },
   "engines": {
     "node": ">=20"

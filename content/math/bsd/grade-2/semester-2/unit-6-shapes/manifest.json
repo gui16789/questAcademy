@@ -40,5 +40,41 @@
     "teachingReviewer": "",
     "readabilityReviewer": "",
     "approvedAt": ""
+  },
+  "coverage": {
+    "coveragePlanId": "math.bsd.g2.s2.coverage-plan",
+    "coveragePlanPath": "content/coverage-plans/math/bsd/grade-2/semester-2.json",
+    "expectedKnowledgePointIds": [
+      "math.shapes.angle",
+      "math.shapes.right-angle",
+      "math.shapes.rectangle-square",
+      "math.shapes.parallelogram",
+      "math.shapes.integrated"
+    ],
+    "expectedMicroKnowledgePointIds": [
+      "mkp.shapes.angle.1",
+      "mkp.shapes.angle.2",
+      "mkp.shapes.right-angle.1",
+      "mkp.shapes.right-angle.2",
+      "mkp.shapes.rectangle-square.1",
+      "mkp.shapes.rectangle-square.2",
+      "mkp.shapes.parallelogram.1",
+      "mkp.shapes.parallelogram.2",
+      "mkp.shapes.integrated.1"
+    ],
+    "coverageTarget": {
+      "knowledgePointCoverageRate": 1,
+      "microKnowledgePointCoverageRate": 1,
+      "skillCoverageRate": 1,
+      "misconceptionCoverageRate": 1
+    },
+    "diagnosticRequirement": {
+      "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+      "minQuestionsPerSkill": 2,
+      "minQuestionsPerMisconception": 1,
+      "excludeReserveFromCoverage": true,
+      "excludeBossFromDiagnosticCoverage": true
+    },
+    "coverageStatus": "draft_gap_known"
   }
 }
