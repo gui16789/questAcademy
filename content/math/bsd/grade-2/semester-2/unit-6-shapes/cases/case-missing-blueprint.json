@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "caseId": "case-missing-blueprint",
+  "name": "图纸碎片案",
+  "subjectId": "math",
+  "unitId": "unit-6-shapes",
+  "targetKnowledgePointIds": [
+    "math.shapes.angle",
+    "math.shapes.right-angle",
+    "math.shapes.rectangle-square",
+    "math.shapes.parallelogram"
+  ],
+  "story": {
+    "summary": "建筑图纸被剪成了碎片，小侦探要认识角、长方形、正方形和平行四边形来拼回图纸。",
+    "setting": "动物城建筑事务所",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-angle",
+    "level-right-angle",
+    "level-rectangle-square",
+    "level-parallelogram"
+  ],
+  "levels": [
+    {
+      "levelId": "level-angle",
+      "caseId": "case-missing-blueprint",
+      "order": 1,
+      "name": "角的认识",
+      "place": "图纸角落",
+      "knowledgePointId": "math.shapes.angle",
+      "skillIds": [
+        "skill.shapes.angle.1",
+        "skill.shapes.angle.2"
+      ],
+      "questionGroupId": "qg-level-angle-basic",
+      "intro": "请在图纸角落调查：能在图形中辨认角。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-angle",
+        "knowledgeCardIds": [
+          "card-angle"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-right-angle",
+      "caseId": "case-missing-blueprint",
+      "order": 2,
+      "name": "直角认识",
+      "place": "直角检查台",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillIds": [
+        "skill.shapes.right-angle.1",
+        "skill.shapes.right-angle.2"
+      ],
+      "questionGroupId": "qg-level-right-angle-basic",
+      "intro": "请在直角检查台调查：直角像书本角、课桌角那样方方正正。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-right-angle",
+        "knowledgeCardIds": [
+          "card-right-angle"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-angle"
+      }
+    },
+    {
+      "levelId": "level-rectangle-square",
+      "caseId": "case-missing-blueprint",
+      "order": 3,
+      "name": "长方形和正方形",
+      "place": "窗框工作台",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillIds": [
+        "skill.shapes.rectangle-square.1",
+        "skill.shapes.rectangle-square.2"
+      ],
+      "questionGroupId": "qg-level-rectangle-square-basic",
+      "intro": "请在窗框工作台调查：长方形对边相等，正方形四条边相等，四个角都是直角。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-rectangle-square",
+        "knowledgeCardIds": [
+          "card-rectangle-square"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-right-angle"
+      }
+    },
+    {
+      "levelId": "level-parallelogram",
+      "caseId": "case-missing-blueprint",
+      "order": 4,
+      "name": "平行四边形认识",
+      "place": "屋顶拼图间",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillIds": [
+        "skill.shapes.parallelogram.1",
+        "skill.shapes.parallelogram.2"
+      ],
+      "questionGroupId": "qg-level-parallelogram-basic",
+      "intro": "请在屋顶拼图间调查：平行四边形的对边相互平行，形状可以斜斜的。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-parallelogram",
+        "knowledgeCardIds": [
+          "card-parallelogram"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-rectangle-square"
+      }
+    }
+  ],
+  "bossTaskId": "boss-missing-blueprint-final",
+  "badgeRewardIds": [
+    "badge-shapes-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

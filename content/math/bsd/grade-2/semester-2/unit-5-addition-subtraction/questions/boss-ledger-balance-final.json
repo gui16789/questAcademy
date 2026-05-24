@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-ledger-balance-final",
+    "caseId": "case-ledger-balance",
+    "name": "商店账本最终核对",
+    "targetKnowledgePointIds": [
+      "math.add-subtract.three-digit-addition",
+      "math.add-subtract.three-digit-subtraction",
+      "math.add-subtract.mixed-add-subtract",
+      "math.add-subtract.estimate-and-check",
+      "math.add-subtract.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.add-subtract.three-digit-add.1",
+      "skill.add-subtract.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.add-subtract.three-digit-add.1",
+      "mis.add-subtract.integrated.1"
+    ],
+    "scenario": "账本记录上午收入 268 元，下午收入 157 元，又支出 189 元，需要判断总收入和剩余金额。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.add-subtract.three-digit-add.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.add-subtract.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-three-digit-add",
+        "card-estimate-check"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "boss",
+      "bossTaskId": "boss-ledger-balance-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "上午收入 268 元，下午收入 157 元，总收入是多少元？",
+      "options": [
+        "425",
+        "415",
+        "325"
+      ],
+      "answer": "425",
+      "explanation": "268 + 157 = 425。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "加与减",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "knowledgePointId": "math.add-subtract.integrated",
+      "skillId": "skill.add-subtract.integrated.1",
+      "misconceptionId": "mis.add-subtract.integrated.1",
+      "questionPatternId": "pattern.add-subtract.integrated.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "boss",
+      "bossTaskId": "boss-ledger-balance-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "总收入 425 元，支出 189 元，还剩多少元？",
+      "options": [
+        "236",
+        "246",
+        "614"
+      ],
+      "answer": "236",
+      "explanation": "425 - 189 = 236。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "加与减",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

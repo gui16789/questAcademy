@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "measurement",
+    "subjectId": "math",
+    "name": "测量"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.time.hour-minute",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "时和分",
+      "shortName": "时和分",
+      "definition": "认识时和分，知道 1 时 = 60 分。",
+      "learningGoal": "能用时和分描述较长活动。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.time.hour-minute.1",
+        "skill.time.hour-minute.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.hour-minute.1",
+        "mis.time.hour-minute.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.time.second",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "秒",
+      "shortName": "秒",
+      "definition": "认识秒，知道 1 分 = 60 秒。",
+      "learningGoal": "用秒描述很短的时间。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.time.second.1",
+        "skill.time.second.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.second.1",
+        "mis.time.second.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.time.read-clock",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "读钟面",
+      "shortName": "读钟面",
+      "definition": "能认读整时、半时和几时几分。",
+      "learningGoal": "先看时针，再看分针。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.time.read-clock.1",
+        "skill.time.read-clock.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.read-clock.1",
+        "mis.time.read-clock.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.time.elapsed-time",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "经过时间",
+      "shortName": "经过时间",
+      "definition": "能计算简单经过时间和结束时间。",
+      "learningGoal": "从开始时间按分钟往后数。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.time.elapsed-time.1",
+        "skill.time.elapsed-time.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.elapsed-time.1",
+        "mis.time.elapsed-time.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.time.integrated",
+      "subjectId": "math",
+      "domainId": "measurement",
+      "name": "时、分、秒综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.time.hour-minute",
+        "math.time.second",
+        "math.time.read-clock",
+        "math.time.elapsed-time"
+      ],
+      "skillIds": [
+        "skill.time.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.time.hour-minute.1",
+      "knowledgePointId": "math.time.hour-minute",
+      "name": "认识时分",
+      "learningGoal": "能认识时分。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.time.hour-minute.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.hour-minute.1"
+      ]
+    },
+    {
+      "skillId": "skill.time.hour-minute.2",
+      "knowledgePointId": "math.time.hour-minute",
+      "name": "时分换算",
+      "learningGoal": "能时分换算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.time.hour-minute.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.hour-minute.2"
+      ]
+    },
+    {
+      "skillId": "skill.time.second.1",
+      "knowledgePointId": "math.time.second",
+      "name": "认识秒",
+      "learningGoal": "能认识秒。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.time.second.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.second.1"
+      ]
+    },
+    {
+      "skillId": "skill.time.second.2",
+      "knowledgePointId": "math.time.second",
+      "name": "分秒换算",
+      "learningGoal": "能分秒换算。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.time.second.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.second.2"
+      ]
+    },
+    {
+      "skillId": "skill.time.read-clock.1",
+      "knowledgePointId": "math.time.read-clock",
+      "name": "读整时半时",
+      "learningGoal": "能读整时半时。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.time.read-clock.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.read-clock.1"
+      ]
+    },
+    {
+      "skillId": "skill.time.read-clock.2",
+      "knowledgePointId": "math.time.read-clock",
+      "name": "读几时几分",
+      "learningGoal": "能读几时几分。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.time.read-clock.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.read-clock.2"
+      ]
+    },
+    {
+      "skillId": "skill.time.elapsed-time.1",
+      "knowledgePointId": "math.time.elapsed-time",
+      "name": "计算结束时间",
+      "learningGoal": "能计算结束时间。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.time.elapsed-time.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.elapsed-time.1"
+      ]
+    },
+    {
+      "skillId": "skill.time.elapsed-time.2",
+      "knowledgePointId": "math.time.elapsed-time",
+      "name": "计算经过时间",
+      "learningGoal": "能计算经过时间。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.time.elapsed-time.2"
+      ],
+      "misconceptionIds": [
+        "mis.time.elapsed-time.2"
+      ]
+    },
+    {
+      "skillId": "skill.time.integrated.1",
+      "knowledgePointId": "math.time.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.time.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.time.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.time.hour-minute.1",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.1",
+      "name": "把 1 时当 100 分",
+      "description": "孩子在时和分任务中容易把 1 时当 100 分。",
+      "diagnosisHint": "请孩子回到题干，先说清时和分的关键信息。",
+      "remediationStrategyId": "review-time-hour-minute"
+    },
+    {
+      "misconceptionId": "mis.time.hour-minute.2",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.2",
+      "name": "活动单位选错",
+      "description": "孩子在时和分任务中容易活动单位选错。",
+      "diagnosisHint": "请孩子回到题干，先说清时和分的关键信息。",
+      "remediationStrategyId": "review-time-hour-minute"
+    },
+    {
+      "misconceptionId": "mis.time.second.1",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.1",
+      "name": "把秒当分",
+      "description": "孩子在秒任务中容易把秒当分。",
+      "diagnosisHint": "请孩子回到题干，先说清秒的关键信息。",
+      "remediationStrategyId": "review-time-second"
+    },
+    {
+      "misconceptionId": "mis.time.second.2",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.2",
+      "name": "短时间单位选错",
+      "description": "孩子在秒任务中容易短时间单位选错。",
+      "diagnosisHint": "请孩子回到题干，先说清秒的关键信息。",
+      "remediationStrategyId": "review-time-second"
+    },
+    {
+      "misconceptionId": "mis.time.read-clock.1",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.1",
+      "name": "只看分针",
+      "description": "孩子在读钟面任务中容易只看分针。",
+      "diagnosisHint": "请孩子回到题干，先说清读钟面的关键信息。",
+      "remediationStrategyId": "review-time-read-clock"
+    },
+    {
+      "misconceptionId": "mis.time.read-clock.2",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.2",
+      "name": "时针接近下一小时就读错",
+      "description": "孩子在读钟面任务中容易时针接近下一小时就读错。",
+      "diagnosisHint": "请孩子回到题干，先说清读钟面的关键信息。",
+      "remediationStrategyId": "review-time-read-clock"
+    },
+    {
+      "misconceptionId": "mis.time.elapsed-time.1",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.1",
+      "name": "跨半小时数错",
+      "description": "孩子在经过时间任务中容易跨半小时数错。",
+      "diagnosisHint": "请孩子回到题干，先说清经过时间的关键信息。",
+      "remediationStrategyId": "review-time-elapsed-time"
+    },
+    {
+      "misconceptionId": "mis.time.elapsed-time.2",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.2",
+      "name": "把开始和结束弄反",
+      "description": "孩子在经过时间任务中容易把开始和结束弄反。",
+      "diagnosisHint": "请孩子回到题干，先说清经过时间的关键信息。",
+      "remediationStrategyId": "review-time-elapsed-time"
+    },
+    {
+      "misconceptionId": "mis.time.integrated.1",
+      "knowledgePointId": "math.time.integrated",
+      "skillId": "skill.time.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-time-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.time.hour-minute.1",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.1",
+      "name": "时和分-认识时分",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查时和分：认识时分。"
+    },
+    {
+      "questionPatternId": "pattern.time.hour-minute.2",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.2",
+      "name": "时和分-时分换算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查时和分：时分换算。"
+    },
+    {
+      "questionPatternId": "pattern.time.second.1",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.1",
+      "name": "秒-认识秒",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查秒：认识秒。"
+    },
+    {
+      "questionPatternId": "pattern.time.second.2",
+      "knowledgePointId": "math.time.second",
+      "skillId": "skill.time.second.2",
+      "name": "秒-分秒换算",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查秒：分秒换算。"
+    },
+    {
+      "questionPatternId": "pattern.time.read-clock.1",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.1",
+      "name": "读钟面-读整时半时",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查读钟面：读整时半时。"
+    },
+    {
+      "questionPatternId": "pattern.time.read-clock.2",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.2",
+      "name": "读钟面-读几时几分",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查读钟面：读几时几分。"
+    },
+    {
+      "questionPatternId": "pattern.time.elapsed-time.1",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.1",
+      "name": "经过时间-计算结束时间",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查经过时间：计算结束时间。"
+    },
+    {
+      "questionPatternId": "pattern.time.elapsed-time.2",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillId": "skill.time.elapsed-time.2",
+      "name": "经过时间-计算经过时间",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查经过时间：计算经过时间。"
+    },
+    {
+      "questionPatternId": "pattern.time.integrated.1",
+      "knowledgePointId": "math.time.integrated",
+      "skillId": "skill.time.integrated.1",
+      "name": "第七单元：时、分、秒综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

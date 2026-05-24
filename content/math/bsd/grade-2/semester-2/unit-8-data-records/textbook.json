@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-8-data-records",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 8,
+    "name": "第八单元：调查与记录",
+    "learningGoals": [
+      "问题要让大家容易选择和回答。",
+      "一个人记录一次，避免重复或漏记。",
+      "同类数据记在同一栏，最后合计。",
+      "先找每类数量，再比较或相减。"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "name": "评选吉祥物",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.data-records.survey-question"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-collect-data",
+      "name": "最喜欢的水果",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.data-records.collect-data"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-record-table",
+      "name": "班级旧物市场",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.data-records.record-table"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "name": "生日统计",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.data-records.interpret-data"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    }
+  ]
+}

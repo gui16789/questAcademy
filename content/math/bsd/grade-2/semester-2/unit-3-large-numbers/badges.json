@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "badges": [
+    {
+      "badgeId": "badge-large-numbers-rookie-detective",
+      "name": "新手小侦探",
+      "description": "完成第一个普通关卡。",
+      "icon": "badge-detective-rookie",
+      "triggerRule": {
+        "type": "first_level_passed",
+        "caseId": "case-large-number-code"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-large-numbers-clue-collector",
+      "name": "线索收集员",
+      "description": "收集全部 4 条线索。",
+      "icon": "badge-clue-collector",
+      "triggerRule": {
+        "type": "all_clues_collected",
+        "caseId": "case-large-number-code",
+        "requiredClueIds": [
+          "clue-count-thousands",
+          "clue-read-write",
+          "clue-compare-order",
+          "clue-estimate-represent"
+        ]
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-large-numbers-wrong-reviewer",
+      "name": "悬案调查员",
+      "description": "第一次进入悬案馆复习。",
+      "icon": "badge-reviewer",
+      "triggerRule": {
+        "type": "first_wrong_review",
+        "caseId": "case-large-number-code"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-large-numbers-persistent",
+      "name": "坚持不放弃",
+      "description": "错题重做并答对。",
+      "icon": "badge-persistent",
+      "triggerRule": {
+        "type": "wrong_question_solved",
+        "caseId": "case-large-number-code"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-large-numbers-case-closer",
+      "name": "破案小能手",
+      "description": "完成 Boss 并成功结案。",
+      "icon": "badge-detective-gold",
+      "triggerRule": {
+        "type": "case_closed",
+        "caseId": "case-large-number-code"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    }
+  ]
+}

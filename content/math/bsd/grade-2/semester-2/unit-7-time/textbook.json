@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-7-time",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 7,
+    "name": "第七单元：时、分、秒",
+    "learningGoals": [
+      "能用时和分描述较长活动。",
+      "用秒描述很短的时间。",
+      "先看时针，再看分针。",
+      "从开始时间按分钟往后数。"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "name": "奥运开幕",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.time.hour-minute"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-second",
+      "name": "一分钟能干什么",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.time.second"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-read-clock",
+      "name": "作息时间表",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.time.read-clock"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "name": "列车时刻",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.time.elapsed-time"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    }
+  ]
+}

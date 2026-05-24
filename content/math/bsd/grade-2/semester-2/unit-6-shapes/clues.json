@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-angle",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "title": "角线索",
+      "text": "在图纸角落确认：能在图形中辨认角。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-angle"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-right-angle",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "title": "直角线索",
+      "text": "在直角检查台确认：直角像书本角、课桌角那样方方正正。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-right-angle"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-rectangle-square",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "title": "长方形和正方形线索",
+      "text": "在窗框工作台确认：长方形对边相等，正方形四条边相等，四个角都是直角。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-rectangle-square"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-parallelogram",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "title": "平行四边形线索",
+      "text": "在屋顶拼图间确认：平行四边形的对边相互平行，形状可以斜斜的。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-parallelogram"
+      },
+      "status": "draft"
+    }
+  ]
+}

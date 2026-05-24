@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-direction-cardinal",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "misconceptionId": "mis.direction.reverse-east-west",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-cardinal-directions"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.direction.choose-cardinal",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "misconceptionId": "mis.direction.ignore-reference",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-map-position"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.direction.choose-map-position",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-diagonal-direction",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "misconceptionId": "mis.direction.swap-diagonal",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-diagonal-directions"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.direction.choose-diagonal",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.skip-route-step",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-route-description"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.direction.follow-route",
+          "count": 3
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-parallelogram-basic",
+  "caseId": "case-missing-blueprint",
+  "levelId": "level-parallelogram",
+  "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+  "knowledgePointId": "math.shapes.parallelogram",
+  "questions": [
+    {
+      "questionId": "q-parallelogram-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-parallelogram",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.1",
+      "misconceptionId": "mis.shapes.parallelogram.1",
+      "questionPatternId": "pattern.shapes.parallelogram.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-parallelogram",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "哪种图形像被推斜的长方形？",
+      "options": [
+        "平行四边形",
+        "圆",
+        "三角形"
+      ],
+      "answer": "平行四边形",
+      "explanation": "平行四边形常像斜斜的四边形。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "平行四边形",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-parallelogram-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-parallelogram",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.2",
+      "misconceptionId": "mis.shapes.parallelogram.2",
+      "questionPatternId": "pattern.shapes.parallelogram.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-parallelogram",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "平行四边形有 ___ 条边。",
+      "options": [],
+      "answer": "4",
+      "explanation": "平行四边形是四边形，有 4 条边。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "平行四边形",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-parallelogram-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-parallelogram",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.1",
+      "misconceptionId": "mis.shapes.parallelogram.1",
+      "questionPatternId": "pattern.shapes.parallelogram.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-parallelogram",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "平行四边形一定有四个直角。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "平行四边形可以没有直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "平行四边形",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-parallelogram-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-parallelogram",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.2",
+      "misconceptionId": "mis.shapes.parallelogram.2",
+      "questionPatternId": "pattern.shapes.parallelogram.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-parallelogram",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "下面哪句话更适合描述平行四边形？",
+      "options": [
+        "对边互相平行",
+        "只有三条边",
+        "所有边都是弯的"
+      ],
+      "answer": "对边互相平行",
+      "explanation": "平行四边形的对边互相平行。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "平行四边形",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

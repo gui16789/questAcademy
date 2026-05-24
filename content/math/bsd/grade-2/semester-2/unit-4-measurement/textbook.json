@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-4-measurement",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 4,
+    "name": "第四单元：测量",
+    "learningGoals": [
+      "知道 1 厘米 = 10 毫米。",
+      "知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+      "选择千米描述较长路线。",
+      "短小物体用毫米或厘米，较长路线用米或千米。"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-millimeter",
+      "name": "铅笔有多长",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.measurement.millimeter"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-decimeter",
+      "name": "课桌有多宽",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.measurement.decimeter"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-kilometer",
+      "name": "1千米有多长",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.measurement.kilometer"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-4-measurement",
+      "lessonId": "lesson-choose-unit",
+      "name": "标签核对",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.measurement.choose-length-unit"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "AI draft，待教研按教材页码复核。"
+      }
+    }
+  ]
+}

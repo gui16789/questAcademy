@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "caseId": "case-ledger-balance",
+  "name": "账本平衡案",
+  "subjectId": "math",
+  "unitId": "unit-5-addition-subtraction",
+  "targetKnowledgePointIds": [
+    "math.add-subtract.three-digit-addition",
+    "math.add-subtract.three-digit-subtraction",
+    "math.add-subtract.mixed-add-subtract",
+    "math.add-subtract.estimate-and-check"
+  ],
+  "story": {
+    "summary": "动物商店的收支账本出现空格，小侦探要用三位数加减法帮店长核对。",
+    "setting": "动物商店收银台",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-three-digit-add",
+    "level-three-digit-subtract",
+    "level-mixed-steps",
+    "level-estimate-check"
+  ],
+  "levels": [
+    {
+      "levelId": "level-three-digit-add",
+      "caseId": "case-ledger-balance",
+      "order": 1,
+      "name": "三位数加法",
+      "place": "电器柜台",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillIds": [
+        "skill.add-subtract.three-digit-add.1",
+        "skill.add-subtract.three-digit-add.2"
+      ],
+      "questionGroupId": "qg-level-three-digit-add-basic",
+      "intro": "请在电器柜台调查：个位对个位、十位对十位、百位对百位。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-three-digit-add",
+        "knowledgeCardIds": [
+          "card-three-digit-add"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-three-digit-subtract",
+      "caseId": "case-ledger-balance",
+      "order": 2,
+      "name": "三位数减法",
+      "place": "电池回收箱",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillIds": [
+        "skill.add-subtract.three-digit-subtract.1",
+        "skill.add-subtract.three-digit-subtract.2"
+      ],
+      "questionGroupId": "qg-level-three-digit-subtract-basic",
+      "intro": "请在电池回收箱调查：某一位不够减时，要向前一位借 1。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-three-digit-subtract",
+        "knowledgeCardIds": [
+          "card-three-digit-subtract"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-three-digit-add"
+      }
+    },
+    {
+      "levelId": "level-mixed-steps",
+      "caseId": "case-ledger-balance",
+      "order": 3,
+      "name": "连加连减与加减混合",
+      "place": "年度展板",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillIds": [
+        "skill.add-subtract.mixed-steps.1",
+        "skill.add-subtract.mixed-steps.2"
+      ],
+      "questionGroupId": "qg-level-mixed-steps-basic",
+      "intro": "请在年度展板调查：先看题意，再按步骤计算。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-mixed-steps",
+        "knowledgeCardIds": [
+          "card-mixed-steps"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-three-digit-subtract"
+      }
+    },
+    {
+      "levelId": "level-estimate-check",
+      "caseId": "case-ledger-balance",
+      "order": 4,
+      "name": "估算与验算",
+      "place": "账本检查室",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillIds": [
+        "skill.add-subtract.estimate-check.1",
+        "skill.add-subtract.estimate-check.2"
+      ],
+      "questionGroupId": "qg-level-estimate-check-basic",
+      "intro": "请在账本检查室调查：先估大约，再精算检查。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-estimate-check",
+        "knowledgeCardIds": [
+          "card-estimate-check"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-mixed-steps"
+      }
+    }
+  ],
+  "bossTaskId": "boss-ledger-balance-final",
+  "badgeRewardIds": [
+    "badge-add-subtract-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

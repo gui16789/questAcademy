@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-survey-notebook-final",
+    "caseId": "case-survey-notebook",
+    "name": "社团报名最终整理",
+    "targetKnowledgePointIds": [
+      "math.data-records.survey-question",
+      "math.data-records.collect-data",
+      "math.data-records.record-table",
+      "math.data-records.interpret-data",
+      "math.data-records.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.data-records.survey-question.1",
+      "skill.data-records.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.data-records.survey-question.1",
+      "mis.data-records.integrated.1"
+    ],
+    "scenario": "报名记录显示绘画 12 人、足球 9 人、合唱 7 人，需要判断最多、最少和相差人数。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.data-records.survey-question.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.data-records.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-survey-question",
+        "card-interpret-data"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-survey-question",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "misconceptionId": "mis.data-records.survey-question.1",
+      "questionPatternId": "pattern.data-records.survey-question.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "boss",
+      "bossTaskId": "boss-survey-notebook-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "绘画 12 人、足球 9 人、合唱 7 人，报名最多的是哪个社团？",
+      "options": [
+        "绘画",
+        "足球",
+        "合唱"
+      ],
+      "answer": "绘画",
+      "explanation": "12 最大，所以绘画社报名最多。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "调查与记录",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "knowledgePointId": "math.data-records.integrated",
+      "skillId": "skill.data-records.integrated.1",
+      "misconceptionId": "mis.data-records.integrated.1",
+      "questionPatternId": "pattern.data-records.integrated.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "boss",
+      "bossTaskId": "boss-survey-notebook-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "绘画比合唱多多少人？",
+      "options": [
+        "5 人",
+        "3 人",
+        "19 人"
+      ],
+      "answer": "5 人",
+      "explanation": "12 - 7 = 5。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "调查与记录",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

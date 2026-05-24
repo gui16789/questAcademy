@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-interpret-data-basic",
+  "caseId": "case-survey-notebook",
+  "levelId": "level-interpret-data",
+  "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+  "knowledgePointId": "math.data-records.interpret-data",
+  "questions": [
+    {
+      "questionId": "q-interpret-data-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.1",
+      "misconceptionId": "mis.data-records.interpret-data.1",
+      "questionPatternId": "pattern.data-records.interpret-data.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-interpret-data",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "绘画 12 人、足球 9 人，哪个更多？",
+      "options": [
+        "绘画",
+        "足球",
+        "一样多"
+      ],
+      "answer": "绘画",
+      "explanation": "12 比 9 多。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "读懂数据",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-interpret-data-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.2",
+      "misconceptionId": "mis.data-records.interpret-data.2",
+      "questionPatternId": "pattern.data-records.interpret-data.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-interpret-data",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "合唱 7 人，足球 9 人，相差 ___ 人。",
+      "options": [],
+      "answer": "2",
+      "explanation": "9 - 7 = 2。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "读懂数据",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-interpret-data-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.1",
+      "misconceptionId": "mis.data-records.interpret-data.1",
+      "questionPatternId": "pattern.data-records.interpret-data.1",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-interpret-data",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "读统计表时，要先看清每一类对应的人数。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "看清类别和数量才能判断。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "读懂数据",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-interpret-data-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-8-data-records",
+      "lessonId": "lesson-interpret-data",
+      "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.2",
+      "misconceptionId": "mis.data-records.interpret-data.2",
+      "questionPatternId": "pattern.data-records.interpret-data.2",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-interpret-data",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "绘画 12 人、足球 9 人、合唱 7 人，最少的是？",
+      "options": [
+        "合唱",
+        "足球",
+        "绘画"
+      ],
+      "answer": "合唱",
+      "explanation": "7 最少。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "调查与记录",
+        "读懂数据",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

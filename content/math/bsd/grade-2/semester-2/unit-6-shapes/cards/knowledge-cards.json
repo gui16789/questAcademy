@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillIds": [
+        "skill.shapes.angle.1",
+        "skill.shapes.angle.2"
+      ],
+      "title": "角线索卡",
+      "summary": "认识角，知道角有一个顶点和两条边。",
+      "example": "一个角由什么组成？",
+      "method": "能在图形中辨认角。",
+      "commonMistake": "把弯曲线当角",
+      "reviewPrompt": "看到角题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.shapes.angle.1",
+        "pattern.shapes.angle.2"
+      ],
+      "levelId": "level-angle",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillIds": [
+        "skill.shapes.right-angle.1",
+        "skill.shapes.right-angle.2"
+      ],
+      "title": "直角线索卡",
+      "summary": "认识直角，能判断生活中的直角。",
+      "example": "课本封面的角通常是什么角？",
+      "method": "直角像书本角、课桌角那样方方正正。",
+      "commonMistake": "把所有角都当直角",
+      "reviewPrompt": "看到直角题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.shapes.right-angle.1",
+        "pattern.shapes.right-angle.2"
+      ],
+      "levelId": "level-right-angle",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-rectangle-square",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillIds": [
+        "skill.shapes.rectangle-square.1",
+        "skill.shapes.rectangle-square.2"
+      ],
+      "title": "长方形和正方形线索卡",
+      "summary": "认识长方形和正方形的边与角的特征。",
+      "example": "正方形有什么特征？",
+      "method": "长方形对边相等，正方形四条边相等，四个角都是直角。",
+      "commonMistake": "忽略边长关系",
+      "reviewPrompt": "看到长方形和正方形题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.shapes.rectangle-square.1",
+        "pattern.shapes.rectangle-square.2"
+      ],
+      "levelId": "level-rectangle-square",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-parallelogram",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillIds": [
+        "skill.shapes.parallelogram.1",
+        "skill.shapes.parallelogram.2"
+      ],
+      "title": "平行四边形线索卡",
+      "summary": "认识平行四边形，能从形状特征中辨认。",
+      "example": "哪种图形像被推斜的长方形？",
+      "method": "平行四边形的对边相互平行，形状可以斜斜的。",
+      "commonMistake": "只认端正的四边形",
+      "reviewPrompt": "看到平行四边形题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.shapes.parallelogram.1",
+        "pattern.shapes.parallelogram.2"
+      ],
+      "levelId": "level-parallelogram",
+      "status": "draft"
+    }
+  ]
+}

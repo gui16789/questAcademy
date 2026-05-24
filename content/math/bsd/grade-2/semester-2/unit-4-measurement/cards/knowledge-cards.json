@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-millimeter",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillIds": [
+        "skill.measurement.millimeter.1",
+        "skill.measurement.millimeter.2"
+      ],
+      "title": "毫米线索卡",
+      "summary": "认识毫米，能用毫米描述较短物体的长度。",
+      "example": "1 厘米等于多少毫米？",
+      "method": "知道 1 厘米 = 10 毫米。",
+      "commonMistake": "把毫米当厘米",
+      "reviewPrompt": "看到毫米题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.measurement.millimeter.1",
+        "pattern.measurement.millimeter.2"
+      ],
+      "levelId": "level-millimeter",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillIds": [
+        "skill.measurement.decimeter.1",
+        "skill.measurement.decimeter.2"
+      ],
+      "title": "分米线索卡",
+      "summary": "认识分米，能在厘米、分米、米之间换算。",
+      "example": "1 分米等于多少厘米？",
+      "method": "知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+      "commonMistake": "把分米和厘米混淆",
+      "reviewPrompt": "看到分米题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.measurement.decimeter.1",
+        "pattern.measurement.decimeter.2"
+      ],
+      "levelId": "level-decimeter",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillIds": [
+        "skill.measurement.kilometer.1",
+        "skill.measurement.kilometer.2"
+      ],
+      "title": "千米线索卡",
+      "summary": "认识千米，能理解 1 千米 = 1000 米。",
+      "example": "1 千米等于多少米？",
+      "method": "选择千米描述较长路线。",
+      "commonMistake": "把千米当米",
+      "reviewPrompt": "看到千米题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.measurement.kilometer.1",
+        "pattern.measurement.kilometer.2"
+      ],
+      "levelId": "level-kilometer",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillIds": [
+        "skill.measurement.choose-unit.1",
+        "skill.measurement.choose-unit.2"
+      ],
+      "title": "选择长度单位线索卡",
+      "summary": "能根据物体或路线特点选择合适长度单位。",
+      "example": "一支铅笔长约 18 什么？",
+      "method": "短小物体用毫米或厘米，较长路线用米或千米。",
+      "commonMistake": "单位过大或过小",
+      "reviewPrompt": "看到选择长度单位题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.measurement.choose-unit.1",
+        "pattern.measurement.choose-unit.2"
+      ],
+      "levelId": "level-choose-unit",
+      "status": "draft"
+    }
+  ]
+}

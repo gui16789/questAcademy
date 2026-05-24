@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "caseId": "case-lost-parcel",
+  "name": "迷路包裹案",
+  "subjectId": "math",
+  "unitId": "unit-2-direction-position",
+  "targetKnowledgePointIds": [
+    "math.direction.cardinal",
+    "math.direction.map-position",
+    "math.direction.diagonal",
+    "math.direction.route"
+  ],
+  "story": {
+    "summary": "动物邮局有一个学习包裹迷路了，小侦探需要用方向与位置线索找到正确投递路线。",
+    "setting": "动物侦探城方向邮局",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-cardinal-directions",
+    "level-map-position",
+    "level-diagonal-directions",
+    "level-route-description"
+  ],
+  "levels": [
+    {
+      "levelId": "level-cardinal-directions",
+      "caseId": "case-lost-parcel",
+      "order": 1,
+      "name": "方向邮局",
+      "place": "方向邮局大厅",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillIds": [
+        "skill.direction.identify-cardinal",
+        "skill.direction.opposite-cardinal"
+      ],
+      "questionGroupId": "qg-level-cardinal-directions-basic",
+      "intro": "邮局大厅挂着方向牌。先辨认东、南、西、北，包裹才不会走错门。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-cardinal-directions",
+        "knowledgeCardIds": [
+          "card-cardinal-directions"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-map-position",
+      "caseId": "case-lost-parcel",
+      "order": 2,
+      "name": "街区平面图",
+      "place": "动物城街区图",
+      "knowledgePointId": "math.direction.map-position",
+      "skillIds": [
+        "skill.direction.describe-map-position",
+        "skill.direction.choose-reference-point"
+      ],
+      "questionGroupId": "qg-level-map-position-basic",
+      "intro": "地图上有邮局、书店和喷泉。先找准参照地点，再说清位置。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-map-position",
+        "knowledgeCardIds": [
+          "card-map-position"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-cardinal-directions"
+      }
+    },
+    {
+      "levelId": "level-diagonal-directions",
+      "caseId": "case-lost-parcel",
+      "order": 3,
+      "name": "四角路牌",
+      "place": "猫头鹰路口",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillIds": [
+        "skill.direction.identify-diagonal",
+        "skill.direction.combine-directions"
+      ],
+      "questionGroupId": "qg-level-diagonal-directions-basic",
+      "intro": "路口多了四个斜方向。东北、东南、西北、西南会指向不同地点。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-diagonal-directions",
+        "knowledgeCardIds": [
+          "card-diagonal-directions"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-map-position"
+      }
+    },
+    {
+      "levelId": "level-route-description",
+      "caseId": "case-lost-parcel",
+      "order": 4,
+      "name": "投递路线",
+      "place": "包裹分发站",
+      "knowledgePointId": "math.direction.route",
+      "skillIds": [
+        "skill.direction.follow-route",
+        "skill.direction.describe-route"
+      ],
+      "questionGroupId": "qg-level-route-description-basic",
+      "intro": "最后要读懂路线单。按顺序走，包裹才能送到正确地点。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-route-description",
+        "knowledgeCardIds": [
+          "card-route-description"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-diagonal-directions"
+      }
+    }
+  ],
+  "bossTaskId": "boss-lost-parcel-final",
+  "badgeRewardIds": [
+    "badge-direction-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

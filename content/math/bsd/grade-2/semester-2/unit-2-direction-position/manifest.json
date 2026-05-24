@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-2-direction-position",
+  "title": "北师大版二年级下册第二单元：方向与位置",
+  "defaultCaseId": "case-lost-parcel",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-23T00:00:00.000Z",
+  "updatedAt": "2026-05-23T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-lost-parcel.json"
+    ],
+    "questions": [
+      "questions/level-cardinal-directions.json",
+      "questions/level-map-position.json",
+      "questions/level-diagonal-directions.json",
+      "questions/level-route-description.json",
+      "questions/boss-lost-parcel-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewStatus": "changes_requested",
+    "teachingReviewStatus": "changes_requested",
+    "readabilityReviewStatus": "changes_requested",
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}

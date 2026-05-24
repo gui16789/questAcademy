@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-clock-schedule-final",
+    "caseId": "case-clock-schedule",
+    "name": "车站日程最终校准",
+    "targetKnowledgePointIds": [
+      "math.time.hour-minute",
+      "math.time.second",
+      "math.time.read-clock",
+      "math.time.elapsed-time",
+      "math.time.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.time.hour-minute.1",
+      "skill.time.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.time.hour-minute.1",
+      "mis.time.integrated.1"
+    ],
+    "scenario": "列车 8:20 到站，停靠 15 分钟后出发，还要判断 1 分钟和 1 秒能完成的事情。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.time.hour-minute.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.time.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-hour-minute",
+        "card-elapsed-time"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-hour-minute",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillId": "skill.time.hour-minute.1",
+      "misconceptionId": "mis.time.hour-minute.1",
+      "questionPatternId": "pattern.time.hour-minute.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "boss",
+      "bossTaskId": "boss-clock-schedule-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "列车 8:20 到站，停靠 15 分钟后几点出发？",
+      "options": [
+        "8:35",
+        "8:05",
+        "9:20"
+      ],
+      "answer": "8:35",
+      "explanation": "20 分再过 15 分是 35 分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "时、分、秒",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-elapsed-time",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+      "knowledgePointId": "math.time.integrated",
+      "skillId": "skill.time.integrated.1",
+      "misconceptionId": "mis.time.integrated.1",
+      "questionPatternId": "pattern.time.integrated.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "boss",
+      "bossTaskId": "boss-clock-schedule-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "下面哪件事更适合用秒记录？",
+      "options": [
+        "跳绳 10 下用时",
+        "暑假天数",
+        "一本书页数"
+      ],
+      "answer": "跳绳 10 下用时",
+      "explanation": "短动作的时间常用秒记录。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "时、分、秒",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

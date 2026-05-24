@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillIds": [
+        "skill.direction.identify-cardinal",
+        "skill.direction.opposite-cardinal"
+      ],
+      "title": "东南西北线索卡",
+      "summary": "东、南、西、北是四个基本方向。",
+      "example": "东和西相对，南和北相对。",
+      "method": "先找题目给出的方向，再判断相对方向。",
+      "commonMistake": "把东和西、南和北看反。",
+      "reviewPrompt": "看到方向词，先慢慢读一遍。",
+      "relatedQuestionPatternIds": [
+        "pattern.direction.choose-cardinal",
+        "pattern.direction.judge-cardinal",
+        "pattern.direction.choose-opposite"
+      ],
+      "levelId": "level-cardinal-directions",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillIds": [
+        "skill.direction.describe-map-position",
+        "skill.direction.choose-reference-point"
+      ],
+      "title": "平面位置线索卡",
+      "summary": "描述位置时，要先找参照地点。",
+      "example": "书店在邮局东面，参照地点是邮局。",
+      "method": "先问“在谁的什么方向”，再判断方向。",
+      "commonMistake": "没找参照地点就直接猜方向。",
+      "reviewPrompt": "先圈出参照地点，再看另一个地点在哪边。",
+      "relatedQuestionPatternIds": [
+        "pattern.direction.choose-map-position",
+        "pattern.direction.judge-map-position",
+        "pattern.direction.choose-reference"
+      ],
+      "levelId": "level-map-position",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillIds": [
+        "skill.direction.identify-diagonal",
+        "skill.direction.combine-directions"
+      ],
+      "title": "斜方向线索卡",
+      "summary": "东北、东南、西北、西南都由两个方向词组成。",
+      "example": "东和北合起来是东北。",
+      "method": "把斜方向拆成两个基本方向来想。",
+      "commonMistake": "只看到了一个方向词，漏掉另一个。",
+      "reviewPrompt": "看到斜方向，问问自己：它包含哪两个方向？",
+      "relatedQuestionPatternIds": [
+        "pattern.direction.choose-diagonal",
+        "pattern.direction.judge-diagonal",
+        "pattern.direction.combine-diagonal"
+      ],
+      "levelId": "level-diagonal-directions",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillIds": [
+        "skill.direction.follow-route",
+        "skill.direction.describe-route"
+      ],
+      "title": "路线描述线索卡",
+      "summary": "路线要按先后顺序一步一步读。",
+      "example": "先向东到书店，再向北到猫咖，终点是猫咖。",
+      "method": "先看起点，再按“先、再、最后”的顺序走。",
+      "commonMistake": "漏读一步，或把先后顺序说反。",
+      "reviewPrompt": "读路线时，用手指按顺序点每一步。",
+      "relatedQuestionPatternIds": [
+        "pattern.direction.follow-route",
+        "pattern.direction.judge-route",
+        "pattern.direction.choose-route-description"
+      ],
+      "levelId": "level-route-description",
+      "status": "draft"
+    }
+  ]
+}

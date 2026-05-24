@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-diagonal-directions-basic",
+  "caseId": "case-lost-parcel",
+  "levelId": "level-diagonal-directions",
+  "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+  "knowledgePointId": "math.direction.diagonal",
+  "questions": [
+    {
+      "questionId": "direction-q9",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "misconceptionId": "mis.direction.swap-diagonal",
+      "questionPatternId": "pattern.direction.choose-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-diagonal-directions",
+      "questionType": "single",
+      "difficultyBand": "practice",
+      "stem": "猫头鹰路口的右上方写着“东”和“北”。合起来是哪个方向？",
+      "options": [
+        "东北",
+        "东南",
+        "西北"
+      ],
+      "answer": "东北",
+      "explanation": "东和北合起来是东北。",
+      "wrongHint": "斜方向要同时看两个方向词。",
+      "tags": [
+        "方向",
+        "东北"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q10",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.combine-directions",
+      "misconceptionId": "mis.direction.miss-one-part",
+      "questionPatternId": "pattern.direction.combine-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-diagonal-directions",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "包裹线索说“先找西和南之间的角”。这个角是哪个方向？",
+      "options": [
+        "西南",
+        "西北",
+        "东南"
+      ],
+      "answer": "西南",
+      "explanation": "西和南合起来是西南。",
+      "wrongHint": "不要漏掉其中一个方向词。",
+      "tags": [
+        "方向",
+        "西南"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q11",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "misconceptionId": "mis.direction.swap-diagonal",
+      "questionPatternId": "pattern.direction.judge-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-diagonal-directions",
+      "questionType": "judge",
+      "difficultyBand": "practice",
+      "stem": "东北是东和北合起来的方向。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "东北包含东和北两个方向。",
+      "wrongHint": "斜方向的名字里藏着两个方向词。",
+      "tags": [
+        "方向",
+        "判断"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q12",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.combine-directions",
+      "misconceptionId": "mis.direction.miss-one-part",
+      "questionPatternId": "pattern.direction.combine-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-diagonal-directions",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "狐狸站在邮局的东南方向。这个方向包含哪两个方向词？",
+      "options": [
+        "东和南",
+        "东和北",
+        "西和南"
+      ],
+      "answer": "东和南",
+      "explanation": "东南由东和南合成。",
+      "wrongHint": "把斜方向拆成两个基本方向来想。",
+      "tags": [
+        "方向",
+        "东南"
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-read-clock-basic",
+  "caseId": "case-clock-schedule",
+  "levelId": "level-read-clock",
+  "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+  "knowledgePointId": "math.time.read-clock",
+  "questions": [
+    {
+      "questionId": "q-read-clock-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-read-clock",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.1",
+      "misconceptionId": "mis.time.read-clock.1",
+      "questionPatternId": "pattern.time.read-clock.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-read-clock",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "分针指向 12，时针指向 8，是几时？",
+      "options": [
+        "8 时",
+        "12 时",
+        "7 时"
+      ],
+      "answer": "8 时",
+      "explanation": "分针指向 12 表示整时，时针指向 8。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "读钟面",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-clock-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-read-clock",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.2",
+      "misconceptionId": "mis.time.read-clock.2",
+      "questionPatternId": "pattern.time.read-clock.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-read-clock",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "8:30 也可以说成 8 时 ___ 分。",
+      "options": [],
+      "answer": "30",
+      "explanation": "8:30 表示 8 时 30 分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "读钟面",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-clock-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-read-clock",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.1",
+      "misconceptionId": "mis.time.read-clock.1",
+      "questionPatternId": "pattern.time.read-clock.1",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-read-clock",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "读钟面时可以先看时针，再看分针。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "先确定几时，再确定几分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "读钟面",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-read-clock-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-7-time",
+      "lessonId": "lesson-read-clock",
+      "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "skillId": "skill.time.read-clock.2",
+      "misconceptionId": "mis.time.read-clock.2",
+      "questionPatternId": "pattern.time.read-clock.2",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-read-clock",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "分针指向 6，通常表示多少分？",
+      "options": [
+        "30 分",
+        "6 分",
+        "60 分"
+      ],
+      "answer": "30 分",
+      "explanation": "钟面每大格 5 分，6 大格是 30 分。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "时、分、秒",
+        "读钟面",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

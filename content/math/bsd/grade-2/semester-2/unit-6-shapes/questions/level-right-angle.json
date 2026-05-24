@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-right-angle-basic",
+  "caseId": "case-missing-blueprint",
+  "levelId": "level-right-angle",
+  "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+  "knowledgePointId": "math.shapes.right-angle",
+  "questions": [
+    {
+      "questionId": "q-right-angle-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-right-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.1",
+      "misconceptionId": "mis.shapes.right-angle.1",
+      "questionPatternId": "pattern.shapes.right-angle.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-right-angle",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "课本封面的角通常是什么角？",
+      "options": [
+        "直角",
+        "锐角",
+        "圆角"
+      ],
+      "answer": "直角",
+      "explanation": "课本角方方正正，是直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "直角",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-right-angle-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-right-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.2",
+      "misconceptionId": "mis.shapes.right-angle.2",
+      "questionPatternId": "pattern.shapes.right-angle.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-right-angle",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "一个长方形有 ___ 个直角。",
+      "options": [],
+      "answer": "4",
+      "explanation": "长方形的四个角都是直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "直角",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-right-angle-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-right-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.1",
+      "misconceptionId": "mis.shapes.right-angle.1",
+      "questionPatternId": "pattern.shapes.right-angle.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-right-angle",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "判断直角时，只看边长长短就可以。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "角的大小和边长无关。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "直角",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-right-angle-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-right-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.2",
+      "misconceptionId": "mis.shapes.right-angle.2",
+      "questionPatternId": "pattern.shapes.right-angle.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-right-angle",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "下面哪个物品常能找到直角？",
+      "options": [
+        "圆盘边缘",
+        "书桌桌角",
+        "绳子弯曲处"
+      ],
+      "answer": "书桌桌角",
+      "explanation": "桌角常是直角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "直角",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

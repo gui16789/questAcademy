@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-survey-question",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-survey-question",
+      "knowledgePointId": "math.data-records.survey-question",
+      "title": "调查问题线索",
+      "text": "在调查公告栏确认：问题要让大家容易选择和回答。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-survey-question"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-collect-data",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-collect-data",
+      "knowledgePointId": "math.data-records.collect-data",
+      "title": "收集数据线索",
+      "text": "在报名采访区确认：一个人记录一次，避免重复或漏记。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-collect-data"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-record-table",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-record-table",
+      "knowledgePointId": "math.data-records.record-table",
+      "title": "记录表线索",
+      "text": "在数据记录台确认：同类数据记在同一栏，最后合计。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-record-table"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-interpret-data",
+      "caseId": "case-survey-notebook",
+      "levelId": "level-interpret-data",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "title": "读懂数据线索",
+      "text": "在统计展示板确认：先找每类数量，再比较或相减。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-interpret-data"
+      },
+      "status": "draft"
+    }
+  ]
+}

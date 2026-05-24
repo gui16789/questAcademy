@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "caseId": "case-bridge-measure",
+  "name": "小桥测量案",
+  "subjectId": "math",
+  "unitId": "unit-4-measurement",
+  "targetKnowledgePointIds": [
+    "math.measurement.millimeter",
+    "math.measurement.decimeter",
+    "math.measurement.kilometer",
+    "math.measurement.choose-length-unit"
+  ],
+  "story": {
+    "summary": "河岸小桥的材料标签混乱了，小侦探要用毫米、分米、米和千米的测量知识核对长度。",
+    "setting": "动物城河岸工地",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-millimeter",
+    "level-decimeter",
+    "level-kilometer",
+    "level-choose-unit"
+  ],
+  "levels": [
+    {
+      "levelId": "level-millimeter",
+      "caseId": "case-bridge-measure",
+      "order": 1,
+      "name": "毫米认识",
+      "place": "铅笔测量桌",
+      "knowledgePointId": "math.measurement.millimeter",
+      "skillIds": [
+        "skill.measurement.millimeter.1",
+        "skill.measurement.millimeter.2"
+      ],
+      "questionGroupId": "qg-level-millimeter-basic",
+      "intro": "请在铅笔测量桌调查：知道 1 厘米 = 10 毫米。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-millimeter",
+        "knowledgeCardIds": [
+          "card-millimeter"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-decimeter",
+      "caseId": "case-bridge-measure",
+      "order": 2,
+      "name": "分米认识",
+      "place": "课桌修理间",
+      "knowledgePointId": "math.measurement.decimeter",
+      "skillIds": [
+        "skill.measurement.decimeter.1",
+        "skill.measurement.decimeter.2"
+      ],
+      "questionGroupId": "qg-level-decimeter-basic",
+      "intro": "请在课桌修理间调查：知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-decimeter",
+        "knowledgeCardIds": [
+          "card-decimeter"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-millimeter"
+      }
+    },
+    {
+      "levelId": "level-kilometer",
+      "caseId": "case-bridge-measure",
+      "order": 3,
+      "name": "千米认识",
+      "place": "长跑路线牌",
+      "knowledgePointId": "math.measurement.kilometer",
+      "skillIds": [
+        "skill.measurement.kilometer.1",
+        "skill.measurement.kilometer.2"
+      ],
+      "questionGroupId": "qg-level-kilometer-basic",
+      "intro": "请在长跑路线牌调查：选择千米描述较长路线。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-kilometer",
+        "knowledgeCardIds": [
+          "card-kilometer"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-decimeter"
+      }
+    },
+    {
+      "levelId": "level-choose-unit",
+      "caseId": "case-bridge-measure",
+      "order": 4,
+      "name": "选择合适单位",
+      "place": "材料标签室",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "skillIds": [
+        "skill.measurement.choose-unit.1",
+        "skill.measurement.choose-unit.2"
+      ],
+      "questionGroupId": "qg-level-choose-unit-basic",
+      "intro": "请在材料标签室调查：短小物体用毫米或厘米，较长路线用米或千米。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-choose-unit",
+        "knowledgeCardIds": [
+          "card-choose-unit"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-kilometer"
+      }
+    }
+  ],
+  "bossTaskId": "boss-bridge-measure-final",
+  "badgeRewardIds": [
+    "badge-measurement-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

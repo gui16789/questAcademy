@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-hour-minute",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-hour-minute",
+      "knowledgePointId": "math.time.hour-minute",
+      "title": "时和分线索",
+      "text": "在钟楼大厅确认：能用时和分描述较长活动。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-hour-minute"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-second",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-second",
+      "knowledgePointId": "math.time.second",
+      "title": "秒线索",
+      "text": "在秒表练习区确认：用秒描述很短的时间。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-second"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-read-clock",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-read-clock",
+      "knowledgePointId": "math.time.read-clock",
+      "title": "读钟面线索",
+      "text": "在候车厅钟面确认：先看时针，再看分针。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-read-clock"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-elapsed-time",
+      "caseId": "case-clock-schedule",
+      "levelId": "level-elapsed-time",
+      "knowledgePointId": "math.time.elapsed-time",
+      "title": "经过时间线索",
+      "text": "在列车时刻牌确认：从开始时间按分钟往后数。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-elapsed-time"
+      },
+      "status": "draft"
+    }
+  ]
+}

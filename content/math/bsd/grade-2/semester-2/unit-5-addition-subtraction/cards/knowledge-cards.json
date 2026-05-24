@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "knowledgeCards": [
+    {
+      "knowledgeCardId": "card-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillIds": [
+        "skill.add-subtract.three-digit-add.1",
+        "skill.add-subtract.three-digit-add.2"
+      ],
+      "title": "三位数加法线索卡",
+      "summary": "能计算三位数加法，理解相同数位对齐。",
+      "example": "236 + 142 = ?",
+      "method": "个位对个位、十位对十位、百位对百位。",
+      "commonMistake": "数位没有对齐",
+      "reviewPrompt": "看到三位数加法题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.add-subtract.three-digit-add.1",
+        "pattern.add-subtract.three-digit-add.2"
+      ],
+      "levelId": "level-three-digit-add",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-three-digit-subtract",
+      "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+      "skillIds": [
+        "skill.add-subtract.three-digit-subtract.1",
+        "skill.add-subtract.three-digit-subtract.2"
+      ],
+      "title": "三位数减法线索卡",
+      "summary": "能计算三位数减法，理解退位。",
+      "example": "564 - 231 = ?",
+      "method": "某一位不够减时，要向前一位借 1。",
+      "commonMistake": "忘记退位",
+      "reviewPrompt": "看到三位数减法题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.add-subtract.three-digit-subtract.1",
+        "pattern.add-subtract.three-digit-subtract.2"
+      ],
+      "levelId": "level-three-digit-subtract",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillIds": [
+        "skill.add-subtract.mixed-steps.1",
+        "skill.add-subtract.mixed-steps.2"
+      ],
+      "title": "加减混合线索卡",
+      "summary": "能按顺序计算简单加减混合问题。",
+      "example": "书店原有 350 本书，进货 120 本，卖出 80 本，还剩多少本？",
+      "method": "先看题意，再按步骤计算。",
+      "commonMistake": "漏算一步",
+      "reviewPrompt": "看到加减混合题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.add-subtract.mixed-steps.1",
+        "pattern.add-subtract.mixed-steps.2"
+      ],
+      "levelId": "level-mixed-steps",
+      "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillIds": [
+        "skill.add-subtract.estimate-check.1",
+        "skill.add-subtract.estimate-check.2"
+      ],
+      "title": "估算验算线索卡",
+      "summary": "能用估算判断结果范围，并用验算检查加减法。",
+      "example": "298 + 401 大约是多少？",
+      "method": "先估大约，再精算检查。",
+      "commonMistake": "估算离精算太远",
+      "reviewPrompt": "看到估算验算题，先找出题目里的关键条件。",
+      "relatedQuestionPatternIds": [
+        "pattern.add-subtract.estimate-check.1",
+        "pattern.add-subtract.estimate-check.2"
+      ],
+      "levelId": "level-estimate-check",
+      "status": "draft"
+    }
+  ]
+}

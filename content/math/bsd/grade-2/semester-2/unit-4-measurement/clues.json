@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-4-measurement",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-millimeter",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-millimeter",
+      "knowledgePointId": "math.measurement.millimeter",
+      "title": "毫米线索",
+      "text": "在铅笔测量桌确认：知道 1 厘米 = 10 毫米。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-millimeter"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-decimeter",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-decimeter",
+      "knowledgePointId": "math.measurement.decimeter",
+      "title": "分米线索",
+      "text": "在课桌修理间确认：知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-decimeter"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-kilometer",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-kilometer",
+      "knowledgePointId": "math.measurement.kilometer",
+      "title": "千米线索",
+      "text": "在长跑路线牌确认：选择千米描述较长路线。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-kilometer"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-choose-unit",
+      "caseId": "case-bridge-measure",
+      "levelId": "level-choose-unit",
+      "knowledgePointId": "math.measurement.choose-length-unit",
+      "title": "选择长度单位线索",
+      "text": "在材料标签室确认：短小物体用毫米或厘米，较长路线用米或千米。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-choose-unit"
+      },
+      "status": "draft"
+    }
+  ]
+}

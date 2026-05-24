@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "subject": {
+    "subjectId": "math",
+    "name": "数学",
+    "stage": "primary",
+    "status": "active"
+  },
+  "textbookVersion": {
+    "textbookVersionId": "bsd",
+    "subjectId": "math",
+    "name": "北师大版",
+    "publisher": "北京师范大学出版社",
+    "status": "active"
+  },
+  "unit": {
+    "unitId": "unit-2-direction-position",
+    "subjectId": "math",
+    "textbookVersionId": "bsd",
+    "gradeId": "grade-2",
+    "semesterId": "semester-2",
+    "order": 2,
+    "name": "第二单元：方向与位置",
+    "learningGoals": [
+      "辨认东、南、西、北四个方向",
+      "在简单平面图中描述物体位置",
+      "辨认东北、东南、西北、西南等方向",
+      "用方向词描述简单路线"
+    ]
+  },
+  "curriculumNodes": [
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "name": "东南西北",
+      "order": 1,
+      "mapsToKnowledgePointIds": [
+        "math.direction.cardinal"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "公开资料显示本单元围绕方向与位置，具体页码待教研负责人用教材核对。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "name": "平面图中的位置",
+      "order": 2,
+      "mapsToKnowledgePointIds": [
+        "math.direction.map-position"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "内容为原创练习，需与正式教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "name": "东北、东南、西北、西南",
+      "order": 3,
+      "mapsToKnowledgePointIds": [
+        "math.direction.diagonal"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "内容为原创练习，需与正式教材页码复核。"
+      }
+    },
+    {
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "name": "描述简单路线",
+      "order": 4,
+      "mapsToKnowledgePointIds": [
+        "math.direction.route"
+      ],
+      "source": {
+        "book": "北师大版小学数学二年级下册",
+        "pageRange": "",
+        "note": "内容为原创练习，需与正式教材页码复核。"
+      }
+    }
+  ]
+}

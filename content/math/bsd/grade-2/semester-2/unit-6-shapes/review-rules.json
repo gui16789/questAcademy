@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-shapes-angle-1",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "misconceptionId": "mis.shapes.angle.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-angle"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.angle.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-angle-2",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.2",
+      "misconceptionId": "mis.shapes.angle.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-angle"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.angle.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-right-angle-1",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.1",
+      "misconceptionId": "mis.shapes.right-angle.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-right-angle"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.right-angle.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-right-angle-2",
+      "knowledgePointId": "math.shapes.right-angle",
+      "skillId": "skill.shapes.right-angle.2",
+      "misconceptionId": "mis.shapes.right-angle.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-right-angle"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.right-angle.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-rectangle-square-1",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.1",
+      "misconceptionId": "mis.shapes.rectangle-square.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-rectangle-square"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.rectangle-square.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-rectangle-square-2",
+      "knowledgePointId": "math.shapes.rectangle-square",
+      "skillId": "skill.shapes.rectangle-square.2",
+      "misconceptionId": "mis.shapes.rectangle-square.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-rectangle-square"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.rectangle-square.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-parallelogram-1",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.1",
+      "misconceptionId": "mis.shapes.parallelogram.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-parallelogram"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.parallelogram.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-parallelogram-2",
+      "knowledgePointId": "math.shapes.parallelogram",
+      "skillId": "skill.shapes.parallelogram.2",
+      "misconceptionId": "mis.shapes.parallelogram.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-parallelogram"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.parallelogram.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-shapes-integrated-1",
+      "knowledgePointId": "math.shapes.integrated",
+      "skillId": "skill.shapes.integrated.1",
+      "misconceptionId": "mis.shapes.integrated.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-parallelogram"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.shapes.integrated.1"
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

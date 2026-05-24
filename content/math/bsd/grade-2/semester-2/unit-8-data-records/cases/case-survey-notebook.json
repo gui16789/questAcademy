@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "caseId": "case-survey-notebook",
+  "name": "调查笔记案",
+  "subjectId": "math",
+  "unitId": "unit-8-data-records",
+  "targetKnowledgePointIds": [
+    "math.data-records.survey-question",
+    "math.data-records.collect-data",
+    "math.data-records.record-table",
+    "math.data-records.interpret-data"
+  ],
+  "story": {
+    "summary": "社团报名表散落一地，小侦探要设计调查、记录数据并读懂结果，帮社团恢复报名情况。",
+    "setting": "动物学院社团招新处",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-survey-question",
+    "level-collect-data",
+    "level-record-table",
+    "level-interpret-data"
+  ],
+  "levels": [
+    {
+      "levelId": "level-survey-question",
+      "caseId": "case-survey-notebook",
+      "order": 1,
+      "name": "提出调查问题",
+      "place": "调查公告栏",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillIds": [
+        "skill.data-records.survey-question.1",
+        "skill.data-records.survey-question.2"
+      ],
+      "questionGroupId": "qg-level-survey-question-basic",
+      "intro": "请在调查公告栏调查：问题要让大家容易选择和回答。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-survey-question",
+        "knowledgeCardIds": [
+          "card-survey-question"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-collect-data",
+      "caseId": "case-survey-notebook",
+      "order": 2,
+      "name": "收集数据",
+      "place": "报名采访区",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillIds": [
+        "skill.data-records.collect-data.1",
+        "skill.data-records.collect-data.2"
+      ],
+      "questionGroupId": "qg-level-collect-data-basic",
+      "intro": "请在报名采访区调查：一个人记录一次，避免重复或漏记。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-collect-data",
+        "knowledgeCardIds": [
+          "card-collect-data"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-survey-question"
+      }
+    },
+    {
+      "levelId": "level-record-table",
+      "caseId": "case-survey-notebook",
+      "order": 3,
+      "name": "记录数据",
+      "place": "数据记录台",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillIds": [
+        "skill.data-records.record-table.1",
+        "skill.data-records.record-table.2"
+      ],
+      "questionGroupId": "qg-level-record-table-basic",
+      "intro": "请在数据记录台调查：同类数据记在同一栏，最后合计。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-record-table",
+        "knowledgeCardIds": [
+          "card-record-table"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-collect-data"
+      }
+    },
+    {
+      "levelId": "level-interpret-data",
+      "caseId": "case-survey-notebook",
+      "order": 4,
+      "name": "分析数据",
+      "place": "统计展示板",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillIds": [
+        "skill.data-records.interpret-data.1",
+        "skill.data-records.interpret-data.2"
+      ],
+      "questionGroupId": "qg-level-interpret-data-basic",
+      "intro": "请在统计展示板调查：先找每类数量，再比较或相减。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-interpret-data",
+        "knowledgeCardIds": [
+          "card-interpret-data"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-record-table"
+      }
+    }
+  ],
+  "bossTaskId": "boss-survey-notebook-final",
+  "badgeRewardIds": [
+    "badge-data-records-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

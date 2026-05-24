@@ -1,0 +1,421 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "math.geometry",
+    "subjectId": "math",
+    "name": "图形与几何"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.direction.cardinal",
+      "subjectId": "math",
+      "domainId": "math.geometry",
+      "name": "辨认东南西北",
+      "shortName": "东南西北",
+      "definition": "东、南、西、北是描述方向的四个基本方向。",
+      "learningGoal": "能根据给定方向判断东、南、西、北。",
+      "gradeBand": "grade-2",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.direction.identify-cardinal",
+        "skill.direction.opposite-cardinal"
+      ],
+      "misconceptionIds": [
+        "mis.direction.reverse-east-west",
+        "mis.direction.reverse-north-south"
+      ],
+      "status": "draft",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.direction.map-position",
+      "subjectId": "math",
+      "domainId": "math.geometry",
+      "name": "在平面图中描述位置",
+      "shortName": "平面位置",
+      "definition": "可以用方向词说清一个地点在另一个地点的什么方向。",
+      "learningGoal": "能在简单平面图中用方向描述两个地点的位置关系。",
+      "gradeBand": "grade-2",
+      "prerequisiteIds": [
+        "math.direction.cardinal"
+      ],
+      "skillIds": [
+        "skill.direction.describe-map-position",
+        "skill.direction.choose-reference-point"
+      ],
+      "misconceptionIds": [
+        "mis.direction.ignore-reference",
+        "mis.direction.use-own-view"
+      ],
+      "status": "draft",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.direction.diagonal",
+      "subjectId": "math",
+      "domainId": "math.geometry",
+      "name": "辨认东北、东南、西北、西南",
+      "shortName": "斜方向",
+      "definition": "两个相邻基本方向合在一起，可以表示东北、东南、西北、西南。",
+      "learningGoal": "能辨认和使用东北、东南、西北、西南。",
+      "gradeBand": "grade-2",
+      "prerequisiteIds": [
+        "math.direction.cardinal"
+      ],
+      "skillIds": [
+        "skill.direction.identify-diagonal",
+        "skill.direction.combine-directions"
+      ],
+      "misconceptionIds": [
+        "mis.direction.swap-diagonal",
+        "mis.direction.miss-one-part"
+      ],
+      "status": "draft",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.direction.route",
+      "subjectId": "math",
+      "domainId": "math.geometry",
+      "name": "描述简单路线",
+      "shortName": "路线描述",
+      "definition": "路线可以用先向哪里走、再向哪里走来描述。",
+      "learningGoal": "能按方向词读懂并描述简单路线。",
+      "gradeBand": "grade-2",
+      "prerequisiteIds": [
+        "math.direction.cardinal",
+        "math.direction.diagonal"
+      ],
+      "skillIds": [
+        "skill.direction.follow-route",
+        "skill.direction.describe-route"
+      ],
+      "misconceptionIds": [
+        "mis.direction.skip-route-step",
+        "mis.direction.reverse-route-order"
+      ],
+      "status": "draft",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.direction.identify-cardinal",
+      "knowledgePointId": "math.direction.cardinal",
+      "name": "辨认基本方向",
+      "learningGoal": "能根据一个已知方向判断其他基本方向。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.direction.choose-cardinal",
+        "pattern.direction.judge-cardinal"
+      ],
+      "misconceptionIds": [
+        "mis.direction.reverse-east-west"
+      ]
+    },
+    {
+      "skillId": "skill.direction.opposite-cardinal",
+      "knowledgePointId": "math.direction.cardinal",
+      "name": "判断相对方向",
+      "learningGoal": "能说出东和西、南和北是相对方向。",
+      "difficultyBand": "practice",
+      "questionPatternIds": [
+        "pattern.direction.choose-opposite"
+      ],
+      "misconceptionIds": [
+        "mis.direction.reverse-north-south"
+      ]
+    },
+    {
+      "skillId": "skill.direction.describe-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "name": "描述地点位置",
+      "learningGoal": "能说出一个地点在另一个地点的什么方向。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.direction.choose-map-position",
+        "pattern.direction.judge-map-position"
+      ],
+      "misconceptionIds": [
+        "mis.direction.ignore-reference"
+      ]
+    },
+    {
+      "skillId": "skill.direction.choose-reference-point",
+      "knowledgePointId": "math.direction.map-position",
+      "name": "找到参照地点",
+      "learningGoal": "能先找准参照地点，再判断方向。",
+      "difficultyBand": "practice",
+      "questionPatternIds": [
+        "pattern.direction.choose-reference"
+      ],
+      "misconceptionIds": [
+        "mis.direction.use-own-view"
+      ]
+    },
+    {
+      "skillId": "skill.direction.identify-diagonal",
+      "knowledgePointId": "math.direction.diagonal",
+      "name": "辨认斜方向",
+      "learningGoal": "能辨认东北、东南、西北、西南。",
+      "difficultyBand": "practice",
+      "questionPatternIds": [
+        "pattern.direction.choose-diagonal",
+        "pattern.direction.judge-diagonal"
+      ],
+      "misconceptionIds": [
+        "mis.direction.swap-diagonal"
+      ]
+    },
+    {
+      "skillId": "skill.direction.combine-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "name": "组合两个方向词",
+      "learningGoal": "能把东和北合成东北，把西和南合成西南。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.direction.combine-diagonal"
+      ],
+      "misconceptionIds": [
+        "mis.direction.miss-one-part"
+      ]
+    },
+    {
+      "skillId": "skill.direction.follow-route",
+      "knowledgePointId": "math.direction.route",
+      "name": "按路线行走",
+      "learningGoal": "能按步骤读懂先后方向。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.direction.follow-route",
+        "pattern.direction.judge-route"
+      ],
+      "misconceptionIds": [
+        "mis.direction.skip-route-step"
+      ]
+    },
+    {
+      "skillId": "skill.direction.describe-route",
+      "knowledgePointId": "math.direction.route",
+      "name": "描述路线",
+      "learningGoal": "能用简短方向词描述从起点到终点的路线。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.direction.choose-route-description"
+      ],
+      "misconceptionIds": [
+        "mis.direction.reverse-route-order"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.direction.reverse-east-west",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "name": "东西方向看反",
+      "description": "把东和西的位置关系看反。",
+      "diagnosisHint": "先找题目给出的方向，再判断相对方向。",
+      "remediationStrategyId": "review-direction-cardinal"
+    },
+    {
+      "misconceptionId": "mis.direction.reverse-north-south",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.opposite-cardinal",
+      "name": "南北方向看反",
+      "description": "把南和北的位置关系看反。",
+      "diagnosisHint": "北和南相对，东和西相对。",
+      "remediationStrategyId": "review-direction-cardinal"
+    },
+    {
+      "misconceptionId": "mis.direction.ignore-reference",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "name": "忘记参照地点",
+      "description": "没有先看清是在谁的哪个方向。",
+      "diagnosisHint": "先圈出参照地点，再判断方向。",
+      "remediationStrategyId": "review-map-position"
+    },
+    {
+      "misconceptionId": "mis.direction.use-own-view",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.choose-reference-point",
+      "name": "用自己的方向代替图中方向",
+      "description": "没有按平面图标注的方向来判断。",
+      "diagnosisHint": "看题目中的方向标，不凭感觉判断。",
+      "remediationStrategyId": "review-map-position"
+    },
+    {
+      "misconceptionId": "mis.direction.swap-diagonal",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "name": "斜方向混淆",
+      "description": "把东北和西北、东南和西南混淆。",
+      "diagnosisHint": "斜方向要同时看两个方向词。",
+      "remediationStrategyId": "review-diagonal-direction"
+    },
+    {
+      "misconceptionId": "mis.direction.miss-one-part",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.combine-directions",
+      "name": "漏掉一个方向词",
+      "description": "只看到了东或北，没有合起来判断东北。",
+      "diagnosisHint": "斜方向由两个方向词组成。",
+      "remediationStrategyId": "review-diagonal-direction"
+    },
+    {
+      "misconceptionId": "mis.direction.skip-route-step",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "name": "漏读路线步骤",
+      "description": "路线中少看了一步。",
+      "diagnosisHint": "按先后顺序一步一步读路线。",
+      "remediationStrategyId": "review-route-description"
+    },
+    {
+      "misconceptionId": "mis.direction.reverse-route-order",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.describe-route",
+      "name": "路线顺序颠倒",
+      "description": "把先走和后走的顺序说反。",
+      "diagnosisHint": "先看起点，再按顺序读路线。",
+      "remediationStrategyId": "review-route-description"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.direction.choose-cardinal",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "name": "选择基本方向",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "basic",
+      "template": "给出一个方位关系，选择正确的东南西北方向。"
+    },
+    {
+      "questionPatternId": "pattern.direction.judge-cardinal",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "name": "判断基本方向",
+      "supportedQuestionTypes": [
+        "judge"
+      ],
+      "difficultyBand": "basic",
+      "template": "判断一句基本方向描述是否正确。"
+    },
+    {
+      "questionPatternId": "pattern.direction.choose-opposite",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.opposite-cardinal",
+      "name": "选择相对方向",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "practice",
+      "template": "选择与某方向相对的方向。"
+    },
+    {
+      "questionPatternId": "pattern.direction.choose-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "name": "选择平面位置",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "basic",
+      "template": "根据简短地图描述选择位置关系。"
+    },
+    {
+      "questionPatternId": "pattern.direction.judge-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "name": "判断平面位置",
+      "supportedQuestionTypes": [
+        "judge"
+      ],
+      "difficultyBand": "basic",
+      "template": "判断一个地点相对另一个地点的方向描述是否正确。"
+    },
+    {
+      "questionPatternId": "pattern.direction.choose-reference",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.choose-reference-point",
+      "name": "选择参照地点",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "practice",
+      "template": "先确定参照地点，再选择正确位置。"
+    },
+    {
+      "questionPatternId": "pattern.direction.choose-diagonal",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "name": "选择斜方向",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "practice",
+      "template": "根据两个方向组合选择斜方向。"
+    },
+    {
+      "questionPatternId": "pattern.direction.judge-diagonal",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "name": "判断斜方向",
+      "supportedQuestionTypes": [
+        "judge"
+      ],
+      "difficultyBand": "practice",
+      "template": "判断东北、东南、西北、西南的描述。"
+    },
+    {
+      "questionPatternId": "pattern.direction.combine-diagonal",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.combine-directions",
+      "name": "组合斜方向",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "application",
+      "template": "把两个方向词合成一个斜方向。"
+    },
+    {
+      "questionPatternId": "pattern.direction.follow-route",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "name": "按步骤读路线",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "application",
+      "template": "根据路线步骤选择终点。"
+    },
+    {
+      "questionPatternId": "pattern.direction.judge-route",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "name": "判断路线描述",
+      "supportedQuestionTypes": [
+        "judge"
+      ],
+      "difficultyBand": "application",
+      "template": "判断路线步骤是否能到达指定地点。"
+    },
+    {
+      "questionPatternId": "pattern.direction.choose-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.describe-route",
+      "name": "选择路线描述",
+      "supportedQuestionTypes": [
+        "single"
+      ],
+      "difficultyBand": "integrated",
+      "template": "选择从起点到终点的正确路线。"
+    }
+  ]
+}

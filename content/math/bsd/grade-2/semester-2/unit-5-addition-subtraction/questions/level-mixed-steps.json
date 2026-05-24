@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-mixed-steps-basic",
+  "caseId": "case-ledger-balance",
+  "levelId": "level-mixed-steps",
+  "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+  "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+  "questions": [
+    {
+      "questionId": "q-mixed-steps-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-mixed-steps",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "misconceptionId": "mis.add-subtract.mixed-steps.1",
+      "questionPatternId": "pattern.add-subtract.mixed-steps.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-mixed-steps",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "书店原有 350 本书，进货 120 本，卖出 80 本，还剩多少本？",
+      "options": [
+        "390",
+        "470",
+        "310"
+      ],
+      "answer": "390",
+      "explanation": "350 + 120 - 80 = 390。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "加减混合",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-mixed-steps-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-mixed-steps",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "misconceptionId": "mis.add-subtract.mixed-steps.2",
+      "questionPatternId": "pattern.add-subtract.mixed-steps.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-mixed-steps",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "260 + 180 - 90 = ___。",
+      "options": [],
+      "answer": "350",
+      "explanation": "260 + 180 = 440，440 - 90 = 350。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "加减混合",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-mixed-steps-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-mixed-steps",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.1",
+      "misconceptionId": "mis.add-subtract.mixed-steps.1",
+      "questionPatternId": "pattern.add-subtract.mixed-steps.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-mixed-steps",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "遇到增加和减少，要先分清每一步是加还是减。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "数量增加用加，减少用减。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "加减混合",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-mixed-steps-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-mixed-steps",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+      "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+      "skillId": "skill.add-subtract.mixed-steps.2",
+      "misconceptionId": "mis.add-subtract.mixed-steps.2",
+      "questionPatternId": "pattern.add-subtract.mixed-steps.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-mixed-steps",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "气球有 500 个，送来 150 个，又用掉 200 个，最后比原来多多少个？",
+      "options": [
+        "少 50 个",
+        "多 50 个",
+        "多 350 个"
+      ],
+      "answer": "少 50 个",
+      "explanation": "500 + 150 - 200 = 450，比原来少 50。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "加减混合",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

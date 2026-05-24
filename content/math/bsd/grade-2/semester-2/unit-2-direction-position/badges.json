@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "badges": [
+    {
+      "badgeId": "badge-direction-rookie",
+      "name": "方向新手侦探",
+      "description": "完成第一个方向关卡。",
+      "icon": "badge-detective-rookie",
+      "triggerRule": {
+        "type": "first_level_passed",
+        "caseId": "case-lost-parcel"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-direction-clue-collector",
+      "name": "方向线索收集员",
+      "description": "收集全部 4 条方向线索。",
+      "icon": "badge-clue-collector",
+      "triggerRule": {
+        "type": "all_clues_collected",
+        "caseId": "case-lost-parcel",
+        "requiredClueIds": [
+          "clue-cardinal-directions",
+          "clue-map-position",
+          "clue-diagonal-directions",
+          "clue-route-description"
+        ]
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-direction-wrong-reviewer",
+      "name": "路线悬案调查员",
+      "description": "第一次进入悬案馆复习方向题。",
+      "icon": "badge-reviewer",
+      "triggerRule": {
+        "type": "first_wrong_review",
+        "caseId": "case-lost-parcel"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-direction-persistent",
+      "name": "方向不迷路",
+      "description": "错题重做并答对。",
+      "icon": "badge-persistent",
+      "triggerRule": {
+        "type": "wrong_question_solved",
+        "caseId": "case-lost-parcel"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    },
+    {
+      "badgeId": "badge-direction-case-closer",
+      "name": "投递路线小专家",
+      "description": "完成最终推理并送达包裹。",
+      "icon": "badge-detective-gold",
+      "triggerRule": {
+        "type": "case_closed",
+        "caseId": "case-lost-parcel"
+      },
+      "isRepeatable": false,
+      "status": "draft"
+    }
+  ]
+}

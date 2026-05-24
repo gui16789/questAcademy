@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-large-numbers-count-thousands-1",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.1",
+      "misconceptionId": "mis.large-numbers.count-thousands.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-count-thousands"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.count-thousands.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-count-thousands-2",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.2",
+      "misconceptionId": "mis.large-numbers.count-thousands.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-count-thousands"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.count-thousands.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-read-write-1",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.1",
+      "misconceptionId": "mis.large-numbers.read-write.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-read-write"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.read-write.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-read-write-2",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.2",
+      "misconceptionId": "mis.large-numbers.read-write.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-read-write"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.read-write.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-compare-order-1",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.1",
+      "misconceptionId": "mis.large-numbers.compare-order.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-compare-order"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.compare-order.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-compare-order-2",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.2",
+      "misconceptionId": "mis.large-numbers.compare-order.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-compare-order"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.compare-order.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-estimate-represent-1",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "misconceptionId": "mis.large-numbers.estimate-represent.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-represent"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.estimate-represent.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-estimate-represent-2",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "misconceptionId": "mis.large-numbers.estimate-represent.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-represent"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.estimate-represent.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-large-numbers-integrated-1",
+      "knowledgePointId": "math.large-numbers.integrated",
+      "skillId": "skill.large-numbers.integrated.1",
+      "misconceptionId": "mis.large-numbers.integrated.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-estimate-represent"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.large-numbers.integrated.1"
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

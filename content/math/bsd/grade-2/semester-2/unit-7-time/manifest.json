@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-7-time",
+  "title": "北师大版二年级下册第七单元：时、分、秒",
+  "defaultCaseId": "case-clock-schedule",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-24T00:00:00.000Z",
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-clock-schedule.json"
+    ],
+    "questions": [
+      "questions/level-hour-minute.json",
+      "questions/level-second.json",
+      "questions/level-read-clock.json",
+      "questions/level-elapsed-time.json",
+      "questions/boss-clock-schedule-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewStatus": "changes_requested",
+    "teachingReviewStatus": "changes_requested",
+    "readabilityReviewStatus": "changes_requested",
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}

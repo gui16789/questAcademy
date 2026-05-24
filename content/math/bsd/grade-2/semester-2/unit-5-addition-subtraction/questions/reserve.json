@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-add-subtract-reserve",
+  "caseId": "case-ledger-balance",
+  "levelId": "reserve",
+  "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+  "knowledgePointId": "math.add-subtract.three-digit-addition",
+  "questions": [
+    {
+      "questionId": "reserve-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-three-digit-add",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+      "knowledgePointId": "math.add-subtract.three-digit-addition",
+      "skillId": "skill.add-subtract.three-digit-add.1",
+      "misconceptionId": "mis.add-subtract.three-digit-add.1",
+      "questionPatternId": "pattern.add-subtract.three-digit-add.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "reserve",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "备用题：这道题用于后续内容审核补位，当前请选择“对”。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "备用题保持可答，待人工审核替换。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "三位数加法",
+        "judge"
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "domain": {
+    "domainId": "number-and-algebra",
+    "subjectId": "math",
+    "name": "数与代数"
+  },
+  "knowledgePoints": [
+    {
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "千以内计数",
+      "shortName": "千以内计数",
+      "definition": "能按百、十、个或整百整千数数。",
+      "learningGoal": "会用一百一百、一十一十等方式数较大的数。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.large-numbers.count-thousands.1",
+        "skill.large-numbers.count-thousands.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.count-thousands.1",
+        "mis.large-numbers.count-thousands.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "数位读写",
+      "shortName": "数位读写",
+      "definition": "能读写万以内的数并说清每个数字所在数位。",
+      "learningGoal": "理解千、百、十、个位上的数字表示多少。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.large-numbers.read-write.1",
+        "skill.large-numbers.read-write.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.read-write.1",
+        "mis.large-numbers.read-write.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "大数比较",
+      "shortName": "大数比较",
+      "definition": "能比较万以内数的大小并按顺序排列。",
+      "learningGoal": "先比位数，位数相同从高位比起。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.large-numbers.compare-order.1",
+        "skill.large-numbers.compare-order.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.compare-order.1",
+        "mis.large-numbers.compare-order.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "大数估计",
+      "shortName": "大数估计",
+      "definition": "能结合参照物估计较大的数量并选择合适表示。",
+      "learningGoal": "先找一组大约多少，再推想总数。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [],
+      "skillIds": [
+        "skill.large-numbers.estimate-represent.1",
+        "skill.large-numbers.estimate-represent.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.estimate-represent.1",
+        "mis.large-numbers.estimate-represent.2"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    },
+    {
+      "knowledgePointId": "math.large-numbers.integrated",
+      "subjectId": "math",
+      "domainId": "number-and-algebra",
+      "name": "生活中的大数综合应用",
+      "shortName": "综合应用",
+      "definition": "把本单元多个知识点放回真实问题中进行判断和解释。",
+      "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+      "gradeBand": "primary-lower",
+      "prerequisiteIds": [
+        "math.large-numbers.thousand-counting",
+        "math.large-numbers.place-value-read-write",
+        "math.large-numbers.compare-large-numbers",
+        "math.large-numbers.estimate-large-numbers"
+      ],
+      "skillIds": [
+        "skill.large-numbers.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.integrated.1"
+      ],
+      "status": "active",
+      "version": "0.1.0"
+    }
+  ],
+  "skills": [
+    {
+      "skillId": "skill.large-numbers.count-thousands.1",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "name": "按百或十数数",
+      "learningGoal": "能按百或十数数。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.large-numbers.count-thousands.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.count-thousands.1"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.count-thousands.2",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "name": "判断计数单位",
+      "learningGoal": "能判断计数单位。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.large-numbers.count-thousands.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.count-thousands.2"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.read-write.1",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "name": "读写四位数",
+      "learningGoal": "能读写四位数。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.large-numbers.read-write.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.read-write.1"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.read-write.2",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "name": "说出数位意义",
+      "learningGoal": "能说出数位意义。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.large-numbers.read-write.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.read-write.2"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.compare-order.1",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "name": "比较数的大小",
+      "learningGoal": "能比较数的大小。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.large-numbers.compare-order.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.compare-order.1"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.compare-order.2",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "name": "按顺序排列",
+      "learningGoal": "能按顺序排列。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.large-numbers.compare-order.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.compare-order.2"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "name": "借助参照估计",
+      "learningGoal": "能借助参照估计。",
+      "difficultyBand": "basic",
+      "questionPatternIds": [
+        "pattern.large-numbers.estimate-represent.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.estimate-represent.1"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "name": "选择近似数",
+      "learningGoal": "能选择近似数。",
+      "difficultyBand": "application",
+      "questionPatternIds": [
+        "pattern.large-numbers.estimate-represent.2"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.estimate-represent.2"
+      ]
+    },
+    {
+      "skillId": "skill.large-numbers.integrated.1",
+      "knowledgePointId": "math.large-numbers.integrated",
+      "name": "综合推理本单元线索",
+      "learningGoal": "能把多个线索合并判断最终答案。",
+      "difficultyBand": "integrated",
+      "questionPatternIds": [
+        "pattern.large-numbers.integrated.1"
+      ],
+      "misconceptionIds": [
+        "mis.large-numbers.integrated.1"
+      ]
+    }
+  ],
+  "misconceptions": [
+    {
+      "misconceptionId": "mis.large-numbers.count-thousands.1",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.1",
+      "name": "忘记满十进一",
+      "description": "孩子在千以内计数任务中容易忘记满十进一。",
+      "diagnosisHint": "请孩子回到题干，先说清千以内计数的关键信息。",
+      "remediationStrategyId": "review-large-numbers-count-thousands"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.count-thousands.2",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.2",
+      "name": "把计数单位混用",
+      "description": "孩子在千以内计数任务中容易把计数单位混用。",
+      "diagnosisHint": "请孩子回到题干，先说清千以内计数的关键信息。",
+      "remediationStrategyId": "review-large-numbers-count-thousands"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.read-write.1",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.1",
+      "name": "漏读中间的零",
+      "description": "孩子在数位读写任务中容易漏读中间的零。",
+      "diagnosisHint": "请孩子回到题干，先说清数位读写的关键信息。",
+      "remediationStrategyId": "review-large-numbers-read-write"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.read-write.2",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.2",
+      "name": "把数位意义看错",
+      "description": "孩子在数位读写任务中容易把数位意义看错。",
+      "diagnosisHint": "请孩子回到题干，先说清数位读写的关键信息。",
+      "remediationStrategyId": "review-large-numbers-read-write"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.compare-order.1",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.1",
+      "name": "只比较末位数字",
+      "description": "孩子在大数比较任务中容易只比较末位数字。",
+      "diagnosisHint": "请孩子回到题干，先说清大数比较的关键信息。",
+      "remediationStrategyId": "review-large-numbers-compare-order"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.compare-order.2",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.2",
+      "name": "从低位开始比较",
+      "description": "孩子在大数比较任务中容易从低位开始比较。",
+      "diagnosisHint": "请孩子回到题干，先说清大数比较的关键信息。",
+      "remediationStrategyId": "review-large-numbers-compare-order"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.estimate-represent.1",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "name": "把精确数当估计",
+      "description": "孩子在大数估计任务中容易把精确数当估计。",
+      "diagnosisHint": "请孩子回到题干，先说清大数估计的关键信息。",
+      "remediationStrategyId": "review-large-numbers-estimate-represent"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.estimate-represent.2",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "name": "参照组数量选错",
+      "description": "孩子在大数估计任务中容易参照组数量选错。",
+      "diagnosisHint": "请孩子回到题干，先说清大数估计的关键信息。",
+      "remediationStrategyId": "review-large-numbers-estimate-represent"
+    },
+    {
+      "misconceptionId": "mis.large-numbers.integrated.1",
+      "knowledgePointId": "math.large-numbers.integrated",
+      "skillId": "skill.large-numbers.integrated.1",
+      "name": "综合线索连接不完整",
+      "description": "孩子只使用了单个线索，没有把最终问题所需的信息连起来。",
+      "diagnosisHint": "引导孩子逐条复述已解锁线索，再选择需要的计算或判断。",
+      "remediationStrategyId": "review-large-numbers-integrated"
+    }
+  ],
+  "questionPatterns": [
+    {
+      "questionPatternId": "pattern.large-numbers.count-thousands.1",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.1",
+      "name": "千以内计数-按百或十数数",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查千以内计数：按百或十数数。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.count-thousands.2",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.2",
+      "name": "千以内计数-判断计数单位",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查千以内计数：判断计数单位。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.read-write.1",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.1",
+      "name": "数位读写-读写四位数",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查数位读写：读写四位数。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.read-write.2",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillId": "skill.large-numbers.read-write.2",
+      "name": "数位读写-说出数位意义",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查数位读写：说出数位意义。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.compare-order.1",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.1",
+      "name": "大数比较-比较数的大小",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查大数比较：比较数的大小。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.compare-order.2",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillId": "skill.large-numbers.compare-order.2",
+      "name": "大数比较-按顺序排列",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查大数比较：按顺序排列。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.estimate-represent.1",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.1",
+      "name": "大数估计-借助参照估计",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "basic",
+      "template": "在案件情境中考查大数估计：借助参照估计。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.estimate-represent.2",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillId": "skill.large-numbers.estimate-represent.2",
+      "name": "大数估计-选择近似数",
+      "supportedQuestionTypes": [
+        "single",
+        "judge",
+        "fill"
+      ],
+      "difficultyBand": "application",
+      "template": "在案件情境中考查大数估计：选择近似数。"
+    },
+    {
+      "questionPatternId": "pattern.large-numbers.integrated.1",
+      "knowledgePointId": "math.large-numbers.integrated",
+      "skillId": "skill.large-numbers.integrated.1",
+      "name": "第三单元：生活中的大数综合推理",
+      "supportedQuestionTypes": [
+        "single",
+        "judge"
+      ],
+      "difficultyBand": "integrated",
+      "template": "结合多个线索完成最终判断。"
+    }
+  ]
+}

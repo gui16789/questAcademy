@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "unitId": "unit-3-large-numbers",
+  "title": "北师大版二年级下册第三单元：生活中的大数",
+  "defaultCaseId": "case-large-number-code",
+  "locale": "zh-CN",
+  "createdAt": "2026-05-24T00:00:00.000Z",
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "files": {
+    "textbook": "textbook.json",
+    "knowledgeMap": "knowledge-map.json",
+    "cases": [
+      "cases/case-large-number-code.json"
+    ],
+    "questions": [
+      "questions/level-count-thousands.json",
+      "questions/level-read-write.json",
+      "questions/level-compare-order.json",
+      "questions/level-estimate-represent.json",
+      "questions/boss-large-number-code-final.json",
+      "questions/reserve.json"
+    ],
+    "knowledgeCards": "cards/knowledge-cards.json",
+    "clues": "clues.json",
+    "badges": "badges.json",
+    "reviewRules": "review-rules.json"
+  },
+  "review": {
+    "contentReviewStatus": "changes_requested",
+    "teachingReviewStatus": "changes_requested",
+    "readabilityReviewStatus": "changes_requested",
+    "contentReviewer": "",
+    "teachingReviewer": "",
+    "readabilityReviewer": "",
+    "approvedAt": ""
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-6-shapes",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-angle-basic",
+  "caseId": "case-missing-blueprint",
+  "levelId": "level-angle",
+  "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+  "knowledgePointId": "math.shapes.angle",
+  "questions": [
+    {
+      "questionId": "q-angle-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "misconceptionId": "mis.shapes.angle.1",
+      "questionPatternId": "pattern.shapes.angle.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-angle",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "一个角由什么组成？",
+      "options": [
+        "一个顶点和两条边",
+        "两条弯线",
+        "三个圆点"
+      ],
+      "answer": "一个顶点和两条边",
+      "explanation": "角有一个顶点和从顶点出发的两条边。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "角",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-angle-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.2",
+      "misconceptionId": "mis.shapes.angle.2",
+      "questionPatternId": "pattern.shapes.angle.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-angle",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "三角形有 ___ 个角。",
+      "options": [],
+      "answer": "3",
+      "explanation": "三角形有 3 个角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "角",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-angle-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.1",
+      "misconceptionId": "mis.shapes.angle.1",
+      "questionPatternId": "pattern.shapes.angle.1",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-angle",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "角的两条边必须从同一个顶点出发。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "这是角的重要特征。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "角",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-angle-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-6-shapes",
+      "lessonId": "lesson-angle",
+      "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+      "knowledgePointId": "math.shapes.angle",
+      "skillId": "skill.shapes.angle.2",
+      "misconceptionId": "mis.shapes.angle.2",
+      "questionPatternId": "pattern.shapes.angle.2",
+      "caseId": "case-missing-blueprint",
+      "levelId": "level-angle",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "下面哪种图形一定有角？",
+      "options": [
+        "圆",
+        "长方形",
+        "曲线"
+      ],
+      "answer": "长方形",
+      "explanation": "长方形有 4 个角。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "认识图形",
+        "角",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

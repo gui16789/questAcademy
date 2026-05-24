@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-large-number-code-final",
+    "caseId": "case-large-number-code",
+    "name": "图书馆编号最终推理",
+    "targetKnowledgePointIds": [
+      "math.large-numbers.thousand-counting",
+      "math.large-numbers.place-value-read-write",
+      "math.large-numbers.compare-large-numbers",
+      "math.large-numbers.estimate-large-numbers",
+      "math.large-numbers.integrated"
+    ],
+    "targetSkillIds": [
+      "skill.large-numbers.count-thousands.1",
+      "skill.large-numbers.integrated.1"
+    ],
+    "targetMisconceptionIds": [
+      "mis.large-numbers.count-thousands.1",
+      "mis.large-numbers.integrated.1"
+    ],
+    "scenario": "管理员留下 3050、3500、5300 三个编号线索，需要读准数位、比较大小，并判断最接近的藏书区。",
+    "steps": [
+      {
+        "stepId": "boss-step-1",
+        "questionId": "b-1",
+        "skillIds": [
+          "skill.large-numbers.count-thousands.1"
+        ]
+      },
+      {
+        "stepId": "boss-step-2",
+        "questionId": "b-2",
+        "skillIds": [
+          "skill.large-numbers.integrated.1"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-step-1",
+        "boss-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-count-thousands",
+        "card-estimate-represent"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "b-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-count-thousands",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-count-thousands",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillId": "skill.large-numbers.count-thousands.1",
+      "misconceptionId": "mis.large-numbers.count-thousands.1",
+      "questionPatternId": "pattern.large-numbers.count-thousands.1",
+      "caseId": "case-large-number-code",
+      "levelId": "boss",
+      "bossTaskId": "boss-large-number-code-final",
+      "stepId": "boss-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "3050 里的 5 在什么数位上？",
+      "options": [
+        "十位",
+        "百位",
+        "千位"
+      ],
+      "answer": "十位",
+      "explanation": "3050 的 5 在十位上，表示 50。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "生活中的大数",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "b-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-3-large-numbers",
+      "lessonId": "lesson-estimate-represent",
+      "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+      "knowledgePointId": "math.large-numbers.integrated",
+      "skillId": "skill.large-numbers.integrated.1",
+      "misconceptionId": "mis.large-numbers.integrated.1",
+      "questionPatternId": "pattern.large-numbers.integrated.1",
+      "caseId": "case-large-number-code",
+      "levelId": "boss",
+      "bossTaskId": "boss-large-number-code-final",
+      "stepId": "boss-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "3050、3500、5300 中最大的编号是哪一个？",
+      "options": [
+        "5300",
+        "3500",
+        "3050"
+      ],
+      "answer": "5300",
+      "explanation": "比较千位，5 千最大，所以 5300 最大。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "Boss",
+        "生活中的大数",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

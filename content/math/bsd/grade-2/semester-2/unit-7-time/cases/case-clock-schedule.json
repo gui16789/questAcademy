@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-7-time",
+  "contentVersion": "0.1.0",
+  "caseId": "case-clock-schedule",
+  "name": "钟表日程案",
+  "subjectId": "math",
+  "unitId": "unit-7-time",
+  "targetKnowledgePointIds": [
+    "math.time.hour-minute",
+    "math.time.second",
+    "math.time.read-clock",
+    "math.time.elapsed-time"
+  ],
+  "story": {
+    "summary": "车站钟楼的日程表被弄乱了，小侦探要读懂时、分、秒，帮大家找回准确时间。",
+    "setting": "动物城车站钟楼",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-hour-minute",
+    "level-second",
+    "level-read-clock",
+    "level-elapsed-time"
+  ],
+  "levels": [
+    {
+      "levelId": "level-hour-minute",
+      "caseId": "case-clock-schedule",
+      "order": 1,
+      "name": "时和分",
+      "place": "钟楼大厅",
+      "knowledgePointId": "math.time.hour-minute",
+      "skillIds": [
+        "skill.time.hour-minute.1",
+        "skill.time.hour-minute.2"
+      ],
+      "questionGroupId": "qg-level-hour-minute-basic",
+      "intro": "请在钟楼大厅调查：能用时和分描述较长活动。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-hour-minute",
+        "knowledgeCardIds": [
+          "card-hour-minute"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-second",
+      "caseId": "case-clock-schedule",
+      "order": 2,
+      "name": "秒的认识",
+      "place": "秒表练习区",
+      "knowledgePointId": "math.time.second",
+      "skillIds": [
+        "skill.time.second.1",
+        "skill.time.second.2"
+      ],
+      "questionGroupId": "qg-level-second-basic",
+      "intro": "请在秒表练习区调查：用秒描述很短的时间。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-second",
+        "knowledgeCardIds": [
+          "card-second"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-hour-minute"
+      }
+    },
+    {
+      "levelId": "level-read-clock",
+      "caseId": "case-clock-schedule",
+      "order": 3,
+      "name": "认读钟面时间",
+      "place": "候车厅钟面",
+      "knowledgePointId": "math.time.read-clock",
+      "skillIds": [
+        "skill.time.read-clock.1",
+        "skill.time.read-clock.2"
+      ],
+      "questionGroupId": "qg-level-read-clock-basic",
+      "intro": "请在候车厅钟面调查：先看时针，再看分针。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-read-clock",
+        "knowledgeCardIds": [
+          "card-read-clock"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-second"
+      }
+    },
+    {
+      "levelId": "level-elapsed-time",
+      "caseId": "case-clock-schedule",
+      "order": 4,
+      "name": "经过时间",
+      "place": "列车时刻牌",
+      "knowledgePointId": "math.time.elapsed-time",
+      "skillIds": [
+        "skill.time.elapsed-time.1",
+        "skill.time.elapsed-time.2"
+      ],
+      "questionGroupId": "qg-level-elapsed-time-basic",
+      "intro": "请在列车时刻牌调查：从开始时间按分钟往后数。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-elapsed-time",
+        "knowledgeCardIds": [
+          "card-elapsed-time"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-read-clock"
+      }
+    }
+  ],
+  "bossTaskId": "boss-clock-schedule-final",
+  "badgeRewardIds": [
+    "badge-time-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}

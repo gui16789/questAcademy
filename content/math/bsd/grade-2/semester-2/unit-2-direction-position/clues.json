@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "clues": [
+    {
+      "clueId": "clue-cardinal-directions",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "title": "四向路牌",
+      "text": "邮局门口有东、南、西、北四块路牌，东西相对，南北相对。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-cardinal-directions"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-map-position",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "title": "街区参照点",
+      "text": "地图上的位置要先找参照地点，再判断另一个地点在哪个方向。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-map-position"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-diagonal-directions",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "title": "四角方向",
+      "text": "东北、东南、西北、西南都藏着两个方向词。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-diagonal-directions"
+      },
+      "status": "draft"
+    },
+    {
+      "clueId": "clue-route-description",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-route-description",
+      "knowledgePointId": "math.direction.route",
+      "title": "投递路线单",
+      "text": "路线要从起点开始，按先后顺序一步一步读。",
+      "unlockCondition": {
+        "type": "level_passed",
+        "levelId": "level-route-description"
+      },
+      "status": "draft"
+    }
+  ]
+}

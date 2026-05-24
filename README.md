@@ -1,19 +1,19 @@
-# 动物侦探城：徽章失踪案
+# 动物侦探城：数学二下路线
 
-面向小学二年级下册除法单元的学习闯关应用。v1.1.0 在 React + TypeScript + Vite 工程基础上补齐内容包 registry、按内容包隔离的学习记录、内容校验和浏览器回归能力，为后续教材切换和知识工厂扩展做准备。
+面向小学二年级下册数学的学习闯关应用。当前 React + TypeScript + Vite 工程已接入内容包 registry、按内容包隔离的学习记录、内容校验、浏览器回归，以及北师大版数学二年级下册完整单元路线草案。
 
 ## 当前版本
 
 | 项目 | 版本 |
 | --- | --- |
-| 产品版本 | v1.1.0 |
-| 内容包 | `math.bsd.g2.s2.unit-1-division@0.1.0` |
+| 产品版本 | v1.3.0 draft |
+| 内容包 | `math.bsd.g2.s2.unit-1-division@0.1.0` 至 `math.bsd.g2.s2.unit-8-data-records@0.1.0` |
 | 前端工程 | `apps/web` |
 | 内容 Schema | `packages/content-schema` |
 | 内容 Runtime | `packages/content-runtime` |
 | 游戏规则引擎 | `packages/game-core` |
 
-产品版本和 Git tag 保持一致；内容包使用独立版本号。
+产品版本和 Git tag 保持一致；内容包使用独立版本号。新增内容包当前为 AI draft，进入 `approved` 或 `published` 前需要完成人工内容审核、教研审核和儿童可读性审核。
 
 ## 本地启动
 
@@ -34,10 +34,23 @@ http://127.0.0.1:5173
 http://127.0.0.1:5173?contentPackageId=math.bsd.g2.s2.unit-1-division
 ```
 
+数学路线当前注册：
+
+```text
+math.bsd.g2.s2.unit-1-division
+math.bsd.g2.s2.unit-2-direction-position
+math.bsd.g2.s2.unit-3-large-numbers
+math.bsd.g2.s2.unit-4-measurement
+math.bsd.g2.s2.unit-5-addition-subtraction
+math.bsd.g2.s2.unit-6-shapes
+math.bsd.g2.s2.unit-7-time
+math.bsd.g2.s2.unit-8-data-records
+```
+
 ## 已包含体验
 
 - 开始页：昵称输入，默认昵称为“小侦探”。
-- 地图页：案件、悬案馆、线索库、勋章馆入口。
+- 地图页：学科切换、数学单元路线、案件、悬案馆、线索库、勋章馆入口。
 - 案件详情：背景、目标、进度和继续调查。
 - 普通关卡：4 个知识点关卡，每关 4 题，答对 3 题通过。
 - Boss 挑战：集齐 4 条线索后解锁，2 道综合题。
@@ -45,7 +58,7 @@ http://127.0.0.1:5173?contentPackageId=math.bsd.g2.s2.unit-1-division
 - 悬案馆：自动记录错题，可重新作答并标记已侦破。
 - 线索库：通关后解锁知识卡。
 - 勋章馆：自动发放 5 类勋章。
-- 内容包 registry：当前默认内容包来自 `content/registry.json`。
+- 内容包 registry：当前默认内容包和数学路线来自 `content/registry.json`。
 - 学习记录：使用 `localStorage` 保存，按 `questAcademy:progress:{contentPackageId}` 隔离，并保留旧数据迁移入口。
 
 ## 常用命令

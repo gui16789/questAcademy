@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import type { Badge, BossTask, CaseConfig, KnowledgeCard, LevelConfig, Question } from "@quest-academy/content-schema";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { Badge, BossTask, CaseConfig, ContentPackageManifest, ContentPackageRegistryEntry, KnowledgeCard, LevelConfig, Question } from "@quest-academy/content-schema";
 import type { ContentRuntime } from "@quest-academy/content-runtime";
 import {
   addWrongRecord,
@@ -17,7 +17,7 @@ import {
   type WrongRecord,
   type WrongRecordMap,
 } from "@quest-academy/game-core";
-import { loadBundledContentRuntime } from "./contentPackage";
+import { getBundledContentPackageEntry, getBundledContentRegistry, loadBundledContentRuntime } from "./contentPackage";
 import {
   clearStoredState,
   createDefaultProgress,
@@ -31,8 +31,17 @@ import {
 type View = "start" | "map" | "case" | "level" | "boss" | "clue" | "closing" | "wrongs" | "knowledge" | "badges" | "review" | "levelResult" | "bossResult";
 type PlayerMode = "level" | "boss" | "review";
 
+interface CourseConfig {
+  courseId: string;
+  courseTitle: string;
+  emptyTitle: string;
+  emptyDescription: string;
+}
+
 interface RuntimeModel {
   runtime: ContentRuntime;
+  manifest: ContentPackageManifest;
+  currentEntry: ContentPackageRegistryEntry;
   caseData: CaseConfig;
   bossTask: BossTask;
   levels: LevelConfig[];
@@ -69,11 +78,34 @@ interface BossResultView {
   passed: boolean;
 }
 
+const SUPPORTED_COURSES: CourseConfig[] = [
+  {
+    courseId: "chinese",
+    courseTitle: "语文",
+    emptyTitle: "语文路线待接入",
+    emptyDescription: "后续接入语文内容包后，单元会按顺序出现在这里。",
+  },
+  {
+    courseId: "math",
+    courseTitle: "数学",
+    emptyTitle: "数学路线待接入",
+    emptyDescription: "数学内容包接入后，单元会按教材顺序串联成路线。",
+  },
+  {
+    courseId: "english",
+    courseTitle: "英语",
+    emptyTitle: "英语路线待接入",
+    emptyDescription: "后续接入英语内容包后，单元会按顺序出现在这里。",
+  },
+];
+
 export function App() {
+  const [activeContentPackageId, setActiveContentPackageId] = useState(() => getInitialContentPackageId());
   const [model, setModel] = useState<RuntimeModel | null>(null);
   const [loadError, setLoadError] = useState<string>("");
   const [hydrated, setHydrated] = useState(false);
   const [view, setView] = useState<View>("start");
+  const [selectedCourseId, setSelectedCourseId] = useState("math");
   const [nickname, setNickname] = useState("");
   const [user, setUser] = useState<UserState>(() => createDefaultUser());
   const [progress, setProgress] = useState<LearningProgress>(() => createDefaultProgress());
@@ -86,27 +118,48 @@ export function App() {
   const [levelResult, setLevelResult] = useState<LevelResultView | null>(null);
   const [bossResult, setBossResult] = useState<BossResultView | null>(null);
   const [lastClueLevelId, setLastClueLevelId] = useState<string>("");
+  const userRef = useRef(user);
+  const internalPackageSwitchRef = useRef(false);
 
   useEffect(() => {
     let active = true;
-    const contentPackageId = new URLSearchParams(window.location.search).get("contentPackageId") ?? undefined;
-    loadBundledContentRuntime(contentPackageId)
+    setHydrated(false);
+    setLoadError("");
+    setPlayer(null);
+    setLevelResult(null);
+    setBossResult(null);
+    setLastClueLevelId("");
+
+    let currentEntry: ContentPackageRegistryEntry;
+    try {
+      currentEntry = getBundledContentPackageEntry(activeContentPackageId);
+    } catch (error: unknown) {
+      setLoadError(error instanceof Error ? error.message : String(error));
+      return () => {
+        active = false;
+      };
+    }
+
+    loadBundledContentRuntime(currentEntry.contentPackageId)
       .then((runtime) => {
         if (!active) return;
-        const nextModel = buildRuntimeModel(runtime);
+        const nextModel = buildRuntimeModel(runtime, currentEntry);
         const storedState = loadStoredState(toStorageModel(nextModel));
         setModel(nextModel);
-        hydrateState(storedState);
+        setSelectedCourseId(getEntryCourseId(currentEntry));
+        hydrateState(storedState, { preserveStartedUser: internalPackageSwitchRef.current });
+        internalPackageSwitchRef.current = false;
       })
       .catch((error: unknown) => {
         if (!active) return;
         setLoadError(error instanceof Error ? error.message : String(error));
+        internalPackageSwitchRef.current = false;
       });
 
     return () => {
       active = false;
     };
-  }, []);
+  }, [activeContentPackageId]);
 
   useEffect(() => {
     if (!model || !hydrated) return;
@@ -121,10 +174,23 @@ export function App() {
   }, [answerRecords, badgeRecords, hydrated, migratedFromDataVersion, model, progress, user, wrongRecords]);
 
   useEffect(() => {
+    userRef.current = user;
+  }, [user]);
+
+  useEffect(() => {
     if (!toast) return;
     const timer = window.setTimeout(() => setToast(""), 2200);
     return () => window.clearTimeout(timer);
   }, [toast]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      internalPackageSwitchRef.current = true;
+      setActiveContentPackageId(getInitialContentPackageId());
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   const activeQuestion = useMemo(() => {
     if (!model || !player) return null;
@@ -176,6 +242,18 @@ export function App() {
     setView("map");
   };
 
+  const openContentPackage = (contentPackageId: string) => {
+    if (contentPackageId === model.currentEntry.contentPackageId) {
+      openView("case");
+      return;
+    }
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set("contentPackageId", contentPackageId);
+    window.history.pushState(null, "", nextUrl.toString());
+    internalPackageSwitchRef.current = true;
+    setActiveContentPackageId(contentPackageId);
+  };
+
   const resetProgress = () => {
     clearStoredState(model ? toStorageModel(model) : undefined);
     setProgress(createDefaultProgress());
@@ -220,7 +298,7 @@ export function App() {
 
   const startBoss = () => {
     if (!progress.bossUnlocked) {
-      showToast("还差线索。集齐 4 条线索后再来挑战 Boss。");
+      showToast(`还差线索。集齐 ${model.levels.length} 条线索后再来挑战 Boss。`);
       return;
     }
 
@@ -407,9 +485,24 @@ export function App() {
   const screen = (() => {
     switch (view) {
       case "start":
-        return <StartScreen nickname={nickname} onNicknameChange={setNickname} onStart={startGame} />;
+        return <StartScreen model={model} nickname={nickname} onNicknameChange={setNickname} onStart={startGame} />;
       case "map":
-        return <MapScreen model={model} nickname={user.nickname} progress={progress} wrongRecords={wrongRecords} badgeRecords={badgeRecords} onCase={() => openView("case")} onReset={resetProgress} onBoss={startBoss} onNavigate={openView} />;
+        return (
+          <MapScreen
+            model={model}
+            selectedCourseId={selectedCourseId}
+            nickname={user.nickname}
+            progress={progress}
+            wrongRecords={wrongRecords}
+            badgeRecords={badgeRecords}
+            onCourseChange={setSelectedCourseId}
+            onOpenPackage={openContentPackage}
+            onCase={() => openView("case")}
+            onReset={resetProgress}
+            onBoss={startBoss}
+            onNavigate={openView}
+          />
+        );
       case "case":
         return <CaseDetail model={model} progress={progress} onMap={() => openView("map")} onStartLevel={startLevel} onStartNext={startNextLevel} onBoss={startBoss} />;
       case "level":
@@ -436,7 +529,7 @@ export function App() {
       case "clue":
         return <ClueScreen model={model} progress={progress} levelId={lastClueLevelId} onContinue={progress.bossUnlocked ? startBoss : startNextLevel} onKnowledge={() => openView("knowledge")} />;
       case "closing":
-        return <ClosingScreen progress={progress} wrongRecords={wrongRecords} onMap={() => openView("map")} onKnowledge={() => openView("knowledge")} onWrongs={() => openView("wrongs")} />;
+        return <ClosingScreen model={model} progress={progress} wrongRecords={wrongRecords} onMap={() => openView("map")} onKnowledge={() => openView("knowledge")} onWrongs={() => openView("wrongs")} />;
       case "wrongs":
         return <WrongCaseHall model={model} wrongRecords={wrongRecords} onMap={() => openView("map")} onReview={startReview} />;
       case "knowledge":
@@ -449,26 +542,50 @@ export function App() {
   })();
 
   return (
-    <AppShell view={view} started={user.started} onNavigate={openView}>
+    <AppShell subtitle={getShellSubtitle(model)} view={view} started={user.started} onNavigate={openView}>
       {screen}
       {toast ? <div className="toast">{toast}</div> : null}
     </AppShell>
   );
 
-  function hydrateState(storedState: LoadedStoredState) {
-    setUser(storedState.user);
-    setNickname(storedState.user.started && storedState.user.nickname !== "小侦探" ? storedState.user.nickname : "");
+  function hydrateState(storedState: LoadedStoredState, options: { preserveStartedUser?: boolean } = {}) {
+    const currentUser = userRef.current;
+    const nextUser =
+      options.preserveStartedUser && currentUser.started
+        ? {
+            ...storedState.user,
+            nickname: currentUser.nickname,
+            avatar: currentUser.avatar,
+            started: true,
+            lastLoginAt: new Date().toISOString(),
+          }
+        : storedState.user;
+
+    setUser(nextUser);
+    setNickname(nextUser.started && nextUser.nickname !== "小侦探" ? nextUser.nickname : "");
     setProgress(storedState.progress);
     setWrongRecords(storedState.wrongRecords);
     setBadgeRecords(storedState.badgeRecords);
     setAnswerRecords(storedState.answerRecords);
     setMigratedFromDataVersion(storedState.migratedFromDataVersion);
-    setView(storedState.user.started ? "map" : "start");
+    setView(nextUser.started ? "map" : "start");
     setHydrated(true);
   }
 }
 
-function AppShell({ children, view, started, onNavigate }: { children: React.ReactNode; view: View; started: boolean; onNavigate: (view: View) => void }) {
+function AppShell({
+  children,
+  subtitle = "内容包加载中",
+  view,
+  started,
+  onNavigate,
+}: {
+  children: React.ReactNode;
+  subtitle?: string;
+  view: View;
+  started: boolean;
+  onNavigate: (view: View) => void;
+}) {
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -476,7 +593,7 @@ function AppShell({ children, view, started, onNavigate }: { children: React.Rea
           <span className="brand-mark">探</span>
           <span>
             <strong>动物侦探城</strong>
-            <small>除法 · 徽章失踪案</small>
+            <small>{subtitle}</small>
           </span>
         </button>
         {started ? (
@@ -501,17 +618,27 @@ function AppShell({ children, view, started, onNavigate }: { children: React.Rea
   );
 }
 
-function StartScreen({ nickname, onNicknameChange, onStart }: { nickname: string; onNicknameChange: (value: string) => void; onStart: () => void }) {
+function StartScreen({
+  model,
+  nickname,
+  onNicknameChange,
+  onStart,
+}: {
+  model: RuntimeModel;
+  nickname: string;
+  onNicknameChange: (value: string) => void;
+  onStart: () => void;
+}) {
   return (
     <section className="screen hero">
       <div className="hero-copy">
-        <p className="tag">北师大版二年级下册 · 第一单元 除法</p>
+        <p className="tag">{model.manifest.title}</p>
         <h1>
           动物侦探城：
           <br />
-          徽章失踪案
+          {model.caseData.name}
         </h1>
-        <p>你将成为新手小侦探，跟着鹿队长调查胡萝卜徽章为什么对不上。完成除法闯关，收集线索，破解最后的 Boss 谜题。</p>
+        <p>{model.caseData.story.summary} 完成闯关，收集线索，破解最后的 Boss 谜题。</p>
         <form
           className="name-row"
           onSubmit={(event) => {
@@ -538,77 +665,115 @@ function StartScreen({ nickname, onNicknameChange, onStart }: { nickname: string
 
 function MapScreen({
   model,
+  selectedCourseId,
   nickname,
   progress,
   wrongRecords,
   badgeRecords,
+  onCourseChange,
+  onOpenPackage,
   onCase,
   onReset,
   onBoss,
   onNavigate,
 }: {
   model: RuntimeModel;
+  selectedCourseId: string;
   nickname: string;
   progress: LearningProgress;
   wrongRecords: WrongRecordMap;
   badgeRecords: BadgeRecordMap;
+  onCourseChange: (courseId: string) => void;
+  onOpenPackage: (contentPackageId: string) => void;
   onCase: () => void;
   onReset: () => void;
   onBoss: () => void;
   onNavigate: (view: View) => void;
 }) {
   const openWrongCount = Object.values(wrongRecords).filter((item) => item.status === "open").length;
+  const selectedCourse = getCourseConfig(selectedCourseId);
+  const routeEntries = getCourseRouteEntries(selectedCourseId);
+  const activePackageId = model.currentEntry.contentPackageId;
   return (
     <section className="screen">
       <div className="section-head">
         <div>
           <h1>欢迎，{nickname}</h1>
-          <p>今天的目标：收集 4 条线索，找出徽章数量异常的真相。</p>
+          <p>
+            选择学科后沿单元路线推进；每个单元进入后继续完成案件、知识点和错题复习。
+          </p>
         </div>
         <button className="btn danger" type="button" onClick={onReset}>
           清空记录
         </button>
       </div>
-      <ProgressStrip levels={model.levels} progress={progress} />
+      <div className="course-switcher" aria-label="学科切换">
+        {SUPPORTED_COURSES.map((course) => (
+          <button className={selectedCourseId === course.courseId ? "is-active" : ""} type="button" key={course.courseId} onClick={() => onCourseChange(course.courseId)}>
+            {course.courseTitle}
+          </button>
+        ))}
+      </div>
       <div className="map-grid">
-        <div className="city-map">
-          <div className="map-road" />
-          <button className="map-node case" type="button" onClick={onCase}>
-            <span>🏫</span>
-            <strong>{model.caseData.name}</strong>
-          </button>
-          <button className="map-node wrongs" type="button" onClick={() => onNavigate("wrongs")}>
-            <span>📁</span>
-            <strong>悬案馆</strong>
-          </button>
-          <button className="map-node knowledge" type="button" onClick={() => onNavigate("knowledge")}>
-            <span>📚</span>
-            <strong>线索库</strong>
-          </button>
-          <button className="map-node badges" type="button" onClick={() => onNavigate("badges")}>
-            <span>🏅</span>
-            <strong>勋章馆</strong>
-          </button>
-          <button className="map-node boss" type="button" disabled={!progress.bossUnlocked} onClick={onBoss}>
-            <span>🧩</span>
-            <strong>{progress.bossUnlocked ? "Boss 挑战" : "Boss 未解锁"}</strong>
-          </button>
+        <div className="route-map" aria-label={`${selectedCourse.courseTitle}单元路线`}>
+          <div className="route-map-head">
+            <div>
+              <p className="tag">{selectedCourse.courseTitle}</p>
+              <h2>{routeEntries[0]?.routeTitle ?? selectedCourse.emptyTitle}</h2>
+            </div>
+            <span>{routeEntries.length ? `${routeEntries.length} 个单元` : "待接入"}</span>
+          </div>
+          {routeEntries.length ? (
+            <div className="unit-route">
+              {routeEntries.map((entry, index) => {
+                const isActive = entry.contentPackageId === activePackageId;
+                const isCompleted = isActive && progress.caseClosed;
+                return (
+                  <button
+                    className={`unit-node ${isActive ? "is-active" : ""} ${isCompleted ? "is-complete" : ""}`}
+                    type="button"
+                    key={entry.contentPackageId}
+                    onClick={() => onOpenPackage(entry.contentPackageId)}
+                  >
+                    <span className="unit-index">{entry.locationOrder ?? index + 1}</span>
+                    <span>
+                      <strong>{entry.locationTitle ?? entry.title}</strong>
+                      <small>{isActive ? `${model.caseData.name} · 当前单元` : "进入该单元学习"}</small>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="empty-state route-empty">
+              <h2>{selectedCourse.emptyTitle}</h2>
+              <p>{selectedCourse.emptyDescription}</p>
+            </div>
+          )}
         </div>
         <aside className="side-panel">
-          <h2>{progress.caseClosed ? "案件已结案" : "调查进度"}</h2>
+          <h2>{progress.caseClosed ? "当前单元已完成" : "当前单元进度"}</h2>
+          <p className="current-unit">{model.currentEntry.locationTitle ?? model.manifest.title}</p>
+          <ProgressStrip levels={model.levels} progress={progress} />
           <div className="stat-grid">
-            <Stat label="已收集线索" value={`${progress.unlockedClueIds.length}/4`} />
-            <Stat label="通过关卡" value={`${progress.passedLevelIds.length}/4`} />
+            <Stat label="已收集线索" value={`${progress.unlockedClueIds.length}/${model.levels.length}`} />
+            <Stat label="通过关卡" value={`${progress.passedLevelIds.length}/${model.levels.length}`} />
             <Stat label="未侦破错题" value={openWrongCount} />
-            <Stat label="已获勋章" value={`${Object.keys(badgeRecords).length}/5`} />
+            <Stat label="已获勋章" value={`${Object.keys(badgeRecords).length}/${model.badges.length}`} />
           </div>
-          <p className="lead">{progress.caseClosed ? "你已经找出了真相，可以去线索库复习，也可以回到悬案馆清理错题。" : "先进入案件详情，鹿队长会带你继续当前关卡。"}</p>
+          <p className="lead">{progress.caseClosed ? "这个单元已经完成，可以复习知识点，也可以切到路线上的下一个单元。" : `继续推进「${model.caseData.name}」，检查本单元知识点是否掌握。`}</p>
           <div className="action-row">
             <button className="btn primary" type="button" onClick={onCase}>
-              查看案件
+              进入当前单元
             </button>
             <button className="btn secondary" type="button" onClick={() => onNavigate("knowledge")}>
-              复习线索
+              复习知识点
+            </button>
+            <button className="btn secondary" type="button" onClick={() => onNavigate("wrongs")}>
+              查看错题
+            </button>
+            <button className="btn secondary" type="button" onClick={() => onNavigate("badges")}>
+              查看勋章
             </button>
           </div>
         </aside>
@@ -647,9 +812,9 @@ function CaseDetail({
       <div className="case-layout">
         <article className="content-card story-box">
           <p className="tag">案件背景</p>
-          <h2>胡萝卜徽章数量对不上了</h2>
+          <h2>{model.caseData.story.setting}</h2>
           <p className="lead">{model.caseData.story.summary}</p>
-          <p>收集 4 条关键线索后，Boss 挑战会解锁。完成 Boss 就能结案，并获得“破案小能手”勋章。</p>
+          <p>收集 {model.levels.length} 条关键线索后，Boss 挑战会解锁。完成 Boss 就能结案，并获得案件勋章。</p>
           <div className="action-row">
             <button className="btn primary" type="button" onClick={onStartNext}>
               {progress.caseClosed ? "重新练习当前关卡" : "开始调查"}
@@ -713,7 +878,7 @@ function QuestionScreen({
   const level = player.levelId ? model.runtime.getLevel(player.levelId) : null;
   const isReview = player.mode === "review";
   const title = player.mode === "boss" ? "Boss 综合推理" : isReview ? "重新调查" : `${level?.name ?? ""} · ${level?.place ?? ""}`;
-  const subtitle = player.mode === "boss" ? "把 4 条线索连起来，找出真相。" : isReview ? "这次只要答对，悬案就会变成已侦破。" : level?.intro ?? "";
+  const subtitle = player.mode === "boss" ? `把 ${model.levels.length} 条线索连起来，找出真相。` : isReview ? "这次只要答对，悬案就会变成已侦破。" : level?.intro ?? "";
   const correctCount = player.results.filter((result) => result.isCorrect).length;
   const isLastQuestion = player.index + 1 >= player.questionIds.length;
 
@@ -873,20 +1038,35 @@ function BossResultScreen({ onRetry, onKnowledge }: { onRetry: () => void; onKno
   );
 }
 
-function ClosingScreen({ progress, wrongRecords, onMap, onKnowledge, onWrongs }: { progress: LearningProgress; wrongRecords: WrongRecordMap; onMap: () => void; onKnowledge: () => void; onWrongs: () => void }) {
+function ClosingScreen({
+  model,
+  progress,
+  wrongRecords,
+  onMap,
+  onKnowledge,
+  onWrongs,
+}: {
+  model: RuntimeModel;
+  progress: LearningProgress;
+  wrongRecords: WrongRecordMap;
+  onMap: () => void;
+  onKnowledge: () => void;
+  onWrongs: () => void;
+}) {
   const openWrongCount = Object.values(wrongRecords).filter((item) => item.status === "open").length;
+  const closingBadge = model.badges.find((badge) => model.caseData.badgeRewardIds.includes(badge.badgeId)) ?? model.badges[model.badges.length - 1];
   return (
     <section className="screen result-panel">
       <p className="tag">案件成功破解</p>
-      <h1>真相：徽章没有丢</h1>
-      <p className="lead">35 枚徽章每队分 6 枚，只能分给 5 个完整小队，还剩 5 枚。剩下的徽章不够再分一个完整小队，所以狐狸配送员的说法不对。</p>
+      <h1>真相：{model.caseData.name}已破解</h1>
+      <p className="lead">{model.bossTask.scenario}</p>
       <div className="stat-grid">
-        <Stat label="掌握知识点" value="4" />
+        <Stat label="掌握知识点" value={model.caseData.targetKnowledgePointIds.length} />
         <Stat label="收集线索" value={progress.unlockedClueIds.length} />
         <Stat label="未侦破错题" value={openWrongCount} />
         <Stat label="新增勋章" value="🏅" />
       </div>
-      <p>动物侦探学院为你颁发“破案小能手”勋章。</p>
+      <p>动物侦探学院为你颁发“{closingBadge?.name ?? "破案小能手"}”勋章。</p>
       <div className="action-row">
         <button className="btn primary" type="button" onClick={onMap}>
           返回地图
@@ -1084,7 +1264,8 @@ function Stat({ label, value }: { label: string; value: string | number }) {
   );
 }
 
-function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
+function buildRuntimeModel(runtime: ContentRuntime, currentEntry: ContentPackageRegistryEntry): RuntimeModel {
+  const manifest = runtime.getManifest();
   const caseData = runtime.getCase();
   const levels = runtime.getLevels(caseData.caseId).slice().sort((a, b) => a.order - b.order);
   const bossTask = runtime.getBossTask(caseData.bossTaskId);
@@ -1105,6 +1286,8 @@ function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
 
   return {
     runtime,
+    manifest,
+    currentEntry,
     caseData,
     bossTask,
     levels,
@@ -1114,6 +1297,29 @@ function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
     knowledgeCards,
     knowledgeNameById,
   };
+}
+
+function getShellSubtitle(model: RuntimeModel) {
+  return `${model.manifest.title.replace(/^北师大版二年级下册/, "")} · ${model.caseData.name}`.replace(/^：/, "");
+}
+
+function getEntryCourseId(entry: ContentPackageRegistryEntry) {
+  return entry.courseId || entry.subjectId;
+}
+
+function getCourseConfig(courseId: string) {
+  return SUPPORTED_COURSES.find((course) => course.courseId === courseId) ?? SUPPORTED_COURSES[0];
+}
+
+function getCourseRouteEntries(courseId: string) {
+  return getBundledContentRegistry()
+    .packages.filter((entry) => getEntryCourseId(entry) === courseId)
+    .slice()
+    .sort((a, b) => (a.locationOrder ?? 0) - (b.locationOrder ?? 0));
+}
+
+function getInitialContentPackageId() {
+  return new URLSearchParams(window.location.search).get("contentPackageId") ?? getBundledContentRegistry().defaultContentPackageId;
 }
 
 function findQuestion(model: RuntimeModel, questionId?: string) {

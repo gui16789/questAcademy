@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-8-data-records",
+  "contentVersion": "0.1.0",
+  "reviewRules": [
+    {
+      "reviewRuleId": "review-data-records-survey-question-1",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.1",
+      "misconceptionId": "mis.data-records.survey-question.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-survey-question"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.survey-question.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-survey-question-2",
+      "knowledgePointId": "math.data-records.survey-question",
+      "skillId": "skill.data-records.survey-question.2",
+      "misconceptionId": "mis.data-records.survey-question.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-survey-question"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.survey-question.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-collect-data-1",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.1",
+      "misconceptionId": "mis.data-records.collect-data.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-collect-data"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.collect-data.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-collect-data-2",
+      "knowledgePointId": "math.data-records.collect-data",
+      "skillId": "skill.data-records.collect-data.2",
+      "misconceptionId": "mis.data-records.collect-data.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-collect-data"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.collect-data.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-record-table-1",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.1",
+      "misconceptionId": "mis.data-records.record-table.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-record-table"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.record-table.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-record-table-2",
+      "knowledgePointId": "math.data-records.record-table",
+      "skillId": "skill.data-records.record-table.2",
+      "misconceptionId": "mis.data-records.record-table.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-record-table"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.record-table.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-interpret-data-1",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.1",
+      "misconceptionId": "mis.data-records.interpret-data.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-interpret-data"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.interpret-data.1"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-interpret-data-2",
+      "knowledgePointId": "math.data-records.interpret-data",
+      "skillId": "skill.data-records.interpret-data.2",
+      "misconceptionId": "mis.data-records.interpret-data.2",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-interpret-data"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.interpret-data.2"
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-data-records-integrated-1",
+      "knowledgePointId": "math.data-records.integrated",
+      "skillId": "skill.data-records.integrated.1",
+      "misconceptionId": "mis.data-records.integrated.1",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "review_knowledge_card",
+          "knowledgeCardId": "card-interpret-data"
+        },
+        {
+          "type": "practice_question_pattern",
+          "questionPatternId": "pattern.data-records.integrated.1"
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

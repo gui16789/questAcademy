@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-5-addition-subtraction",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-estimate-check-basic",
+  "caseId": "case-ledger-balance",
+  "levelId": "level-estimate-check",
+  "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+  "knowledgePointId": "math.add-subtract.estimate-and-check",
+  "questions": [
+    {
+      "questionId": "q-estimate-check-1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "misconceptionId": "mis.add-subtract.estimate-check.1",
+      "questionPatternId": "pattern.add-subtract.estimate-check.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-estimate-check",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "298 + 401 大约是多少？",
+      "options": [
+        "700",
+        "500",
+        "900"
+      ],
+      "answer": "700",
+      "explanation": "298 约 300，401 约 400，合起来约 700。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "估算验算",
+        "single"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-check-2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "misconceptionId": "mis.add-subtract.estimate-check.2",
+      "questionPatternId": "pattern.add-subtract.estimate-check.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-estimate-check",
+      "questionType": "fill",
+      "difficultyBand": "application",
+      "stem": "验算 735 - 268 = 467，可以算 467 + 268 = ___。",
+      "options": [],
+      "answer": "735",
+      "explanation": "差加减数应等于被减数。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "估算验算",
+        "fill"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-check-3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.1",
+      "misconceptionId": "mis.add-subtract.estimate-check.1",
+      "questionPatternId": "pattern.add-subtract.estimate-check.1",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-estimate-check",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "估算可以帮助发现明显不合理的答案。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "估算先判断结果大约在哪个范围。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "估算验算",
+        "judge"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "q-estimate-check-4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-5-addition-subtraction",
+      "lessonId": "lesson-estimate-check",
+      "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+      "knowledgePointId": "math.add-subtract.estimate-and-check",
+      "skillId": "skill.add-subtract.estimate-check.2",
+      "misconceptionId": "mis.add-subtract.estimate-check.2",
+      "questionPatternId": "pattern.add-subtract.estimate-check.2",
+      "caseId": "case-ledger-balance",
+      "levelId": "level-estimate-check",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "503 - 198 大约是多少？",
+      "options": [
+        "300",
+        "700",
+        "100"
+      ],
+      "answer": "300",
+      "explanation": "503 约 500，198 约 200，差约 300。",
+      "wrongHint": "这条线索还不够清楚，我们先放进悬案馆，稍后再调查。",
+      "tags": [
+        "加与减",
+        "估算验算",
+        "single"
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-3-large-numbers",
+  "contentVersion": "0.1.0",
+  "caseId": "case-large-number-code",
+  "name": "大数密码案",
+  "subjectId": "math",
+  "unitId": "unit-3-large-numbers",
+  "targetKnowledgePointIds": [
+    "math.large-numbers.thousand-counting",
+    "math.large-numbers.place-value-read-write",
+    "math.large-numbers.compare-large-numbers",
+    "math.large-numbers.estimate-large-numbers"
+  ],
+  "story": {
+    "summary": "动物图书馆的藏书编号被打乱了，小侦探要用生活中的大数读写、比较和估计线索找回正确编号。",
+    "setting": "动物图书馆资料室",
+    "mentorCharacterId": "char-deer-captain"
+  },
+  "levelIds": [
+    "level-count-thousands",
+    "level-read-write",
+    "level-compare-order",
+    "level-estimate-represent"
+  ],
+  "levels": [
+    {
+      "levelId": "level-count-thousands",
+      "caseId": "case-large-number-code",
+      "order": 1,
+      "name": "千以内计数",
+      "place": "书架计数台",
+      "knowledgePointId": "math.large-numbers.thousand-counting",
+      "skillIds": [
+        "skill.large-numbers.count-thousands.1",
+        "skill.large-numbers.count-thousands.2"
+      ],
+      "questionGroupId": "qg-level-count-thousands-basic",
+      "intro": "请在书架计数台调查：会用一百一百、一十一十等方式数较大的数。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-count-thousands",
+        "knowledgeCardIds": [
+          "card-count-thousands"
+        ]
+      },
+      "unlockRule": {
+        "type": "available_by_default"
+      }
+    },
+    {
+      "levelId": "level-read-write",
+      "caseId": "case-large-number-code",
+      "order": 2,
+      "name": "万以内数的读写",
+      "place": "号码牌工作台",
+      "knowledgePointId": "math.large-numbers.place-value-read-write",
+      "skillIds": [
+        "skill.large-numbers.read-write.1",
+        "skill.large-numbers.read-write.2"
+      ],
+      "questionGroupId": "qg-level-read-write-basic",
+      "intro": "请在号码牌工作台调查：理解千、百、十、个位上的数字表示多少。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-read-write",
+        "knowledgeCardIds": [
+          "card-read-write"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-count-thousands"
+      }
+    },
+    {
+      "levelId": "level-compare-order",
+      "caseId": "case-large-number-code",
+      "order": 3,
+      "name": "大数比较与排序",
+      "place": "藏书编号墙",
+      "knowledgePointId": "math.large-numbers.compare-large-numbers",
+      "skillIds": [
+        "skill.large-numbers.compare-order.1",
+        "skill.large-numbers.compare-order.2"
+      ],
+      "questionGroupId": "qg-level-compare-order-basic",
+      "intro": "请在藏书编号墙调查：先比位数，位数相同从高位比起。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-compare-order",
+        "knowledgeCardIds": [
+          "card-compare-order"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-read-write"
+      }
+    },
+    {
+      "levelId": "level-estimate-represent",
+      "caseId": "case-large-number-code",
+      "order": 4,
+      "name": "估计与表示大数",
+      "place": "故事页扫描间",
+      "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+      "skillIds": [
+        "skill.large-numbers.estimate-represent.1",
+        "skill.large-numbers.estimate-represent.2"
+      ],
+      "questionGroupId": "qg-level-estimate-represent-basic",
+      "intro": "请在故事页扫描间调查：先找一组大约多少，再推想总数。",
+      "passRule": {
+        "type": "min_correct",
+        "minCorrect": 3,
+        "total": 4
+      },
+      "reward": {
+        "clueId": "clue-estimate-represent",
+        "knowledgeCardIds": [
+          "card-estimate-represent"
+        ]
+      },
+      "unlockRule": {
+        "type": "previous_level_passed",
+        "levelId": "level-compare-order"
+      }
+    }
+  ],
+  "bossTaskId": "boss-large-number-code-final",
+  "badgeRewardIds": [
+    "badge-large-numbers-case-closer"
+  ],
+  "unlockRule": {
+    "type": "available_by_default"
+  },
+  "status": "draft"
+}
