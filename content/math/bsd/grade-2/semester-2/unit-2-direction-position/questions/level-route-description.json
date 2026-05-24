@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-route-description-basic",
+  "caseId": "case-lost-parcel",
+  "levelId": "level-route-description",
+  "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+  "knowledgePointId": "math.direction.route",
+  "questions": [
+    {
+      "questionId": "direction-q13",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.skip-route-step",
+      "questionPatternId": "pattern.direction.follow-route",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-route-description",
+      "questionType": "single",
+      "difficultyBand": "application",
+      "stem": "从邮局出发，先向东到书店，再向北到猫咖。终点是哪儿？",
+      "options": [
+        "猫咖",
+        "书店",
+        "邮局"
+      ],
+      "answer": "猫咖",
+      "explanation": "先到书店，再向北走到猫咖，所以终点是猫咖。",
+      "wrongHint": "路线要按先后顺序一步一步读。",
+      "tags": [
+        "路线",
+        "步骤"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q14",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.skip-route-step",
+      "questionPatternId": "pattern.direction.judge-route",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-route-description",
+      "questionType": "judge",
+      "difficultyBand": "application",
+      "stem": "路线单写着：先向西，再向南。读路线时可以先看第二步。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "路线要按顺序读，先看第一步，再看第二步。",
+      "wrongHint": "路线单里的“先、再”很重要。",
+      "tags": [
+        "路线",
+        "顺序"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q15",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.describe-route",
+      "misconceptionId": "mis.direction.reverse-route-order",
+      "questionPatternId": "pattern.direction.choose-route-description",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-route-description",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "包裹从喷泉到书店，要先向北，再向东。哪句话说对了？",
+      "options": [
+        "先向北，再向东",
+        "先向东，再向北",
+        "先向南，再向西"
+      ],
+      "answer": "先向北，再向东",
+      "explanation": "题目给出的顺序就是先向北，再向东。",
+      "wrongHint": "不要把先后顺序说反。",
+      "tags": [
+        "路线",
+        "描述"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q16",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.reverse-route-order",
+      "questionPatternId": "pattern.direction.follow-route",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-route-description",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "路线单写着：从邮局向东到书店，再向南到花店。第二站是哪儿？",
+      "options": [
+        "花店",
+        "书店",
+        "邮局"
+      ],
+      "answer": "花店",
+      "explanation": "先到书店，再向南到花店，所以第二站是花店。",
+      "wrongHint": "按“先到哪里、再到哪里”整理路线。",
+      "tags": [
+        "路线",
+        "终点"
+      ],
+      "status": "draft"
+    }
+  ]
+}

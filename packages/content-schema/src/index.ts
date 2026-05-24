@@ -88,10 +88,17 @@ export interface ContentPackageRegistryEntry {
   contentVersion: ContentVersion;
   title: string;
   subjectId: SubjectId;
+  courseId?: string;
+  courseTitle?: string;
+  routeId?: string;
+  routeTitle?: string;
   textbookVersionId: TextbookVersionId;
   gradeId: GradeId;
   semesterId: SemesterId;
   unitId: UnitId;
+  locationId?: string;
+  locationTitle?: string;
+  locationOrder?: number;
   defaultCaseId: CaseId;
   status: ContentStatus;
   entryPath: string;

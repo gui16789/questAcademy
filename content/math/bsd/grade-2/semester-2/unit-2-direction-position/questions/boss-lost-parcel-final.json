@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "bossTask": {
+    "bossTaskId": "boss-lost-parcel-final",
+    "caseId": "case-lost-parcel",
+    "name": "迷路包裹最终推理",
+    "targetKnowledgePointIds": [
+      "math.direction.cardinal",
+      "math.direction.map-position",
+      "math.direction.diagonal",
+      "math.direction.route"
+    ],
+    "targetSkillIds": [
+      "skill.direction.describe-map-position",
+      "skill.direction.identify-diagonal",
+      "skill.direction.follow-route"
+    ],
+    "targetMisconceptionIds": [
+      "mis.direction.ignore-reference",
+      "mis.direction.swap-diagonal",
+      "mis.direction.skip-route-step"
+    ],
+    "scenario": "迷路包裹的投递单写着：从邮局出发，先到东北方向的猫咖，再向南到花店。小侦探要判断终点和路线说法。",
+    "steps": [
+      {
+        "stepId": "boss-direction-step-1",
+        "questionId": "direction-b1",
+        "skillIds": [
+          "skill.direction.identify-diagonal"
+        ]
+      },
+      {
+        "stepId": "boss-direction-step-2",
+        "questionId": "direction-b2",
+        "skillIds": [
+          "skill.direction.follow-route"
+        ]
+      }
+    ],
+    "passRule": {
+      "type": "all_required",
+      "requiredCorrectStepIds": [
+        "boss-direction-step-1",
+        "boss-direction-step-2"
+      ]
+    },
+    "failureReviewRoute": {
+      "type": "by_skill",
+      "fallbackKnowledgeCardIds": [
+        "card-diagonal-directions",
+        "card-route-description"
+      ]
+    },
+    "status": "draft"
+  },
+  "questions": [
+    {
+      "questionId": "direction-b1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.identify-diagonal",
+      "misconceptionId": "mis.direction.swap-diagonal",
+      "questionPatternId": "pattern.direction.choose-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "boss",
+      "bossTaskId": "boss-lost-parcel-final",
+      "stepId": "boss-direction-step-1",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "投递单说：猫咖在邮局的东北方向。东北包含哪两个方向？",
+      "options": [
+        "东和北",
+        "东和南",
+        "西和北"
+      ],
+      "answer": "东和北",
+      "explanation": "东北由东和北合成。",
+      "wrongHint": "最终推理也要先拆清方向词。",
+      "tags": [
+        "Boss",
+        "斜方向",
+        "综合"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-b2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.skip-route-step",
+      "questionPatternId": "pattern.direction.follow-route",
+      "caseId": "case-lost-parcel",
+      "levelId": "boss",
+      "bossTaskId": "boss-lost-parcel-final",
+      "stepId": "boss-direction-step-2",
+      "questionType": "single",
+      "difficultyBand": "integrated",
+      "stem": "路线是：从邮局先到东北方向的猫咖，再向南到花店。包裹最后应送到哪里？",
+      "options": [
+        "花店",
+        "猫咖",
+        "邮局"
+      ],
+      "answer": "花店",
+      "explanation": "先到猫咖，再向南到花店，所以终点是花店。",
+      "wrongHint": "按路线单的先后顺序一步一步推理。",
+      "tags": [
+        "Boss",
+        "路线",
+        "综合"
+      ],
+      "status": "draft"
+    }
+  ]
+}

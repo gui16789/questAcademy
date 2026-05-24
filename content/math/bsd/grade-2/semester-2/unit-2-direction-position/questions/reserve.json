@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-direction-reserve",
+  "caseId": "case-lost-parcel",
+  "levelId": "reserve",
+  "questions": [
+    {
+      "questionId": "direction-r1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "misconceptionId": "mis.direction.reverse-east-west",
+      "questionPatternId": "pattern.direction.choose-cardinal",
+      "caseId": "case-lost-parcel",
+      "levelId": "reserve",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "东的相对方向是哪个？",
+      "options": [
+        "西",
+        "南",
+        "北"
+      ],
+      "answer": "西",
+      "explanation": "东和西相对。",
+      "wrongHint": "想一想哪两个方向面对面。",
+      "tags": [
+        "备用题",
+        "方向"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-r2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "misconceptionId": "mis.direction.ignore-reference",
+      "questionPatternId": "pattern.direction.judge-map-position",
+      "caseId": "case-lost-parcel",
+      "levelId": "reserve",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "判断位置时，可以不看参照地点。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "错",
+      "explanation": "判断位置要先看清参照地点。",
+      "wrongHint": "先找“在谁的什么方向”。",
+      "tags": [
+        "备用题",
+        "位置"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-r3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-diagonal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+      "knowledgePointId": "math.direction.diagonal",
+      "skillId": "skill.direction.combine-directions",
+      "misconceptionId": "mis.direction.miss-one-part",
+      "questionPatternId": "pattern.direction.combine-diagonal",
+      "caseId": "case-lost-parcel",
+      "levelId": "reserve",
+      "questionType": "single",
+      "difficultyBand": "practice",
+      "stem": "西和北合起来是哪个方向？",
+      "options": [
+        "西北",
+        "西南",
+        "东北"
+      ],
+      "answer": "西北",
+      "explanation": "西和北合起来是西北。",
+      "wrongHint": "斜方向要看两个方向词。",
+      "tags": [
+        "备用题",
+        "斜方向"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-r4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-route-description",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+      "knowledgePointId": "math.direction.route",
+      "skillId": "skill.direction.follow-route",
+      "misconceptionId": "mis.direction.skip-route-step",
+      "questionPatternId": "pattern.direction.judge-route",
+      "caseId": "case-lost-parcel",
+      "levelId": "reserve",
+      "questionType": "judge",
+      "difficultyBand": "application",
+      "stem": "读路线时，要按先后顺序一步一步看。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "路线顺序不能颠倒，也不能漏步。",
+      "wrongHint": "先看第一步，再看下一步。",
+      "tags": [
+        "备用题",
+        "路线"
+      ],
+      "status": "draft"
+    }
+  ]
+}

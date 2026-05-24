@@ -98,8 +98,8 @@ async function runRegression(cdpClient, content, entry) {
   await Page.navigate({ url: packageAppUrl });
   await waitForText("开始调查");
   await clickByText("开始调查");
-  await waitForText("欢迎，小侦探");
-  await clickByText("查看案件");
+  await waitForText("欢迎");
+  await clickByText("进入当前单元");
   await waitForText("关卡记录");
   await clickByText("开始调查");
 
@@ -120,7 +120,7 @@ async function runRegression(cdpClient, content, entry) {
     await waitForText(question.explanation);
     await clickByText(questionIndex + 1 === content.bossQuestions.length ? "查看结果" : "下一题");
   }
-  await waitForText("真相：徽章没有丢");
+  await waitForText("案件成功破解");
 
   const fullFlowState = await evalJs(`(() => {
     const data = JSON.parse(localStorage.getItem(${JSON.stringify(storageKey)}));
@@ -139,34 +139,39 @@ async function runRegression(cdpClient, content, entry) {
   assert(fullFlowState.bossUnlocked && fullFlowState.caseClosed, "boss is unlocked and case is closed");
   assert((await evalJs(`localStorage.getItem(${JSON.stringify(otherPackageStorageKey)})`)) === "other-package-progress", "other content package progress key is preserved");
 
-  await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
-  await evalJs(`localStorage.setItem(${JSON.stringify(legacyStorageKey)}, ${JSON.stringify(JSON.stringify(createLegacyState()))})`);
-  await Page.navigate({ url: packageAppUrl });
-  await waitForText("欢迎，旧侦探");
-  const migratedState = await evalJs(`(() => {
-    const data = JSON.parse(localStorage.getItem(${JSON.stringify(storageKey)}));
-    return {
-      dataVersion: data.dataVersion,
-      migratedFromDataVersion: data.migratedFromDataVersion,
-      passedLevelId: data.progress.passedLevelIds[0],
-      clueId: data.progress.unlockedClueIds[0],
-      cardId: data.progress.unlockedKnowledgeCardIds[0],
-      wrongCorrectAnswer: data.wrongRecords.q2.correctAnswer,
-      wrongCount: data.wrongRecords.q2.wrongCount,
-      badgeId: Object.keys(data.badgeRecords)[0]
-    };
-  })()`);
-  assert(migratedState.dataVersion === "1.0.0" && migratedState.migratedFromDataVersion === "0.2.0", "legacy data migrates to v1.0.0");
-  assert(migratedState.passedLevelId === "level-average-sharing", "legacy level id is mapped");
-  assert(migratedState.clueId === "clue-average-sharing" && migratedState.cardId === "card-average-sharing", "legacy clue unlock maps to content ids");
-  assert(migratedState.wrongCorrectAnswer === "对" && migratedState.wrongCount === 2, "legacy wrong question is preserved");
-  assert(migratedState.badgeId === "badge-rookie-detective", "legacy badge is preserved");
+  if (entry.contentPackageId === "math.bsd.g2.s2.unit-1-division") {
+    await evalJs(`localStorage.removeItem(${JSON.stringify(storageKey)})`);
+    await evalJs(`localStorage.setItem(${JSON.stringify(legacyStorageKey)}, ${JSON.stringify(JSON.stringify(createLegacyState()))})`);
+    await Page.navigate({ url: packageAppUrl });
+    await waitForText("欢迎");
+    const migratedState = await evalJs(`(() => {
+      const data = JSON.parse(localStorage.getItem(${JSON.stringify(storageKey)}));
+      return {
+        dataVersion: data.dataVersion,
+        migratedFromDataVersion: data.migratedFromDataVersion,
+        passedLevelId: data.progress.passedLevelIds[0],
+        clueId: data.progress.unlockedClueIds[0],
+        cardId: data.progress.unlockedKnowledgeCardIds[0],
+        wrongCorrectAnswer: data.wrongRecords.q2.correctAnswer,
+        wrongCount: data.wrongRecords.q2.wrongCount,
+        badgeId: Object.keys(data.badgeRecords)[0]
+      };
+    })()`);
+    assert(migratedState.dataVersion === "1.0.0" && migratedState.migratedFromDataVersion === "0.2.0", "legacy data migrates to v1.0.0");
+    assert(migratedState.passedLevelId === "level-average-sharing", "legacy level id is mapped");
+    assert(migratedState.clueId === "clue-average-sharing" && migratedState.cardId === "card-average-sharing", "legacy clue unlock maps to content ids");
+    assert(migratedState.wrongCorrectAnswer === "对" && migratedState.wrongCount === 2, "legacy wrong question is preserved");
+    assert(migratedState.badgeId === "badge-rookie-detective", "legacy badge is preserved");
+  } else {
+    await Page.navigate({ url: packageAppUrl });
+    await waitForText("欢迎");
+  }
 
   await Page.navigate({ url: packageAppUrl });
-  await waitForText("欢迎，旧侦探");
+  await waitForText("欢迎");
   await Emulation.setDeviceMetricsOverride({ width: 320, height: 900, deviceScaleFactor: 1, mobile: true });
   await Page.navigate({ url: packageAppUrl });
-  await waitForText("欢迎，旧侦探");
+  await waitForText("欢迎");
   const mobile = await evalJs(`({ scrollWidth: document.documentElement.scrollWidth, innerWidth, hasNav: document.querySelectorAll('.quick-nav button').length === 4 })`);
   assert(mobile.scrollWidth <= mobile.innerWidth, "320px viewport has no horizontal overflow");
   assert(mobile.hasNav, "mobile navigation is available");

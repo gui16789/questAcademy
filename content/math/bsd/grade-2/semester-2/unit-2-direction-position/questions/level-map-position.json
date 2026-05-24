@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-map-position-basic",
+  "caseId": "case-lost-parcel",
+  "levelId": "level-map-position",
+  "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+  "knowledgePointId": "math.direction.map-position",
+  "questions": [
+    {
+      "questionId": "direction-q5",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "misconceptionId": "mis.direction.ignore-reference",
+      "questionPatternId": "pattern.direction.choose-map-position",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-map-position",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "在街区图上，书店在邮局的东面。书店相对邮局在哪个方向？",
+      "options": [
+        "东",
+        "西",
+        "南"
+      ],
+      "answer": "东",
+      "explanation": "题目说书店在邮局的东面，所以方向是东。",
+      "wrongHint": "先找参照地点“邮局”，再判断书店的位置。",
+      "tags": [
+        "位置",
+        "参照地点"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q6",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.choose-reference-point",
+      "misconceptionId": "mis.direction.use-own-view",
+      "questionPatternId": "pattern.direction.choose-reference",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-map-position",
+      "questionType": "single",
+      "difficultyBand": "practice",
+      "stem": "题目问“喷泉在书店的南面吗？”判断前应该先找哪个参照地点？",
+      "options": [
+        "书店",
+        "喷泉",
+        "邮局"
+      ],
+      "answer": "书店",
+      "explanation": "“在书店的南面”要先找书店，再看喷泉的位置。",
+      "wrongHint": "看到“在谁的什么方向”，先找“谁”。",
+      "tags": [
+        "位置",
+        "参照地点"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q7",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "misconceptionId": "mis.direction.ignore-reference",
+      "questionPatternId": "pattern.direction.judge-map-position",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-map-position",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "如果邮局在喷泉的西面，那么喷泉在邮局的东面。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "邮局在喷泉西面，反过来看，喷泉就在邮局东面。",
+      "wrongHint": "同一条路，从两个地点看方向会相反。",
+      "tags": [
+        "位置",
+        "相对位置"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q8",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-map-position",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+      "knowledgePointId": "math.direction.map-position",
+      "skillId": "skill.direction.describe-map-position",
+      "misconceptionId": "mis.direction.use-own-view",
+      "questionPatternId": "pattern.direction.choose-map-position",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-map-position",
+      "questionType": "single",
+      "difficultyBand": "practice",
+      "stem": "地图上，猫咖在邮局的北面。小侦探应该向哪个方向找猫咖？",
+      "options": [
+        "北",
+        "南",
+        "东"
+      ],
+      "answer": "北",
+      "explanation": "猫咖在邮局北面，所以从邮局向北找。",
+      "wrongHint": "按地图给出的方向找，不凭感觉猜。",
+      "tags": [
+        "位置",
+        "地图"
+      ],
+      "status": "draft"
+    }
+  ]
+}

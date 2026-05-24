@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentPackageId": "math.bsd.g2.s2.unit-2-direction-position",
+  "contentVersion": "0.1.0",
+  "questionGroupId": "qg-level-cardinal-directions-basic",
+  "caseId": "case-lost-parcel",
+  "levelId": "level-cardinal-directions",
+  "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+  "knowledgePointId": "math.direction.cardinal",
+  "questions": [
+    {
+      "questionId": "direction-q1",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "misconceptionId": "mis.direction.reverse-east-west",
+      "questionPatternId": "pattern.direction.choose-cardinal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-cardinal-directions",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "方向牌写着：太阳从东边升起。邮局大厅的东门应该贴哪张牌？",
+      "options": [
+        "东",
+        "西",
+        "北"
+      ],
+      "answer": "东",
+      "explanation": "太阳从东边升起，所以东门贴“东”。",
+      "wrongHint": "先找题目给出的方向，再判断方向牌。",
+      "tags": [
+        "方向",
+        "东南西北",
+        "基础"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q2",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.opposite-cardinal",
+      "misconceptionId": "mis.direction.reverse-east-west",
+      "questionPatternId": "pattern.direction.choose-opposite",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-cardinal-directions",
+      "questionType": "single",
+      "difficultyBand": "basic",
+      "stem": "东和哪个方向相对？",
+      "options": [
+        "西",
+        "南",
+        "北"
+      ],
+      "answer": "西",
+      "explanation": "东和西相对，南和北相对。",
+      "wrongHint": "相对方向像面对面的两扇门。",
+      "tags": [
+        "方向",
+        "相对方向"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q3",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.opposite-cardinal",
+      "misconceptionId": "mis.direction.reverse-north-south",
+      "questionPatternId": "pattern.direction.judge-cardinal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-cardinal-directions",
+      "questionType": "judge",
+      "difficultyBand": "basic",
+      "stem": "北和南是相对的方向。",
+      "options": [
+        "对",
+        "错"
+      ],
+      "answer": "对",
+      "explanation": "北和南相对，东和西相对。",
+      "wrongHint": "先想一想四个基本方向中哪两个面对面。",
+      "tags": [
+        "方向",
+        "判断"
+      ],
+      "status": "draft"
+    },
+    {
+      "questionId": "direction-q4",
+      "contentVersion": "0.1.0",
+      "subjectId": "math",
+      "textbookVersionId": "bsd",
+      "gradeId": "grade-2",
+      "semesterId": "semester-2",
+      "unitId": "unit-2-direction-position",
+      "lessonId": "lesson-cardinal-directions",
+      "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+      "knowledgePointId": "math.direction.cardinal",
+      "skillId": "skill.direction.identify-cardinal",
+      "misconceptionId": "mis.direction.reverse-north-south",
+      "questionPatternId": "pattern.direction.choose-cardinal",
+      "caseId": "case-lost-parcel",
+      "levelId": "level-cardinal-directions",
+      "questionType": "single",
+      "difficultyBand": "practice",
+      "stem": "包裹车从邮局向北开。它开向哪个方向？",
+      "options": [
+        "北",
+        "南",
+        "西"
+      ],
+      "answer": "北",
+      "explanation": "题目已经说明向北开，所以方向是北。",
+      "wrongHint": "读题时先圈出方向词。",
+      "tags": [
+        "方向",
+        "读题"
+      ],
+      "status": "draft"
+    }
+  ]
+}

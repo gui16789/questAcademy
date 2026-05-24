@@ -2,39 +2,69 @@ import type { ContentPackageRegistry, ContentPackageRegistryEntry } from "@quest
 import { createContentRuntime, loadContentPackage } from "@quest-academy/content-runtime";
 
 import registryJson from "../../../content/registry.json";
-import badges from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/badges.json";
-import knowledgeCards from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/cards/knowledge-cards.json";
-import caseCarrotBadge from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/cases/case-carrot-badge.json";
-import clues from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/clues.json";
-import knowledgeMap from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/knowledge-map.json";
-import manifest from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/manifest.json";
-import bossCarrotBadgeFinal from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/boss-carrot-badge-final.json";
-import levelAverageSharing from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-average-sharing.json";
-import levelDivisionExpression from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-division-expression.json";
-import levelRemainderRule from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-remainder-rule.json";
-import levelWithRemainder from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-with-remainder.json";
-import reserve from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/reserve.json";
-import reviewRules from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/review-rules.json";
-import textbook from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/textbook.json";
+import divisionBadges from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/badges.json";
+import divisionKnowledgeCards from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/cards/knowledge-cards.json";
+import divisionCaseCarrotBadge from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/cases/case-carrot-badge.json";
+import divisionClues from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/clues.json";
+import divisionKnowledgeMap from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/knowledge-map.json";
+import divisionManifest from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/manifest.json";
+import divisionBossCarrotBadgeFinal from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/boss-carrot-badge-final.json";
+import divisionLevelAverageSharing from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-average-sharing.json";
+import divisionLevelDivisionExpression from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-division-expression.json";
+import divisionLevelRemainderRule from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-remainder-rule.json";
+import divisionLevelWithRemainder from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/level-with-remainder.json";
+import divisionReserve from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/questions/reserve.json";
+import divisionReviewRules from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/review-rules.json";
+import divisionTextbook from "../../../content/math/bsd/grade-2/semester-2/unit-1-division/textbook.json";
+import directionBadges from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/badges.json";
+import directionKnowledgeCards from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/cards/knowledge-cards.json";
+import directionCaseLostParcel from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/cases/case-lost-parcel.json";
+import directionClues from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/clues.json";
+import directionKnowledgeMap from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/knowledge-map.json";
+import directionManifest from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/manifest.json";
+import directionBossLostParcelFinal from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/boss-lost-parcel-final.json";
+import directionLevelCardinalDirections from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/level-cardinal-directions.json";
+import directionLevelDiagonalDirections from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/level-diagonal-directions.json";
+import directionLevelMapPosition from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/level-map-position.json";
+import directionLevelRouteDescription from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/level-route-description.json";
+import directionReserve from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/questions/reserve.json";
+import directionReviewRules from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/review-rules.json";
+import directionTextbook from "../../../content/math/bsd/grade-2/semester-2/unit-2-direction-position/textbook.json";
 
 const registry = registryJson as ContentPackageRegistry;
 
 const bundledContentFilesByPackageId: Record<string, Record<string, unknown>> = {
   "math.bsd.g2.s2.unit-1-division": {
-    "manifest.json": manifest,
-    "textbook.json": textbook,
-    "knowledge-map.json": knowledgeMap,
-    "cases/case-carrot-badge.json": caseCarrotBadge,
-    "questions/level-average-sharing.json": levelAverageSharing,
-    "questions/level-division-expression.json": levelDivisionExpression,
-    "questions/level-with-remainder.json": levelWithRemainder,
-    "questions/level-remainder-rule.json": levelRemainderRule,
-    "questions/boss-carrot-badge-final.json": bossCarrotBadgeFinal,
-    "questions/reserve.json": reserve,
-    "cards/knowledge-cards.json": knowledgeCards,
-    "clues.json": clues,
-    "badges.json": badges,
-    "review-rules.json": reviewRules,
+    "manifest.json": divisionManifest,
+    "textbook.json": divisionTextbook,
+    "knowledge-map.json": divisionKnowledgeMap,
+    "cases/case-carrot-badge.json": divisionCaseCarrotBadge,
+    "questions/level-average-sharing.json": divisionLevelAverageSharing,
+    "questions/level-division-expression.json": divisionLevelDivisionExpression,
+    "questions/level-with-remainder.json": divisionLevelWithRemainder,
+    "questions/level-remainder-rule.json": divisionLevelRemainderRule,
+    "questions/boss-carrot-badge-final.json": divisionBossCarrotBadgeFinal,
+    "questions/reserve.json": divisionReserve,
+    "cards/knowledge-cards.json": divisionKnowledgeCards,
+    "clues.json": divisionClues,
+    "badges.json": divisionBadges,
+    "review-rules.json": divisionReviewRules,
+  },
+  "math.bsd.g2.s2.unit-2-direction-position": {
+    "manifest.json": directionManifest,
+    "textbook.json": directionTextbook,
+    "knowledge-map.json": directionKnowledgeMap,
+    "cases/case-lost-parcel.json": directionCaseLostParcel,
+    "questions/level-cardinal-directions.json": directionLevelCardinalDirections,
+    "questions/level-map-position.json": directionLevelMapPosition,
+    "questions/level-diagonal-directions.json": directionLevelDiagonalDirections,
+    "questions/level-route-description.json": directionLevelRouteDescription,
+    "questions/boss-lost-parcel-final.json": directionBossLostParcelFinal,
+    "questions/reserve.json": directionReserve,
+    "cards/knowledge-cards.json": directionKnowledgeCards,
+    "clues.json": directionClues,
+    "badges.json": directionBadges,
+    "review-rules.json": directionReviewRules,
   },
 };
 

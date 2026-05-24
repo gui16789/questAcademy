@@ -150,7 +150,7 @@ button {
 .btn[disabled],
 .option[disabled],
 .number-key[disabled],
-.map-node[disabled] {
+.unit-node[disabled] {
   cursor: not-allowed;
   opacity: 0.5;
   transform: none;
@@ -360,90 +360,152 @@ main {
   background: var(--green);
 }
 
+.course-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.course-switcher button {
+  min-height: 2.5rem;
+  border: 2px solid rgba(36, 49, 64, 0.1);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  color: var(--ink);
+  background: var(--surface);
+  font-weight: 900;
+  box-shadow: 0 5px 0 rgba(36, 49, 64, 0.08);
+}
+
+.course-switcher button.is-active {
+  border-color: #56351f;
+  color: #2f1c10;
+  background: var(--gold);
+}
+
 .map-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
   gap: 1rem;
 }
 
-.city-map {
+.route-map {
   position: relative;
   min-height: 32rem;
   border: 3px solid #56351f;
   border-radius: 24px;
+  padding: clamp(1rem, 3vw, 1.35rem);
   overflow: hidden;
   background:
-    linear-gradient(90deg, transparent 49%, rgba(86, 53, 31, 0.12) 49% 51%, transparent 51%),
-    linear-gradient(0deg, transparent 49%, rgba(86, 53, 31, 0.1) 49% 51%, transparent 51%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45), transparent),
     #dff2c8;
   box-shadow: var(--shadow);
 }
 
-.map-road {
+.route-map::before {
+  content: "";
   position: absolute;
-  left: -10%;
-  right: -10%;
-  top: 48%;
-  height: 4.5rem;
+  left: 8%;
+  right: 8%;
+  top: 53%;
+  height: 3.5rem;
+  border: 3px solid rgba(86, 53, 31, 0.22);
+  border-left: 0;
+  border-right: 0;
   background: #b58b5d;
-  transform: rotate(-18deg);
+  transform: rotate(-6deg);
 }
 
-.map-node {
-  position: absolute;
+.route-map-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.route-map-head h2 {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+}
+
+.route-map-head > span {
+  border: 2px solid rgba(36, 49, 64, 0.1);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: var(--surface);
+  font-weight: 900;
+}
+
+.unit-route {
+  position: relative;
+  z-index: 1;
   display: grid;
-  width: min(34vw, 13rem);
-  min-width: 9rem;
-  min-height: 6.25rem;
-  place-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.unit-node {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 7rem;
   border: 3px solid #56351f;
   border-radius: 18px;
-  padding: 0.8rem;
-  text-align: center;
+  padding: 0.9rem;
+  text-align: left;
   color: var(--ink);
   background: var(--surface);
   box-shadow: 0 10px 0 rgba(86, 53, 31, 0.12);
 }
 
-.map-node strong {
+.unit-node strong,
+.unit-node small {
   display: block;
+}
+
+.unit-node small {
   margin-top: 0.35rem;
+  color: var(--muted);
+  font-weight: 800;
 }
 
-.map-node span {
-  display: block;
-  font-size: 2rem;
-}
-
-.map-node.case {
-  left: 8%;
-  top: 10%;
+.unit-node.is-active {
   background: #fff1b8;
 }
 
-.map-node.wrongs {
-  right: 9%;
-  top: 18%;
-  background: #ffe1da;
-}
-
-.map-node.knowledge {
-  left: 14%;
-  bottom: 14%;
-  background: #dff4ff;
-}
-
-.map-node.badges {
-  right: 12%;
-  bottom: 10%;
+.unit-node.is-complete {
   background: #e9f6d5;
 }
 
-.map-node.boss {
-  left: 50%;
-  top: 45%;
-  background: #ffe5a8;
-  transform: translate(-50%, -50%);
+.unit-index {
+  display: grid;
+  flex: 0 0 auto;
+  width: 3.1rem;
+  height: 3.1rem;
+  place-items: center;
+  border: 2px solid #56351f;
+  border-radius: 50%;
+  color: #56351f;
+  background: var(--gold);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.route-empty {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5rem;
+}
+
+.current-unit {
+  margin: -0.25rem 0 0.8rem;
+  color: var(--muted);
+  font-weight: 900;
 }
 
 .side-panel,
@@ -787,12 +849,12 @@ main {
     min-height: 20rem;
   }
 
-  .city-map {
+  .route-map {
     min-height: 28rem;
   }
 
-  .map-node {
-    width: min(42vw, 12rem);
+  .unit-route {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -835,28 +897,11 @@ main {
     font-size: 3rem;
   }
 
-  .city-map {
+  .route-map {
     min-height: 35rem;
   }
 
-  .map-node {
-    position: relative;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    width: 100%;
-    min-width: 0;
-    transform: none !important;
-  }
-
-  .city-map {
-    display: grid;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-
-  .map-road {
+  .route-map::before {
     display: none;
   }
 
