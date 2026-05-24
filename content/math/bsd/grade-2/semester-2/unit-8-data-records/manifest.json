@@ -40,5 +40,41 @@
     "teachingReviewer": "",
     "readabilityReviewer": "",
     "approvedAt": ""
+  },
+  "coverage": {
+    "coveragePlanId": "math.bsd.g2.s2.coverage-plan",
+    "coveragePlanPath": "content/coverage-plans/math/bsd/grade-2/semester-2.json",
+    "expectedKnowledgePointIds": [
+      "math.data-records.survey-question",
+      "math.data-records.collect-data",
+      "math.data-records.record-table",
+      "math.data-records.interpret-data",
+      "math.data-records.integrated"
+    ],
+    "expectedMicroKnowledgePointIds": [
+      "mkp.data-records.survey-question.1",
+      "mkp.data-records.survey-question.2",
+      "mkp.data-records.collect-data.1",
+      "mkp.data-records.collect-data.2",
+      "mkp.data-records.record-table.1",
+      "mkp.data-records.record-table.2",
+      "mkp.data-records.interpret-data.1",
+      "mkp.data-records.interpret-data.2",
+      "mkp.data-records.integrated.1"
+    ],
+    "coverageTarget": {
+      "knowledgePointCoverageRate": 1,
+      "microKnowledgePointCoverageRate": 1,
+      "skillCoverageRate": 1,
+      "misconceptionCoverageRate": 1
+    },
+    "diagnosticRequirement": {
+      "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+      "minQuestionsPerSkill": 2,
+      "minQuestionsPerMisconception": 1,
+      "excludeReserveFromCoverage": true,
+      "excludeBossFromDiagnosticCoverage": true
+    },
+    "coverageStatus": "draft_gap_known"
   }
 }

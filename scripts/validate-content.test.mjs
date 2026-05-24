@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 
+import { coverageDiagnostics, generateCoverageReport } from "./coverage-lib.mjs";
 import { validateContentRegistry } from "./validate-content.mjs";
 
 const rootDir = process.cwd();
@@ -68,6 +69,30 @@ test("registry validation fails when multiple packages are default", async () =>
 
   const result = await validateContentRegistry({ rootDir, registryPath });
   assert.ok(result.errors.some((error) => error.includes("expected exactly one default content package")));
+});
+
+test("coverage report separates ordinary, boss, and reserve questions", async () => {
+  const report = await generateCoverageReport({
+    rootDir,
+    contentPackageId: "math.bsd.g2.s2.unit-1-division",
+  });
+  const [item] = report.packages;
+
+  assert.equal(item.contentInventory.ordinaryQuestionCount, 16);
+  assert.equal(item.contentInventory.bossQuestionCount, 2);
+  assert.equal(item.contentInventory.reserveQuestionCount, 10);
+  assert.ok(item.uncoveredMicroKnowledgePoints.some((micro) => micro.microKnowledgePointId === "mkp.word-problem.interpret-remainder"));
+});
+
+test("coverage gaps are warnings for draft and errors for published packages", async () => {
+  const report = await generateCoverageReport({
+    rootDir,
+    contentPackageId: "math.bsd.g2.s2.unit-1-division",
+  });
+  const [item] = report.packages;
+
+  assert.ok(coverageDiagnostics(item, "draft").every((diagnostic) => diagnostic.severity === "WARN"));
+  assert.ok(coverageDiagnostics(item, "published").every((diagnostic) => diagnostic.severity === "ERROR"));
 });
 
 async function writeRegistry(registry) {

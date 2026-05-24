@@ -30,6 +30,8 @@ export type UnitId = string;
 export type LessonId = string;
 export type CurriculumNodeId = string;
 export type KnowledgePointId = string;
+export type ExpectedKnowledgePointId = string;
+export type MicroKnowledgePointId = string;
 export type SkillId = string;
 export type MisconceptionId = string;
 export type QuestionPatternId = string;
@@ -69,6 +71,7 @@ export interface ContentPackageManifest {
   createdAt: string;
   updatedAt: string;
   files: ContentPackageFileRefs;
+  coverage?: ContentPackageCoverageDeclaration;
   review: ReviewMeta;
 }
 
@@ -81,6 +84,40 @@ export interface ContentPackageFileRefs {
   clues: string;
   badges: string;
   reviewRules: string;
+}
+
+export type CoverageStatus =
+  | "planned"
+  | "not_started"
+  | "partial"
+  | "diagnostic_ready"
+  | "draft_gap_known"
+  | "published_ready"
+  | string;
+
+export interface CoverageTarget {
+  knowledgePointCoverageRate: number;
+  microKnowledgePointCoverageRate: number;
+  skillCoverageRate: number;
+  misconceptionCoverageRate: number;
+}
+
+export interface DiagnosticRequirement {
+  minQuestionsPerRequiredMicroKnowledgePoint: number;
+  minQuestionsPerSkill: number;
+  minQuestionsPerMisconception: number;
+  excludeReserveFromCoverage: boolean;
+  excludeBossFromDiagnosticCoverage: boolean;
+}
+
+export interface ContentPackageCoverageDeclaration {
+  coveragePlanId: string;
+  coveragePlanPath: string;
+  expectedKnowledgePointIds: ExpectedKnowledgePointId[];
+  expectedMicroKnowledgePointIds: MicroKnowledgePointId[];
+  coverageTarget: CoverageTarget;
+  diagnosticRequirement: DiagnosticRequirement;
+  coverageStatus: CoverageStatus;
 }
 
 export interface ContentPackageRegistryEntry {
@@ -230,6 +267,73 @@ export interface KnowledgeMapFile {
   questionPatterns: QuestionPattern[];
 }
 
+export interface ExpectedKnowledgePoint {
+  expectedKnowledgePointId: ExpectedKnowledgePointId;
+  knowledgePointId: KnowledgePointId;
+  subjectId: SubjectId;
+  textbookVersionId: TextbookVersionId;
+  gradeId: GradeId;
+  semesterId: SemesterId;
+  unitId: UnitId;
+  lessonId: LessonId;
+  curriculumNodeId?: CurriculumNodeId;
+  name: string;
+  learningGoal: string;
+  microKnowledgePointIds: MicroKnowledgePointId[];
+  required: boolean;
+  coverageStatus: CoverageStatus;
+}
+
+export interface MicroKnowledgePoint {
+  microKnowledgePointId: MicroKnowledgePointId;
+  expectedKnowledgePointId: ExpectedKnowledgePointId;
+  knowledgePointId: KnowledgePointId;
+  subjectId: SubjectId;
+  textbookVersionId: TextbookVersionId;
+  gradeId: GradeId;
+  semesterId: SemesterId;
+  unitId: UnitId;
+  lessonId: LessonId;
+  curriculumNodeId?: CurriculumNodeId;
+  name: string;
+  learningGoal: string;
+  skillIds: SkillId[];
+  misconceptionIds: MisconceptionId[];
+  recommendedQuestionTypes: QuestionType[];
+  required: boolean;
+  coverageTarget: Pick<CoverageTarget, "microKnowledgePointCoverageRate" | "skillCoverageRate" | "misconceptionCoverageRate">;
+  diagnosticRequirement: DiagnosticRequirement;
+  coverageStatus: CoverageStatus;
+}
+
+export interface CoveragePlanUnit {
+  unitId: UnitId;
+  order: number;
+  name: string;
+  lessons: Array<{
+    lessonId: LessonId;
+    curriculumNodeId?: CurriculumNodeId;
+    name: string;
+    order: number;
+  }>;
+  expectedKnowledgePoints: ExpectedKnowledgePoint[];
+  microKnowledgePoints: MicroKnowledgePoint[];
+}
+
+export interface CoveragePlanFile {
+  schemaVersion: SchemaVersion;
+  coveragePlanId: string;
+  title: string;
+  subjectId: SubjectId;
+  textbookVersionId: TextbookVersionId;
+  gradeId: GradeId;
+  semesterId: SemesterId;
+  status: ContentStatus | CoverageStatus;
+  coverageTarget: CoverageTarget;
+  diagnosticRequirement: DiagnosticRequirement;
+  units: CoveragePlanUnit[];
+}
+
 export interface CaseStory {
   summary: string;
   setting: string;
@@ -299,6 +403,7 @@ export interface Question {
   lessonId: LessonId;
   curriculumNodeId: CurriculumNodeId;
   knowledgePointId: KnowledgePointId;
+  microKnowledgePointId?: MicroKnowledgePointId;
   skillId: SkillId;
   misconceptionId: MisconceptionId;
   questionPatternId: QuestionPatternId;

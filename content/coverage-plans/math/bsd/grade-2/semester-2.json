@@ -1,0 +1,4021 @@
+{
+  "schemaVersion": "0.1.0",
+  "coveragePlanId": "math.bsd.g2.s2.coverage-plan",
+  "title": "北师大版数学二年级下册知识覆盖率计划",
+  "subjectId": "math",
+  "textbookVersionId": "bsd",
+  "gradeId": "grade-2",
+  "semesterId": "semester-2",
+  "status": "draft",
+  "coverageTarget": {
+    "knowledgePointCoverageRate": 1,
+    "microKnowledgePointCoverageRate": 1,
+    "skillCoverageRate": 1,
+    "misconceptionCoverageRate": 1
+  },
+  "diagnosticRequirement": {
+    "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+    "minQuestionsPerSkill": 2,
+    "minQuestionsPerMisconception": 1,
+    "excludeReserveFromCoverage": true,
+    "excludeBossFromDiagnosticCoverage": true
+  },
+  "units": [
+    {
+      "unitId": "unit-1-division",
+      "order": 1,
+      "name": "第一单元：除法",
+      "lessons": [
+        {
+          "lessonId": "lesson-average-sharing",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-average-sharing",
+          "name": "平均分",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-division-expression",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-division-expression",
+          "name": "除法算式含义",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-with-remainder",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+          "name": "有余数除法",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-remainder-rule",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+          "name": "余数小于除数",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.division.average-sharing",
+          "knowledgePointId": "math.division.average-sharing",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-average-sharing",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-average-sharing",
+          "name": "平均分",
+          "learningGoal": "理解平均分就是每份数量一样多，能判断和计算简单平均分情境。",
+          "microKnowledgePointIds": [
+            "mkp.average-sharing.identify-equal-groups",
+            "mkp.average-sharing.calculate-each-share"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.division.expression",
+          "knowledgePointId": "math.division.expression",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-division-expression",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-division-expression",
+          "name": "除法算式含义",
+          "learningGoal": "理解除法可以表示平均分，能根据情境读懂除法算式。",
+          "microKnowledgePointIds": [
+            "mkp.expression.map-story-to-expression",
+            "mkp.expression.explain-quotient"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.division.with-remainder",
+          "knowledgePointId": "math.division.with-remainder",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-with-remainder",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+          "name": "有余数除法",
+          "learningGoal": "理解除完后剩下不够再分一组的数量叫余数，能计算简单商和余数。",
+          "microKnowledgePointIds": [
+            "mkp.remainder.calculate",
+            "mkp.remainder.explain-leftover"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.division.remainder-rule",
+          "knowledgePointId": "math.division.remainder-rule",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-remainder-rule",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+          "name": "余数小于除数",
+          "learningGoal": "理解余数必须比除数小，能判断一个有余数除法结果是否合理。",
+          "microKnowledgePointIds": [
+            "mkp.remainder.compare-with-divisor",
+            "mkp.remainder.correct-invalid-result"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.division.word-problem",
+          "knowledgePointId": "math.division.word-problem",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-unit-integration",
+          "name": "除法解决实际问题",
+          "learningGoal": "能在情境中判断商和余数的意义，完成综合推理任务。",
+          "microKnowledgePointIds": [
+            "mkp.word-problem.interpret-remainder"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.average-sharing.identify-equal-groups",
+          "expectedKnowledgePointId": "math.division.average-sharing",
+          "knowledgePointId": "math.division.average-sharing",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-average-sharing",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-average-sharing",
+          "name": "判断每份是否一样多",
+          "learningGoal": "能判断一个分法是不是平均分。",
+          "skillIds": [
+            "skill.average-sharing.identify-equal-groups"
+          ],
+          "misconceptionIds": [
+            "mis.average-sharing.unequal-as-equal"
+          ],
+          "misconceptionNames": [
+            "把分完误认为平均分"
+          ],
+          "recommendedQuestionTypes": [
+            "judge",
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.average-sharing.calculate-each-share",
+          "expectedKnowledgePointId": "math.division.average-sharing",
+          "knowledgePointId": "math.division.average-sharing",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-average-sharing",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-average-sharing",
+          "name": "计算每份数量",
+          "learningGoal": "能根据总数和份数算出每份数量。",
+          "skillIds": [
+            "skill.average-sharing.calculate-each-share"
+          ],
+          "misconceptionIds": [
+            "mis.average-sharing.wrong-share-count"
+          ],
+          "misconceptionNames": [
+            "把份数和每份数混淆"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.expression.map-story-to-expression",
+          "expectedKnowledgePointId": "math.division.expression",
+          "knowledgePointId": "math.division.expression",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-division-expression",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-division-expression",
+          "name": "根据情境选择除法算式",
+          "learningGoal": "能把平均分情境转换成对应除法算式。",
+          "skillIds": [
+            "skill.expression.map-story-to-expression"
+          ],
+          "misconceptionIds": [
+            "mis.expression.use-addition"
+          ],
+          "misconceptionNames": [
+            "把平均分情境写成加法"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.expression.explain-quotient",
+          "expectedKnowledgePointId": "math.division.expression",
+          "knowledgePointId": "math.division.expression",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-division-expression",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-division-expression",
+          "name": "理解商表示每份或组数",
+          "learningGoal": "能说清楚除法算式中商的实际含义。",
+          "skillIds": [
+            "skill.expression.explain-quotient"
+          ],
+          "misconceptionIds": [
+            "mis.expression.reverse-roles"
+          ],
+          "misconceptionNames": [
+            "被除数、除数、商含义混淆"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.remainder.calculate",
+          "expectedKnowledgePointId": "math.division.with-remainder",
+          "knowledgePointId": "math.division.with-remainder",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-with-remainder",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+          "name": "计算商和余数",
+          "learningGoal": "能算出有余数除法中的商和余数。",
+          "skillIds": [
+            "skill.remainder.calculate"
+          ],
+          "misconceptionIds": [
+            "mis.remainder.forget-leftover"
+          ],
+          "misconceptionNames": [
+            "忘记写余数"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "fill",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.remainder.explain-leftover",
+          "expectedKnowledgePointId": "math.division.with-remainder",
+          "knowledgePointId": "math.division.with-remainder",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-with-remainder",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-with-remainder",
+          "name": "理解剩余数量含义",
+          "learningGoal": "能解释余数表示剩下不够再分一组的数量。",
+          "skillIds": [
+            "skill.remainder.explain-leftover"
+          ],
+          "misconceptionIds": [
+            "mis.remainder.leftover-as-group"
+          ],
+          "misconceptionNames": [
+            "把剩余误当完整一组"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.remainder.compare-with-divisor",
+          "expectedKnowledgePointId": "math.division.remainder-rule",
+          "knowledgePointId": "math.division.remainder-rule",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-remainder-rule",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+          "name": "比较余数和除数大小",
+          "learningGoal": "能判断余数是否小于除数。",
+          "skillIds": [
+            "skill.remainder.compare-with-divisor"
+          ],
+          "misconceptionIds": [
+            "mis.remainder.greater-than-divisor",
+            "mis.remainder.equal-divisor"
+          ],
+          "misconceptionNames": [
+            "认为余数可以大于除数",
+            "认为余数可以等于除数"
+          ],
+          "recommendedQuestionTypes": [
+            "judge",
+            "single",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.remainder.correct-invalid-result",
+          "expectedKnowledgePointId": "math.division.remainder-rule",
+          "knowledgePointId": "math.division.remainder-rule",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-remainder-rule",
+          "curriculumNodeId": "bsd.g2.s2.unit1.lesson-remainder-rule",
+          "name": "修正不合理余数",
+          "learningGoal": "能发现并修正余数不合理的除法结果。",
+          "skillIds": [
+            "skill.remainder.correct-invalid-result"
+          ],
+          "misconceptionIds": [
+            "mis.remainder.greater-than-divisor",
+            "mis.remainder.equal-divisor"
+          ],
+          "misconceptionNames": [
+            "认为余数可以大于除数",
+            "认为余数可以等于除数"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.word-problem.interpret-remainder",
+          "expectedKnowledgePointId": "math.division.word-problem",
+          "knowledgePointId": "math.division.word-problem",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-1-division",
+          "lessonId": "lesson-unit-integration",
+          "name": "判断余数在情境中的意义",
+          "learningGoal": "能判断剩余数量是否能再组成一个完整小组。",
+          "skillIds": [
+            "skill.word-problem.interpret-remainder"
+          ],
+          "misconceptionIds": [
+            "mis.word-problem.use-remainder-wrong"
+          ],
+          "misconceptionNames": [
+            "不理解剩余是否能再组成一组"
+          ],
+          "recommendedQuestionTypes": [
+            "judge",
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-2-direction-position",
+      "order": 2,
+      "name": "第二单元：方向与位置",
+      "lessons": [
+        {
+          "lessonId": "lesson-cardinal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+          "name": "东南西北",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-map-position",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+          "name": "平面图中的位置",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-diagonal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+          "name": "东北、东南、西北、西南",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-route-description",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+          "name": "描述简单路线",
+          "order": 4
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.direction.cardinal",
+          "knowledgePointId": "math.direction.cardinal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-cardinal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+          "name": "辨认东南西北",
+          "learningGoal": "能根据给定方向判断东、南、西、北。",
+          "microKnowledgePointIds": [
+            "mkp.direction.identify-cardinal",
+            "mkp.direction.opposite-cardinal"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.direction.map-position",
+          "knowledgePointId": "math.direction.map-position",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-map-position",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+          "name": "在平面图中描述位置",
+          "learningGoal": "能在简单平面图中用方向描述两个地点的位置关系。",
+          "microKnowledgePointIds": [
+            "mkp.direction.describe-map-position",
+            "mkp.direction.choose-reference-point"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.direction.diagonal",
+          "knowledgePointId": "math.direction.diagonal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-diagonal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+          "name": "辨认东北、东南、西北、西南",
+          "learningGoal": "能辨认和使用东北、东南、西北、西南。",
+          "microKnowledgePointIds": [
+            "mkp.direction.identify-diagonal",
+            "mkp.direction.combine-directions"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.direction.route",
+          "knowledgePointId": "math.direction.route",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-route-description",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+          "name": "描述简单路线",
+          "learningGoal": "能按方向词读懂并描述简单路线。",
+          "microKnowledgePointIds": [
+            "mkp.direction.follow-route",
+            "mkp.direction.describe-route"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.direction.identify-cardinal",
+          "expectedKnowledgePointId": "math.direction.cardinal",
+          "knowledgePointId": "math.direction.cardinal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-cardinal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+          "name": "辨认基本方向",
+          "learningGoal": "能根据一个已知方向判断其他基本方向。",
+          "skillIds": [
+            "skill.direction.identify-cardinal"
+          ],
+          "misconceptionIds": [
+            "mis.direction.reverse-east-west"
+          ],
+          "misconceptionNames": [
+            "东西方向看反"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.opposite-cardinal",
+          "expectedKnowledgePointId": "math.direction.cardinal",
+          "knowledgePointId": "math.direction.cardinal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-cardinal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-cardinal-directions",
+          "name": "判断相对方向",
+          "learningGoal": "能说出东和西、南和北是相对方向。",
+          "skillIds": [
+            "skill.direction.opposite-cardinal"
+          ],
+          "misconceptionIds": [
+            "mis.direction.reverse-north-south"
+          ],
+          "misconceptionNames": [
+            "南北方向看反"
+          ],
+          "recommendedQuestionTypes": [
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.describe-map-position",
+          "expectedKnowledgePointId": "math.direction.map-position",
+          "knowledgePointId": "math.direction.map-position",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-map-position",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+          "name": "描述地点位置",
+          "learningGoal": "能说出一个地点在另一个地点的什么方向。",
+          "skillIds": [
+            "skill.direction.describe-map-position"
+          ],
+          "misconceptionIds": [
+            "mis.direction.ignore-reference"
+          ],
+          "misconceptionNames": [
+            "忘记参照地点"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.choose-reference-point",
+          "expectedKnowledgePointId": "math.direction.map-position",
+          "knowledgePointId": "math.direction.map-position",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-map-position",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-map-position",
+          "name": "找到参照地点",
+          "learningGoal": "能先找准参照地点，再判断方向。",
+          "skillIds": [
+            "skill.direction.choose-reference-point"
+          ],
+          "misconceptionIds": [
+            "mis.direction.use-own-view"
+          ],
+          "misconceptionNames": [
+            "用自己的方向代替图中方向"
+          ],
+          "recommendedQuestionTypes": [
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.identify-diagonal",
+          "expectedKnowledgePointId": "math.direction.diagonal",
+          "knowledgePointId": "math.direction.diagonal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-diagonal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+          "name": "辨认斜方向",
+          "learningGoal": "能辨认东北、东南、西北、西南。",
+          "skillIds": [
+            "skill.direction.identify-diagonal"
+          ],
+          "misconceptionIds": [
+            "mis.direction.swap-diagonal"
+          ],
+          "misconceptionNames": [
+            "斜方向混淆"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.combine-directions",
+          "expectedKnowledgePointId": "math.direction.diagonal",
+          "knowledgePointId": "math.direction.diagonal",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-diagonal-directions",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-diagonal-directions",
+          "name": "组合两个方向词",
+          "learningGoal": "能把东和北合成东北，把西和南合成西南。",
+          "skillIds": [
+            "skill.direction.combine-directions"
+          ],
+          "misconceptionIds": [
+            "mis.direction.miss-one-part"
+          ],
+          "misconceptionNames": [
+            "漏掉一个方向词"
+          ],
+          "recommendedQuestionTypes": [
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.follow-route",
+          "expectedKnowledgePointId": "math.direction.route",
+          "knowledgePointId": "math.direction.route",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-route-description",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+          "name": "按路线行走",
+          "learningGoal": "能按步骤读懂先后方向。",
+          "skillIds": [
+            "skill.direction.follow-route"
+          ],
+          "misconceptionIds": [
+            "mis.direction.skip-route-step"
+          ],
+          "misconceptionNames": [
+            "漏读路线步骤"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.direction.describe-route",
+          "expectedKnowledgePointId": "math.direction.route",
+          "knowledgePointId": "math.direction.route",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-2-direction-position",
+          "lessonId": "lesson-route-description",
+          "curriculumNodeId": "bsd.g2.s2.unit2.lesson-route-description",
+          "name": "描述路线",
+          "learningGoal": "能用简短方向词描述从起点到终点的路线。",
+          "skillIds": [
+            "skill.direction.describe-route"
+          ],
+          "misconceptionIds": [
+            "mis.direction.reverse-route-order"
+          ],
+          "misconceptionNames": [
+            "路线顺序颠倒"
+          ],
+          "recommendedQuestionTypes": [
+            "single"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-3-large-numbers",
+      "order": 3,
+      "name": "第三单元：生活中的大数",
+      "lessons": [
+        {
+          "lessonId": "lesson-count-thousands",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-count-thousands",
+          "name": "数一数",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-read-write",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+          "name": "拨一拨",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-compare-order",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+          "name": "比一比",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-estimate-represent",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+          "name": "有多少个字",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.large-numbers.thousand-counting",
+          "knowledgePointId": "math.large-numbers.thousand-counting",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-count-thousands",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-count-thousands",
+          "name": "千以内计数",
+          "learningGoal": "会用一百一百、一十一十等方式数较大的数。",
+          "microKnowledgePointIds": [
+            "mkp.large-numbers.count-thousands.1",
+            "mkp.large-numbers.count-thousands.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.large-numbers.place-value-read-write",
+          "knowledgePointId": "math.large-numbers.place-value-read-write",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-read-write",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+          "name": "数位读写",
+          "learningGoal": "理解千、百、十、个位上的数字表示多少。",
+          "microKnowledgePointIds": [
+            "mkp.large-numbers.read-write.1",
+            "mkp.large-numbers.read-write.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.large-numbers.compare-large-numbers",
+          "knowledgePointId": "math.large-numbers.compare-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-compare-order",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+          "name": "大数比较",
+          "learningGoal": "先比位数，位数相同从高位比起。",
+          "microKnowledgePointIds": [
+            "mkp.large-numbers.compare-order.1",
+            "mkp.large-numbers.compare-order.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-estimate-represent",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+          "name": "大数估计",
+          "learningGoal": "先找一组大约多少，再推想总数。",
+          "microKnowledgePointIds": [
+            "mkp.large-numbers.estimate-represent.1",
+            "mkp.large-numbers.estimate-represent.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.large-numbers.integrated",
+          "knowledgePointId": "math.large-numbers.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-unit-integration",
+          "name": "生活中的大数综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.large-numbers.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.large-numbers.count-thousands.1",
+          "expectedKnowledgePointId": "math.large-numbers.thousand-counting",
+          "knowledgePointId": "math.large-numbers.thousand-counting",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-count-thousands",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-count-thousands",
+          "name": "按百或十数数",
+          "learningGoal": "能按百或十数数。",
+          "skillIds": [
+            "skill.large-numbers.count-thousands.1"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.count-thousands.1"
+          ],
+          "misconceptionNames": [
+            "忘记满十进一"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.count-thousands.2",
+          "expectedKnowledgePointId": "math.large-numbers.thousand-counting",
+          "knowledgePointId": "math.large-numbers.thousand-counting",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-count-thousands",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-count-thousands",
+          "name": "判断计数单位",
+          "learningGoal": "能判断计数单位。",
+          "skillIds": [
+            "skill.large-numbers.count-thousands.2"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.count-thousands.2"
+          ],
+          "misconceptionNames": [
+            "把计数单位混用"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.read-write.1",
+          "expectedKnowledgePointId": "math.large-numbers.place-value-read-write",
+          "knowledgePointId": "math.large-numbers.place-value-read-write",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-read-write",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+          "name": "读写四位数",
+          "learningGoal": "能读写四位数。",
+          "skillIds": [
+            "skill.large-numbers.read-write.1"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.read-write.1"
+          ],
+          "misconceptionNames": [
+            "漏读中间的零"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.read-write.2",
+          "expectedKnowledgePointId": "math.large-numbers.place-value-read-write",
+          "knowledgePointId": "math.large-numbers.place-value-read-write",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-read-write",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-read-write",
+          "name": "说出数位意义",
+          "learningGoal": "能说出数位意义。",
+          "skillIds": [
+            "skill.large-numbers.read-write.2"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.read-write.2"
+          ],
+          "misconceptionNames": [
+            "把数位意义看错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.compare-order.1",
+          "expectedKnowledgePointId": "math.large-numbers.compare-large-numbers",
+          "knowledgePointId": "math.large-numbers.compare-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-compare-order",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+          "name": "比较数的大小",
+          "learningGoal": "能比较数的大小。",
+          "skillIds": [
+            "skill.large-numbers.compare-order.1"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.compare-order.1"
+          ],
+          "misconceptionNames": [
+            "只比较末位数字"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.compare-order.2",
+          "expectedKnowledgePointId": "math.large-numbers.compare-large-numbers",
+          "knowledgePointId": "math.large-numbers.compare-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-compare-order",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-compare-order",
+          "name": "按顺序排列",
+          "learningGoal": "能按顺序排列。",
+          "skillIds": [
+            "skill.large-numbers.compare-order.2"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.compare-order.2"
+          ],
+          "misconceptionNames": [
+            "从低位开始比较"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.estimate-represent.1",
+          "expectedKnowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-estimate-represent",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+          "name": "借助参照估计",
+          "learningGoal": "能借助参照估计。",
+          "skillIds": [
+            "skill.large-numbers.estimate-represent.1"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.estimate-represent.1"
+          ],
+          "misconceptionNames": [
+            "把精确数当估计"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.estimate-represent.2",
+          "expectedKnowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "knowledgePointId": "math.large-numbers.estimate-large-numbers",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-estimate-represent",
+          "curriculumNodeId": "bsd.g2.s2.unit3.lesson-estimate-represent",
+          "name": "选择近似数",
+          "learningGoal": "能选择近似数。",
+          "skillIds": [
+            "skill.large-numbers.estimate-represent.2"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.estimate-represent.2"
+          ],
+          "misconceptionNames": [
+            "参照组数量选错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.large-numbers.integrated.1",
+          "expectedKnowledgePointId": "math.large-numbers.integrated",
+          "knowledgePointId": "math.large-numbers.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-3-large-numbers",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.large-numbers.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.large-numbers.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-4-measurement",
+      "order": 4,
+      "name": "第四单元：测量",
+      "lessons": [
+        {
+          "lessonId": "lesson-millimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+          "name": "铅笔有多长",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-decimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+          "name": "课桌有多宽",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-kilometer",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+          "name": "1千米有多长",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-choose-unit",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+          "name": "标签核对",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.measurement.millimeter",
+          "knowledgePointId": "math.measurement.millimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-millimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+          "name": "毫米",
+          "learningGoal": "知道 1 厘米 = 10 毫米。",
+          "microKnowledgePointIds": [
+            "mkp.measurement.millimeter.1",
+            "mkp.measurement.millimeter.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.measurement.decimeter",
+          "knowledgePointId": "math.measurement.decimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-decimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+          "name": "分米",
+          "learningGoal": "知道 1 分米 = 10 厘米，10 分米 = 1 米。",
+          "microKnowledgePointIds": [
+            "mkp.measurement.decimeter.1",
+            "mkp.measurement.decimeter.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.measurement.kilometer",
+          "knowledgePointId": "math.measurement.kilometer",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-kilometer",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+          "name": "千米",
+          "learningGoal": "选择千米描述较长路线。",
+          "microKnowledgePointIds": [
+            "mkp.measurement.kilometer.1",
+            "mkp.measurement.kilometer.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.measurement.choose-length-unit",
+          "knowledgePointId": "math.measurement.choose-length-unit",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-choose-unit",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+          "name": "选择长度单位",
+          "learningGoal": "短小物体用毫米或厘米，较长路线用米或千米。",
+          "microKnowledgePointIds": [
+            "mkp.measurement.choose-unit.1",
+            "mkp.measurement.choose-unit.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.measurement.integrated",
+          "knowledgePointId": "math.measurement.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-unit-integration",
+          "name": "测量综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.measurement.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.measurement.millimeter.1",
+          "expectedKnowledgePointId": "math.measurement.millimeter",
+          "knowledgePointId": "math.measurement.millimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-millimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+          "name": "认识毫米",
+          "learningGoal": "能认识毫米。",
+          "skillIds": [
+            "skill.measurement.millimeter.1"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.millimeter.1"
+          ],
+          "misconceptionNames": [
+            "把毫米当厘米"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.millimeter.2",
+          "expectedKnowledgePointId": "math.measurement.millimeter",
+          "knowledgePointId": "math.measurement.millimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-millimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-millimeter",
+          "name": "厘米毫米换算",
+          "learningGoal": "能厘米毫米换算。",
+          "skillIds": [
+            "skill.measurement.millimeter.2"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.millimeter.2"
+          ],
+          "misconceptionNames": [
+            "忘记 1 厘米是 10 毫米"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.decimeter.1",
+          "expectedKnowledgePointId": "math.measurement.decimeter",
+          "knowledgePointId": "math.measurement.decimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-decimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+          "name": "认识分米",
+          "learningGoal": "能认识分米。",
+          "skillIds": [
+            "skill.measurement.decimeter.1"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.decimeter.1"
+          ],
+          "misconceptionNames": [
+            "把分米和厘米混淆"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.decimeter.2",
+          "expectedKnowledgePointId": "math.measurement.decimeter",
+          "knowledgePointId": "math.measurement.decimeter",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-decimeter",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-decimeter",
+          "name": "分米米换算",
+          "learningGoal": "能分米米换算。",
+          "skillIds": [
+            "skill.measurement.decimeter.2"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.decimeter.2"
+          ],
+          "misconceptionNames": [
+            "忘记 10 分米是 1 米"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.kilometer.1",
+          "expectedKnowledgePointId": "math.measurement.kilometer",
+          "knowledgePointId": "math.measurement.kilometer",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-kilometer",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+          "name": "认识千米",
+          "learningGoal": "能认识千米。",
+          "skillIds": [
+            "skill.measurement.kilometer.1"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.kilometer.1"
+          ],
+          "misconceptionNames": [
+            "把千米当米"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.kilometer.2",
+          "expectedKnowledgePointId": "math.measurement.kilometer",
+          "knowledgePointId": "math.measurement.kilometer",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-kilometer",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-kilometer",
+          "name": "米千米换算",
+          "learningGoal": "能米千米换算。",
+          "skillIds": [
+            "skill.measurement.kilometer.2"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.kilometer.2"
+          ],
+          "misconceptionNames": [
+            "路线单位选太小"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.choose-unit.1",
+          "expectedKnowledgePointId": "math.measurement.choose-length-unit",
+          "knowledgePointId": "math.measurement.choose-length-unit",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-choose-unit",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+          "name": "选择长度单位",
+          "learningGoal": "能选择长度单位。",
+          "skillIds": [
+            "skill.measurement.choose-unit.1"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.choose-unit.1"
+          ],
+          "misconceptionNames": [
+            "单位过大或过小"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.choose-unit.2",
+          "expectedKnowledgePointId": "math.measurement.choose-length-unit",
+          "knowledgePointId": "math.measurement.choose-length-unit",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-choose-unit",
+          "curriculumNodeId": "bsd.g2.s2.unit4.lesson-choose-unit",
+          "name": "判断测量结果",
+          "learningGoal": "能判断测量结果。",
+          "skillIds": [
+            "skill.measurement.choose-unit.2"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.choose-unit.2"
+          ],
+          "misconceptionNames": [
+            "只看数字不看单位"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.measurement.integrated.1",
+          "expectedKnowledgePointId": "math.measurement.integrated",
+          "knowledgePointId": "math.measurement.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-4-measurement",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.measurement.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.measurement.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-5-addition-subtraction",
+      "order": 5,
+      "name": "第五单元：加与减",
+      "lessons": [
+        {
+          "lessonId": "lesson-three-digit-add",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+          "name": "买电器",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-three-digit-subtract",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-subtract",
+          "name": "回收电池",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-mixed-steps",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+          "name": "十年变化",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-estimate-check",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+          "name": "图书馆",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-addition",
+          "knowledgePointId": "math.add-subtract.three-digit-addition",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-add",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+          "name": "三位数加法",
+          "learningGoal": "个位对个位、十位对十位、百位对百位。",
+          "microKnowledgePointIds": [
+            "mkp.add-subtract.three-digit-add.1",
+            "mkp.add-subtract.three-digit-add.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-subtract",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-subtract",
+          "name": "三位数减法",
+          "learningGoal": "某一位不够减时，要向前一位借 1。",
+          "microKnowledgePointIds": [
+            "mkp.add-subtract.three-digit-subtract.1",
+            "mkp.add-subtract.three-digit-subtract.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-mixed-steps",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+          "name": "加减混合",
+          "learningGoal": "先看题意，再按步骤计算。",
+          "microKnowledgePointIds": [
+            "mkp.add-subtract.mixed-steps.1",
+            "mkp.add-subtract.mixed-steps.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.add-subtract.estimate-and-check",
+          "knowledgePointId": "math.add-subtract.estimate-and-check",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-estimate-check",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+          "name": "估算验算",
+          "learningGoal": "先估大约，再精算检查。",
+          "microKnowledgePointIds": [
+            "mkp.add-subtract.estimate-check.1",
+            "mkp.add-subtract.estimate-check.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.add-subtract.integrated",
+          "knowledgePointId": "math.add-subtract.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-unit-integration",
+          "name": "加与减综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.add-subtract.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.add-subtract.three-digit-add.1",
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-addition",
+          "knowledgePointId": "math.add-subtract.three-digit-addition",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-add",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+          "name": "相同数位相加",
+          "learningGoal": "能相同数位相加。",
+          "skillIds": [
+            "skill.add-subtract.three-digit-add.1"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.three-digit-add.1"
+          ],
+          "misconceptionNames": [
+            "数位没有对齐"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.three-digit-add.2",
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-addition",
+          "knowledgePointId": "math.add-subtract.three-digit-addition",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-add",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-add",
+          "name": "处理进位",
+          "learningGoal": "能处理进位。",
+          "skillIds": [
+            "skill.add-subtract.three-digit-add.2"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.three-digit-add.2"
+          ],
+          "misconceptionNames": [
+            "忘记进位"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.three-digit-subtract.1",
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-subtract",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-subtract",
+          "name": "相同数位相减",
+          "learningGoal": "能相同数位相减。",
+          "skillIds": [
+            "skill.add-subtract.three-digit-subtract.1"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.three-digit-subtract.1"
+          ],
+          "misconceptionNames": [
+            "忘记退位"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.three-digit-subtract.2",
+          "expectedKnowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "knowledgePointId": "math.add-subtract.three-digit-subtraction",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-three-digit-subtract",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-three-digit-subtract",
+          "name": "处理退位",
+          "learningGoal": "能处理退位。",
+          "skillIds": [
+            "skill.add-subtract.three-digit-subtract.2"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.three-digit-subtract.2"
+          ],
+          "misconceptionNames": [
+            "被减数和减数看反"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.mixed-steps.1",
+          "expectedKnowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-mixed-steps",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+          "name": "分步计算",
+          "learningGoal": "能分步计算。",
+          "skillIds": [
+            "skill.add-subtract.mixed-steps.1"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.mixed-steps.1"
+          ],
+          "misconceptionNames": [
+            "漏算一步"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.mixed-steps.2",
+          "expectedKnowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "knowledgePointId": "math.add-subtract.mixed-add-subtract",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-mixed-steps",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-mixed-steps",
+          "name": "理解数量变化",
+          "learningGoal": "能理解数量变化。",
+          "skillIds": [
+            "skill.add-subtract.mixed-steps.2"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.mixed-steps.2"
+          ],
+          "misconceptionNames": [
+            "把增加和减少弄反"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.estimate-check.1",
+          "expectedKnowledgePointId": "math.add-subtract.estimate-and-check",
+          "knowledgePointId": "math.add-subtract.estimate-and-check",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-estimate-check",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+          "name": "估算结果",
+          "learningGoal": "能估算结果。",
+          "skillIds": [
+            "skill.add-subtract.estimate-check.1"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.estimate-check.1"
+          ],
+          "misconceptionNames": [
+            "估算离精算太远"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.estimate-check.2",
+          "expectedKnowledgePointId": "math.add-subtract.estimate-and-check",
+          "knowledgePointId": "math.add-subtract.estimate-and-check",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-estimate-check",
+          "curriculumNodeId": "bsd.g2.s2.unit5.lesson-estimate-check",
+          "name": "用逆运算验算",
+          "learningGoal": "能用逆运算验算。",
+          "skillIds": [
+            "skill.add-subtract.estimate-check.2"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.estimate-check.2"
+          ],
+          "misconceptionNames": [
+            "不会用逆运算检查"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.add-subtract.integrated.1",
+          "expectedKnowledgePointId": "math.add-subtract.integrated",
+          "knowledgePointId": "math.add-subtract.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-5-addition-subtraction",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.add-subtract.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.add-subtract.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-6-shapes",
+      "order": 6,
+      "name": "第六单元：认识图形",
+      "lessons": [
+        {
+          "lessonId": "lesson-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+          "name": "认识角",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-right-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+          "name": "认识直角",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-rectangle-square",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+          "name": "长方形与正方形",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-parallelogram",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+          "name": "平行四边形",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.shapes.angle",
+          "knowledgePointId": "math.shapes.angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+          "name": "角",
+          "learningGoal": "能在图形中辨认角。",
+          "microKnowledgePointIds": [
+            "mkp.shapes.angle.1",
+            "mkp.shapes.angle.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.shapes.right-angle",
+          "knowledgePointId": "math.shapes.right-angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-right-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+          "name": "直角",
+          "learningGoal": "直角像书本角、课桌角那样方方正正。",
+          "microKnowledgePointIds": [
+            "mkp.shapes.right-angle.1",
+            "mkp.shapes.right-angle.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.shapes.rectangle-square",
+          "knowledgePointId": "math.shapes.rectangle-square",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-rectangle-square",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+          "name": "长方形和正方形",
+          "learningGoal": "长方形对边相等，正方形四条边相等，四个角都是直角。",
+          "microKnowledgePointIds": [
+            "mkp.shapes.rectangle-square.1",
+            "mkp.shapes.rectangle-square.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.shapes.parallelogram",
+          "knowledgePointId": "math.shapes.parallelogram",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-parallelogram",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+          "name": "平行四边形",
+          "learningGoal": "平行四边形的对边相互平行，形状可以斜斜的。",
+          "microKnowledgePointIds": [
+            "mkp.shapes.parallelogram.1",
+            "mkp.shapes.parallelogram.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.shapes.integrated",
+          "knowledgePointId": "math.shapes.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-unit-integration",
+          "name": "认识图形综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.shapes.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.shapes.angle.1",
+          "expectedKnowledgePointId": "math.shapes.angle",
+          "knowledgePointId": "math.shapes.angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+          "name": "辨认角",
+          "learningGoal": "能辨认角。",
+          "skillIds": [
+            "skill.shapes.angle.1"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.angle.1"
+          ],
+          "misconceptionNames": [
+            "把弯曲线当角"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.angle.2",
+          "expectedKnowledgePointId": "math.shapes.angle",
+          "knowledgePointId": "math.shapes.angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-angle",
+          "name": "数角",
+          "learningGoal": "能数角。",
+          "skillIds": [
+            "skill.shapes.angle.2"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.angle.2"
+          ],
+          "misconceptionNames": [
+            "漏数角"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.right-angle.1",
+          "expectedKnowledgePointId": "math.shapes.right-angle",
+          "knowledgePointId": "math.shapes.right-angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-right-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+          "name": "辨认直角",
+          "learningGoal": "能辨认直角。",
+          "skillIds": [
+            "skill.shapes.right-angle.1"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.right-angle.1"
+          ],
+          "misconceptionNames": [
+            "把所有角都当直角"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.right-angle.2",
+          "expectedKnowledgePointId": "math.shapes.right-angle",
+          "knowledgePointId": "math.shapes.right-angle",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-right-angle",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-right-angle",
+          "name": "比较角的大小",
+          "learningGoal": "能比较角的大小。",
+          "skillIds": [
+            "skill.shapes.right-angle.2"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.right-angle.2"
+          ],
+          "misconceptionNames": [
+            "只看边长判断角"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.rectangle-square.1",
+          "expectedKnowledgePointId": "math.shapes.rectangle-square",
+          "knowledgePointId": "math.shapes.rectangle-square",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-rectangle-square",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+          "name": "辨认长方形",
+          "learningGoal": "能辨认长方形。",
+          "skillIds": [
+            "skill.shapes.rectangle-square.1"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.rectangle-square.1"
+          ],
+          "misconceptionNames": [
+            "忽略边长关系"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.rectangle-square.2",
+          "expectedKnowledgePointId": "math.shapes.rectangle-square",
+          "knowledgePointId": "math.shapes.rectangle-square",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-rectangle-square",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-rectangle-square",
+          "name": "辨认正方形",
+          "learningGoal": "能辨认正方形。",
+          "skillIds": [
+            "skill.shapes.rectangle-square.2"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.rectangle-square.2"
+          ],
+          "misconceptionNames": [
+            "把所有四边形当长方形"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.parallelogram.1",
+          "expectedKnowledgePointId": "math.shapes.parallelogram",
+          "knowledgePointId": "math.shapes.parallelogram",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-parallelogram",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+          "name": "辨认平行四边形",
+          "learningGoal": "能辨认平行四边形。",
+          "skillIds": [
+            "skill.shapes.parallelogram.1"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.parallelogram.1"
+          ],
+          "misconceptionNames": [
+            "只认端正的四边形"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.parallelogram.2",
+          "expectedKnowledgePointId": "math.shapes.parallelogram",
+          "knowledgePointId": "math.shapes.parallelogram",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-parallelogram",
+          "curriculumNodeId": "bsd.g2.s2.unit6.lesson-parallelogram",
+          "name": "区分四边形",
+          "learningGoal": "能区分四边形。",
+          "skillIds": [
+            "skill.shapes.parallelogram.2"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.parallelogram.2"
+          ],
+          "misconceptionNames": [
+            "把梯形当平行四边形"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.shapes.integrated.1",
+          "expectedKnowledgePointId": "math.shapes.integrated",
+          "knowledgePointId": "math.shapes.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-6-shapes",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.shapes.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.shapes.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-7-time",
+      "order": 7,
+      "name": "第七单元：时、分、秒",
+      "lessons": [
+        {
+          "lessonId": "lesson-hour-minute",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+          "name": "奥运开幕",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-second",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+          "name": "一分钟能干什么",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-read-clock",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+          "name": "作息时间表",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-elapsed-time",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+          "name": "列车时刻",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.time.hour-minute",
+          "knowledgePointId": "math.time.hour-minute",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-hour-minute",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+          "name": "时和分",
+          "learningGoal": "能用时和分描述较长活动。",
+          "microKnowledgePointIds": [
+            "mkp.time.hour-minute.1",
+            "mkp.time.hour-minute.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.time.second",
+          "knowledgePointId": "math.time.second",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-second",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+          "name": "秒",
+          "learningGoal": "用秒描述很短的时间。",
+          "microKnowledgePointIds": [
+            "mkp.time.second.1",
+            "mkp.time.second.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.time.read-clock",
+          "knowledgePointId": "math.time.read-clock",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-read-clock",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+          "name": "读钟面",
+          "learningGoal": "先看时针，再看分针。",
+          "microKnowledgePointIds": [
+            "mkp.time.read-clock.1",
+            "mkp.time.read-clock.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.time.elapsed-time",
+          "knowledgePointId": "math.time.elapsed-time",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-elapsed-time",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+          "name": "经过时间",
+          "learningGoal": "从开始时间按分钟往后数。",
+          "microKnowledgePointIds": [
+            "mkp.time.elapsed-time.1",
+            "mkp.time.elapsed-time.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.time.integrated",
+          "knowledgePointId": "math.time.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-unit-integration",
+          "name": "时、分、秒综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.time.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.time.hour-minute.1",
+          "expectedKnowledgePointId": "math.time.hour-minute",
+          "knowledgePointId": "math.time.hour-minute",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-hour-minute",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+          "name": "认识时分",
+          "learningGoal": "能认识时分。",
+          "skillIds": [
+            "skill.time.hour-minute.1"
+          ],
+          "misconceptionIds": [
+            "mis.time.hour-minute.1"
+          ],
+          "misconceptionNames": [
+            "把 1 时当 100 分"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.hour-minute.2",
+          "expectedKnowledgePointId": "math.time.hour-minute",
+          "knowledgePointId": "math.time.hour-minute",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-hour-minute",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-hour-minute",
+          "name": "时分换算",
+          "learningGoal": "能时分换算。",
+          "skillIds": [
+            "skill.time.hour-minute.2"
+          ],
+          "misconceptionIds": [
+            "mis.time.hour-minute.2"
+          ],
+          "misconceptionNames": [
+            "活动单位选错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.second.1",
+          "expectedKnowledgePointId": "math.time.second",
+          "knowledgePointId": "math.time.second",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-second",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+          "name": "认识秒",
+          "learningGoal": "能认识秒。",
+          "skillIds": [
+            "skill.time.second.1"
+          ],
+          "misconceptionIds": [
+            "mis.time.second.1"
+          ],
+          "misconceptionNames": [
+            "把秒当分"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.second.2",
+          "expectedKnowledgePointId": "math.time.second",
+          "knowledgePointId": "math.time.second",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-second",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-second",
+          "name": "分秒换算",
+          "learningGoal": "能分秒换算。",
+          "skillIds": [
+            "skill.time.second.2"
+          ],
+          "misconceptionIds": [
+            "mis.time.second.2"
+          ],
+          "misconceptionNames": [
+            "短时间单位选错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.read-clock.1",
+          "expectedKnowledgePointId": "math.time.read-clock",
+          "knowledgePointId": "math.time.read-clock",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-read-clock",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+          "name": "读整时半时",
+          "learningGoal": "能读整时半时。",
+          "skillIds": [
+            "skill.time.read-clock.1"
+          ],
+          "misconceptionIds": [
+            "mis.time.read-clock.1"
+          ],
+          "misconceptionNames": [
+            "只看分针"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.read-clock.2",
+          "expectedKnowledgePointId": "math.time.read-clock",
+          "knowledgePointId": "math.time.read-clock",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-read-clock",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-read-clock",
+          "name": "读几时几分",
+          "learningGoal": "能读几时几分。",
+          "skillIds": [
+            "skill.time.read-clock.2"
+          ],
+          "misconceptionIds": [
+            "mis.time.read-clock.2"
+          ],
+          "misconceptionNames": [
+            "时针接近下一小时就读错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.elapsed-time.1",
+          "expectedKnowledgePointId": "math.time.elapsed-time",
+          "knowledgePointId": "math.time.elapsed-time",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-elapsed-time",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+          "name": "计算结束时间",
+          "learningGoal": "能计算结束时间。",
+          "skillIds": [
+            "skill.time.elapsed-time.1"
+          ],
+          "misconceptionIds": [
+            "mis.time.elapsed-time.1"
+          ],
+          "misconceptionNames": [
+            "跨半小时数错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.elapsed-time.2",
+          "expectedKnowledgePointId": "math.time.elapsed-time",
+          "knowledgePointId": "math.time.elapsed-time",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-elapsed-time",
+          "curriculumNodeId": "bsd.g2.s2.unit7.lesson-elapsed-time",
+          "name": "计算经过时间",
+          "learningGoal": "能计算经过时间。",
+          "skillIds": [
+            "skill.time.elapsed-time.2"
+          ],
+          "misconceptionIds": [
+            "mis.time.elapsed-time.2"
+          ],
+          "misconceptionNames": [
+            "把开始和结束弄反"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.time.integrated.1",
+          "expectedKnowledgePointId": "math.time.integrated",
+          "knowledgePointId": "math.time.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-7-time",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.time.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.time.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    },
+    {
+      "unitId": "unit-8-data-records",
+      "order": 8,
+      "name": "第八单元：调查与记录",
+      "lessons": [
+        {
+          "lessonId": "lesson-survey-question",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+          "name": "评选吉祥物",
+          "order": 1
+        },
+        {
+          "lessonId": "lesson-collect-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+          "name": "最喜欢的水果",
+          "order": 2
+        },
+        {
+          "lessonId": "lesson-record-table",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+          "name": "班级旧物市场",
+          "order": 3
+        },
+        {
+          "lessonId": "lesson-interpret-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+          "name": "生日统计",
+          "order": 4
+        },
+        {
+          "lessonId": "lesson-unit-integration",
+          "name": "单元综合应用",
+          "order": 5
+        }
+      ],
+      "expectedKnowledgePoints": [
+        {
+          "expectedKnowledgePointId": "math.data-records.survey-question",
+          "knowledgePointId": "math.data-records.survey-question",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-survey-question",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+          "name": "调查问题",
+          "learningGoal": "问题要让大家容易选择和回答。",
+          "microKnowledgePointIds": [
+            "mkp.data-records.survey-question.1",
+            "mkp.data-records.survey-question.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.data-records.collect-data",
+          "knowledgePointId": "math.data-records.collect-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-collect-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+          "name": "收集数据",
+          "learningGoal": "一个人记录一次，避免重复或漏记。",
+          "microKnowledgePointIds": [
+            "mkp.data-records.collect-data.1",
+            "mkp.data-records.collect-data.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.data-records.record-table",
+          "knowledgePointId": "math.data-records.record-table",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-record-table",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+          "name": "记录表",
+          "learningGoal": "同类数据记在同一栏，最后合计。",
+          "microKnowledgePointIds": [
+            "mkp.data-records.record-table.1",
+            "mkp.data-records.record-table.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.data-records.interpret-data",
+          "knowledgePointId": "math.data-records.interpret-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-interpret-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+          "name": "读懂数据",
+          "learningGoal": "先找每类数量，再比较或相减。",
+          "microKnowledgePointIds": [
+            "mkp.data-records.interpret-data.1",
+            "mkp.data-records.interpret-data.2"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        },
+        {
+          "expectedKnowledgePointId": "math.data-records.integrated",
+          "knowledgePointId": "math.data-records.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-unit-integration",
+          "name": "调查与记录综合应用",
+          "learningGoal": "能综合运用本单元核心知识完成最终推理。",
+          "microKnowledgePointIds": [
+            "mkp.data-records.integrated.1"
+          ],
+          "required": true,
+          "coverageStatus": "planned"
+        }
+      ],
+      "microKnowledgePoints": [
+        {
+          "microKnowledgePointId": "mkp.data-records.survey-question.1",
+          "expectedKnowledgePointId": "math.data-records.survey-question",
+          "knowledgePointId": "math.data-records.survey-question",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-survey-question",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+          "name": "判断调查问题",
+          "learningGoal": "能判断调查问题。",
+          "skillIds": [
+            "skill.data-records.survey-question.1"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.survey-question.1"
+          ],
+          "misconceptionNames": [
+            "问题不清楚"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.survey-question.2",
+          "expectedKnowledgePointId": "math.data-records.survey-question",
+          "knowledgePointId": "math.data-records.survey-question",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-survey-question",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-survey-question",
+          "name": "选择调查对象",
+          "learningGoal": "能选择调查对象。",
+          "skillIds": [
+            "skill.data-records.survey-question.2"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.survey-question.2"
+          ],
+          "misconceptionNames": [
+            "对象范围不合适"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.collect-data.1",
+          "expectedKnowledgePointId": "math.data-records.collect-data",
+          "knowledgePointId": "math.data-records.collect-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-collect-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+          "name": "按规则收集",
+          "learningGoal": "能按规则收集。",
+          "skillIds": [
+            "skill.data-records.collect-data.1"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.collect-data.1"
+          ],
+          "misconceptionNames": [
+            "重复记录"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.collect-data.2",
+          "expectedKnowledgePointId": "math.data-records.collect-data",
+          "knowledgePointId": "math.data-records.collect-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-collect-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-collect-data",
+          "name": "避免重复遗漏",
+          "learningGoal": "能避免重复遗漏。",
+          "skillIds": [
+            "skill.data-records.collect-data.2"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.collect-data.2"
+          ],
+          "misconceptionNames": [
+            "漏掉一个对象"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.record-table.1",
+          "expectedKnowledgePointId": "math.data-records.record-table",
+          "knowledgePointId": "math.data-records.record-table",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-record-table",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+          "name": "用符号记录",
+          "learningGoal": "能用符号记录。",
+          "skillIds": [
+            "skill.data-records.record-table.1"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.record-table.1"
+          ],
+          "misconceptionNames": [
+            "记号和人数不对应"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.record-table.2",
+          "expectedKnowledgePointId": "math.data-records.record-table",
+          "knowledgePointId": "math.data-records.record-table",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-record-table",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-record-table",
+          "name": "整理成表格",
+          "learningGoal": "能整理成表格。",
+          "skillIds": [
+            "skill.data-records.record-table.2"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.record-table.2"
+          ],
+          "misconceptionNames": [
+            "类别混在一起"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.interpret-data.1",
+          "expectedKnowledgePointId": "math.data-records.interpret-data",
+          "knowledgePointId": "math.data-records.interpret-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-interpret-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+          "name": "比较数据多少",
+          "learningGoal": "能比较数据多少。",
+          "skillIds": [
+            "skill.data-records.interpret-data.1"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.interpret-data.1"
+          ],
+          "misconceptionNames": [
+            "只看类别顺序"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.interpret-data.2",
+          "expectedKnowledgePointId": "math.data-records.interpret-data",
+          "knowledgePointId": "math.data-records.interpret-data",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-interpret-data",
+          "curriculumNodeId": "bsd.g2.s2.unit8.lesson-interpret-data",
+          "name": "求相差数量",
+          "learningGoal": "能求相差数量。",
+          "skillIds": [
+            "skill.data-records.interpret-data.2"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.interpret-data.2"
+          ],
+          "misconceptionNames": [
+            "相差人数计算错"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge",
+            "fill"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        },
+        {
+          "microKnowledgePointId": "mkp.data-records.integrated.1",
+          "expectedKnowledgePointId": "math.data-records.integrated",
+          "knowledgePointId": "math.data-records.integrated",
+          "subjectId": "math",
+          "textbookVersionId": "bsd",
+          "gradeId": "grade-2",
+          "semesterId": "semester-2",
+          "unitId": "unit-8-data-records",
+          "lessonId": "lesson-unit-integration",
+          "name": "综合推理本单元线索",
+          "learningGoal": "能把多个线索合并判断最终答案。",
+          "skillIds": [
+            "skill.data-records.integrated.1"
+          ],
+          "misconceptionIds": [
+            "mis.data-records.integrated.1"
+          ],
+          "misconceptionNames": [
+            "综合线索连接不完整"
+          ],
+          "recommendedQuestionTypes": [
+            "single",
+            "judge"
+          ],
+          "required": true,
+          "coverageTarget": {
+            "microKnowledgePointCoverageRate": 1,
+            "skillCoverageRate": 1,
+            "misconceptionCoverageRate": 1
+          },
+          "diagnosticRequirement": {
+            "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+            "minQuestionsPerSkill": 2,
+            "minQuestionsPerMisconception": 1,
+            "excludeReserveFromCoverage": true,
+            "excludeBossFromDiagnosticCoverage": true
+          },
+          "coverageStatus": "planned"
+        }
+      ]
+    }
+  ]
+}

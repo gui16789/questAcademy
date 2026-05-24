@@ -40,5 +40,41 @@
     "teachingReviewer": "",
     "readabilityReviewer": "",
     "approvedAt": ""
+  },
+  "coverage": {
+    "coveragePlanId": "math.bsd.g2.s2.coverage-plan",
+    "coveragePlanPath": "content/coverage-plans/math/bsd/grade-2/semester-2.json",
+    "expectedKnowledgePointIds": [
+      "math.add-subtract.three-digit-addition",
+      "math.add-subtract.three-digit-subtraction",
+      "math.add-subtract.mixed-add-subtract",
+      "math.add-subtract.estimate-and-check",
+      "math.add-subtract.integrated"
+    ],
+    "expectedMicroKnowledgePointIds": [
+      "mkp.add-subtract.three-digit-add.1",
+      "mkp.add-subtract.three-digit-add.2",
+      "mkp.add-subtract.three-digit-subtract.1",
+      "mkp.add-subtract.three-digit-subtract.2",
+      "mkp.add-subtract.mixed-steps.1",
+      "mkp.add-subtract.mixed-steps.2",
+      "mkp.add-subtract.estimate-check.1",
+      "mkp.add-subtract.estimate-check.2",
+      "mkp.add-subtract.integrated.1"
+    ],
+    "coverageTarget": {
+      "knowledgePointCoverageRate": 1,
+      "microKnowledgePointCoverageRate": 1,
+      "skillCoverageRate": 1,
+      "misconceptionCoverageRate": 1
+    },
+    "diagnosticRequirement": {
+      "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+      "minQuestionsPerSkill": 2,
+      "minQuestionsPerMisconception": 1,
+      "excludeReserveFromCoverage": true,
+      "excludeBossFromDiagnosticCoverage": true
+    },
+    "coverageStatus": "draft_gap_known"
   }
 }

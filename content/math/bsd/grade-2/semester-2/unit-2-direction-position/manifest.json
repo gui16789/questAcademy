@@ -40,5 +40,39 @@
     "teachingReviewer": "",
     "readabilityReviewer": "",
     "approvedAt": ""
+  },
+  "coverage": {
+    "coveragePlanId": "math.bsd.g2.s2.coverage-plan",
+    "coveragePlanPath": "content/coverage-plans/math/bsd/grade-2/semester-2.json",
+    "expectedKnowledgePointIds": [
+      "math.direction.cardinal",
+      "math.direction.map-position",
+      "math.direction.diagonal",
+      "math.direction.route"
+    ],
+    "expectedMicroKnowledgePointIds": [
+      "mkp.direction.identify-cardinal",
+      "mkp.direction.opposite-cardinal",
+      "mkp.direction.describe-map-position",
+      "mkp.direction.choose-reference-point",
+      "mkp.direction.identify-diagonal",
+      "mkp.direction.combine-directions",
+      "mkp.direction.follow-route",
+      "mkp.direction.describe-route"
+    ],
+    "coverageTarget": {
+      "knowledgePointCoverageRate": 1,
+      "microKnowledgePointCoverageRate": 1,
+      "skillCoverageRate": 1,
+      "misconceptionCoverageRate": 1
+    },
+    "diagnosticRequirement": {
+      "minQuestionsPerRequiredMicroKnowledgePoint": 2,
+      "minQuestionsPerSkill": 2,
+      "minQuestionsPerMisconception": 1,
+      "excludeReserveFromCoverage": true,
+      "excludeBossFromDiagnosticCoverage": true
+    },
+    "coverageStatus": "draft_gap_known"
   }
 }
