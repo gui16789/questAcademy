@@ -35,6 +35,7 @@
         "stepId": "boss-step-2",
         "questionId": "b2",
         "skillIds": [
+          "skill.remainder.compare-with-divisor",
           "skill.word-problem.interpret-remainder"
         ]
       }
@@ -50,7 +51,8 @@
       "type": "by_skill",
       "fallbackKnowledgeCardIds": [
         "card-with-remainder",
-        "card-remainder-rule"
+        "card-remainder-rule",
+        "card-division-word-problem"
       ]
     },
     "status": "draft"
