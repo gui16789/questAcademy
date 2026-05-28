@@ -483,6 +483,106 @@ main {
   font-size: 1.6rem;
 }
 
+.mastery-panel {
+  margin: 1rem 0;
+}
+
+.mastery-panel h2 {
+  margin: 0 0 0.75rem;
+}
+
+.mastery-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mastery-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem 0.8rem;
+  align-items: center;
+  border: 2px solid rgba(36, 49, 64, 0.08);
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: #fff8e8;
+}
+
+.mastery-item strong,
+.mastery-item span,
+.mastery-item small {
+  display: block;
+}
+
+.mastery-item strong {
+  line-height: 1.25;
+}
+
+.mastery-item span,
+.mastery-item small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.mastery-tip {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.mastery-score {
+  display: grid;
+  width: 3.4rem;
+  height: 3.4rem;
+  place-items: center;
+  border: 3px solid rgba(36, 49, 64, 0.1);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--green-deep);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.mastery-bar {
+  grid-column: 1 / -1;
+  height: 0.7rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(36, 49, 64, 0.1);
+}
+
+.mastery-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--gold));
+}
+
+.mastery-item.needs_review .mastery-score {
+  color: var(--red);
+}
+
+.mastery-item.needs_review .mastery-bar span {
+  background: var(--red);
+}
+
+.mastery-item.unstable .mastery-score {
+  color: var(--orange);
+}
+
+.mastery-item.unstable .mastery-bar span {
+  background: var(--orange);
+}
+
+.mastery-item.not_started .mastery-score {
+  color: var(--muted);
+}
+
+.mastery-item.not_started .mastery-bar span {
+  background: var(--muted);
+}
+
 .case-layout,
 .cards-grid,
 .badge-grid {

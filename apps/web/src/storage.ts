@@ -1,5 +1,5 @@
 import type { Badge, ContentPackageManifest, LevelConfig, Question } from "@quest-academy/content-schema";
-import type { AnswerResult, BadgeRecordMap, LearningProgress, WrongRecord, WrongRecordMap } from "@quest-academy/game-core";
+import type { AnswerResult, BadgeRecordMap, LearningProgress, MasteryRecordMap, WrongRecord, WrongRecordMap } from "@quest-academy/game-core";
 
 export const LEGACY_STORAGE_KEY = "animalDetectiveCityMvp";
 export const PROGRESS_STORAGE_KEY_PREFIX = "questAcademy:progress";
@@ -19,7 +19,8 @@ export interface LoadedStoredState {
   progress: LearningProgress;
   wrongRecords: WrongRecordMap;
   badgeRecords: BadgeRecordMap;
-  answerRecords: unknown[];
+  masteryRecords: MasteryRecordMap;
+  answerRecords: AnswerResult[];
   migratedFromDataVersion: string;
 }
 
@@ -88,6 +89,7 @@ export function saveStoredState(model: StorageModel, state: LoadedStoredState): 
         lastStudyAt: now,
       },
       answerRecords: state.answerRecords,
+      masteryRecords: state.masteryRecords,
       wrongRecords: state.wrongRecords,
       wrongQuestions: state.wrongRecords,
       badgeRecords: state.badgeRecords,
@@ -111,6 +113,7 @@ function createDefaultStoredState(): LoadedStoredState {
     progress: createDefaultProgress(),
     wrongRecords: {},
     badgeRecords: {},
+    masteryRecords: {},
     answerRecords: [],
     migratedFromDataVersion: "",
   };
@@ -134,7 +137,8 @@ function migrateStoredState(saved: Record<string, unknown>, model: StorageModel,
     progress: migrateProgress(savedProgress, model),
     wrongRecords: migrateWrongRecords(objectValue(saved.wrongRecords) ?? objectValue(saved.wrongQuestions), model),
     badgeRecords: migrateBadgeRecords(objectValue(saved.badgeRecords) ?? objectValue(saved.badges), model),
-    answerRecords: arrayValue(saved.answerRecords),
+    masteryRecords: migrateMasteryRecords(objectValue(saved.masteryRecords)),
+    answerRecords: arrayValue(saved.answerRecords) as AnswerResult[],
     migratedFromDataVersion: sourceDataVersion === DATA_VERSION ? stringValue(saved.migratedFromDataVersion) : sourceDataVersion,
   };
 }
@@ -217,6 +221,34 @@ function migrateBadgeRecords(records: Record<string, unknown> | undefined, model
   );
 }
 
+function migrateMasteryRecords(records: Record<string, unknown> | undefined): MasteryRecordMap {
+  if (!records) return {};
+  return Object.fromEntries(
+    Object.entries(records)
+      .map(([recordId, value]) => {
+        const record = objectValue(value);
+        if (!record) return null;
+        const dimension = stringValue(record.dimension);
+        const id = stringValue(record.id);
+        if ((dimension !== "knowledgePoint" && dimension !== "skill") || !id) return null;
+        return [
+          recordId,
+          {
+            dimension,
+            id,
+            correctCount: numberValue(record.correctCount, 0),
+            totalCount: numberValue(record.totalCount, 0),
+            accuracy: numberValue(record.accuracy ?? record.recentAccuracy, 0),
+            score: numberValue(record.score, 0),
+            state: toMasteryState(stringValue(record.state)),
+            lastPracticedAt: stringValue(record.lastPracticedAt) || new Date().toISOString(),
+          },
+        ] as const;
+      })
+      .filter((entry): entry is readonly [string, MasteryRecordMap[string]] => Boolean(entry)),
+  );
+}
+
 function findQuestion(questionId: string, model: StorageModel): Question | undefined {
   return [...model.questions, ...model.reserveQuestions].find((question) => question.questionId === questionId);
 }
@@ -242,6 +274,10 @@ function toClueId(value: string, model: StorageModel): string {
 
 function toWrongStatus(value: string): WrongRecord["status"] {
   return value === "reviewing" || value === "solved" || value === "archived" ? value : "open";
+}
+
+function toMasteryState(value: string): MasteryRecordMap[string]["state"] {
+  return value === "not_started" || value === "learning" || value === "unstable" || value === "mastered" || value === "needs_review" ? value : "not_started";
 }
 
 function createSafeStorage() {
