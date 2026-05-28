@@ -10,10 +10,15 @@ import {
   checkAnswer,
   finishBoss,
   finishLevel,
+  getMasteryRecord,
   markWrongRecordSolved,
+  selectLevelQuestions,
+  updateMasteryRecords,
   type AnswerResult,
   type BadgeRecordMap,
   type LearningProgress,
+  type MasteryRecordMap,
+  type MasteryState,
   type WrongRecord,
   type WrongRecordMap,
 } from "@quest-academy/game-core";
@@ -61,12 +66,24 @@ interface LevelResultView {
   correctCount: number;
   total: number;
   passed: boolean;
+  masteryItems: MasterySummary[];
 }
 
 interface BossResultView {
   correctCount: number;
   total: number;
   passed: boolean;
+  masteryItems: MasterySummary[];
+}
+
+interface MasterySummary {
+  id: string;
+  name: string;
+  score: number;
+  state: MasteryState;
+  correctCount: number;
+  totalCount: number;
+  recommendation: string;
 }
 
 export function App() {
@@ -79,7 +96,8 @@ export function App() {
   const [progress, setProgress] = useState<LearningProgress>(() => createDefaultProgress());
   const [wrongRecords, setWrongRecords] = useState<WrongRecordMap>({});
   const [badgeRecords, setBadgeRecords] = useState<BadgeRecordMap>({});
-  const [answerRecords, setAnswerRecords] = useState<unknown[]>([]);
+  const [masteryRecords, setMasteryRecords] = useState<MasteryRecordMap>({});
+  const [answerRecords, setAnswerRecords] = useState<AnswerResult[]>([]);
   const [migratedFromDataVersion, setMigratedFromDataVersion] = useState("");
   const [player, setPlayer] = useState<PlayerState | null>(null);
   const [toast, setToast] = useState("");
@@ -115,10 +133,11 @@ export function App() {
       progress,
       wrongRecords,
       badgeRecords,
+      masteryRecords,
       answerRecords,
       migratedFromDataVersion,
     });
-  }, [answerRecords, badgeRecords, hydrated, migratedFromDataVersion, model, progress, user, wrongRecords]);
+  }, [answerRecords, badgeRecords, hydrated, masteryRecords, migratedFromDataVersion, model, progress, user, wrongRecords]);
 
   useEffect(() => {
     if (!toast) return;
@@ -181,6 +200,7 @@ export function App() {
     setProgress(createDefaultProgress());
     setWrongRecords({});
     setBadgeRecords({});
+    setMasteryRecords({});
     setAnswerRecords([]);
     setMigratedFromDataVersion("");
     setPlayer(null);
@@ -200,10 +220,14 @@ export function App() {
       return;
     }
 
+    const selectedQuestions = selectLevelQuestions(level, model.runtime.getQuestionsByLevel(level.levelId), {
+      wrongRecords,
+      supplementalQuestions: model.reserveQuestions,
+    });
     setPlayer({
       mode: "level",
       levelId: level.levelId,
-      questionIds: model.runtime.getQuestionsByLevel(level.levelId).map((question) => question.questionId),
+      questionIds: selectedQuestions.map((question) => question.questionId),
       index: 0,
       selectedAnswer: "",
       locked: false,
@@ -301,6 +325,7 @@ export function App() {
   };
 
   const submitReviewResult = (answerResult: AnswerResult) => {
+    setMasteryRecords((records) => updateMasteryRecords(records, [answerResult]));
     if (answerResult.isCorrect) {
       setWrongRecords((records) => markWrongRecordSolved(records, answerResult.questionId));
       setBadgeRecords((records) =>
@@ -352,11 +377,14 @@ export function App() {
     if (!player?.levelId) return;
     const level = model.runtime.getLevel(player.levelId);
     const result = finishLevel(level, player.results);
+    const nextMasteryRecords = updateMasteryRecords(masteryRecords, player.results);
+    setMasteryRecords(nextMasteryRecords);
     setLevelResult({
       levelId: result.levelId,
       correctCount: result.correctCount,
       total: result.total,
       passed: result.isPassed,
+      masteryItems: buildLevelMasterySummaries(model, nextMasteryRecords, level),
     });
 
     if (!result.isPassed) {
@@ -388,10 +416,13 @@ export function App() {
   const finishCurrentBoss = () => {
     if (!player) return;
     const result = finishBoss(model.bossTask, player.results);
+    const nextMasteryRecords = updateMasteryRecords(masteryRecords, player.results);
+    setMasteryRecords(nextMasteryRecords);
     setBossResult({
       correctCount: result.correctCount,
       total: result.total,
       passed: result.isPassed,
+      masteryItems: buildBossMasterySummaries(model, nextMasteryRecords),
     });
 
     if (!result.isPassed) {
@@ -432,11 +463,11 @@ export function App() {
       case "levelResult":
         return levelResult ? <LevelResultScreen result={levelResult} onRetry={() => startLevel(levelResult.levelId)} onKnowledge={() => openView("knowledge")} /> : null;
       case "bossResult":
-        return bossResult ? <BossResultScreen onRetry={startBoss} onKnowledge={() => openView("knowledge")} /> : null;
+        return bossResult ? <BossResultScreen result={bossResult} onRetry={startBoss} onKnowledge={() => openView("knowledge")} /> : null;
       case "clue":
-        return <ClueScreen model={model} progress={progress} levelId={lastClueLevelId} onContinue={progress.bossUnlocked ? startBoss : startNextLevel} onKnowledge={() => openView("knowledge")} />;
+        return <ClueScreen model={model} progress={progress} masteryRecords={masteryRecords} levelId={lastClueLevelId} onContinue={progress.bossUnlocked ? startBoss : startNextLevel} onKnowledge={() => openView("knowledge")} />;
       case "closing":
-        return <ClosingScreen progress={progress} wrongRecords={wrongRecords} onMap={() => openView("map")} onKnowledge={() => openView("knowledge")} onWrongs={() => openView("wrongs")} />;
+        return <ClosingScreen model={model} progress={progress} masteryRecords={masteryRecords} wrongRecords={wrongRecords} onMap={() => openView("map")} onKnowledge={() => openView("knowledge")} onWrongs={() => openView("wrongs")} />;
       case "wrongs":
         return <WrongCaseHall model={model} wrongRecords={wrongRecords} onMap={() => openView("map")} onReview={startReview} />;
       case "knowledge":
@@ -461,6 +492,7 @@ export function App() {
     setProgress(storedState.progress);
     setWrongRecords(storedState.wrongRecords);
     setBadgeRecords(storedState.badgeRecords);
+    setMasteryRecords(storedState.masteryRecords);
     setAnswerRecords(storedState.answerRecords);
     setMigratedFromDataVersion(storedState.migratedFromDataVersion);
     setView(storedState.user.started ? "map" : "start");
@@ -820,6 +852,7 @@ function LevelResultScreen({ result, onRetry, onKnowledge }: { result: LevelResu
       <p className="lead">
         你答对了 {result.correctCount}/{result.total} 题。先整理一下思路，再重新调查这一关。
       </p>
+      <MasteryPanel title="本关能力记录" items={result.masteryItems} />
       <div className="action-row">
         <button className="btn primary" type="button" onClick={onRetry}>
           重新挑战
@@ -832,9 +865,24 @@ function LevelResultScreen({ result, onRetry, onKnowledge }: { result: LevelResu
   );
 }
 
-function ClueScreen({ model, progress, levelId, onContinue, onKnowledge }: { model: RuntimeModel; progress: LearningProgress; levelId: string; onContinue: () => void; onKnowledge: () => void }) {
+function ClueScreen({
+  model,
+  progress,
+  masteryRecords,
+  levelId,
+  onContinue,
+  onKnowledge,
+}: {
+  model: RuntimeModel;
+  progress: LearningProgress;
+  masteryRecords: MasteryRecordMap;
+  levelId: string;
+  onContinue: () => void;
+  onKnowledge: () => void;
+}) {
   const level = model.runtime.getLevel(levelId || model.levels[0].levelId);
   const clue = model.runtime.getClues().find((item) => item.levelId === level.levelId);
+  const masteryItems = buildLevelMasterySummaries(model, masteryRecords, level);
   return (
     <section className="screen result-panel">
       <p className="tag">调查完成</p>
@@ -844,6 +892,7 @@ function ClueScreen({ model, progress, levelId, onContinue, onKnowledge }: { mod
         <p>{clue?.text ?? "这张知识线索卡已经收入线索库。"}</p>
       </div>
       <p className="lead">这张知识线索卡已经收入线索库。</p>
+      <MasteryPanel title="本关能力记录" items={masteryItems} />
       <div className="action-row">
         <button className="btn primary" type="button" onClick={onContinue}>
           {progress.bossUnlocked ? "挑战 Boss" : "继续下一关"}
@@ -856,11 +905,12 @@ function ClueScreen({ model, progress, levelId, onContinue, onKnowledge }: { mod
   );
 }
 
-function BossResultScreen({ onRetry, onKnowledge }: { onRetry: () => void; onKnowledge: () => void }) {
+function BossResultScreen({ result, onRetry, onKnowledge }: { result: BossResultView; onRetry: () => void; onKnowledge: () => void }) {
   return (
     <section className="screen result-panel">
       <h1>Boss 的谜题还没有完全破解</h1>
       <p className="lead">你可以先去线索库看看提示，也可以马上再挑战一次。</p>
+      <MasteryPanel title="Boss 能力记录" items={result.masteryItems} />
       <div className="action-row">
         <button className="btn primary" type="button" onClick={onRetry}>
           再挑战一次
@@ -873,19 +923,38 @@ function BossResultScreen({ onRetry, onKnowledge }: { onRetry: () => void; onKno
   );
 }
 
-function ClosingScreen({ progress, wrongRecords, onMap, onKnowledge, onWrongs }: { progress: LearningProgress; wrongRecords: WrongRecordMap; onMap: () => void; onKnowledge: () => void; onWrongs: () => void }) {
+function ClosingScreen({
+  model,
+  progress,
+  masteryRecords,
+  wrongRecords,
+  onMap,
+  onKnowledge,
+  onWrongs,
+}: {
+  model: RuntimeModel;
+  progress: LearningProgress;
+  masteryRecords: MasteryRecordMap;
+  wrongRecords: WrongRecordMap;
+  onMap: () => void;
+  onKnowledge: () => void;
+  onWrongs: () => void;
+}) {
   const openWrongCount = Object.values(wrongRecords).filter((item) => item.status === "open").length;
+  const unitMasteryItems = buildUnitMasterySummaries(model, masteryRecords);
+  const masteredCount = unitMasteryItems.filter((item) => item.state === "mastered" || item.state === "learning").length;
   return (
     <section className="screen result-panel">
       <p className="tag">案件成功破解</p>
       <h1>真相：徽章没有丢</h1>
       <p className="lead">35 枚徽章每队分 6 枚，只能分给 5 个完整小队，还剩 5 枚。剩下的徽章不够再分一个完整小队，所以狐狸配送员的说法不对。</p>
       <div className="stat-grid">
-        <Stat label="掌握知识点" value="4" />
+        <Stat label="基本达标知识点" value={`${masteredCount}/${unitMasteryItems.length}`} />
         <Stat label="收集线索" value={progress.unlockedClueIds.length} />
         <Stat label="未侦破错题" value={openWrongCount} />
         <Stat label="新增勋章" value="🏅" />
       </div>
+      <MasteryPanel title="单元知识点报告" items={unitMasteryItems} />
       <p>动物侦探学院为你颁发“破案小能手”勋章。</p>
       <div className="action-row">
         <button className="btn primary" type="button" onClick={onMap}>
@@ -1084,6 +1153,35 @@ function Stat({ label, value }: { label: string; value: string | number }) {
   );
 }
 
+function MasteryPanel({ title, items }: { title: string; items: MasterySummary[] }) {
+  if (items.length === 0) return null;
+  return (
+    <section className="mastery-panel" aria-label={title}>
+      <h2>{title}</h2>
+      <div className="mastery-list">
+        {items.map((item) => (
+          <div className={`mastery-item ${item.state}`} key={item.id}>
+            <div>
+              <strong>{item.name}</strong>
+              <span>{masteryStateLabel(item.state)}</span>
+            </div>
+            <div className="mastery-score" aria-label={`${item.name} ${item.score} 分`}>
+              {item.score}
+            </div>
+            <div className="mastery-bar" aria-hidden="true">
+              <span style={{ width: `${item.score}%` }} />
+            </div>
+            <small>
+              {item.correctCount}/{item.totalCount} 题
+            </small>
+            <p className="mastery-tip">{item.recommendation}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
   const caseData = runtime.getCase();
   const levels = runtime.getLevels(caseData.caseId).slice().sort((a, b) => a.order - b.order);
@@ -1114,6 +1212,64 @@ function buildRuntimeModel(runtime: ContentRuntime): RuntimeModel {
     knowledgeCards,
     knowledgeNameById,
   };
+}
+
+function buildLevelMasterySummaries(model: RuntimeModel, records: MasteryRecordMap, level: LevelConfig): MasterySummary[] {
+  return level.skillIds.map((skillId) => {
+    const skill = model.runtime.getSkill(skillId);
+    const record = getMasteryRecord(records, "skill", skillId);
+    return toMasterySummary(skillId, skill.name, record);
+  });
+}
+
+function buildBossMasterySummaries(model: RuntimeModel, records: MasteryRecordMap): MasterySummary[] {
+  return model.bossTask.targetSkillIds.map((skillId) => {
+    const skill = model.runtime.getSkill(skillId);
+    const record = getMasteryRecord(records, "skill", skillId);
+    return toMasterySummary(skillId, skill.name, record);
+  });
+}
+
+function buildUnitMasterySummaries(model: RuntimeModel, records: MasteryRecordMap): MasterySummary[] {
+  const knowledgePointIds = Array.from(new Set([...model.caseData.targetKnowledgePointIds, ...model.bossTask.targetKnowledgePointIds]));
+  return knowledgePointIds.map((knowledgePointId) =>
+    toMasterySummary(knowledgePointId, model.knowledgeNameById.get(knowledgePointId) ?? knowledgePointId, getMasteryRecord(records, "knowledgePoint", knowledgePointId)),
+  );
+}
+
+function toMasterySummary(id: string, name: string, record?: ReturnType<typeof getMasteryRecord>): MasterySummary {
+  return {
+    id,
+    name,
+    score: record?.score ?? 0,
+    state: record?.state ?? "not_started",
+    correctCount: record?.correctCount ?? 0,
+    totalCount: record?.totalCount ?? 0,
+    recommendation: masteryRecommendation(record?.state ?? "not_started", record?.totalCount ?? 0),
+  };
+}
+
+function masteryStateLabel(state: MasteryState) {
+  const labels: Record<MasteryState, string> = {
+    not_started: "待练习",
+    needs_review: "需要复习",
+    unstable: "还不稳定",
+    learning: "基本掌握",
+    mastered: "掌握",
+  };
+  return labels[state];
+}
+
+function masteryRecommendation(state: MasteryState, totalCount: number) {
+  if (totalCount > 0 && totalCount < 3 && (state === "learning" || state === "mastered")) return "已经答得不错，再练几题确认真的稳。";
+  const recommendations: Record<MasteryState, string> = {
+    not_started: "还没有足够记录，先完成对应闯关。",
+    needs_review: "建议先看线索卡，再练同类题。",
+    unstable: "思路快接上了，重点复盘错因。",
+    learning: "基本达标，可以继续挑战应用题。",
+    mastered: "表现稳定，可以放心进入综合挑战。",
+  };
+  return recommendations[state];
 }
 
 function findQuestion(model: RuntimeModel, questionId?: string) {

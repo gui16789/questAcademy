@@ -1,0 +1,1009 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>动物侦探城 UI 视觉稿 - 闯关主界面</title>
+    <style>
+      :root {
+        --ink: #2f3a45;
+        --muted: #6b7a8a;
+        --paper: #fff9ef;
+        --paper-deep: #fff0d8;
+        --surface: #fffdf8;
+        --orange: #ff8a3d;
+        --orange-deep: #e96f22;
+        --blue: #5bb9f0;
+        --blue-deep: #217db4;
+        --green: #68c77c;
+        --green-deep: #2e8d49;
+        --gold: #ffc83d;
+        --red: #f66b6b;
+        --line: #d9e2ec;
+        --brown: #7d5630;
+        --shadow: 0 18px 42px rgba(111, 79, 37, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-width: 1180px;
+        min-height: 900px;
+        color: var(--ink);
+        background: #f5fbff;
+        font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        letter-spacing: 0;
+      }
+
+      body {
+        padding: 26px;
+      }
+
+      .mockup {
+        position: relative;
+        width: 1440px;
+        min-height: 900px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid rgba(125, 86, 48, 0.18);
+        border-radius: 28px;
+        background:
+          linear-gradient(180deg, rgba(255, 253, 248, 0.92) 0 13%, rgba(255, 249, 239, 0.7) 13% 100%),
+          linear-gradient(130deg, #fff9ef 0%, #e8f8ff 42%, #ecf8e8 100%);
+        box-shadow: 0 26px 70px rgba(47, 58, 69, 0.18);
+      }
+
+      .mockup::before {
+        content: "";
+        position: absolute;
+        inset: 88px 0 auto;
+        height: 236px;
+        background:
+          linear-gradient(180deg, rgba(91, 185, 240, 0.4), rgba(255, 255, 255, 0)),
+          repeating-linear-gradient(90deg, rgba(47, 58, 69, 0.05) 0 2px, transparent 2px 74px);
+        clip-path: polygon(0 18%, 9% 13%, 19% 28%, 31% 9%, 43% 20%, 56% 6%, 70% 24%, 83% 10%, 100% 22%, 100% 100%, 0 100%);
+      }
+
+      .mockup::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 238px;
+        background:
+          linear-gradient(180deg, rgba(104, 199, 124, 0), rgba(104, 199, 124, 0.34)),
+          repeating-linear-gradient(-8deg, rgba(46, 141, 73, 0.08) 0 8px, transparent 8px 34px);
+        clip-path: polygon(0 32%, 10% 18%, 24% 30%, 38% 12%, 52% 28%, 65% 15%, 79% 30%, 91% 18%, 100% 28%, 100% 100%, 0 100%);
+      }
+
+      .topbar {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 88px;
+        padding: 0 34px;
+        border-bottom: 2px solid rgba(125, 86, 48, 0.12);
+        background: rgba(255, 253, 248, 0.78);
+        backdrop-filter: blur(12px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .brand-mark {
+        position: relative;
+        display: grid;
+        width: 54px;
+        height: 54px;
+        place-items: center;
+        border: 3px solid var(--brown);
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: inset 0 -7px rgba(125, 86, 48, 0.16), 0 6px 0 rgba(125, 86, 48, 0.1);
+      }
+
+      .brand-mark svg {
+        width: 31px;
+        height: 31px;
+      }
+
+      .brand-title {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 900;
+      }
+
+      .brand-subtitle {
+        margin: 7px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-width: 92px;
+        height: 44px;
+        border: 2px solid rgba(47, 58, 69, 0.1);
+        border-radius: 16px;
+        color: var(--ink);
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 800;
+        box-shadow: 0 5px 0 rgba(47, 58, 69, 0.07);
+      }
+
+      .nav-button.active {
+        border-color: var(--brown);
+        background: var(--orange);
+        color: #44240f;
+      }
+
+      .student-chip {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        min-width: 188px;
+        height: 54px;
+        padding: 0 16px 0 10px;
+        border: 2px solid rgba(125, 86, 48, 0.16);
+        border-radius: 20px;
+        background: #fff7e8;
+        font-weight: 800;
+      }
+
+      .avatar {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        border: 2px solid var(--brown);
+        border-radius: 50%;
+        background: #ffcf92;
+      }
+
+      .avatar::before,
+      .avatar::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--ink);
+      }
+
+      .avatar::before {
+        left: 10px;
+      }
+
+      .avatar::after {
+        right: 10px;
+      }
+
+      .avatar span {
+        position: absolute;
+        left: 12px;
+        bottom: 8px;
+        width: 10px;
+        height: 5px;
+        border-bottom: 2px solid var(--ink);
+        border-radius: 50%;
+      }
+
+      .main {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 844px 470px;
+        gap: 28px;
+        padding: 30px 34px 32px;
+      }
+
+      .case-heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-column: 1 / -1;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--orange-deep);
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      .case-heading h1 {
+        margin: 0;
+        font-size: 44px;
+        line-height: 1.05;
+        font-weight: 900;
+      }
+
+      .case-heading p {
+        max-width: 648px;
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+
+      .case-stamp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 164px;
+        height: 72px;
+        margin-top: 8px;
+        border: 4px solid rgba(233, 111, 34, 0.78);
+        border-radius: 18px;
+        color: var(--orange-deep);
+        background: rgba(255, 255, 255, 0.74);
+        font-size: 22px;
+        font-weight: 900;
+        transform: rotate(4deg);
+      }
+
+      .map-stage,
+      .mission-board {
+        position: relative;
+        border: 3px solid rgba(125, 86, 48, 0.22);
+        border-radius: 24px;
+        background: rgba(255, 253, 248, 0.86);
+        box-shadow: var(--shadow);
+      }
+
+      .map-stage {
+        min-height: 484px;
+        overflow: hidden;
+        padding: 26px 28px;
+      }
+
+      .map-stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(155deg, rgba(255, 200, 61, 0.16) 0 22%, transparent 22%),
+          linear-gradient(32deg, transparent 0 56%, rgba(91, 185, 240, 0.14) 56% 100%);
+      }
+
+      .district-row {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 390px;
+      }
+
+      .place {
+        position: relative;
+        width: 150px;
+        min-height: 196px;
+        padding: 12px;
+        border: 2px solid rgba(47, 58, 69, 0.1);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 12px 24px rgba(47, 58, 69, 0.1);
+      }
+
+      .place:nth-child(2) {
+        margin-top: 74px;
+      }
+
+      .place:nth-child(3) {
+        margin-top: 26px;
+      }
+
+      .place:nth-child(4) {
+        margin-top: 96px;
+      }
+
+      .place.done {
+        border-color: rgba(46, 141, 73, 0.34);
+      }
+
+      .place.current {
+        border-color: var(--brown);
+        background: #fff8db;
+        box-shadow: 0 16px 28px rgba(255, 138, 61, 0.18);
+      }
+
+      .place.locked {
+        opacity: 0.7;
+      }
+
+      .building-art {
+        position: relative;
+        height: 92px;
+        margin-bottom: 14px;
+      }
+
+      .building-art .roof {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 3px;
+        height: 30px;
+        border: 3px solid var(--brown);
+        border-radius: 18px 18px 8px 8px;
+        background: var(--orange);
+      }
+
+      .building-art .house {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        top: 28px;
+        height: 58px;
+        border: 3px solid var(--brown);
+        border-radius: 10px;
+        background: #ffe4a6;
+      }
+
+      .building-art .house::before,
+      .building-art .house::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        width: 14px;
+        height: 14px;
+        border: 2px solid var(--brown);
+        border-radius: 4px;
+        background: #c9efff;
+      }
+
+      .building-art .house::before {
+        left: 9px;
+      }
+
+      .building-art .house::after {
+        right: 9px;
+      }
+
+      .place h2 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.25;
+        font-weight: 900;
+      }
+
+      .place p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .status-badge {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 2px solid rgba(47, 58, 69, 0.12);
+        border-radius: 50%;
+        background: #ffffff;
+      }
+
+      .status-badge svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .trail {
+        position: absolute;
+        left: 140px;
+        right: 150px;
+        top: 220px;
+        height: 96px;
+        border-top: 8px dotted rgba(125, 86, 48, 0.28);
+        transform: rotate(5deg);
+      }
+
+      .mentor {
+        position: absolute;
+        left: 38px;
+        bottom: 22px;
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+      }
+
+      .mentor-face {
+        position: relative;
+        width: 86px;
+        height: 90px;
+        border: 3px solid var(--brown);
+        border-radius: 46px 46px 34px 34px;
+        background: #dbad71;
+        box-shadow: inset 0 -10px rgba(125, 86, 48, 0.12);
+      }
+
+      .mentor-face::before,
+      .mentor-face::after {
+        content: "";
+        position: absolute;
+        top: -22px;
+        width: 22px;
+        height: 42px;
+        border: 3px solid var(--brown);
+        border-radius: 18px;
+        background: #f3cf9d;
+      }
+
+      .mentor-face::before {
+        left: 12px;
+        transform: rotate(-16deg);
+      }
+
+      .mentor-face::after {
+        right: 12px;
+        transform: rotate(16deg);
+      }
+
+      .mentor-eye {
+        position: absolute;
+        top: 34px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--ink);
+      }
+
+      .mentor-eye.left {
+        left: 27px;
+      }
+
+      .mentor-eye.right {
+        right: 27px;
+      }
+
+      .mentor-mouth {
+        position: absolute;
+        left: 34px;
+        bottom: 24px;
+        width: 18px;
+        height: 9px;
+        border-bottom: 3px solid var(--ink);
+        border-radius: 50%;
+      }
+
+      .speech {
+        max-width: 420px;
+        padding: 16px 18px;
+        border: 2px solid rgba(47, 58, 69, 0.1);
+        border-radius: 20px 20px 20px 6px;
+        background: #ffffff;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1.45;
+        font-weight: 800;
+        box-shadow: 0 10px 22px rgba(47, 58, 69, 0.1);
+      }
+
+      .mission-board {
+        min-height: 484px;
+        padding: 24px;
+      }
+
+      .board-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .board-title p {
+        margin: 0 0 8px;
+        color: var(--blue-deep);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .board-title h2 {
+        margin: 0;
+        font-size: 27px;
+        line-height: 1.15;
+        font-weight: 900;
+      }
+
+      .progress-ring {
+        display: grid;
+        width: 76px;
+        height: 76px;
+        place-items: center;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at center, #fffdf8 0 57%, transparent 58%),
+          conic-gradient(var(--green) 0 75%, #e7edf2 75% 100%);
+        color: var(--green-deep);
+        font-size: 21px;
+        font-weight: 900;
+      }
+
+      .question {
+        padding: 20px;
+        border: 2px solid rgba(217, 226, 236, 0.9);
+        border-radius: 20px;
+        background: #ffffff;
+      }
+
+      .question-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 32px;
+        padding: 0 12px;
+        border-radius: 999px;
+        background: #e8f8ff;
+        color: var(--blue-deep);
+      }
+
+      .question h3 {
+        margin: 0 0 18px;
+        font-size: 24px;
+        line-height: 1.45;
+        font-weight: 900;
+      }
+
+      .visual-sum {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 72px;
+        margin-bottom: 18px;
+        border: 2px dashed rgba(125, 86, 48, 0.24);
+        border-radius: 18px;
+        background: #fff8e8;
+      }
+
+      .badge-dot {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--brown);
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: inset 0 -4px rgba(125, 86, 48, 0.12);
+      }
+
+      .option-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .option {
+        min-height: 58px;
+        border: 2px solid rgba(47, 58, 69, 0.09);
+        border-radius: 17px;
+        background: #fffdf8;
+        color: var(--ink);
+        font-size: 19px;
+        font-weight: 900;
+        box-shadow: 0 5px 0 rgba(47, 58, 69, 0.06);
+      }
+
+      .option.selected {
+        border-color: var(--brown);
+        background: #ffdf9c;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+      }
+
+      .hint {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .primary-action {
+        min-width: 144px;
+        height: 54px;
+        border: 3px solid var(--brown);
+        border-radius: 19px;
+        background: var(--orange);
+        color: #44240f;
+        font-size: 19px;
+        font-weight: 900;
+        box-shadow: 0 7px 0 rgba(125, 86, 48, 0.22);
+      }
+
+      .clue-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .clue {
+        min-height: 68px;
+        padding: 10px;
+        border: 2px solid rgba(47, 58, 69, 0.09);
+        border-radius: 18px;
+        background: #fff7e8;
+      }
+
+      .clue strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .clue span {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .mastery-dock {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 250px repeat(4, 1fr);
+        gap: 14px;
+        grid-column: 1 / -1;
+        align-items: stretch;
+        margin-top: 2px;
+      }
+
+      .mastery-title {
+        padding: 20px 18px;
+        border: 3px solid rgba(125, 86, 48, 0.18);
+        border-radius: 22px;
+        background: rgba(255, 253, 248, 0.88);
+        box-shadow: var(--shadow);
+      }
+
+      .mastery-title p {
+        margin: 0 0 10px;
+        color: var(--orange-deep);
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .mastery-title h2 {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.18;
+        font-weight: 900;
+      }
+
+      .mastery-card {
+        position: relative;
+        min-height: 148px;
+        padding: 18px 16px;
+        border: 2px solid rgba(217, 226, 236, 0.9);
+        border-radius: 22px;
+        background: #ffffff;
+        box-shadow: 0 12px 28px rgba(47, 58, 69, 0.1);
+      }
+
+      .mastery-card h3 {
+        margin: 0 0 10px;
+        font-size: 19px;
+        line-height: 1.2;
+        font-weight: 900;
+      }
+
+      .score {
+        display: flex;
+        align-items: baseline;
+        gap: 3px;
+        margin-bottom: 12px;
+        color: var(--green-deep);
+      }
+
+      .score strong {
+        font-size: 36px;
+        line-height: 1;
+        font-weight: 900;
+      }
+
+      .score span {
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      .bar {
+        height: 12px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: #eaf0f5;
+      }
+
+      .bar span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--green), var(--gold));
+      }
+
+      .mastery-card small {
+        display: block;
+        margin-top: 11px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.35;
+        font-weight: 800;
+      }
+
+      .review-note {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border-radius: 50%;
+        background: #ffe3e3;
+      }
+
+      .review-note svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .magnifier {
+        width: 17px;
+        height: 17px;
+      }
+
+      svg {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mockup" aria-label="动物侦探城闯关主界面视觉稿">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M14 6h4l2 5h-8l2-5Z" fill="#7D5630" />
+              <path d="M8 11h16l-2 13H10L8 11Z" fill="#fff8db" stroke="#7D5630" stroke-width="2" />
+              <path d="M13 17h6M12 21h8" stroke="#7D5630" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div>
+            <p class="brand-title">动物侦探学院</p>
+            <p class="brand-subtitle">北师大版二年级下册 · 第一单元 除法</p>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="主导航">
+          <div class="nav-button active">
+            <svg class="magnifier" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="10" cy="10" r="6" stroke="#2f3a45" stroke-width="3" />
+              <path d="m15 15 5 5" stroke="#2f3a45" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            案件
+          </div>
+          <div class="nav-button">错题馆</div>
+          <div class="nav-button">知识卡</div>
+          <div class="nav-button">勋章</div>
+        </nav>
+
+        <div class="student-chip">
+          <div class="avatar" aria-hidden="true"><span></span></div>
+          小侦探 安安
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="case-heading">
+          <div>
+            <p class="eyebrow">CASE 01 · 胡萝卜徽章失踪案</p>
+            <h1>用除法线索找回学院徽章</h1>
+            <p>完成 4 个调查地点，收集线索，再挑战最终推理。每道题都会记录对应知识点，通关后生成掌握能力评分。</p>
+          </div>
+          <div class="case-stamp">调查中</div>
+        </section>
+
+        <section class="map-stage" aria-label="关卡地图">
+          <div class="trail" aria-hidden="true"></div>
+          <div class="district-row">
+            <article class="place done">
+              <div class="status-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="m6 12 4 4 8-9" stroke="#2e8d49" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="building-art" aria-hidden="true">
+                <div class="roof"></div>
+                <div class="house"></div>
+              </div>
+              <h2>仓库平均分</h2>
+              <p>判断每份是否一样多</p>
+            </article>
+
+            <article class="place current">
+              <div class="status-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="11" cy="11" r="6" stroke="#e96f22" stroke-width="3" />
+                  <path d="m16 16 4 4" stroke="#e96f22" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="building-art" aria-hidden="true">
+                <div class="roof"></div>
+                <div class="house"></div>
+              </div>
+              <h2>分发记录表</h2>
+              <p>读懂除法算式含义</p>
+            </article>
+
+            <article class="place">
+              <div class="status-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4v16M4 12h16" stroke="#5bb9f0" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="building-art" aria-hidden="true">
+                <div class="roof"></div>
+                <div class="house"></div>
+              </div>
+              <h2>剩下的徽章</h2>
+              <p>计算商和余数</p>
+            </article>
+
+            <article class="place locked">
+              <div class="status-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="#6b7a8a" stroke-width="3" stroke-linecap="round" />
+                  <rect x="6" y="11" width="12" height="9" rx="2" stroke="#6b7a8a" stroke-width="3" />
+                </svg>
+              </div>
+              <div class="building-art" aria-hidden="true">
+                <div class="roof"></div>
+                <div class="house"></div>
+              </div>
+              <h2>可疑的说法</h2>
+              <p>判断余数小于除数</p>
+            </article>
+          </div>
+
+          <div class="mentor">
+            <div class="mentor-face" aria-hidden="true">
+              <span class="mentor-eye left"></span>
+              <span class="mentor-eye right"></span>
+              <span class="mentor-mouth"></span>
+            </div>
+            <div class="speech">分发台的记录很关键。先找总数和份数，再判断算式里的商表示什么。</div>
+          </div>
+        </section>
+
+        <aside class="mission-board" aria-label="当前挑战">
+          <div class="board-top">
+            <div class="board-title">
+              <p>当前挑战 · 第 2 关 / 4 题</p>
+              <h2>分发记录表</h2>
+            </div>
+            <div class="progress-ring">75%</div>
+          </div>
+
+          <section class="question">
+            <div class="question-meta">
+              <span class="tag">知识点：除法算式</span>
+              <span>第 3 题</span>
+            </div>
+            <h3>12 枚徽章平均分给 3 个小队，每个小队分到几枚？下面哪个算式最合适？</h3>
+            <div class="visual-sum" aria-hidden="true">
+              <span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span>
+              <span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span>
+              <span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span><span class="badge-dot"></span>
+            </div>
+            <div class="option-grid">
+              <button class="option">12 + 3 = 15</button>
+              <button class="option selected">12 ÷ 3 = 4</button>
+              <button class="option">12 - 3 = 9</button>
+              <button class="option">3 × 4 = 12</button>
+            </div>
+            <div class="actions">
+              <div class="hint">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3a7 7 0 0 0-4 12.7V19h8v-3.3A7 7 0 0 0 12 3Z" stroke="#6b7a8a" stroke-width="3" stroke-linejoin="round" />
+                  <path d="M9 22h6" stroke="#6b7a8a" stroke-width="3" stroke-linecap="round" />
+                </svg>
+                提示：平均分通常用除法。
+              </div>
+              <button class="primary-action">提交答案</button>
+            </div>
+          </section>
+
+          <div class="clue-strip">
+            <div class="clue"><strong>线索 1</strong><span>仓库数量</span></div>
+            <div class="clue"><strong>线索 2</strong><span>分发记录</span></div>
+            <div class="clue"><strong>线索 3</strong><span>待发现</span></div>
+            <div class="clue"><strong>Boss</strong><span>未解锁</span></div>
+          </div>
+        </aside>
+
+        <section class="mastery-dock" aria-label="单元知识点掌握评分">
+          <div class="mastery-title">
+            <p>能力雷达 · 自动记录</p>
+            <h2>单元知识点掌握报告</h2>
+          </div>
+
+          <article class="mastery-card">
+            <h3>平均分</h3>
+            <div class="score"><strong>96</strong><span>分</span></div>
+            <div class="bar"><span style="width: 96%"></span></div>
+            <small>已掌握：判断每份是否一样多、计算每份数量。</small>
+          </article>
+
+          <article class="mastery-card">
+            <h3>除法算式</h3>
+            <div class="score"><strong>82</strong><span>分</span></div>
+            <div class="bar"><span style="width: 82%"></span></div>
+            <small>学习中：继续练习商在情境中的含义。</small>
+          </article>
+
+          <article class="mastery-card">
+            <span class="review-note" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 8v5" stroke="#f66b6b" stroke-width="3" stroke-linecap="round" />
+                <path d="M12 17h.01" stroke="#f66b6b" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </span>
+            <h3>有余数除法</h3>
+            <div class="score" style="color: #e96f22"><strong>68</strong><span>分</span></div>
+            <div class="bar"><span style="width: 68%; background: linear-gradient(90deg, #ff8a3d, #ffc83d)"></span></div>
+            <small>需巩固：容易忘记写剩余数量。</small>
+          </article>
+
+          <article class="mastery-card">
+            <h3>余数规则</h3>
+            <div class="score" style="color: #6b7a8a"><strong>--</strong><span>分</span></div>
+            <div class="bar"><span style="width: 16%; background: #d9e2ec"></span></div>
+            <small>完成第 4 关后生成评分。</small>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

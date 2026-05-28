@@ -56,6 +56,7 @@ npm run test
 npm run validate:content
 npm run validate:content -- --package math.bsd.g2.s2.unit-1-division
 npm run validate:content -- --all
+npm run create:content-package -- --id math.bsd.g2.s2.unit-2-direction --title "北师大版二年级下册第二单元：方向与位置"
 npm run build
 npm run test:regression
 npm run test:regression -- --package math.bsd.g2.s2.unit-1-division
@@ -63,6 +64,8 @@ npm run test:regression -- --all
 ```
 
 `npm run test:regression` 会启动本地 Vite 服务并使用本机 Chrome headless 跑完整浏览器回归。默认回归 registry 默认内容包；`--package` 可指定内容包；`--all` 会回归 registry 内全部内容包。若 Chrome 不在默认路径，可设置 `CHROME_PATH`。
+
+`npm run create:content-package` 会生成一个草稿内容包骨架，默认不登记到 registry。补齐内容并确认可审核后，再手动登记到 `content/registry.json`。
 
 ## 主要目录
 
@@ -73,6 +76,7 @@ npm run test:regression -- --all
 - `content/`：教材、知识图谱、案件、题目、知识卡、线索和勋章内容包。
 - `content/registry.json`：内容包注册表。
 - `scripts/validate-content.mjs`：内容包 registry、结构和引用校验脚本。
+- `scripts/create-content-package.mjs`：内容包草稿骨架生成脚本。
 - `scripts/regression-smoke.mjs`：浏览器回归脚本，支持按内容包运行。
 - `docs/`：产品、架构、GitHub 流程、测试和发布文档。
 
@@ -80,5 +84,6 @@ npm run test:regression -- --all
 
 - `CONTRIBUTING.md`：分支、提交、PR、文档和内容协作规范。
 - `docs/README.md`：文档中心入口。
+- `docs/北师大版二年级数学全册接入规划.md`：北师大版二年级全册内容包接入路线。
 - `docs/GITHUB_WORKFLOW.md`：GitHub Issue、PR、Review 和发布流程。
 - `docs/CODE_AND_CONTENT_CONVENTIONS.md`：代码、内容、题目、存储和测试规范。

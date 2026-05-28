@@ -300,6 +300,11 @@ export async function validateContentPackage(contentRoot, options = {}) {
   }
 
   const allQuestions = collectQuestions(questionGroups);
+  const questionCountByKnowledgePointId = countBy(allQuestions, ({ question }) => question.knowledgePointId);
+  const questionCountBySkillId = countBy(allQuestions, ({ question }) => question.skillId);
+  const questionCountByPatternId = countBy(allQuestions, ({ question }) => question.questionPatternId);
+  const cardCountByKnowledgePointId = countBy(cardData?.knowledgeCards ?? [], (card) => card.knowledgePointId);
+  const questionsByLevelId = groupBy(allQuestions, ({ question }) => question.levelId);
   for (const { file, question } of allQuestions) {
     requireFields(file, question.questionId, question, [
       "questionId",
@@ -334,6 +339,30 @@ export async function validateContentPackage(contentRoot, options = {}) {
     expectKnown(file, question.questionId, "levelId", question.levelId, levelIds, fail);
   }
 
+  for (const node of textbook?.curriculumNodes ?? []) {
+    if ((node.mapsToKnowledgePointIds ?? []).length === 0) fail(manifest.files.textbook, node.curriculumNodeId, "expected at least 1 mapped knowledgePointId");
+  }
+
+  for (const point of knowledgeMap?.knowledgePoints ?? []) {
+    if ((questionCountByKnowledgePointId.get(point.knowledgePointId) ?? 0) === 0) fail(manifest.files.knowledgeMap, point.knowledgePointId, "expected at least 1 question covering this knowledgePointId");
+    if ((cardCountByKnowledgePointId.get(point.knowledgePointId) ?? 0) === 0) fail(manifest.files.knowledgeMap, point.knowledgePointId, "expected at least 1 knowledgeCard covering this knowledgePointId");
+  }
+
+  for (const skill of knowledgeMap?.skills ?? []) {
+    if ((questionCountBySkillId.get(skill.skillId) ?? 0) === 0) fail(manifest.files.knowledgeMap, skill.skillId, "expected at least 1 question covering this skillId");
+  }
+
+  for (const pattern of knowledgeMap?.questionPatterns ?? []) {
+    if ((questionCountByPatternId.get(pattern.questionPatternId) ?? 0) === 0) fail(manifest.files.knowledgeMap, pattern.questionPatternId, "expected at least 1 question covering this questionPatternId");
+  }
+
+  for (const level of caseData?.levels ?? []) {
+    const levelQuestionSkillIds = new Set((questionsByLevelId.get(level.levelId) ?? []).map(({ question }) => question.skillId));
+    for (const skillId of level.skillIds ?? []) {
+      if (!levelQuestionSkillIds.has(skillId)) fail(caseFile, level.levelId, `expected at least 1 level question covering declared skillId ${skillId}`);
+    }
+  }
+
   for (const badge of badgeData?.badges ?? []) {
     requireFields(badgeFile, badge.badgeId, badge, ["badgeId", "name", "description", "icon", "triggerRule", "isRepeatable"], errors);
     addUnique(badgeFile, badge.badgeId, badgeIds, "badgeId", fail);
@@ -361,6 +390,16 @@ export async function validateContentPackage(contentRoot, options = {}) {
   for (const misconceptionId of bossTask?.targetMisconceptionIds ?? []) expectKnown(bossGroup.file, bossTask.bossTaskId, "misconceptionId", misconceptionId, misconceptionIds, fail);
   for (const step of bossTask?.steps ?? []) expectKnown(bossGroup.file, step.stepId, "questionId", step.questionId, questionIds, fail);
   for (const cardId of bossTask?.failureReviewRoute?.fallbackKnowledgeCardIds ?? []) expectKnown(bossGroup.file, bossTask.bossTaskId, "knowledgeCardId", cardId, knowledgeCardIds, fail);
+  if (bossTask) {
+    const bossQuestions = allQuestions.filter(({ question }) => question.levelId === "boss");
+    const bossSkillIds = new Set([
+      ...bossQuestions.map(({ question }) => question.skillId),
+      ...(bossTask.steps ?? []).flatMap((step) => step.skillIds ?? []),
+    ]);
+    for (const skillId of bossTask.targetSkillIds ?? []) {
+      if (!bossSkillIds.has(skillId)) fail(bossGroup.file, bossTask.bossTaskId, `expected boss question or step covering target skillId ${skillId}`);
+    }
+  }
 
   for (const rule of reviewRuleData?.reviewRules ?? []) {
     requireFields(reviewRuleFile, rule.reviewRuleId, rule, [
@@ -438,6 +477,25 @@ function expectKnown(file, id, refType, refId, set, fail) {
 
 function collectQuestions(questionGroups) {
   return questionGroups.flatMap(({ file, data }) => (data?.questions ?? []).map((question) => ({ file, question })));
+}
+
+function countBy(items, getKey) {
+  const counts = new Map();
+  for (const item of items) {
+    const key = getKey(item);
+    if (!key) continue;
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  return counts;
+}
+
+function groupBy(items, getKey) {
+  const groups = new Map();
+  for (const item of items) {
+    const key = getKey(item);
+    groups.set(key, [...(groups.get(key) ?? []), item]);
+  }
+  return groups;
 }
 
 async function readJsonFile(file, errors, label) {

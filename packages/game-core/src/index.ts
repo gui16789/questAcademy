@@ -79,6 +79,28 @@ export interface BadgeRecord {
 
 export type BadgeRecordMap = Record<string, BadgeRecord>;
 
+export type MasteryDimension = "knowledgePoint" | "skill";
+export type MasteryState = "not_started" | "learning" | "unstable" | "mastered" | "needs_review";
+
+export interface MasteryRecord {
+  dimension: MasteryDimension;
+  id: string;
+  correctCount: number;
+  totalCount: number;
+  accuracy: number;
+  score: number;
+  state: MasteryState;
+  lastPracticedAt: string;
+}
+
+export type MasteryRecordMap = Record<string, MasteryRecord>;
+
+export interface SelectLevelQuestionsOptions {
+  maxQuestions?: number;
+  wrongRecords?: WrongRecordMap;
+  supplementalQuestions?: Question[];
+}
+
 export type GameEvent =
   | { type: "first_level_passed"; caseId: string; passedLevelIds: LevelId[] }
   | { type: "all_clues_collected"; caseId: string; unlockedClueIds: ClueId[] }
@@ -131,6 +153,30 @@ export function finishLevel(level: LevelConfig, answerResults: AnswerResult[]): 
     unlockedClueIds: isPassed ? [level.reward.clueId] : [],
     unlockedKnowledgeCardIds: isPassed ? level.reward.knowledgeCardIds : [],
   };
+}
+
+export function selectLevelQuestions(level: LevelConfig, questions: Question[], options: SelectLevelQuestionsOptions = {}): Question[] {
+  const maxQuestions = options.maxQuestions ?? level.passRule.total ?? questions.length;
+  const wrongRecords = options.wrongRecords ?? {};
+  const rankedQuestions = rankQuestions(questions, options.wrongRecords);
+  const rankedSupplementalQuestions = rankQuestions(getLevelSupplementalQuestions(level, options.supplementalQuestions ?? []), wrongRecords);
+  const selected: Question[] = [];
+  const selectedIds = new Set<QuestionId>();
+
+  for (const skillId of level.skillIds) {
+    const supplementalQuestion = rankedSupplementalQuestions.find(
+      (item) => item.skillId === skillId && questionPriority(item, wrongRecords) > 0 && !selectedIds.has(item.questionId),
+    );
+    const question = supplementalQuestion ?? rankedQuestions.find((item) => item.skillId === skillId && !selectedIds.has(item.questionId));
+    if (question) addSelectedQuestion(question, selected, selectedIds);
+  }
+
+  for (const question of rankQuestions([...questions, ...rankedSupplementalQuestions.filter((item) => questionPriority(item, wrongRecords) > 0)], wrongRecords)) {
+    if (selected.length >= maxQuestions) break;
+    addSelectedQuestion(question, selected, selectedIds);
+  }
+
+  return selected.slice(0, maxQuestions);
 }
 
 export function canStartBoss(progress: Pick<LearningProgress, "passedLevelIds">, levels: LevelConfig[]): boolean {
@@ -245,6 +291,39 @@ export function applyBossResult(progress: LearningProgress, bossResult: BossResu
   };
 }
 
+export function updateMasteryRecords(existingRecords: MasteryRecordMap, answerResults: AnswerResult[], practicedAt = new Date().toISOString()): MasteryRecordMap {
+  const nextRecords = { ...existingRecords };
+  const groupedResults = [
+    ...groupAnswerResults(answerResults, "knowledgePoint", (result) => result.knowledgePointId),
+    ...groupAnswerResults(answerResults, "skill", (result) => result.skillId),
+  ];
+
+  for (const group of groupedResults) {
+    const key = masteryRecordKey(group.dimension, group.id);
+    const existing = nextRecords[key];
+    const correctCount = (existing?.correctCount ?? 0) + group.correctCount;
+    const totalCount = (existing?.totalCount ?? 0) + group.totalCount;
+    const accuracy = totalCount > 0 ? correctCount / totalCount : 0;
+    const score = Math.round(accuracy * 100);
+    nextRecords[key] = {
+      dimension: group.dimension,
+      id: group.id,
+      correctCount,
+      totalCount,
+      accuracy,
+      score,
+      state: toMasteryState(score, totalCount),
+      lastPracticedAt: practicedAt,
+    };
+  }
+
+  return nextRecords;
+}
+
+export function getMasteryRecord(records: MasteryRecordMap, dimension: MasteryDimension, id: string): MasteryRecord | undefined {
+  return records[masteryRecordKey(dimension, id)];
+}
+
 export function normalizeAnswer(value: string): string {
   return String(value).trim().replace(/\s+/g, "").replace(/。/g, "").toLowerCase();
 }
@@ -266,4 +345,73 @@ function badgeEventMatches(badge: Badge, event: GameEvent): boolean {
 
 function unique<T>(items: T[]): T[] {
   return Array.from(new Set(items));
+}
+
+function rankQuestions(questions: Question[], wrongRecords: WrongRecordMap = {}): Question[] {
+  return questions
+    .slice()
+    .sort((left, right) => questionPriority(right, wrongRecords) - questionPriority(left, wrongRecords) || left.questionId.localeCompare(right.questionId));
+}
+
+function questionPriority(question: Question, wrongRecords: WrongRecordMap): number {
+  const wrongs = Object.values(wrongRecords).filter((record) => record.status === "open");
+  let score = 0;
+  if (wrongs.some((record) => record.questionId === question.questionId)) score += 4;
+  if (wrongs.some((record) => record.misconceptionId === question.misconceptionId)) score += 3;
+  if (wrongs.some((record) => record.skillId === question.skillId)) score += 2;
+  if (question.difficultyBand === "application" || question.difficultyBand === "integrated") score += 1;
+  return score;
+}
+
+function getLevelSupplementalQuestions(level: LevelConfig, questions: Question[]): Question[] {
+  const skillIds = new Set(level.skillIds);
+  return questions.filter(
+    (question) =>
+      question.caseId === level.caseId &&
+      question.levelId === "reserve" &&
+      (question.knowledgePointId === level.knowledgePointId || skillIds.has(question.skillId)),
+  );
+}
+
+function addSelectedQuestion(question: Question, selected: Question[], selectedIds: Set<QuestionId>): void {
+  if (selectedIds.has(question.questionId)) return;
+  selected.push(question);
+  selectedIds.add(question.questionId);
+}
+
+function groupAnswerResults(answerResults: AnswerResult[], dimension: MasteryDimension, getId: (result: AnswerResult) => string) {
+  const groups = new Map<string, { correctCount: number; totalCount: number }>();
+  for (const result of answerResults) {
+    const id = getId(result);
+    if (!id) continue;
+    const group = groups.get(id) ?? { correctCount: 0, totalCount: 0 };
+    groups.set(id, {
+      correctCount: group.correctCount + (result.isCorrect ? 1 : 0),
+      totalCount: group.totalCount + 1,
+    });
+  }
+
+  return [...groups.entries()].map(([id, group]) => ({
+    dimension,
+    id,
+    correctCount: group.correctCount,
+    totalCount: group.totalCount,
+  }));
+}
+
+function masteryRecordKey(dimension: MasteryDimension, id: string): string {
+  return `${dimension}:${id}`;
+}
+
+function toMasteryState(score: number, totalCount: number): MasteryState {
+  if (totalCount === 0) return "not_started";
+  if (totalCount < 3) {
+    if (score >= 70) return "learning";
+    if (score >= 50) return "unstable";
+    return "needs_review";
+  }
+  if (score >= 90) return "mastered";
+  if (score >= 70) return "learning";
+  if (score >= 50) return "unstable";
+  return "needs_review";
 }

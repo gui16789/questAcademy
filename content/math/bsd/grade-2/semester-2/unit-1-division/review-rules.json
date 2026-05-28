@@ -90,6 +90,28 @@
         }
       ],
       "status": "draft"
+    },
+    {
+      "reviewRuleId": "review-division-word-problem-basic",
+      "knowledgePointId": "math.division.word-problem",
+      "skillId": "skill.word-problem.interpret-remainder",
+      "misconceptionId": "mis.word-problem.use-remainder-wrong",
+      "trigger": {
+        "type": "wrong_answer",
+        "minWrongCount": 1
+      },
+      "actions": [
+        {
+          "type": "show_knowledge_card",
+          "knowledgeCardId": "card-division-word-problem"
+        },
+        {
+          "type": "recommend_question_pattern",
+          "questionPatternId": "pattern.judge-remainder-context",
+          "count": 3
+        }
+      ],
+      "status": "draft"
     }
   ]
 }

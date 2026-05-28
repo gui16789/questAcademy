@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
-import { mkdtemp, writeFile } from "node:fs/promises";
+import { cp, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 
-import { validateContentRegistry } from "./validate-content.mjs";
+import { validateContentPackage, validateContentRegistry } from "./validate-content.mjs";
 
 const rootDir = process.cwd();
 
@@ -68,6 +68,22 @@ test("registry validation fails when multiple packages are default", async () =>
 
   const result = await validateContentRegistry({ rootDir, registryPath });
   assert.ok(result.errors.some((error) => error.includes("expected exactly one default content package")));
+});
+
+test("package validation fails when a level declares an uncovered skill", async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), "quest-academy-package-"));
+  const contentRoot = path.join("content", "math", "bsd", "grade-2", "semester-2", "unit-1-division");
+  const sourceRoot = path.join(rootDir, contentRoot);
+  const packageRoot = path.join(dir, contentRoot);
+  await cp(sourceRoot, packageRoot, { recursive: true });
+
+  const caseFile = path.join(packageRoot, "cases", "case-carrot-badge.json");
+  const caseData = JSON.parse(await readFile(caseFile, "utf8"));
+  caseData.levels[0].skillIds.push("skill.expression.map-story-to-expression");
+  await writeFile(caseFile, JSON.stringify(caseData), "utf8");
+
+  const errors = await validateContentPackage(contentRoot, { rootDir: dir });
+  assert.ok(errors.some((error) => error.includes("expected at least 1 level question covering declared skillId skill.expression.map-story-to-expression")));
 });
 
 async function writeRegistry(registry) {

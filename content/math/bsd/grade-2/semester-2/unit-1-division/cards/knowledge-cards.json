@@ -87,6 +87,24 @@
       ],
       "levelId": "level-remainder-rule",
       "status": "draft"
+    },
+    {
+      "knowledgeCardId": "card-division-word-problem",
+      "knowledgePointId": "math.division.word-problem",
+      "skillIds": [
+        "skill.word-problem.interpret-remainder"
+      ],
+      "title": "实际问题余数线索卡",
+      "summary": "余数要放回故事里判断。", 
+      "example": "35 枚徽章每队 6 枚，剩 5 枚不够再分给 1 个完整小队。",
+      "method": "先算商和余数，再看余数在题目中代表什么。",
+      "commonMistake": "只看到有剩余，就以为还能再组成完整一组。",
+      "reviewPrompt": "遇到实际问题时，问一问：剩下的数量够不够再组成一组？",
+      "relatedQuestionPatternIds": [
+        "pattern.judge-remainder-context"
+      ],
+      "levelId": "level-remainder-rule",
+      "status": "draft"
     }
   ]
 }

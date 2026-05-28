@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">动物侦探城闯关主界面视觉稿</title>
+  <desc id="desc">北师大版二年级数学除法单元的游戏化学习界面，包含案件地图、当前挑战、线索进度和知识点掌握评分。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF9EF"/>
+      <stop offset="0.48" stop-color="#E8F8FF"/>
+      <stop offset="1" stop-color="#ECF8E8"/>
+    </linearGradient>
+    <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DDF3CC" stop-opacity="0"/>
+      <stop offset="1" stop-color="#9DDA86"/>
+    </linearGradient>
+    <linearGradient id="progress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#68C77C"/>
+      <stop offset="1" stop-color="#FFC83D"/>
+    </linearGradient>
+    <linearGradient id="warningProgress" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#FFC83D"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-18%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#6F4F25" flood-opacity="0.16"/>
+    </filter>
+    <filter id="cardShadow" x="-15%" y="-18%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#2F3A45" flood-opacity="0.1"/>
+    </filter>
+    <style>
+      .font { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif; }
+      .ink { fill: #2F3A45; }
+      .muted { fill: #6B7A8A; }
+      .heavy { font-weight: 900; }
+      .bold { font-weight: 700; }
+      .mid { font-weight: 600; }
+      .small { font-size: 14px; }
+      .text16 { font-size: 16px; }
+      .text18 { font-size: 18px; }
+      .text20 { font-size: 20px; }
+      .text22 { font-size: 22px; }
+      .text24 { font-size: 24px; }
+      .text28 { font-size: 28px; }
+      .text44 { font-size: 44px; }
+      .stroke-brown { stroke: #7D5630; }
+      .stroke-soft { stroke: #D9E2EC; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="900" rx="28" fill="url(#sky)"/>
+  <path d="M0 130L132 112L260 150L420 116L590 144L760 106L922 152L1090 124L1262 150L1440 120V372H0Z" fill="#5BB9F0" opacity="0.18"/>
+  <path d="M0 670L145 616L315 682L485 606L660 676L840 624L1030 686L1200 628L1440 690V900H0Z" fill="url(#grass)"/>
+  <path d="M0 780C160 720 315 772 470 734C650 690 796 760 956 716C1132 666 1268 746 1440 702V900H0Z" fill="#68C77C" opacity="0.23"/>
+
+  <rect x="0" y="0" width="1440" height="88" fill="#FFFDF8" opacity="0.84"/>
+  <line x1="0" y1="88" x2="1440" y2="88" stroke="#7D5630" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g transform="translate(34 17)">
+    <circle cx="27" cy="27" r="27" fill="#FFC83D" stroke="#7D5630" stroke-width="3"/>
+    <path d="M24 10H30L33 18H21L24 10Z" fill="#7D5630"/>
+    <path d="M16 18H38L35 42H19L16 18Z" fill="#FFF8DB" stroke="#7D5630" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M23 27H31M22 34H33" stroke="#7D5630" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="104" y="40" class="font ink heavy text24">动物侦探学院</text>
+  <text x="104" y="64" class="font muted bold small">北师大版二年级下册 · 第一单元 除法</text>
+
+  <g class="font bold text16">
+    <rect x="760" y="22" width="96" height="44" rx="16" fill="#FF8A3D" stroke="#7D5630" stroke-width="2.5"/>
+    <circle cx="787" cy="43" r="9" fill="none" stroke="#2F3A45" stroke-width="3"/>
+    <path d="M794 50L802 58" stroke="#2F3A45" stroke-width="3" stroke-linecap="round"/>
+    <text x="815" y="49" fill="#44240F" text-anchor="middle">案件</text>
+
+    <rect x="868" y="22" width="98" height="44" rx="16" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+    <text x="917" y="49" fill="#2F3A45" text-anchor="middle">错题馆</text>
+
+    <rect x="978" y="22" width="98" height="44" rx="16" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+    <text x="1027" y="49" fill="#2F3A45" text-anchor="middle">知识卡</text>
+
+    <rect x="1088" y="22" width="86" height="44" rx="16" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+    <text x="1131" y="49" fill="#2F3A45" text-anchor="middle">勋章</text>
+  </g>
+
+  <g transform="translate(1207 17)">
+    <rect width="198" height="54" rx="20" fill="#FFF7E8" stroke="#7D5630" stroke-opacity="0.16" stroke-width="2"/>
+    <circle cx="28" cy="27" r="18" fill="#FFCF92" stroke="#7D5630" stroke-width="2"/>
+    <circle cx="22" cy="25" r="2.5" fill="#2F3A45"/>
+    <circle cx="34" cy="25" r="2.5" fill="#2F3A45"/>
+    <path d="M23 34Q28 38 33 34" fill="none" stroke="#2F3A45" stroke-width="2" stroke-linecap="round"/>
+    <text x="58" y="34" class="font ink heavy text16">小侦探 安安</text>
+  </g>
+
+  <g transform="translate(34 118)">
+    <text x="0" y="0" class="font heavy text16" fill="#E96F22">CASE 01 · 胡萝卜徽章失踪案</text>
+    <text x="0" y="52" class="font ink heavy text44">用除法线索找回学院徽章</text>
+    <text x="0" y="91" class="font muted bold text18">完成 4 个调查地点，收集线索，再挑战最终推理。每道题都会记录对应知识点，通关后生成掌握能力评分。</text>
+  </g>
+  <g transform="translate(1240 116) rotate(4 82 36)">
+    <rect width="164" height="72" rx="18" fill="#FFFFFF" fill-opacity="0.74" stroke="#E96F22" stroke-opacity="0.78" stroke-width="4"/>
+    <text x="82" y="45" class="font heavy text22" fill="#E96F22" text-anchor="middle">调查中</text>
+  </g>
+
+  <g transform="translate(34 240)" filter="url(#softShadow)">
+    <rect width="844" height="484" rx="24" fill="#FFFDF8" fill-opacity="0.88" stroke="#7D5630" stroke-opacity="0.22" stroke-width="3"/>
+    <path d="M0 0H844V484H0Z" fill="#FFC83D" opacity="0.07"/>
+    <path d="M118 250C230 180 320 326 420 238C540 132 622 258 738 186" fill="none" stroke="#7D5630" stroke-opacity="0.28" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 24"/>
+
+    <g transform="translate(42 40)">
+      <rect width="150" height="196" rx="22" fill="#FFFFFF" fill-opacity="0.82" stroke="#68C77C" stroke-opacity="0.38" stroke-width="2"/>
+      <circle cx="124" cy="24" r="17" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.12" stroke-width="2"/>
+      <path d="M116 24L122 30L134 16" fill="none" stroke="#2E8D49" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M48 18H102L112 48H38Z" fill="#FF8A3D" stroke="#7D5630" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="50" y="47" width="50" height="56" rx="10" fill="#FFE4A6" stroke="#7D5630" stroke-width="3"/>
+      <rect x="59" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <rect x="80" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <text x="18" y="139" class="font ink heavy text18">仓库平均分</text>
+      <text x="18" y="168" class="font muted bold small">判断每份是否一样多</text>
+    </g>
+
+    <g transform="translate(248 112)">
+      <rect width="150" height="196" rx="22" fill="#FFF8DB" stroke="#7D5630" stroke-width="2.5"/>
+      <circle cx="124" cy="24" r="17" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.12" stroke-width="2"/>
+      <circle cx="119" cy="20" r="8" fill="none" stroke="#E96F22" stroke-width="3"/>
+      <path d="M126 27L134 35" stroke="#E96F22" stroke-width="3" stroke-linecap="round"/>
+      <path d="M48 18H102L112 48H38Z" fill="#5BB9F0" stroke="#7D5630" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="50" y="47" width="50" height="56" rx="10" fill="#FFE4A6" stroke="#7D5630" stroke-width="3"/>
+      <rect x="59" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <rect x="80" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <text x="18" y="139" class="font ink heavy text18">分发记录表</text>
+      <text x="18" y="168" class="font muted bold small">读懂除法算式含义</text>
+    </g>
+
+    <g transform="translate(454 64)">
+      <rect width="150" height="196" rx="22" fill="#FFFFFF" fill-opacity="0.82" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+      <circle cx="124" cy="24" r="17" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.12" stroke-width="2"/>
+      <path d="M124 15V33M115 24H133" stroke="#5BB9F0" stroke-width="3" stroke-linecap="round"/>
+      <path d="M48 18H102L112 48H38Z" fill="#68C77C" stroke="#7D5630" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="50" y="47" width="50" height="56" rx="10" fill="#FFE4A6" stroke="#7D5630" stroke-width="3"/>
+      <rect x="59" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <rect x="80" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <text x="18" y="139" class="font ink heavy text18">剩下的徽章</text>
+      <text x="18" y="168" class="font muted bold small">计算商和余数</text>
+    </g>
+
+    <g transform="translate(660 134)" opacity="0.78">
+      <rect width="150" height="196" rx="22" fill="#FFFFFF" fill-opacity="0.82" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+      <circle cx="124" cy="24" r="17" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.12" stroke-width="2"/>
+      <path d="M117 22V19C117 15 120 12 124 12C128 12 131 15 131 19V22" fill="none" stroke="#6B7A8A" stroke-width="3" stroke-linecap="round"/>
+      <rect x="116" y="22" width="16" height="13" rx="3" fill="none" stroke="#6B7A8A" stroke-width="3"/>
+      <path d="M48 18H102L112 48H38Z" fill="#D9E2EC" stroke="#7D5630" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="50" y="47" width="50" height="56" rx="10" fill="#FFE4A6" stroke="#7D5630" stroke-width="3"/>
+      <rect x="59" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <rect x="80" y="62" width="12" height="12" rx="3" fill="#C9EFFF" stroke="#7D5630" stroke-width="2"/>
+      <text x="18" y="139" class="font ink heavy text18">可疑的说法</text>
+      <text x="18" y="168" class="font muted bold small">判断余数小于除数</text>
+    </g>
+
+    <g transform="translate(38 360)">
+      <path d="M20 -18C14 -60 44 -86 76 -74C112 -62 116 -22 88 10Z" fill="#F3CF9D" stroke="#7D5630" stroke-width="3"/>
+      <path d="M72 -18C78 -60 48 -86 16 -74C-20 -62 -24 -22 4 10Z" fill="#F3CF9D" stroke="#7D5630" stroke-width="3"/>
+      <rect x="0" y="-58" width="86" height="90" rx="38" fill="#DBAD71" stroke="#7D5630" stroke-width="3"/>
+      <circle cx="29" cy="-20" r="4" fill="#2F3A45"/>
+      <circle cx="57" cy="-20" r="4" fill="#2F3A45"/>
+      <path d="M36 3Q43 10 50 3" fill="none" stroke="#2F3A45" stroke-width="3" stroke-linecap="round"/>
+      <rect x="104" y="-68" width="420" height="82" rx="20" fill="#FFFFFF" stroke="#2F3A45" stroke-opacity="0.1" stroke-width="2"/>
+      <text x="124" y="-35" class="font ink heavy text18">分发台的记录很关键。先找总数和份数，</text>
+      <text x="124" y="-9" class="font ink heavy text18">再判断算式里的商表示什么。</text>
+    </g>
+  </g>
+
+  <g transform="translate(906 240)" filter="url(#softShadow)">
+    <rect width="470" height="484" rx="24" fill="#FFFDF8" fill-opacity="0.9" stroke="#7D5630" stroke-opacity="0.22" stroke-width="3"/>
+    <text x="24" y="36" class="font heavy small" fill="#217DB4">当前挑战 · 第 2 关 / 4 题</text>
+    <text x="24" y="75" class="font ink heavy text28">分发记录表</text>
+    <circle cx="396" cy="50" r="38" fill="#FFFDF8" stroke="#EAF0F5" stroke-width="12"/>
+    <path d="M396 12A38 38 0 1 1 358 50" fill="none" stroke="#68C77C" stroke-width="12" stroke-linecap="round"/>
+    <text x="396" y="57" class="font heavy text20" fill="#2E8D49" text-anchor="middle">75%</text>
+
+    <g transform="translate(24 104)">
+      <rect width="422" height="284" rx="20" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <rect x="20" y="20" width="142" height="32" rx="16" fill="#E8F8FF"/>
+      <text x="35" y="42" class="font heavy small" fill="#217DB4">知识点：除法算式</text>
+      <text x="354" y="41" class="font muted bold small">第 3 题</text>
+      <text x="20" y="84" class="font ink heavy text20">12 枚徽章平均分给 3 个小队，</text>
+      <text x="20" y="114" class="font ink heavy text20">每个小队分到几枚？</text>
+
+      <rect x="20" y="132" width="382" height="54" rx="16" fill="#FFF8E8" stroke="#7D5630" stroke-opacity="0.24" stroke-width="2" stroke-dasharray="6 8"/>
+      <g fill="#FFC83D" stroke="#7D5630" stroke-width="2">
+        <circle cx="60" cy="159" r="13"/><circle cx="88" cy="159" r="13"/><circle cx="116" cy="159" r="13"/><circle cx="144" cy="159" r="13"/>
+        <circle cx="185" cy="159" r="13"/><circle cx="213" cy="159" r="13"/><circle cx="241" cy="159" r="13"/><circle cx="269" cy="159" r="13"/>
+        <circle cx="310" cy="159" r="13"/><circle cx="338" cy="159" r="13"/><circle cx="366" cy="159" r="13"/>
+      </g>
+
+      <g class="font heavy text18" text-anchor="middle">
+        <rect x="20" y="202" width="181" height="58" rx="17" fill="#FFFDF8" stroke="#2F3A45" stroke-opacity="0.09" stroke-width="2"/>
+        <text x="111" y="238" fill="#2F3A45">12 + 3 = 15</text>
+        <rect x="221" y="202" width="181" height="58" rx="17" fill="#FFDF9C" stroke="#7D5630" stroke-width="2.5"/>
+        <text x="312" y="238" fill="#2F3A45">12 ÷ 3 = 4</text>
+      </g>
+    </g>
+
+    <g transform="translate(24 408)">
+      <path d="M0 0H180" stroke="#D9E2EC" stroke-width="2"/>
+      <path d="M8 28A7 7 0 0 0 4 41V45H18V41A7 7 0 0 0 14 28Z" fill="none" stroke="#6B7A8A" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="30" y="43" class="font muted bold small">提示：平均分通常用除法。</text>
+      <rect x="278" y="5" width="144" height="54" rx="19" fill="#FF8A3D" stroke="#7D5630" stroke-width="3"/>
+      <text x="350" y="39" class="font heavy text18" fill="#44240F" text-anchor="middle">提交答案</text>
+    </g>
+
+    <g transform="translate(24 424)" class="font">
+      <g transform="translate(0 72)">
+        <rect width="96" height="62" rx="16" fill="#FFF7E8" stroke="#2F3A45" stroke-opacity="0.09" stroke-width="2"/>
+        <text x="12" y="24" class="heavy small" fill="#2F3A45">线索 1</text>
+        <text x="12" y="45" class="bold" font-size="12" fill="#6B7A8A">仓库数量</text>
+      </g>
+      <g transform="translate(108 72)">
+        <rect width="96" height="62" rx="16" fill="#FFF7E8" stroke="#2F3A45" stroke-opacity="0.09" stroke-width="2"/>
+        <text x="12" y="24" class="heavy small" fill="#2F3A45">线索 2</text>
+        <text x="12" y="45" class="bold" font-size="12" fill="#6B7A8A">分发记录</text>
+      </g>
+      <g transform="translate(216 72)">
+        <rect width="96" height="62" rx="16" fill="#FFF7E8" stroke="#2F3A45" stroke-opacity="0.09" stroke-width="2"/>
+        <text x="12" y="24" class="heavy small" fill="#2F3A45">线索 3</text>
+        <text x="12" y="45" class="bold" font-size="12" fill="#6B7A8A">待发现</text>
+      </g>
+      <g transform="translate(324 72)">
+        <rect width="96" height="62" rx="16" fill="#FFF7E8" stroke="#2F3A45" stroke-opacity="0.09" stroke-width="2"/>
+        <text x="12" y="24" class="heavy small" fill="#2F3A45">Boss</text>
+        <text x="12" y="45" class="bold" font-size="12" fill="#6B7A8A">未解锁</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(34 746)">
+    <g filter="url(#softShadow)">
+      <rect width="250" height="124" rx="22" fill="#FFFDF8" fill-opacity="0.9" stroke="#7D5630" stroke-opacity="0.18" stroke-width="3"/>
+    </g>
+    <text x="18" y="37" class="font heavy small" fill="#E96F22">能力雷达 · 自动记录</text>
+    <text x="18" y="73" class="font ink heavy text24">单元知识点</text>
+    <text x="18" y="103" class="font ink heavy text24">掌握报告</text>
+
+    <g transform="translate(264 0)" filter="url(#cardShadow)">
+      <rect width="260" height="124" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <text x="16" y="31" class="font ink heavy text20">平均分</text>
+      <text x="16" y="72" class="font heavy" font-size="34" fill="#2E8D49">96</text>
+      <text x="65" y="72" class="font heavy small" fill="#2E8D49">分</text>
+      <rect x="16" y="86" width="228" height="12" rx="6" fill="#EAF0F5"/>
+      <rect x="16" y="86" width="219" height="12" rx="6" fill="url(#progress)"/>
+      <text x="16" y="116" class="font muted bold" font-size="12">已掌握：判断每份是否一样多</text>
+    </g>
+
+    <g transform="translate(538 0)" filter="url(#cardShadow)">
+      <rect width="260" height="124" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <text x="16" y="31" class="font ink heavy text20">除法算式</text>
+      <text x="16" y="72" class="font heavy" font-size="34" fill="#2E8D49">82</text>
+      <text x="65" y="72" class="font heavy small" fill="#2E8D49">分</text>
+      <rect x="16" y="86" width="228" height="12" rx="6" fill="#EAF0F5"/>
+      <rect x="16" y="86" width="187" height="12" rx="6" fill="url(#progress)"/>
+      <text x="16" y="116" class="font muted bold" font-size="12">学习中：继续练习商的含义</text>
+    </g>
+
+    <g transform="translate(812 0)" filter="url(#cardShadow)">
+      <rect width="260" height="124" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <circle cx="225" cy="25" r="17" fill="#FFE3E3"/>
+      <path d="M225 17V27" stroke="#F66B6B" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="225" cy="33" r="2.5" fill="#F66B6B"/>
+      <text x="16" y="31" class="font ink heavy text20">有余数除法</text>
+      <text x="16" y="72" class="font heavy" font-size="34" fill="#E96F22">68</text>
+      <text x="65" y="72" class="font heavy small" fill="#E96F22">分</text>
+      <rect x="16" y="86" width="228" height="12" rx="6" fill="#EAF0F5"/>
+      <rect x="16" y="86" width="155" height="12" rx="6" fill="url(#warningProgress)"/>
+      <text x="16" y="116" class="font muted bold" font-size="12">需巩固：容易忘记写余数</text>
+    </g>
+
+    <g transform="translate(1086 0)" filter="url(#cardShadow)">
+      <rect width="260" height="124" rx="22" fill="#FFFFFF" stroke="#D9E2EC" stroke-width="2"/>
+      <text x="16" y="31" class="font ink heavy text20">余数规则</text>
+      <text x="16" y="72" class="font heavy" font-size="34" fill="#6B7A8A">--</text>
+      <text x="65" y="72" class="font heavy small" fill="#6B7A8A">分</text>
+      <rect x="16" y="86" width="228" height="12" rx="6" fill="#EAF0F5"/>
+      <rect x="16" y="86" width="36" height="12" rx="6" fill="#D9E2EC"/>
+      <text x="16" y="116" class="font muted bold" font-size="12">完成第 4 关后生成评分</text>
+    </g>
+  </g>
+</svg>

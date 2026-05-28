@@ -38,14 +38,16 @@ test("queries case, levels, questions, boss, cards, clues, badges, and review ru
   assert.equal(runtime.getQuestionsByLevel("level-average-sharing").length, 4);
   assert.equal(runtime.getReserveQuestions().length, 10);
   assert.equal(runtime.getBossTask().steps.length, 2);
-  assert.equal(runtime.getKnowledgeCards().length, 4);
+  assert.equal(runtime.getKnowledgeCards().length, 5);
   assert.equal(runtime.getKnowledgeCard("card-remainder-rule").knowledgePointId, "math.division.remainder-rule");
+  assert.equal(runtime.getKnowledgeCard("card-division-word-problem").knowledgePointId, "math.division.word-problem");
   assert.equal(runtime.getClues().length, 4);
   assert.equal(runtime.getClue("clue-with-remainder").levelId, "level-with-remainder");
   assert.equal(runtime.getBadges().length, 5);
   assert.equal(runtime.getBadge("badge-case-closer").triggerRule.type, "case_closed");
-  assert.equal(runtime.getReviewRules().length, 4);
+  assert.equal(runtime.getReviewRules().length, 5);
   assert.equal(runtime.getReviewRule("review-remainder-rule-basic").skillId, "skill.remainder.compare-with-divisor");
+  assert.equal(runtime.getReviewRule("review-division-word-problem-basic").skillId, "skill.word-problem.interpret-remainder");
   assert.equal(runtime.getKnowledgePoint("math.division.word-problem").shortName, "除法实际问题");
   assert.equal(runtime.getSkill("skill.remainder.calculate").knowledgePointId, "math.division.with-remainder");
 });
